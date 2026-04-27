@@ -143,17 +143,18 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKey))
             <h2 class="text-xs sm:text-sm font-semibold tracking-wide uppercase text-ink/70">All Radicals</h2>
             <span class="text-[10px] sm:text-xs text-ink/40">tap to view</span>
           </div>
-          <div class="nice-scroll grid grid-cols-6 sm:grid-cols-7 md:grid-cols-8 gap-2 p-3 sm:p-4
+          <div class="nice-scroll grid grid-cols-5 sm:grid-cols-6 md:grid-cols-7 gap-2.5 sm:gap-3 p-3 sm:p-4
                       max-h-[42vh] lg:max-h-[68vh] overflow-y-auto">
             <template v-if="filtered.length">
               <button v-for="(r, i) in filtered" :key="r.kangxi + '-' + i"
                       :title="`${r.char} — ${r.pinyin} — ${r.meaning}`"
                       @click="pickRadical(i)"
-                      class="group relative aspect-square flex flex-col items-center justify-center rounded-xl
-                             border transition-all duration-200 active:scale-95"
+                      class="group relative aspect-square flex flex-col items-center justify-center rounded-2xl
+                             border-2 shadow-sm transition-all duration-200 active:scale-95
+                             hover:shadow-md hover:-translate-y-0.5"
                       :class="radical && r.kangxi === radical.kangxi && i === activeIdx
                               ? 'shadow-chip ring-2 scale-[1.06] z-10'
-                              : 'hover:scale-105'"
+                              : ''"
                       :style="(() => {
                         const isActive = radical && r.kangxi === radical.kangxi && i === activeIdx
                         const p = CAT_COLORS[r.cat]
@@ -162,8 +163,8 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKey))
                                 border-color:${isActive ? p.accent : p.light};
                                 ${isActive ? `--tw-ring-color:${p.accent}66;` : ''}`
                       })()">
-                <span class="han text-2xl sm:text-[26px] font-bold leading-none">{{ r.char }}</span>
-                <span class="text-[9px] sm:text-[10px] mt-1 font-mono opacity-70">#{{ r.kangxi }}</span>
+                <span class="han text-3xl sm:text-[34px] font-bold leading-none drop-shadow-sm">{{ r.char }}</span>
+                <span class="text-[10px] sm:text-[11px] mt-1.5 font-mono opacity-70 tracking-wider">#{{ r.kangxi }}</span>
               </button>
             </template>
             <div v-else class="col-span-full py-10 text-center text-ink/50 text-sm">
