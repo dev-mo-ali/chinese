@@ -1,0 +1,75 @@
+export const STROKE_GROUPS = [
+  {
+    key: "heng", main: "一", mainName: "横", mainPinyin: "héng", mainEn: "Horizontal",
+    intro: "Drawn left to right with even pressure. The foundation stroke of nearly every character.",
+    color: "#9b2226", bg: "#fce4e4", light: "#f5c6c6", text: "#5a0e12",
+    items: [
+      { glyph: "㇐", name: "横", pinyin: "héng", en: "Horizontal", ex: ["一","二","三","王","工"] },
+      { glyph: "㇀", name: "提", pinyin: "tí", en: "Rising stroke", ex: ["习","地","冷","冰","刁"] },
+    ],
+  },
+  {
+    key: "shu", main: "丨", mainName: "竖", mainPinyin: "shù", mainEn: "Vertical",
+    intro: "Drawn top to bottom. The vertical pillar that anchors a character's structure.",
+    color: "#2d6a4f", bg: "#e8f5e9", light: "#c8e6c9", text: "#1b4332",
+    items: [
+      { glyph: "㇑", name: "长竖", pinyin: "cháng shù", en: "Long vertical", ex: ["书","快","师","十","市"] },
+      { glyph: "㇑", name: "短竖", pinyin: "duǎn shù", en: "Short vertical", ex: ["刊","修","候","刚","利"] },
+      { glyph: "㇚", name: "竖钩", pinyin: "shù gōu", en: "Vertical hook", ex: ["小","水","求","寸","找"] },
+    ],
+  },
+  {
+    key: "pie", main: "丿", mainName: "撇", mainPinyin: "piě", mainEn: "Left falling",
+    intro: "Sweeps from upper-right to lower-left. Tapers to a fine point with rhythm and grace.",
+    color: "#7c5a1e", bg: "#fdf3e3", light: "#f5deb3", text: "#4a3200",
+    items: [
+      { glyph: "㇒", name: "撇", pinyin: "piě", en: "Left falling", ex: ["月","木","大","人","个"] },
+      { glyph: "㇓", name: "横撇", pinyin: "héng piě", en: "Shorter, more horizontal left falling", ex: ["千","舌","毛","白","禾"] },
+    ],
+  },
+  {
+    key: "dian", main: "丶", mainName: "点", mainPinyin: "diǎn", mainEn: "Dot",
+    intro: "A single tap of the brush. Small but expressive — the soul of the character.",
+    color: "#344e8b", bg: "#e8eaf6", light: "#c5cae9", text: "#1a237e",
+    items: [
+      { glyph: "㇔", name: "短点", pinyin: "duǎn diǎn", en: "Short dot", ex: ["主","广","心","注","文"] },
+      { glyph: "㇔", name: "长点", pinyin: "cháng diǎn", en: "Long dot", ex: ["双","不","贝","头"] },
+      { glyph: "㇃", name: "左点", pinyin: "zuǒ diǎn", en: "Left dot", ex: ["办","刃","心","必","小"] },
+      { glyph: "㇏", name: "平捺", pinyin: "píng nà", en: "Horizontal right falling", ex: ["之","延","这","走"] },
+      { glyph: "㇏", name: "斜捺", pinyin: "xié nà", en: "Slanted right falling", ex: ["又","义","个","人","大"] },
+    ],
+  },
+  {
+    key: "zhe", main: "乛", mainName: "折", mainPinyin: "zhé", mainEn: "Turning",
+    intro: "Compound strokes that change direction without lifting the brush — the most varied family.",
+    color: "#6b3a8b", bg: "#f1e8f5", light: "#dcc7e6", text: "#3d1f55",
+    items: [
+      { glyph: "㇕", name: "横折", pinyin: "héng zhé", en: "Horizontal turning", ex: ["口","问"] },
+      { glyph: "㇗", name: "横折提", pinyin: "héng zhé tí", en: "Horizontal turning and rising", ex: ["说","话","讨","论","讲"] },
+      { glyph: "㇇", name: "横撇", pinyin: "héng piě", en: "Horizontal and left-falling", ex: ["又","反"] },
+      { glyph: "㇆", name: "横折钩", pinyin: "héng zhé gōu", en: "Horizontal turning and hook", ex: ["刀","门","也"] },
+      { glyph: "㇖", name: "横钩", pinyin: "héng gōu", en: "Horizontal hook", ex: ["买","皮","卖"] },
+      { glyph: "㇍", name: "横折斜钩", pinyin: "héng zhé xié gōu", en: "Horizontal and slanted hook", ex: ["飞","风","凤","凰"] },
+      { glyph: "㇈", name: "横折弯钩", pinyin: "héng zhé wān gōu", en: "Horizontal turning and curved hook", ex: ["几","九","匹"] },
+      { glyph: "㇌", name: "横折弯", pinyin: "héng zhé wān", en: "Horizontal turning and curved turning", ex: ["朵","铅"] },
+      { glyph: "㇊", name: "横折折", pinyin: "héng zhé zhé", en: "Horizontal turning and turning", ex: ["凹"] },
+      { glyph: "㇋", name: "横折折撇", pinyin: "héng zhé zhé piě", en: "Horizontal turning and turning left-falling", ex: ["廷","建"] },
+      { glyph: "㇎", name: "横折折折", pinyin: "héng zhé zhé zhé", en: "Horizontal triple turning", ex: ["凸"] },
+      { glyph: "㇟", name: "横折撇弯钩", pinyin: "héng zhé piě wān gōu", en: "Horizontal turning, left-falling, curved hook", ex: ["阵","队","除"] },
+      { glyph: "㇡", name: "横折折折钩", pinyin: "héng zhé zhé zhé gōu", en: "Horizontal triple turning and hook", ex: ["乃","奶"] },
+      { glyph: "㇗", name: "竖折", pinyin: "shù zhé", en: "Vertical turning", ex: ["山","匹"] },
+      { glyph: "㇄", name: "竖弯", pinyin: "shù wān", en: "Vertical curved turning", ex: ["四"] },
+      { glyph: "㇙", name: "竖提", pinyin: "shù tí", en: "Vertical and rising", ex: ["民","切"] },
+      { glyph: "㇜", name: "竖折折", pinyin: "shù zhé zhé", en: "Vertical turning and vertical", ex: ["鼎"] },
+      { glyph: "㇘", name: "竖折折撇", pinyin: "shù zhé zhé piě", en: "Vertical turning and left-falling", ex: ["专","传"] },
+      { glyph: "㇄", name: "竖弯钩", pinyin: "shù wān gōu", en: "Vertical curved hook", ex: ["儿","乱"] },
+      { glyph: "㇉", name: "竖折折钩", pinyin: "shù zhé zhé gōu", en: "Vertical turning and turning hook", ex: ["与","马"] },
+      { glyph: "㇜", name: "撇折", pinyin: "piě zhé", en: "Left falling and turning", ex: ["么","公"] },
+      { glyph: "㇃", name: "撇点", pinyin: "piě diǎn", en: "Left-falling and dot", ex: ["女","巡"] },
+      { glyph: "㇁", name: "弯钩", pinyin: "wān gōu", en: "Curved hook", ex: ["家","了","子"] },
+      { glyph: "㇂", name: "斜钩", pinyin: "xié gōu", en: "Slanted hook", ex: ["戈","我","伐"] },
+    ],
+  },
+]
+
+export const useStrokes = () => ({ STROKE_GROUPS })
