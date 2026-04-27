@@ -31,6 +31,18 @@ const headerData = computed(() => {
 })
 
 const bgClass = computed(() => (isStrokes.value || hskMatch.value) ? 'paper-bg-warm' : 'paper-bg')
+
+const showTop = ref(false)
+const scrollProgress = ref(0)
+const onScroll = () => {
+  showTop.value = window.scrollY > 400
+  const h = document.documentElement
+  const max = (h.scrollHeight - h.clientHeight) || 1
+  scrollProgress.value = Math.min(100, Math.max(0, (window.scrollY / max) * 100))
+}
+const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
+onMounted(() => { window.addEventListener('scroll', onScroll, { passive: true }); onScroll() })
+onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
 </script>
 
 <template>
@@ -49,10 +61,6 @@ const bgClass = computed(() => (isStrokes.value || hskMatch.value) ? 'paper-bg-w
             {{ headerData.title }}
           </div>
         </div>
-        <a :href="headerData.sourceHref" target="_blank" rel="noopener"
-           class="hidden sm:inline-block text-[11px] text-gold-soft hover:text-gold transition">
-          Source ↗
-        </a>
       </div>
       <nav class="max-w-6xl mx-auto px-4 mt-2 flex gap-1 overflow-x-auto nice-scroll" aria-label="View">
         <NuxtLink
@@ -67,6 +75,9 @@ const bgClass = computed(() => (isStrokes.value || hskMatch.value) ? 'paper-bg-w
             class="absolute left-2 right-2 bottom-0 h-[3px] rounded-t bg-gold"></span>
         </NuxtLink>
       </nav>
+      <div class="h-1 bg-cream/10" aria-hidden="true">
+        <div class="h-full bg-[#c0392b] transition-[width] duration-75 ease-out" :style="{ width: scrollProgress + '%' }"></div>
+      </div>
     </header>
 
     <main class="safe-bottom">
@@ -77,17 +88,17 @@ const bgClass = computed(() => (isStrokes.value || hskMatch.value) ? 'paper-bg-w
         <div class="max-w-3xl mx-auto rounded-3xl bg-ink text-cream shadow-card overflow-hidden">
           <div class="px-5 sm:px-8 py-5 sm:py-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div class="flex items-start gap-3">
-              <div class="shrink-0 w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold han font-bold">作</div>
-              <div class="min-w-0">
-                <div class="text-[10px] tracking-[0.25em] uppercase text-gold-soft">Created by</div>
-                <div class="text-sm sm:text-base font-semibold text-cream truncate">Moh</div>
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
               <div class="shrink-0 w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold han font-bold">师</div>
               <div class="min-w-0">
                 <div class="text-[10px] tracking-[0.25em] uppercase text-gold-soft">Supervisor</div>
                 <div class="text-sm sm:text-base font-semibold text-cream truncate">Wen</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="shrink-0 w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold han font-bold">作</div>
+              <div class="min-w-0">
+                <div class="text-[10px] tracking-[0.25em] uppercase text-gold-soft">Created by</div>
+                <div class="text-sm sm:text-base font-semibold text-cream truncate">Moh</div>
               </div>
             </div>
           </div>
@@ -97,5 +108,24 @@ const bgClass = computed(() => (isStrokes.value || hskMatch.value) ? 'paper-bg-w
         </div>
       </footer>
     </main>
+
+    <Transition
+      enter-active-class="transition duration-200 ease-out"
+      enter-from-class="opacity-0 translate-y-2"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-150 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 translate-y-2"
+    >
+      <button
+        v-if="showTop"
+        @click="scrollTop"
+        type="button"
+        aria-label="Back to top"
+        class="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-ink text-cream border-2 border-gold-deep/70 shadow-lg hover:bg-gold-deep/30 hover:text-gold transition flex items-center justify-center"
+      >
+        <span class="han text-lg leading-none" aria-hidden="true">↑</span>
+      </button>
+    </Transition>
   </div>
 </template>
