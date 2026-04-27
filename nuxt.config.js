@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   app: {
+       baseURL: '/chinese/', // ← add this, replace with your actual repo name
     head: {
       htmlAttrs: { lang: 'en' },
       meta: [
