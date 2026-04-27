@@ -1,5 +1,5 @@
 {
-  "name": "ch-radicals",
+  "name": "Chinese-app",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,8 +9,10 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
-  "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.12.2",
-    "nuxt": "^3.13.2"
+  "dependencies": {
+    "nuxt": "latest",
+    "vue": "latest",
+    "vue-router": "latest",
+    "@nuxtjs/tailwindcss": "latest"
   }
 }
