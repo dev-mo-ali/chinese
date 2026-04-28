@@ -93,19 +93,21 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
           </div>
         </div>
       </div>
-      <nav class="max-w-6xl mx-auto px-4 mt-2 flex gap-1 overflow-x-auto nice-scroll" aria-label="View">
-        <NuxtLink
-          v-for="t in tabs" :key="t.to" :to="t.to"
-          class="relative px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold tracking-wide uppercase transition whitespace-nowrap"
-          :class="route.path === t.to ? 'text-cream' : 'text-gold-soft hover:text-cream'"
-        >
-          <span class="flex items-center gap-1.5">
-            <span class="han text-base">{{ t.han }}</span> {{ t.label }}
-          </span>
-          <span v-if="route.path === t.to"
-            class="absolute left-2 right-2 bottom-0 h-[3px] rounded-t bg-gold"></span>
-        </NuxtLink>
-      </nav>
+      <div class="nav-fade max-w-6xl mx-auto px-4 mt-2 relative">
+        <nav class="flex gap-1 overflow-x-auto nice-scroll pb-1" aria-label="View">
+          <NuxtLink
+            v-for="t in tabs" :key="t.to" :to="t.to"
+            class="relative px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold tracking-wide uppercase transition whitespace-nowrap"
+            :class="route.path === t.to ? 'text-cream' : 'text-gold-soft hover:text-cream'"
+          >
+            <span class="flex items-center gap-1.5">
+              <span class="han text-base">{{ t.han }}</span> {{ t.label }}
+            </span>
+            <span v-if="route.path === t.to"
+              class="absolute left-2 right-2 bottom-0 h-[3px] rounded-t bg-gold"></span>
+          </NuxtLink>
+        </nav>
+      </div>
       <div class="h-1 bg-cream/10 overflow-hidden" aria-hidden="true">
         <div class="progress-bar h-full transition-[width] duration-75 ease-out" :style="{ width: scrollProgress + '%' }"></div>
       </div>
@@ -162,6 +164,26 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
 </template>
 
 <style scoped>
+/* Edge-fade hint for the horizontally-scrollable nav (mobile) */
+.nav-fade::before,
+.nav-fade::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 22px;
+  pointer-events: none;
+  z-index: 1;
+}
+.nav-fade::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(26, 18, 9, 0.9), rgba(26, 18, 9, 0));
+}
+.nav-fade::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(26, 18, 9, 0.9), rgba(26, 18, 9, 0));
+}
+
 .progress-bar {
   position: relative;
   background: linear-gradient(90deg, #bbf7d0 0%, #86efac 35%, #4ade80 65%, #86efac 100%);

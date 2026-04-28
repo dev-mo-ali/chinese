@@ -8,10 +8,26 @@ body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI'
 .han   { font-family: 'Noto Serif SC', 'PingFang SC', 'Songti SC', serif; }
 .brush { font-family: 'Ma Shan Zheng', 'ZCOOL XiaoWei', 'Long Cang', 'Noto Serif SC', serif; }
 
-.nice-scroll::-webkit-scrollbar { width: 8px; height: 8px; }
+/* Subtle, slim scrollbar — Firefox */
+.nice-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(212, 196, 160, 0.45) transparent;
+}
+/* WebKit / Chromium */
+.nice-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
 .nice-scroll::-webkit-scrollbar-track { background: transparent; }
-.nice-scroll::-webkit-scrollbar-thumb { background: #d4c4a0; border-radius: 8px; }
-.nice-scroll::-webkit-scrollbar-thumb:hover { background: #b89d6a; }
+.nice-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgba(200, 168, 75, 0.55), rgba(212, 196, 160, 0.55));
+  border-radius: 999px;
+}
+.nice-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, rgba(200, 168, 75, 0.85), rgba(184, 157, 106, 0.85));
+}
+/* On touch devices the thumb adds visual noise — hide it (swipe still works) */
+@media (hover: none) and (pointer: coarse) {
+  .nice-scroll { scrollbar-width: none; }
+  .nice-scroll::-webkit-scrollbar { display: none; }
+}
 
 .mm-line, .mm-ex circle, .mm-ex text { transition: all 0.28s cubic-bezier(.4,0,.2,1); }
 .mm-ex { cursor: pointer; }
