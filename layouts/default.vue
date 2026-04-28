@@ -2,6 +2,7 @@
 const route = useRoute()
 
 const tabs = [
+  { to: '/pinyin',  han: '拼', label: 'Pinyin'   },
   { to: '/strokes', han: '笔', label: 'Strokes'  },
   { to: '/',        han: '部', label: 'Radicals' },
   { to: '/hsk1',    han: '一', label: 'HSK 1'    },
@@ -10,6 +11,7 @@ const tabs = [
 ]
 
 const isStrokes = computed(() => route.path.startsWith('/strokes'))
+const isPinyin  = computed(() => route.path.startsWith('/pinyin'))
 const hskMatch  = computed(() => route.path.match(/^\/hsk([123])/))
 
 const headerData = computed(() => {
@@ -25,6 +27,10 @@ const headerData = computed(() => {
   if (isStrokes.value) {
     return { icon: '笔画', eyebrow: 'Chinese Strokes', title: '5 groups · 36 variations',
              sourceHref: 'https://www.digmandarin.com/' }
+  }
+  if (isPinyin.value) {
+    return { icon: '拼音', eyebrow: 'Hanyu Pinyin', title: 'Initials · Finals · Tones · Audio',
+             sourceHref: 'https://www.digmandarin.com/chinese-pinyin-chart' }
   }
   return { icon: '部首', eyebrow: 'Chinese Radicals', title: 'Top 40 · Top 100 · All 214',
            sourceHref: 'https://www.hackingchinese.com/the-100-most-common-radicals-in-chinese/' }
@@ -91,14 +97,14 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
               <div class="shrink-0 w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold han font-bold">师</div>
               <div class="min-w-0">
                 <div class="text-[10px] tracking-[0.25em] uppercase text-gold-soft">Supervisor</div>
-                <div class="text-sm sm:text-base font-semibold text-cream truncate">Wen</div>
+                <div class="text-sm sm:text-base font-semibold text-cream truncate">Teacher: Wen</div>
               </div>
             </div>
             <div class="flex items-start gap-3">
               <div class="shrink-0 w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold han font-bold">作</div>
               <div class="min-w-0">
                 <div class="text-[10px] tracking-[0.25em] uppercase text-gold-soft">Created by</div>
-                <div class="text-sm sm:text-base font-semibold text-cream truncate">Moh</div>
+                <div class="text-sm sm:text-base font-semibold text-cream truncate">Eng: Moh</div>
               </div>
             </div>
           </div>
