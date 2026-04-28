@@ -10,6 +10,7 @@ const tabs = [
   { to: '/hsk2',     han: '二', label: 'HSK 2'    },
   { to: '/hsk3',     han: '三', label: 'HSK 3'    },
   { to: '/write',    han: '写', label: 'Write'    },
+  { to: '/sentence', han: '句', label: 'Sentence' },
   { to: '/game',     han: '游', label: 'Game'     },
 ]
 
@@ -18,6 +19,7 @@ const isStrokes  = computed(() => route.path.startsWith('/strokes'))
 const isPinyin   = computed(() => route.path.startsWith('/pinyin'))
 const isRadicals = computed(() => route.path.startsWith('/radicals'))
 const isWrite    = computed(() => route.path.startsWith('/write'))
+const isSentence = computed(() => route.path.startsWith('/sentence'))
 const isGame     = computed(() => route.path.startsWith('/game'))
 const hskMatch   = computed(() => route.path.match(/^\/hsk([123])/))
 
@@ -46,6 +48,10 @@ const headerData = computed(() => {
   if (isWrite.value) {
     return { icon: '书写', eyebrow: 'Practice Writing', title: 'Stroke order · Animate · Quiz',
              sourceHref: 'https://hanziwriter.org/' }
+  }
+  if (isSentence.value) {
+    return { icon: '造句', eyebrow: 'Sentence Builder', title: 'Order the words · Build a sentence',
+             sourceHref: '' }
   }
   if (isGame.value) {
     return { icon: '游戏', eyebrow: 'Memory Game', title: 'Quiz · Match · Remember Hanzi',
