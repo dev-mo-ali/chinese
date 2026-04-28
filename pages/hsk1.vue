@@ -1,5 +1,5 @@
 <script setup>
-import { HSK1_META, HSK1_LESSONS } from '~/composables/useHSK1.js'
+import { HSK1_META, HSK1_LESSONS, HSK1_STROKES } from '~/composables/useHSK1.js'
 
 useHead({ title: 'HSK 1 · Standard Course · 15 Lessons' })
 
@@ -35,6 +35,7 @@ const resetVocabReveals = () => { vocabRevealed.value = new Set() }
 const current = computed(() => HSK1_LESSONS.find(l => l.no === activeLesson.value))
 
 const totalVocab = computed(() => HSK1_LESSONS.reduce((s, l) => s + l.vocab.length, 0))
+const totalStrokes = computed(() => HSK1_STROKES.reduce((s, g) => s + g.items.length, 0))
 
 const allVocab = computed(() =>
   HSK1_LESSONS.flatMap(l => l.vocab.map(v => ({ ...v, lesson: l.no })))
@@ -412,6 +413,105 @@ const posColor = (pos) => posColors[pos] || '#6b7280'
       </footer>
     </article>
 
+    <!-- BASIC STROKES · jade brushwork -->
+    <article class="rounded-3xl shadow-card overflow-hidden border mb-8"
+             style="background:#fff; border-color:rgba(15,118,110,.22);"
+    >
+      <header class="flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b"
+              style="background: linear-gradient(135deg,#ecfdf5,#f0fdfa); border-color:rgba(15,118,110,.18);"
+      >
+        <span class="flex items-center justify-center w-10 h-10 rounded-lg han text-xl font-bold text-white shadow-chip"
+              style="background: linear-gradient(135deg,#0f766e,#14b8a6);">笔</span>
+        <div>
+          <div class="text-[10px] tracking-widest uppercase font-semibold" style="color:#0f766e">
+            Basic Strokes · 笔画
+          </div>
+          <div class="text-base sm:text-lg han font-bold text-ink">{{ totalStrokes }} strokes · Lessons 1–6</div>
+        </div>
+        <span class="ml-auto text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded text-white"
+              style="background:#0f766e;">17 总笔画</span>
+      </header>
+
+      <div class="p-4 sm:p-6 space-y-6"
+           style="background: linear-gradient(180deg,#f8fffd,#ffffff);">
+        <section v-for="group in HSK1_STROKES" :key="group.lesson">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="font-mono text-[10px] font-bold tracking-widest text-white px-2 py-0.5 rounded"
+                  style="background:#0f766e;">L{{ String(group.lesson).padStart(2,'0') }}</span>
+            <h4 class="text-sm font-bold tracking-wide" style="color:#134e4a;">{{ group.title }}</h4>
+            <span class="text-[10px] font-mono" style="color:#0f766e;opacity:.6;">{{ group.items.length }} strokes</span>
+            <span class="flex-1 h-px" style="background: linear-gradient(to right,rgba(15,118,110,.4) 0%, transparent 100%);"></span>
+          </div>
+
+          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <li v-for="(s, i) in group.items" :key="i"
+                class="stroke-card group relative grid grid-cols-[auto_1fr] items-center gap-3 px-3.5 py-3 rounded-xl bg-white border"
+                style="border-color:rgba(20,184,166,.25);"
+            >
+              <div class="stroke-tile flex items-center justify-center w-16 h-16 rounded-lg shrink-0 border"
+                   style="background: linear-gradient(135deg,#ecfdf5,#d1fae5); border-color:rgba(15,118,110,.3);"
+              >
+                <span class="han font-bold leading-none"
+                      style="color:#134e4a; font-size: 2.25rem;">{{ s.glyph }}</span>
+              </div>
+
+              <div class="min-w-0">
+                <div class="flex items-baseline gap-2 mb-0.5">
+                  <span class="han text-[15px] font-bold text-ink">{{ s.name }}</span>
+                  <span class="text-[12px] tracking-wide font-semibold" style="color:#0f766e">{{ s.pinyin }}</span>
+                </div>
+                <div class="text-[12px] text-ink-soft leading-snug mb-1.5">{{ s.en }}</div>
+                <div class="flex items-center flex-wrap gap-1.5">
+                  <span class="font-mono text-[10px] px-1.5 py-0.5 rounded tracking-widest"
+                        style="background:#ccfbf1;color:#0f766e;">{{ s.direction }}</span>
+                  <span v-for="(ch, ei) in s.ex" :key="ei"
+                        class="han text-[13px] font-semibold px-1.5 py-0.5 rounded border"
+                        style="color:#134e4a;background:#f0fdfa;border-color:rgba(20,184,166,.3);"
+                  >{{ ch }}</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Stroke order rules · short reference -->
+        <section class="rounded-2xl border p-4 sm:p-5"
+                 style="background: linear-gradient(135deg,#f0fdfa,#ecfdf5); border-color:rgba(15,118,110,.25);"
+        >
+          <div class="flex items-center gap-3 mb-3">
+            <span class="flex items-center justify-center w-8 h-8 rounded-lg han text-sm font-bold text-white shadow-chip"
+                  style="background: linear-gradient(135deg,#0f766e,#14b8a6);">顺</span>
+            <div>
+              <div class="text-[10px] font-semibold tracking-widest uppercase" style="color:#0f766e">Stroke Order Rules</div>
+              <div class="text-sm font-bold text-ink han">笔顺 · 6 条</div>
+            </div>
+          </div>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+            <li v-for="(rule, i) in [
+              { han: '先横后竖', p: 'héng xiān, shù hòu',  en: 'Horizontal before vertical',     ex: '十' },
+              { han: '先撇后捺', p: 'piě xiān, nà hòu',    en: 'Left-falling before right-falling', ex: '八' },
+              { han: '从上到下', p: 'cóng shàng dào xià', en: 'Top before bottom',                ex: '二' },
+              { han: '从左到右', p: 'cóng zuǒ dào yòu',   en: 'Left before right',                ex: '儿' },
+              { han: '先外后内', p: 'xiān wài hòu nèi',   en: 'Outside before inside',            ex: '四' },
+              { han: '先中后两边', p: 'xiān zhōng hòu liǎngbiān', en: 'Middle before sides',     ex: '小' },
+            ]" :key="i"
+                class="flex items-center gap-3 px-3 py-2 rounded-lg bg-white/80 border"
+                style="border-color:rgba(20,184,166,.3);"
+            >
+              <span class="font-mono text-[10px] font-bold text-white px-1.5 py-0.5 rounded shrink-0"
+                    style="background:#0f766e;">№ {{ String(i + 1).padStart(2,'0') }}</span>
+              <div class="min-w-0 flex-1">
+                <div class="han text-[13px] font-bold text-ink leading-tight">{{ rule.han }}</div>
+                <div class="text-[10.5px] tracking-wide" style="color:#0f766e;">{{ rule.p }}</div>
+                <div class="text-[11px] text-ink-soft italic leading-snug">{{ rule.en }}</div>
+              </div>
+              <span class="han text-2xl font-bold shrink-0" style="color:#134e4a;">{{ rule.ex }}</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
     <!-- ALL VOCAB · indigo dictionary -->
     <article class="rounded-3xl shadow-card overflow-hidden border"
              style="background:#fff; border-color:rgba(67,56,202,.2);"
@@ -497,6 +597,28 @@ const posColor = (pos) => posColors[pos] || '#6b7280'
 </template>
 
 <style scoped>
+/* Strokes · jade hover theme */
+.stroke-card {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
+}
+.stroke-card:hover {
+  transform: translateY(-2px);
+  border-color: #0f766e !important;
+  background-color: #f8fffd;
+  box-shadow: 0 10px 24px -10px rgba(15, 118, 110, .35),
+              0 2px 6px -2px rgba(15, 118, 110, .25);
+}
+.stroke-tile {
+  transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.stroke-card:hover .stroke-tile {
+  transform: rotate(-2deg) scale(1.05);
+  background: linear-gradient(135deg, #d1fae5, #a7f3d0) !important;
+  border-color: rgba(15, 118, 110, .55) !important;
+  box-shadow: 0 6px 14px -6px rgba(15, 118, 110, .55);
+}
+
 /* Glossary · indigo hover theme */
 .glossary-card {
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;

@@ -1213,4 +1213,62 @@ export const HSK1_LESSONS = [
   },
 ]
 
-export const useHSK1 = () => ({ HSK1_META, HSK1_LESSONS })
+// 17 basic strokes taught in HSK Standard Course 1 (Lessons 1–6)
+// Source: HSK 1 Standard Course · "Strokes of Chinese Characters (1)–(6)"
+export const HSK1_STROKES = [
+  {
+    lesson: 1,
+    title: 'Strokes (1)',
+    items: [
+      { glyph: '一', name: '横',    pinyin: 'héng', en: 'Horizontal',    direction: '→',  ex: ['一', '二'] },
+      { glyph: '丨', name: '竖',    pinyin: 'shù',  en: 'Vertical',      direction: '↓',  ex: ['十', '工'] },
+      { glyph: '丿', name: '撇',    pinyin: 'piě',  en: 'Left-falling',  direction: '↙',  ex: ['八', '人'] },
+      { glyph: '丶', name: '点',    pinyin: 'diǎn', en: 'Dot',           direction: '↘',  ex: ['不'] },
+      { glyph: '㇏', name: '捺',    pinyin: 'nà',   en: 'Right-falling', direction: '↘',  ex: ['大', '天'] },
+    ],
+  },
+  {
+    lesson: 2,
+    title: 'Strokes (2)',
+    items: [
+      { glyph: '𠃍', name: '横折',   pinyin: 'héngzhé', en: 'Horizontal-turning', direction: '→↓', ex: ['口', '日'] },
+      { glyph: '𠃊', name: '竖折',   pinyin: 'shùzhé',  en: 'Vertical-turning',   direction: '↓→', ex: ['山', '出'] },
+      { glyph: '亅', name: '竖钩',   pinyin: 'shùgōu',  en: 'Vertical hook',      direction: '↓↖', ex: ['丁', '小'] },
+    ],
+  },
+  {
+    lesson: 3,
+    title: 'Strokes (3)',
+    items: [
+      { glyph: '㇆', name: '横折钩', pinyin: 'héngzhégōu', en: 'Horizontal-turning hook', direction: '→↓↖', ex: ['门', '月'] },
+      { glyph: '㇃', name: '卧钩',   pinyin: 'wògōu',      en: 'Lying hook',              direction: '↘↖',  ex: ['心', '您'] },
+    ],
+  },
+  {
+    lesson: 4,
+    title: 'Strokes (4)',
+    items: [
+      { glyph: '㇄', name: '竖弯钩',     pinyin: 'shùwāngōu',     en: 'Vertical curved hook',          direction: '↓→↑', ex: ['七', '儿'] },
+      { glyph: '㇈', name: '横折弯钩',   pinyin: 'héngzhéwāngōu', en: 'Horizontal-turning curved hook', direction: '→↓→↑', ex: ['九', '几'] },
+    ],
+  },
+  {
+    lesson: 5,
+    title: 'Strokes (5)',
+    items: [
+      { glyph: '㇇', name: '横撇',  pinyin: 'héngpiě',  en: 'Horizontal to left-falling', direction: '→↙', ex: ['水', '又'] },
+      { glyph: '㇙', name: '撇点',  pinyin: 'piědiǎn',  en: 'Left-falling to dot',        direction: '↙↘', ex: ['女', '好'] },
+    ],
+  },
+  {
+    lesson: 6,
+    title: 'Strokes (6)',
+    items: [
+      { glyph: '㇜', name: '撇折', pinyin: 'piězhé', en: 'Left-falling to turning', direction: '↙→', ex: ['么', '东'] },
+      { glyph: '㇂', name: '斜钩', pinyin: 'xiégōu', en: 'Slanting hook',           direction: '↘↗', ex: ['我', '钱'] },
+      { glyph: '㇀', name: '提',   pinyin: 'tí',     en: 'Rising',                  direction: '↗',  ex: ['我', '打'] },
+    ],
+  },
+]
+
+export const useHSK1 = () => ({ HSK1_META, HSK1_LESSONS, HSK1_STROKES })
