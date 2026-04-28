@@ -81,8 +81,8 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
             class="absolute left-2 right-2 bottom-0 h-[3px] rounded-t bg-gold"></span>
         </NuxtLink>
       </nav>
-      <div class="h-1 bg-cream/10" aria-hidden="true">
-        <div class="h-full bg-[#c0392b] transition-[width] duration-75 ease-out" :style="{ width: scrollProgress + '%' }"></div>
+      <div class="h-1 bg-cream/10 overflow-hidden" aria-hidden="true">
+        <div class="progress-bar h-full transition-[width] duration-75 ease-out" :style="{ width: scrollProgress + '%' }"></div>
       </div>
     </header>
 
@@ -135,3 +135,44 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
     </Transition>
   </div>
 </template>
+
+<style scoped>
+.progress-bar {
+  position: relative;
+  background: linear-gradient(90deg, #bbf7d0 0%, #86efac 35%, #4ade80 65%, #86efac 100%);
+  background-size: 200% 100%;
+  box-shadow:
+    0 0 6px rgba(134, 239, 172, .85),
+    0 0 14px rgba(74, 222, 128, .55),
+    0 0 22px rgba(134, 239, 172, .35);
+  animation: progress-flow 3s linear infinite;
+}
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(255, 255, 255, .85) 50%,
+    transparent 65%,
+    transparent 100%
+  );
+  background-size: 250% 100%;
+  animation: progress-sheen 2.4s linear infinite;
+  pointer-events: none;
+}
+@keyframes progress-flow {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@keyframes progress-sheen {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -50% 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar,
+  .progress-bar::after { animation: none; }
+}
+</style>
