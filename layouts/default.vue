@@ -2,17 +2,22 @@
 const route = useRoute()
 
 const tabs = [
-  { to: '/pinyin',  han: '拼', label: 'Pinyin'   },
-  { to: '/strokes', han: '笔', label: 'Strokes'  },
-  { to: '/',        han: '部', label: 'Radicals' },
-  { to: '/hsk1',    han: '一', label: 'HSK 1'    },
-  { to: '/hsk2',    han: '二', label: 'HSK 2'    },
-  { to: '/hsk3',    han: '三', label: 'HSK 3'    },
+  { to: '/',         han: '家', label: 'Home'     },
+  { to: '/pinyin',   han: '拼', label: 'Pinyin'   },
+  { to: '/strokes',  han: '笔', label: 'Strokes'  },
+  { to: '/radicals', han: '部', label: 'Radicals' },
+  { to: '/hsk1',     han: '一', label: 'HSK 1'    },
+  { to: '/hsk2',     han: '二', label: 'HSK 2'    },
+  { to: '/hsk3',     han: '三', label: 'HSK 3'    },
+  { to: '/game',     han: '游', label: 'Game'     },
 ]
 
-const isStrokes = computed(() => route.path.startsWith('/strokes'))
-const isPinyin  = computed(() => route.path.startsWith('/pinyin'))
-const hskMatch  = computed(() => route.path.match(/^\/hsk([123])/))
+const isHome     = computed(() => route.path === '/')
+const isStrokes  = computed(() => route.path.startsWith('/strokes'))
+const isPinyin   = computed(() => route.path.startsWith('/pinyin'))
+const isRadicals = computed(() => route.path.startsWith('/radicals'))
+const isGame     = computed(() => route.path.startsWith('/game'))
+const hskMatch   = computed(() => route.path.match(/^\/hsk([123])/))
 
 const headerData = computed(() => {
   if (hskMatch.value) {
@@ -32,8 +37,16 @@ const headerData = computed(() => {
     return { icon: '拼音', eyebrow: 'Hanyu Pinyin', title: 'Initials · Finals · Tones · Audio',
              sourceHref: 'https://www.digmandarin.com/chinese-pinyin-chart' }
   }
-  return { icon: '部首', eyebrow: 'Chinese Radicals', title: 'Top 40 · Top 100 · All 214',
-           sourceHref: 'https://www.hackingchinese.com/the-100-most-common-radicals-in-chinese/' }
+  if (isRadicals.value) {
+    return { icon: '部首', eyebrow: 'Chinese Radicals', title: 'Top 40 · Top 100 · All 214',
+             sourceHref: 'https://www.hackingchinese.com/the-100-most-common-radicals-in-chinese/' }
+  }
+  if (isGame.value) {
+    return { icon: '游戏', eyebrow: 'Memory Game', title: 'Quiz · Match · Remember Hanzi',
+             sourceHref: '' }
+  }
+  return { icon: '汉语', eyebrow: 'Welcome · 欢迎', title: 'Learn Chinese · Step by step',
+           sourceHref: '' }
 })
 
 const bgClass = computed(() => (isStrokes.value || hskMatch.value) ? 'paper-bg-warm' : 'paper-bg')
