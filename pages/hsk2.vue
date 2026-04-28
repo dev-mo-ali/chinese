@@ -1,5 +1,5 @@
 <script setup>
-import { HSK2_META, HSK2_LESSONS } from '~/composables/useHSK2.js'
+import { HSK2_META, HSK2_LESSONS, HSK2_STROKES, HSK2_CHARACTERS, HSK2_RADICALS } from '~/composables/useHSK2.js'
 
 useHead({ title: 'HSK 2 · Standard Course · 15 Lessons' })
 
@@ -35,6 +35,17 @@ const resetVocabReveals = () => { vocabRevealed.value = new Set() }
 const current = computed(() => HSK2_LESSONS.find(l => l.no === activeLesson.value))
 
 const totalVocab = computed(() => HSK2_LESSONS.reduce((s, l) => s + l.vocab.length, 0))
+const totalStrokes = computed(() => HSK2_STROKES.reduce((s, g) => s + g.items.length, 0))
+const totalChars = computed(() => HSK2_CHARACTERS.length)
+const radicalInfo = (r) => HSK2_RADICALS[r] || { name: '', en: '', desc: '' }
+const charsByLesson = computed(() => {
+  const map = new Map()
+  for (const ch of HSK2_CHARACTERS) {
+    if (!map.has(ch.lesson)) map.set(ch.lesson, [])
+    map.get(ch.lesson).push(ch)
+  }
+  return [...map.entries()].map(([lesson, items]) => ({ lesson, items }))
+})
 
 const allVocab = computed(() =>
   HSK2_LESSONS.flatMap(l => l.vocab.map(v => ({ ...v, lesson: l.no })))
@@ -405,6 +416,171 @@ const posColor = (pos) => posColors[pos] || '#6b7280'
       </footer>
     </article>
 
+    <!-- BASIC STROKES · jade brushwork -->
+    <article class="rounded-3xl shadow-card overflow-hidden border mb-8"
+             style="background:#fff; border-color:rgba(15,118,110,.22);"
+    >
+      <header class="flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b"
+              style="background: linear-gradient(135deg,#ecfdf5,#f0fdfa); border-color:rgba(15,118,110,.18);"
+      >
+        <span class="flex items-center justify-center w-10 h-10 rounded-lg han text-xl font-bold text-white shadow-chip"
+              style="background: linear-gradient(135deg,#0f766e,#14b8a6);">笔</span>
+        <div>
+          <div class="text-[10px] tracking-widest uppercase font-semibold" style="color:#0f766e">
+            Basic Strokes · 笔画
+          </div>
+          <div class="text-base sm:text-lg han font-bold text-ink">{{ totalStrokes }} new strokes · Lessons 1–4</div>
+        </div>
+        <span class="ml-auto text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded text-white"
+              style="background:#0f766e;">8 新笔画</span>
+      </header>
+
+      <div class="p-4 sm:p-6 space-y-6"
+           style="background: linear-gradient(180deg,#f8fffd,#ffffff);">
+        <section v-for="group in HSK2_STROKES" :key="group.lesson">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="font-mono text-[10px] font-bold tracking-widest text-white px-2 py-0.5 rounded"
+                  style="background:#0f766e;">L{{ String(group.lesson).padStart(2,'0') }}</span>
+            <h4 class="text-sm font-bold tracking-wide" style="color:#134e4a;">{{ group.title }}</h4>
+            <span class="text-[10px] font-mono" style="color:#0f766e;opacity:.6;">{{ group.items.length }} strokes</span>
+            <span class="flex-1 h-px" style="background: linear-gradient(to right,rgba(15,118,110,.4) 0%, transparent 100%);"></span>
+          </div>
+
+          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <li v-for="(s, i) in group.items" :key="i"
+                class="stroke-card group relative grid grid-cols-[auto_1fr] items-center gap-3 px-3.5 py-3 rounded-xl bg-white border"
+                style="border-color:rgba(20,184,166,.25);"
+            >
+              <div class="stroke-tile flex items-center justify-center w-16 h-16 rounded-lg shrink-0 border"
+                   style="background: linear-gradient(135deg,#ecfdf5,#d1fae5); border-color:rgba(15,118,110,.3);"
+              >
+                <span class="han font-bold leading-none"
+                      style="color:#134e4a; font-size: 2.25rem;">{{ s.glyph }}</span>
+              </div>
+
+              <div class="min-w-0">
+                <div class="flex items-baseline gap-2 mb-0.5 flex-wrap">
+                  <span class="han text-[15px] font-bold text-ink">{{ s.name }}</span>
+                  <span class="text-[12px] tracking-wide font-semibold" style="color:#0f766e">{{ s.pinyin }}</span>
+                </div>
+                <div class="text-[12px] text-ink-soft leading-snug mb-1.5">{{ s.en }}</div>
+                <div class="flex items-center flex-wrap gap-1.5">
+                  <span class="font-mono text-[10px] px-1.5 py-0.5 rounded tracking-widest"
+                        style="background:#ccfbf1;color:#0f766e;">{{ s.direction }}</span>
+                  <span class="han text-[12.5px] font-semibold px-1.5 py-0.5 rounded border"
+                        style="color:#134e4a;background:#f0fdfa;border-color:rgba(20,184,166,.3);"
+                  >{{ s.ex }}</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
+    <!-- SINGLE-COMPONENT CHARACTERS · amber scroll -->
+    <article class="rounded-3xl shadow-card overflow-hidden border mb-8"
+             style="background:#fff; border-color:rgba(124,90,30,.25);"
+    >
+      <header class="flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b"
+              style="background: linear-gradient(135deg,#fffbeb,#fef3c7); border-color:rgba(124,90,30,.2);"
+      >
+        <span class="flex items-center justify-center w-10 h-10 rounded-lg han text-xl font-bold text-white shadow-chip"
+              style="background: linear-gradient(135deg,#7c5a1e,#b45309);">字</span>
+        <div>
+          <div class="text-[10px] tracking-widest uppercase font-semibold" style="color:#7c5a1e">
+            Single-Component Characters · 单体字
+          </div>
+          <div class="text-base sm:text-lg han font-bold text-ink">{{ totalChars }} new characters · Lessons 1–6</div>
+        </div>
+        <span class="ml-auto text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded text-white"
+              style="background:#7c5a1e;">14 新单体字</span>
+      </header>
+
+      <div class="p-4 sm:p-6 space-y-7"
+           style="background: linear-gradient(180deg,#fffdf6,#ffffff);">
+        <section v-for="group in charsByLesson" :key="group.lesson">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="font-mono text-[10px] font-bold tracking-widest text-white px-2 py-0.5 rounded"
+                  style="background:#7c5a1e;">L{{ String(group.lesson).padStart(2,'0') }}</span>
+            <h4 class="text-sm font-bold tracking-wide" style="color:#5a3a06;">Lesson {{ group.lesson }}</h4>
+            <span class="text-[10px] font-mono" style="color:#7c5a1e;opacity:.6;">{{ group.items.length }} characters</span>
+            <span class="flex-1 h-px" style="background: linear-gradient(to right,rgba(124,90,30,.4) 0%, transparent 100%);"></span>
+          </div>
+
+          <!-- Table layout (md+) -->
+          <div class="hidden md:block overflow-x-auto rounded-xl border" style="border-color:rgba(124,90,30,.22);">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr style="background: linear-gradient(135deg,#fef3c7,#fde68a); color:#5a3a06;">
+                  <th class="px-3 py-2 text-[10px] font-mono uppercase tracking-widest font-bold w-20">Char</th>
+                  <th class="px-3 py-2 text-[10px] font-mono uppercase tracking-widest font-bold w-28">Pinyin</th>
+                  <th class="px-3 py-2 text-[10px] font-mono uppercase tracking-widest font-bold w-96">Radical</th>
+                  <th class="px-3 py-2 text-[10px] font-mono uppercase tracking-widest font-bold w-44">Meaning</th>
+                  <th class="px-3 py-2 text-[10px] font-mono uppercase tracking-widest font-bold">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(ch, i) in group.items" :key="i"
+                    class="char-row border-t"
+                    style="border-color:rgba(124,90,30,.14);">
+                  <td class="px-3 py-3 align-middle">
+                    <span class="han font-bold leading-none" style="color:#5a3a06; font-size:2rem;">{{ ch.c }}</span>
+                  </td>
+                  <td class="px-3 py-3 align-middle">
+                    <span class="text-[13px] tracking-wide font-semibold" style="color:#7c5a1e">{{ ch.p }}</span>
+                  </td>
+                  <td class="px-3 py-3 align-middle">
+                    <div class="flex items-start gap-2">
+                      <span class="han text-lg font-bold inline-flex items-center justify-center w-10 h-10 rounded-md border shrink-0"
+                            style="color:#5a3a06;background:#fffbeb;border-color:rgba(124,90,30,.3);">{{ ch.radical }}</span>
+                      <div class="min-w-0">
+                        <div class="flex items-baseline gap-1.5 leading-tight">
+                          <span class="text-[12px] font-semibold" style="color:#7c5a1e">{{ radicalInfo(ch.radical).name }}</span>
+                          <span class="text-[11px] text-ink-soft">· {{ radicalInfo(ch.radical).en }}</span>
+                        </div>
+                        <div class="text-[11px] text-ink-soft leading-snug italic mt-0.5">{{ radicalInfo(ch.radical).desc }}</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-3 py-3 align-middle text-[13px] text-ink font-medium">{{ ch.en }}</td>
+                  <td class="px-3 py-3 align-middle text-[12.5px] text-ink-soft leading-snug italic">{{ ch.desc }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Card layout (mobile) -->
+          <ul class="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <li v-for="(ch, i) in group.items" :key="i"
+                class="char-card relative grid grid-cols-[auto_1fr] gap-3 px-3.5 py-3 rounded-xl bg-white border"
+                style="border-color:rgba(124,90,30,.22);">
+              <div class="flex flex-col items-center justify-center gap-1">
+                <span class="han font-bold leading-none" style="color:#5a3a06; font-size:2.25rem;">{{ ch.c }}</span>
+                <span class="han text-[11px] font-bold inline-flex items-center justify-center w-7 h-7 rounded border"
+                      style="color:#5a3a06;background:#fffbeb;border-color:rgba(124,90,30,.3);"
+                      :title="`Radical: ${ch.radical} (${radicalInfo(ch.radical).name}) — ${radicalInfo(ch.radical).en}`">{{ ch.radical }}</span>
+              </div>
+              <div class="min-w-0">
+                <div class="flex items-baseline gap-2 mb-0.5">
+                  <span class="text-[13px] tracking-wide font-semibold" style="color:#7c5a1e">{{ ch.p }}</span>
+                  <span class="text-[12px] text-ink font-medium">· {{ ch.en }}</span>
+                </div>
+                <div class="text-[11.5px] text-ink-soft leading-snug italic">{{ ch.desc }}</div>
+                <div class="mt-1.5 pt-1.5 border-t text-[11px]" style="border-color:rgba(124,90,30,.18);">
+                  <span class="font-mono uppercase tracking-widest text-[9px] font-bold" style="color:#7c5a1e">Radical</span>
+                  <span class="ml-1 font-semibold" style="color:#5a3a06">{{ ch.radical }}</span>
+                  <span class="ml-1" style="color:#7c5a1e">{{ radicalInfo(ch.radical).name }}</span>
+                  <span class="text-ink-soft"> · {{ radicalInfo(ch.radical).en }}</span>
+                  <div class="text-ink-soft italic leading-snug mt-0.5">{{ radicalInfo(ch.radical).desc }}</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
     <!-- ALL VOCAB · indigo dictionary -->
     <article class="rounded-3xl shadow-card overflow-hidden border"
              style="background:#fff; border-color:rgba(67,56,202,.2);"
@@ -485,6 +661,42 @@ const posColor = (pos) => posColors[pos] || '#6b7280'
 </template>
 
 <style scoped>
+/* Single-component characters · amber hover */
+.char-row { transition: background-color .2s ease; }
+.char-row:hover { background-color: #fffbeb; }
+.char-card {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
+}
+.char-card:hover {
+  transform: translateY(-2px);
+  border-color: #b45309 !important;
+  background-color: #fffdf6;
+  box-shadow: 0 10px 24px -10px rgba(124, 90, 30, .35);
+}
+
+/* Strokes · jade hover theme */
+.stroke-card {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
+}
+.stroke-card:hover {
+  transform: translateY(-2px);
+  border-color: #0f766e !important;
+  background-color: #f8fffd;
+  box-shadow: 0 10px 24px -10px rgba(15, 118, 110, .35),
+              0 2px 6px -2px rgba(15, 118, 110, .25);
+}
+.stroke-tile {
+  transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.stroke-card:hover .stroke-tile {
+  transform: rotate(-2deg) scale(1.05);
+  background: linear-gradient(135deg, #d1fae5, #a7f3d0) !important;
+  border-color: rgba(15, 118, 110, .55) !important;
+  box-shadow: 0 6px 14px -6px rgba(15, 118, 110, .55);
+}
+
 .glossary-card { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease; }
 .glossary-card:hover {
   transform: translateY(-2px);

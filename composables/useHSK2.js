@@ -932,3 +932,123 @@ export const HSK2_LESSONS = [
     ],
   },
 ]
+
+// HSK 2 introduces 8 additional basic strokes (continuing from HSK 1's 1–6).
+// Stroke groups follow the textbook's "Basic Strokes of Chinese Characters
+// (7) – (10)" sections in Lessons 1–4.
+export const HSK2_STROKES = [
+  {
+    lesson: 1,
+    title: 'Basic Strokes of Chinese Characters (7)',
+    items: [
+      { glyph: '㇆', name: '横折提',     pinyin: 'héngzhétí',
+        en: 'Horizontal-Turning-Rising',
+        direction: '→ ↓ ↗',
+        ex: '话 huà · 说 shuō' },
+      { glyph: '𠃌', name: '横折折折钩', pinyin: 'héngzhézhézhégōu',
+        en: 'Horizontal-Triple-Turning-Hook',
+        direction: '→ ↓ → ↓ ↖',
+        ex: '奶 nǎi · 场 chǎng' },
+    ],
+  },
+  {
+    lesson: 2,
+    title: 'Basic Strokes of Chinese Characters (8)',
+    items: [
+      { glyph: '㇌', name: '横撇弯钩',   pinyin: 'héngpiěwāngōu',
+        en: 'Horizontal-Left-Falling-Curved-Hook',
+        direction: '→ ↙ ⤺ ↖',
+        ex: '队 duì · 阵 zhèn' },
+      { glyph: '㇋', name: '横折折撇',   pinyin: 'héngzhézhépiě',
+        en: 'Horizontal-Double-Turning-Left-Falling',
+        direction: '→ ↓ → ↙',
+        ex: '及 jí · 级 jí' },
+    ],
+  },
+  {
+    lesson: 3,
+    title: 'Basic Strokes of Chinese Characters (9)',
+    items: [
+      { glyph: '㇂', name: '横折斜钩',   pinyin: 'héngzhéxiégōu',
+        en: 'Horizontal-Turning-Slanting-Hook',
+        direction: '→ ↘ ↖',
+        ex: '飞 fēi · 风 fēng' },
+      { glyph: '㇉', name: '弯钩',       pinyin: 'wāngōu',
+        en: 'Crooked Hook',
+        direction: '⤺ ↖',
+        ex: '狗 gǒu · 猫 māo' },
+    ],
+  },
+  {
+    lesson: 4,
+    title: 'Basic Strokes of Chinese Characters (10)',
+    items: [
+      { glyph: '㇙', name: '竖提',       pinyin: 'shùtí',
+        en: 'Vertical-Rising',
+        direction: '↓ ↗',
+        ex: '长 cháng · 民 mín' },
+      { glyph: '𠃊', name: '竖折折钩',   pinyin: 'shùzhézhégōu',
+        en: 'Vertical-Double-Turning-Hook',
+        direction: '↓ → ↓ ↖',
+        ex: '马 mǎ · 写 xiě' },
+    ],
+  },
+]
+
+// HSK 2 introduces 14 additional single-component characters across the
+// first six lessons. Etymology / description notes are condensed from the
+// textbook's character explanation boxes.
+export const HSK2_CHARACTERS = [
+  { lesson: 1, c: '为', p: 'wéi/wèi', radical: '丶', en: 'to do · for',
+    desc: 'The complex form 為 looks like a hand pulling an elephant for work — originally "to work".' },
+  { lesson: 1, c: '也', p: 'yě',      radical: '乙', en: 'also · too',
+    desc: 'The ancient form looks like a long snake with a pointed head; now used as the adverb "also".' },
+
+  { lesson: 2, c: '生', p: 'shēng',   radical: '生', en: 'to be born · life · raw',
+    desc: 'A young seedling sprouting from the earth — "to germinate and grow"; extended to "to live", "to get (ill)".' },
+  { lesson: 2, c: '高', p: 'gāo',     radical: '高', en: 'tall · high',
+    desc: 'Originally a tall pavilion — means "tall" or "high".' },
+
+  { lesson: 3, c: '手', p: 'shǒu',    radical: '手', en: 'hand',
+    desc: 'An image of a human hand with five fingers — means "hand".' },
+  { lesson: 3, c: '丈', p: 'zhàng',   radical: '一', en: 'unit of length · senior',
+    desc: 'Originally an old person holding a walking stick; now a unit of length (≈ 3.3 m) and a respectful term for an elder.' },
+  { lesson: 3, c: '夫', p: 'fū',      radical: '大', en: 'man · husband',
+    desc: 'Originally an adult man wearing a hairpin; now usually means "a man" or "husband".' },
+
+  { lesson: 4, c: '两', p: 'liǎng',   radical: '一', en: 'two · a pair',
+    desc: 'Originally a yoke fastened across two horses with a pair of saddles — means "two" or "a pair".' },
+  { lesson: 4, c: '乐', p: 'yuè/lè',  radical: '丿', en: 'music (yuè) · happy (lè)',
+    desc: 'The complex form 樂 originally referred to musical instruments ("music", yuè); now also "joyful, happy" (lè).' },
+  { lesson: 4, c: '长', p: 'cháng/zhǎng', radical: '丿', en: 'long (cháng) · to grow / elder (zhǎng)',
+    desc: 'An old person holding a walking stick — extended to "long distance" (cháng) and "elder / to grow up" (zhǎng).' },
+
+  { lesson: 5, c: '鱼', p: 'yú',      radical: '鱼', en: 'fish',
+    desc: 'A pictograph of a whole fish — means "fish".' },
+  { lesson: 5, c: '衣', p: 'yī',      radical: '衣', en: 'clothes',
+    desc: 'An ancient Chinese upper garment — now refers to clothes in general.' },
+
+  { lesson: 6, c: '门', p: 'mén',     radical: '门', en: 'door · gate',
+    desc: 'Originally the two panels of a door at the entrance of a house, which can open and close.' },
+  { lesson: 6, c: '羊', p: 'yáng',    radical: '羊', en: 'sheep · goat',
+    desc: 'A sheep’s head facing us, with curving horns — means "sheep".' },
+]
+
+// Kangxi-radical lookup for all radicals appearing in HSK2_CHARACTERS.
+// Each entry: { name (pinyin), pinyin, en, desc }.
+export const HSK2_RADICALS = {
+  '丶': { name: 'zhǔ',  pinyin: 'zhǔ',  en: 'dot',         desc: 'A single dot stroke; one of the most basic radicals.' },
+  '乙': { name: 'yǐ',   pinyin: 'yǐ',   en: 'second',      desc: 'A twisting/hook stroke; the second of the Heavenly Stems.' },
+  '一': { name: 'yī',   pinyin: 'yī',   en: 'one',         desc: 'A single horizontal stroke; the radical for "one" and many basic numerals.' },
+  '丿': { name: 'piě',  pinyin: 'piě',  en: 'slash',       desc: 'A left-falling stroke radical, often the first stroke in many characters.' },
+  '生': { name: 'shēng',pinyin: 'shēng',en: 'life · birth',desc: 'A young plant sprouting from the soil; relates to growth, life, birth.' },
+  '高': { name: 'gāo',  pinyin: 'gāo',  en: 'tall',        desc: 'A tall watchtower or pavilion; relates to height and grandeur.' },
+  '手': { name: 'shǒu', pinyin: 'shǒu', en: 'hand',        desc: 'A picture of a hand with five fingers; relates to actions done by hand.' },
+  '大': { name: 'dà',   pinyin: 'dà',   en: 'big',         desc: 'A person with outstretched arms; relates to size and greatness.' },
+  '鱼': { name: 'yú',   pinyin: 'yú',   en: 'fish',        desc: 'A pictograph of a fish; relates to fish and aquatic life.' },
+  '衣': { name: 'yī',   pinyin: 'yī',   en: 'clothes',     desc: 'A picture of an upper garment; relates to clothing and fabric.' },
+  '门': { name: 'mén',  pinyin: 'mén',  en: 'door · gate', desc: 'Two door panels; relates to gates, doors and entrances.' },
+  '羊': { name: 'yáng', pinyin: 'yáng', en: 'sheep',       desc: 'A sheep’s head with curving horns; relates to sheep and goats.' },
+}
+
+export const useHSK2 = () => ({ HSK2_META, HSK2_LESSONS, HSK2_STROKES, HSK2_CHARACTERS, HSK2_RADICALS })
