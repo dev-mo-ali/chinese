@@ -1,5 +1,5 @@
 <script setup>
-import { HSK1_META, HSK1_LESSONS, HSK1_STROKES } from '~/composables/useHSK1.js'
+import { HSK1_META, HSK1_LESSONS, HSK1_STROKES, HSK1_CHARACTERS, HSK1_RADICALS } from '~/composables/useHSK1.js'
 
 useHead({ title: 'HSK 1 · Standard Course · 15 Lessons' })
 
@@ -36,6 +36,16 @@ const current = computed(() => HSK1_LESSONS.find(l => l.no === activeLesson.valu
 
 const totalVocab = computed(() => HSK1_LESSONS.reduce((s, l) => s + l.vocab.length, 0))
 const totalStrokes = computed(() => HSK1_STROKES.reduce((s, g) => s + g.items.length, 0))
+const totalChars = computed(() => HSK1_CHARACTERS.length)
+const radicalInfo = (r) => HSK1_RADICALS[r] || { name: '', en: '', desc: '' }
+const charsByLesson = computed(() => {
+  const map = new Map()
+  for (const ch of HSK1_CHARACTERS) {
+    if (!map.has(ch.lesson)) map.set(ch.lesson, [])
+    map.get(ch.lesson).push(ch)
+  }
+  return [...map.entries()].map(([lesson, items]) => ({ lesson, items }))
+})
 
 const allVocab = computed(() =>
   HSK1_LESSONS.flatMap(l => l.vocab.map(v => ({ ...v, lesson: l.no })))
@@ -512,6 +522,109 @@ const posColor = (pos) => posColors[pos] || '#6b7280'
       </div>
     </article>
 
+    <!-- SINGLE-COMPONENT CHARACTERS · amber scroll -->
+    <article class="rounded-3xl shadow-card overflow-hidden border mb-8"
+             style="background:#fff; border-color:rgba(124,90,30,.25);"
+    >
+      <header class="flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b"
+              style="background: linear-gradient(135deg,#fffbeb,#fef3c7); border-color:rgba(124,90,30,.2);"
+      >
+        <span class="flex items-center justify-center w-10 h-10 rounded-lg han text-xl font-bold text-white shadow-chip"
+              style="background: linear-gradient(135deg,#7c5a1e,#b45309);">字</span>
+        <div>
+          <div class="text-[10px] tracking-widest uppercase font-semibold" style="color:#7c5a1e">
+            Single-Component Characters · 单体字
+          </div>
+          <div class="text-base sm:text-lg han font-bold text-ink">{{ totalChars }} characters · Lessons 1–15</div>
+        </div>
+        <span class="ml-auto text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded text-white"
+              style="background:#7c5a1e;">52 单体字</span>
+      </header>
+
+      <div class="p-4 sm:p-6 space-y-7"
+           style="background: linear-gradient(180deg,#fffdf6,#ffffff);">
+        <section v-for="group in charsByLesson" :key="group.lesson">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="font-mono text-[10px] font-bold tracking-widest text-white px-2 py-0.5 rounded"
+                  style="background:#7c5a1e;">L{{ String(group.lesson).padStart(2,'0') }}</span>
+            <h4 class="text-sm font-bold tracking-wide" style="color:#5a3a06;">Lesson {{ group.lesson }}</h4>
+            <span class="text-[10px] font-mono" style="color:#7c5a1e;opacity:.6;">{{ group.items.length }} characters</span>
+            <span class="flex-1 h-px" style="background: linear-gradient(to right,rgba(124,90,30,.4) 0%, transparent 100%);"></span>
+          </div>
+
+          <!-- Table layout (md+) -->
+          <div class="hidden md:block overflow-x-auto rounded-xl border" style="border-color:rgba(124,90,30,.22);">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr style="background: linear-gradient(135deg,#fef3c7,#fde68a); color:#5a3a06;">
+                  <th class="px-3 py-2 text-[10px] font-mono uppercase tracking-widest font-bold w-20">Char</th>
+                  <th class="px-3 py-2 text-[10px] font-mono uppercase tracking-widest font-bold w-28">Pinyin</th>
+                  <th class="px-3 py-2 text-[10px] font-mono uppercase tracking-widest font-bold w-96">Radical</th>
+                  <th class="px-3 py-2 text-[10px] font-mono uppercase tracking-widest font-bold w-44">Meaning</th>
+                  <th class="px-3 py-2 text-[10px] font-mono uppercase tracking-widest font-bold">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(ch, i) in group.items" :key="i"
+                    class="char-row border-t"
+                    style="border-color:rgba(124,90,30,.14);">
+                  <td class="px-3 py-3 align-middle">
+                    <span class="han font-bold leading-none" style="color:#5a3a06; font-size:2rem;">{{ ch.c }}</span>
+                  </td>
+                  <td class="px-3 py-3 align-middle">
+                    <span class="text-[13px] tracking-wide font-semibold" style="color:#7c5a1e">{{ ch.p }}</span>
+                  </td>
+                  <td class="px-3 py-3 align-middle">
+                    <div class="flex items-start gap-2">
+                      <span class="han text-lg font-bold inline-flex items-center justify-center w-10 h-10 rounded-md border shrink-0"
+                            style="color:#5a3a06;background:#fffbeb;border-color:rgba(124,90,30,.3);">{{ ch.radical }}</span>
+                      <div class="min-w-0">
+                        <div class="flex items-baseline gap-1.5 leading-tight">
+                          <span class="text-[12px] font-semibold" style="color:#7c5a1e">{{ radicalInfo(ch.radical).name }}</span>
+                          <span class="text-[11px] text-ink-soft">· {{ radicalInfo(ch.radical).en }}</span>
+                        </div>
+                        <div class="text-[11px] text-ink-soft leading-snug italic mt-0.5">{{ radicalInfo(ch.radical).desc }}</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-3 py-3 align-middle text-[13px] text-ink font-medium">{{ ch.en }}</td>
+                  <td class="px-3 py-3 align-middle text-[12.5px] text-ink-soft leading-snug italic">{{ ch.desc }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Card layout (mobile) -->
+          <ul class="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <li v-for="(ch, i) in group.items" :key="i"
+                class="char-card relative grid grid-cols-[auto_1fr] gap-3 px-3.5 py-3 rounded-xl bg-white border"
+                style="border-color:rgba(124,90,30,.22);">
+              <div class="flex flex-col items-center justify-center gap-1">
+                <span class="han font-bold leading-none" style="color:#5a3a06; font-size:2.25rem;">{{ ch.c }}</span>
+                <span class="han text-[11px] font-bold inline-flex items-center justify-center w-7 h-7 rounded border"
+                      style="color:#5a3a06;background:#fffbeb;border-color:rgba(124,90,30,.3);"
+                      :title="`Radical: ${ch.radical} (${radicalInfo(ch.radical).name}) — ${radicalInfo(ch.radical).en}`">{{ ch.radical }}</span>
+              </div>
+              <div class="min-w-0">
+                <div class="flex items-baseline gap-2 mb-0.5">
+                  <span class="text-[13px] tracking-wide font-semibold" style="color:#7c5a1e">{{ ch.p }}</span>
+                  <span class="text-[12px] text-ink font-medium">· {{ ch.en }}</span>
+                </div>
+                <div class="text-[11.5px] text-ink-soft leading-snug italic">{{ ch.desc }}</div>
+                <div class="mt-1.5 pt-1.5 border-t text-[11px]" style="border-color:rgba(124,90,30,.18);">
+                  <span class="font-mono uppercase tracking-widest text-[9px] font-bold" style="color:#7c5a1e">Radical</span>
+                  <span class="ml-1 font-semibold" style="color:#5a3a06">{{ ch.radical }}</span>
+                  <span class="ml-1" style="color:#7c5a1e">{{ radicalInfo(ch.radical).name }}</span>
+                  <span class="text-ink-soft"> · {{ radicalInfo(ch.radical).en }}</span>
+                  <div class="text-ink-soft italic leading-snug mt-0.5">{{ radicalInfo(ch.radical).desc }}</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
     <!-- ALL VOCAB · indigo dictionary -->
     <article class="rounded-3xl shadow-card overflow-hidden border"
              style="background:#fff; border-color:rgba(67,56,202,.2);"
@@ -597,6 +710,20 @@ const posColor = (pos) => posColors[pos] || '#6b7280'
 </template>
 
 <style scoped>
+/* Single-component characters · amber hover */
+.char-row { transition: background-color .2s ease; }
+.char-row:hover { background-color: #fffbeb; }
+.char-card {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
+}
+.char-card:hover {
+  transform: translateY(-2px);
+  border-color: #b45309 !important;
+  background-color: #fffdf6;
+  box-shadow: 0 10px 24px -10px rgba(124, 90, 30, .35);
+}
+
 /* Strokes · jade hover theme */
 .stroke-card {
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;

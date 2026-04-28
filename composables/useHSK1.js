@@ -1271,4 +1271,119 @@ export const HSK1_STROKES = [
   },
 ]
 
-export const useHSK1 = () => ({ HSK1_META, HSK1_LESSONS, HSK1_STROKES })
+// 52 single-component characters (单体字) introduced in the "Characters" section
+// of each lesson in HSK Standard Course 1. Etymology notes are condensed from
+// the textbook's character explanations.
+
+// Kangxi radical lookup for the radicals that appear in HSK 1
+// single-component characters. Each entry: { name, pinyin, en, desc }.
+export const HSK1_RADICALS = {
+  '一': { name: 'yī',     pinyin: 'yī',    en: 'one',         desc: 'A single horizontal stroke; the radical for "one" and many basic numerals.' },
+  '二': { name: 'èr',     pinyin: 'èr',    en: 'two',         desc: 'Two stacked horizontal strokes; the radical for "two".' },
+  '十': { name: 'shí',    pinyin: 'shí',   en: 'ten',         desc: 'A cross-shaped radical meaning "ten" or "complete".' },
+  '八': { name: 'bā',     pinyin: 'bā',    en: 'eight',       desc: 'Two strokes parting outward; conveys "split" or "divide".' },
+  '亠': { name: 'tóu',    pinyin: 'tóu',   en: 'lid',         desc: 'A "lid" radical placed on top of other components.' },
+  '口': { name: 'kǒu',    pinyin: 'kǒu',   en: 'mouth',       desc: 'Pictograph of an open mouth; relates to speech, eating, openings.' },
+  '见': { name: 'jiàn',   pinyin: 'jiàn',  en: 'see',         desc: 'Eye over person; relates to seeing and perception.' },
+  '山': { name: 'shān',   pinyin: 'shān',  en: 'mountain',    desc: 'Three peaks; relates to mountains and landforms.' },
+  '小': { name: 'xiǎo',   pinyin: 'xiǎo',  en: 'small',       desc: 'Tiny strokes; relates to smallness or fewness.' },
+  '月': { name: 'yuè',    pinyin: 'yuè',   en: 'moon / flesh',desc: 'Crescent moon; also a "flesh" radical for body parts.' },
+  '心': { name: 'xīn',    pinyin: 'xīn',   en: 'heart',       desc: 'Pictograph of the heart; relates to feelings and thought.' },
+  '丨': { name: 'gǔn',    pinyin: 'gǔn',   en: 'vertical',    desc: 'A single vertical stroke radical.' },
+  '人': { name: 'rén',    pinyin: 'rén',   en: 'person',      desc: 'A standing person; relates to people and human actions.' },
+  '儿': { name: 'ér',     pinyin: 'ér',    en: 'legs / child',desc: 'Walking legs of a person; appears at the bottom of characters.' },
+  '几': { name: 'jī',     pinyin: 'jī',    en: 'small table', desc: 'A low table; also used for "how many".' },
+  '丿': { name: 'piě',    pinyin: 'piě',   en: 'slash',       desc: 'A left-falling stroke radical.' },
+  '水': { name: 'shuǐ',   pinyin: 'shuǐ',  en: 'water',       desc: 'Flowing water; relates to liquids, rivers, the sea.' },
+  '女': { name: 'nǚ',     pinyin: 'nǚ',    en: 'woman',       desc: 'A kneeling woman; relates to women and femininity.' },
+  '乙': { name: 'yǐ',     pinyin: 'yǐ',    en: 'second',      desc: 'A twisting/hook stroke; the second of the Heavenly Stems.' },
+  '大': { name: 'dà',     pinyin: 'dà',    en: 'big',         desc: 'A person with outstretched arms; relates to size and greatness.' },
+  '戈': { name: 'gē',     pinyin: 'gē',    en: 'dagger-axe',  desc: 'An ancient bladed weapon; relates to war and weapons.' },
+  '覀': { name: 'yà',     pinyin: 'yà',    en: 'cover',       desc: 'A "cover" radical, a variant of 西 ("west").' },
+  '囗': { name: 'wéi',    pinyin: 'wéi',   en: 'enclosure',   desc: 'A boundary enclosing space; relates to boxes and surroundings.' },
+  '土': { name: 'tǔ',     pinyin: 'tǔ',    en: 'earth',       desc: 'Soil mounded on the ground; relates to land, ground, places.' },
+  '子': { name: 'zǐ',     pinyin: 'zǐ',    en: 'child',       desc: 'A swaddled baby; relates to children, offspring, small things.' },
+  '工': { name: 'gōng',   pinyin: 'gōng',  en: 'work',        desc: "A craftsman's ruler; relates to labor and craftsmanship." },
+  '木': { name: 'mù',     pinyin: 'mù',    en: 'tree / wood', desc: 'A tree with roots and branches; relates to plants, wood, timber.' },
+  '田': { name: 'tián',   pinyin: 'tián',  en: 'field',       desc: 'A cultivated field divided into plots; relates to farming and land.' },
+  '气': { name: 'qì',     pinyin: 'qì',    en: 'air',         desc: 'Rising vapor; relates to air, breath and gases.' },
+  '雨': { name: 'yǔ',     pinyin: 'yǔ',    en: 'rain',        desc: 'Drops falling from a cloud; relates to weather phenomena.' },
+  '日': { name: 'rì',     pinyin: 'rì',    en: 'sun',         desc: 'Pictograph of the sun; relates to daylight and time.' },
+  '目': { name: 'mù',     pinyin: 'mù',    en: 'eye',         desc: 'Pictograph of an eye; relates to sight and vision.' },
+  '廾': { name: 'gǒng',   pinyin: 'gǒng',  en: 'two hands',   desc: 'Two hands joined together to lift or hold something.' },
+  '车': { name: 'chē',    pinyin: 'chē',   en: 'vehicle',     desc: 'A wheeled cart seen from above; relates to vehicles and transport.' },
+  '干': { name: 'gān',    pinyin: 'gān',   en: 'shield',      desc: 'A pole or shield; relates to "to do" and dryness in modern usage.' },
+  '凵': { name: 'kǎn',    pinyin: 'kǎn',   en: 'open box',    desc: 'An open container; relates to receptacles and openings.' },
+  '飞': { name: 'fēi',    pinyin: 'fēi',   en: 'fly',         desc: 'Wings in flight; relates to flying and swift motion.' },
+}
+
+export const HSK1_CHARACTERS = [
+  { lesson: 1, c: '一', p: 'yī',    radical: '一', en: 'one',         desc: 'A single horizontal stroke — one of the basic strokes; means "one".' },
+  { lesson: 1, c: '二', p: 'èr',    radical: '二', en: 'two',         desc: 'Two horizontal strokes — means "two".' },
+  { lesson: 1, c: '三', p: 'sān',   radical: '一', en: 'three',       desc: 'Three horizontal strokes — means "three".' },
+  { lesson: 1, c: '十', p: 'shí',   radical: '十', en: 'ten',         desc: 'A horizontal crossed by a vertical — means "ten".' },
+  { lesson: 1, c: '八', p: 'bā',    radical: '八', en: 'eight',       desc: 'Means "eight"; shaped like two strokes parting.' },
+  { lesson: 1, c: '六', p: 'liù',   radical: '亠', en: 'six',         desc: 'Means "six".' },
+
+  { lesson: 2, c: '口', p: 'kǒu',   radical: '口', en: 'mouth',       desc: 'Shaped like an open mouth; basic meaning "mouth".' },
+  { lesson: 2, c: '见', p: 'jiàn',  radical: '见', en: 'to see',      desc: 'Originally an eye (目) on top of a person (人) — "watching with eyes open".' },
+  { lesson: 2, c: '山', p: 'shān',  radical: '山', en: 'mountain',    desc: 'Originally shaped like rolling mountain peaks.' },
+  { lesson: 2, c: '小', p: 'xiǎo',  radical: '小', en: 'small',       desc: 'Originally shaped like tiny grains of sand; opposite of 大.' },
+  { lesson: 2, c: '不', p: 'bù',    radical: '一', en: 'no, not',     desc: 'Originally a tool; now a negative adverb.' },
+
+  { lesson: 3, c: '月', p: 'yuè',   radical: '月', en: 'moon, month', desc: 'Refers to the moon; pictograph of a crescent.' },
+  { lesson: 3, c: '心', p: 'xīn',   radical: '心', en: 'heart',       desc: 'Pictograph of the heart.' },
+  { lesson: 3, c: '中', p: 'zhōng', radical: '丨', en: 'middle',      desc: 'Originally a flying flag; now means "middle".' },
+  { lesson: 3, c: '人', p: 'rén',   radical: '人', en: 'person',      desc: 'Originally shaped like a person standing straight.' },
+
+  { lesson: 4, c: '七', p: 'qī',    radical: '一', en: 'seven',       desc: 'Means "seven".' },
+  { lesson: 4, c: '儿', p: 'ér',    radical: '儿', en: 'son, child',  desc: 'Originally meant "kid"; now usually "son".' },
+  { lesson: 4, c: '几', p: 'jǐ',    radical: '几', en: 'how many',    desc: 'Originally a small low table; now means "how many".' },
+  { lesson: 4, c: '九', p: 'jiǔ',   radical: '丿', en: 'nine',        desc: 'Means "nine".' },
+
+  { lesson: 5, c: '水', p: 'shuǐ',  radical: '水', en: 'water',       desc: 'Originally a mountain stream — the shape of flowing water.' },
+  { lesson: 5, c: '女', p: 'nǚ',    radical: '女', en: 'woman',       desc: 'Originally a woman kneeling on the ground — "woman".' },
+  { lesson: 5, c: '了', p: 'le',    radical: '乙', en: 'particle',    desc: 'Originally an upside-down 子 (a newborn baby); now a function word.' },
+  { lesson: 5, c: '大', p: 'dà',    radical: '大', en: 'big',         desc: 'Originally a person with arms and legs stretching out — "big"; opposite of 小.' },
+
+  { lesson: 6, c: '东', p: 'dōng',  radical: '一', en: 'east',        desc: 'Where the sun rises; opposite of 西.' },
+  { lesson: 6, c: '我', p: 'wǒ',    radical: '戈', en: 'I, me',       desc: 'Originally a weapon with sharp edges; now a personal pronoun.' },
+  { lesson: 6, c: '西', p: 'xī',    radical: '覀', en: 'west',        desc: 'Originally shaped like a bird\u2019s nest; now means "west", opposite of 东.' },
+
+  { lesson: 7, c: '四', p: 'sì',    radical: '囗', en: 'four',        desc: 'Means "four".' },
+  { lesson: 7, c: '五', p: 'wǔ',    radical: '二', en: 'five',        desc: 'Means "five".' },
+  { lesson: 7, c: '书', p: 'shū',   radical: '乙', en: 'book',        desc: 'Originally "to dip a brush in ink and write"; now means "writing" or "book".' },
+
+  { lesson: 8, c: '少', p: 'shǎo',  radical: '小', en: 'few, little', desc: 'Opposite of 多 — a small amount or quantity.' },
+  { lesson: 8, c: '个', p: 'gè',    radical: '人', en: 'measure word',desc: 'Originally meant "one individual person"; now a general measure word.' },
+
+  { lesson: 9, c: '在', p: 'zài',   radical: '土', en: 'at, in',      desc: 'Indicates location or existence.' },
+  { lesson: 9, c: '子', p: 'zǐ',    radical: '子', en: 'child, son',  desc: 'Originally meant "baby"; now has many meanings (儿子, 电子…).' },
+  { lesson: 9, c: '工', p: 'gōng',  radical: '工', en: 'work, labor', desc: 'Originally a craftsman\u2019s zigzag ruler; now means "worker", "work".' },
+
+  { lesson: 10, c: '上', p: 'shàng', radical: '一', en: 'up, above',  desc: 'A short horizontal above the baseline indicates "above".' },
+  { lesson: 10, c: '下', p: 'xià',   radical: '一', en: 'down, below',desc: 'A short horizontal below the baseline indicates "below"; opposite of 上.' },
+  { lesson: 10, c: '本', p: 'běn',   radical: '木', en: 'root, origin',desc: 'A tree (木) with a dot at its base — the "root" of everything.' },
+  { lesson: 10, c: '末', p: 'mò',    radical: '木', en: 'tip, end',   desc: 'A tree (木) with a mark at its top — the "tip"; secondary or non-essential.' },
+
+  { lesson: 11, c: '午', p: 'wǔ',   radical: '十', en: 'noon',        desc: 'In Chinese, refers to the period between 11 am and 1 pm — noon.' },
+  { lesson: 11, c: '电', p: 'diàn', radical: '田', en: 'electricity', desc: 'Originally a flash of lightning; both a phenomenon and a form of energy.' },
+
+  { lesson: 12, c: '天', p: 'tiān', radical: '大', en: 'sky, day',    desc: 'Originally "the top of the head"; now means "sky", opposite of 地.' },
+  { lesson: 12, c: '气', p: 'qì',   radical: '气', en: 'air, gas',    desc: 'Refers to air — formless and freely spreading.' },
+  { lesson: 12, c: '雨', p: 'yǔ',   radical: '雨', en: 'rain',        desc: 'Pictograph of raindrops falling from the sky.' },
+
+  { lesson: 13, c: '日', p: 'rì',   radical: '日', en: 'sun, day',    desc: 'Pictograph of the sun.' },
+  { lesson: 13, c: '目', p: 'mù',   radical: '目', en: 'eye',         desc: 'Pictograph of an eye.' },
+  { lesson: 13, c: '习', p: 'xí',   radical: '乙', en: 'to study',    desc: 'Originally "to learn and review until proficient"; in modern Chinese close to 学.' },
+
+  { lesson: 14, c: '开', p: 'kāi',  radical: '廾', en: 'to open',     desc: 'Originally two hands pulling a door latch — "to open"; many extended meanings.' },
+  { lesson: 14, c: '车', p: 'chē',  radical: '车', en: 'vehicle',     desc: 'Originally an ox- or horse-drawn wheeled cart; now any land vehicle.' },
+  { lesson: 14, c: '回', p: 'huí',  radical: '囗', en: 'to return',   desc: 'A whirling flow of water — originally "to rotate", now "to return".' },
+
+  { lesson: 15, c: '年', p: 'nián', radical: '干', en: 'year',        desc: 'Originally "to carry crops home"; now means "year".' },
+  { lesson: 15, c: '出', p: 'chū',  radical: '凵', en: 'to go out',   desc: 'A plant germinating and growing outward — "to come or go out".' },
+  { lesson: 15, c: '飞', p: 'fēi',  radical: '飞', en: 'to fly',      desc: 'A bird or insect flying with its wings — "to fly", "quick".' },
+]
+
+export const useHSK1 = () => ({ HSK1_META, HSK1_LESSONS, HSK1_STROKES, HSK1_CHARACTERS, HSK1_RADICALS })
