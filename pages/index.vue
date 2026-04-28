@@ -8,6 +8,7 @@ const sections = [
   { to: '/hsk1',     han: 'HSK 一', label: 'HSK 1',  desc: 'Beginner vocabulary and grammar.' },
   { to: '/hsk2',     han: 'HSK 二', label: 'HSK 2',  desc: 'Elementary vocabulary and grammar.' },
   { to: '/hsk3',     han: 'HSK 三', label: 'HSK 3',  desc: 'Intermediate vocabulary and grammar.' },
+  { to: '/write',    han: '书写',   label: 'Write',  desc: 'Practice stroke order and writing characters.' },
   { to: '/game',     han: '游戏',   label: 'Game',   desc: 'Memory & quiz games to remember characters.' },
 ]
 </script>

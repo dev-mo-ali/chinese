@@ -9,6 +9,7 @@ const tabs = [
   { to: '/hsk1',     han: '一', label: 'HSK 1'    },
   { to: '/hsk2',     han: '二', label: 'HSK 2'    },
   { to: '/hsk3',     han: '三', label: 'HSK 3'    },
+  { to: '/write',    han: '写', label: 'Write'    },
   { to: '/game',     han: '游', label: 'Game'     },
 ]
 
@@ -16,6 +17,7 @@ const isHome     = computed(() => route.path === '/')
 const isStrokes  = computed(() => route.path.startsWith('/strokes'))
 const isPinyin   = computed(() => route.path.startsWith('/pinyin'))
 const isRadicals = computed(() => route.path.startsWith('/radicals'))
+const isWrite    = computed(() => route.path.startsWith('/write'))
 const isGame     = computed(() => route.path.startsWith('/game'))
 const hskMatch   = computed(() => route.path.match(/^\/hsk([123])/))
 
@@ -40,6 +42,10 @@ const headerData = computed(() => {
   if (isRadicals.value) {
     return { icon: '部首', eyebrow: 'Chinese Radicals', title: 'Top 40 · Top 100 · All 214',
              sourceHref: 'https://www.hackingchinese.com/the-100-most-common-radicals-in-chinese/' }
+  }
+  if (isWrite.value) {
+    return { icon: '书写', eyebrow: 'Practice Writing', title: 'Stroke order · Animate · Quiz',
+             sourceHref: 'https://hanziwriter.org/' }
   }
   if (isGame.value) {
     return { icon: '游戏', eyebrow: 'Memory Game', title: 'Quiz · Match · Remember Hanzi',
