@@ -11,6 +11,7 @@ const tabs = [
   { to: '/hsk3',     han: '三', label: 'HSK 3'    },
   { to: '/write',    han: '写', label: 'Write'    },
   { to: '/sentence', han: '句', label: 'Sentence' },
+  { to: '/topics',   han: '题', label: 'Topics'   },
   { to: '/game',     han: '游', label: 'Game'     },
 ]
 
@@ -21,7 +22,12 @@ const isRadicals = computed(() => route.path.startsWith('/radicals'))
 const isWrite    = computed(() => route.path.startsWith('/write'))
 const isSentence = computed(() => route.path.startsWith('/sentence'))
 const isGame     = computed(() => route.path.startsWith('/game'))
+const isTopics   = computed(() => route.path.startsWith('/topics'))
 const hskMatch   = computed(() => route.path.match(/^\/hsk([123])/))
+const topicSlug  = computed(() => {
+  const m = route.path.match(/^\/topics\/([^/]+)/)
+  return m ? m[1] : null
+})
 
 const headerData = computed(() => {
   if (hskMatch.value) {
@@ -55,6 +61,11 @@ const headerData = computed(() => {
   }
   if (isGame.value) {
     return { icon: '游戏', eyebrow: 'Memory Game', title: 'Quiz · Match · Remember Hanzi',
+             sourceHref: '' }
+  }
+  if (isTopics.value) {
+    return { icon: '主题', eyebrow: 'Thematic Vocabulary',
+             title: topicSlug.value ? `Topic · ${topicSlug.value}` : 'Body · Directions · Bedroom · Kitchen · Opposites',
              sourceHref: '' }
   }
   return { icon: '汉语', eyebrow: 'Welcome · 欢迎', title: 'Learn Chinese · Step by step',
