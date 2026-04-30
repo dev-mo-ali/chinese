@@ -12,6 +12,9 @@ const {
   search, pickLesson,
 } = useHskPage({ scrollTargetId: 'lesson-detail' })
 
+const open = reactive({ strokes: false, radicals: false, chars: false, vocab: false })
+const toggle = (k) => { open[k] = !open[k] }
+
 const current = computed(() => HSK2_LESSONS.find(l => l.no === activeLesson.value))
 
 const totalVocab = computed(() => HSK2_LESSONS.reduce((s, l) => s + l.vocab.length, 0))
@@ -416,7 +419,9 @@ const filteredVocab = computed(() => {
     <article class="rounded-3xl shadow-card overflow-hidden border mb-8"
              style="background:#fff; border-color:rgba(15,118,110,.22);"
     >
-      <header class="flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b"
+      <header @click="toggle('strokes')"
+              :aria-expanded="open.strokes"
+              class="fold-head flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b cursor-pointer select-none"
               style="background: linear-gradient(135deg,#ecfdf5,#f0fdfa); border-color:rgba(15,118,110,.18);"
       >
         <span class="flex items-center justify-center w-10 h-10 rounded-lg han text-xl font-bold text-white shadow-chip"
@@ -427,11 +432,14 @@ const filteredVocab = computed(() => {
           </div>
           <div class="text-base sm:text-lg han font-bold text-ink">{{ totalStrokes }} new strokes · Lessons 1–4</div>
         </div>
-        <span class="ml-auto text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded text-white"
-              style="background:#0f766e;">8 新笔画</span>
+        <span class="ml-auto flex items-center gap-2">
+          <span class="text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded text-white"
+                style="background:#0f766e;">{{ totalStrokes }} strokes · 笔画</span>
+          <span class="fold-caret text-lg leading-none" style="color:#0f766e;" :class="{ 'is-open': open.strokes }">▸</span>
+        </span>
       </header>
 
-      <div class="p-4 sm:p-6 space-y-6"
+      <div v-show="open.strokes" class="p-4 sm:p-6 space-y-6"
            style="background: linear-gradient(180deg,#f8fffd,#ffffff);">
         <section v-for="group in HSK2_STROKES" :key="group.lesson">
           <div class="flex items-center gap-3 mb-3">
@@ -478,7 +486,9 @@ const filteredVocab = computed(() => {
     <article class="rounded-3xl shadow-card overflow-hidden border mb-8"
              style="background:#fff; border-color:rgba(91,33,182,.22);"
     >
-      <header class="flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b"
+      <header @click="toggle('radicals')"
+              :aria-expanded="open.radicals"
+              class="fold-head flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b cursor-pointer select-none"
               style="background: linear-gradient(135deg,#f5f3ff,#eef2ff); border-color:rgba(91,33,182,.18);"
       >
         <span class="flex items-center justify-center w-10 h-10 rounded-lg han text-xl font-bold text-white shadow-chip"
@@ -489,11 +499,14 @@ const filteredVocab = computed(() => {
           </div>
           <div class="text-base sm:text-lg han font-bold text-ink">{{ totalRadicals }} radicals · Lessons 1–10</div>
         </div>
-        <span class="ml-auto text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded text-white"
-              style="background:#5b21b6;">2 / lesson</span>
+        <span class="ml-auto flex items-center gap-2">
+          <span class="text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded text-white"
+                style="background:#5b21b6;">{{ HSK2_LESSON_RADICALS.length }} lessons · 课</span>
+          <span class="fold-caret text-lg leading-none" style="color:#5b21b6;" :class="{ 'is-open': open.radicals }">▸</span>
+        </span>
       </header>
 
-      <div class="p-4 sm:p-6 space-y-6"
+      <div v-show="open.radicals" class="p-4 sm:p-6 space-y-6"
            style="background: linear-gradient(180deg,#faf5ff,#ffffff);">
         <section v-for="group in HSK2_LESSON_RADICALS" :key="group.lesson">
           <div class="flex items-center gap-3 mb-3">
@@ -549,7 +562,9 @@ const filteredVocab = computed(() => {
     <article class="rounded-3xl shadow-card overflow-hidden border mb-8"
              style="background:#fff; border-color:rgba(124,90,30,.25);"
     >
-      <header class="flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b"
+      <header @click="toggle('chars')"
+              :aria-expanded="open.chars"
+              class="fold-head flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b cursor-pointer select-none"
               style="background: linear-gradient(135deg,#fffbeb,#fef3c7); border-color:rgba(124,90,30,.2);"
       >
         <span class="flex items-center justify-center w-10 h-10 rounded-lg han text-xl font-bold text-white shadow-chip"
@@ -560,11 +575,14 @@ const filteredVocab = computed(() => {
           </div>
           <div class="text-base sm:text-lg han font-bold text-ink">{{ totalChars }} new characters · Lessons 1–6</div>
         </div>
-        <span class="ml-auto text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded text-white"
-              style="background:#7c5a1e;">14 新单体字</span>
+        <span class="ml-auto flex items-center gap-2">
+          <span class="text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded text-white"
+                style="background:#7c5a1e;">{{ totalChars }} chars · 单体字</span>
+          <span class="fold-caret text-lg leading-none" style="color:#7c5a1e;" :class="{ 'is-open': open.chars }">▸</span>
+        </span>
       </header>
 
-      <div class="p-4 sm:p-6 space-y-7"
+      <div v-show="open.chars" class="p-4 sm:p-6 space-y-7"
            style="background: linear-gradient(180deg,#fffdf6,#ffffff);">
         <section v-for="group in charsByLesson" :key="group.lesson">
           <div class="flex items-center gap-3 mb-3">
@@ -652,7 +670,9 @@ const filteredVocab = computed(() => {
     <article class="rounded-3xl shadow-card overflow-hidden border"
              style="background:#fff; border-color:rgba(67,56,202,.2);"
     >
-      <header class="flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b"
+      <header @click="toggle('vocab')"
+              :aria-expanded="open.vocab"
+              class="fold-head flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b cursor-pointer select-none"
               style="background: linear-gradient(135deg,#eef2ff,#f5f3ff); border-color:rgba(67,56,202,.18);"
       >
         <span class="flex items-center justify-center w-10 h-10 rounded-lg han text-xl font-bold text-white shadow-chip"
@@ -661,20 +681,22 @@ const filteredVocab = computed(() => {
           <div class="text-[10px] tracking-widest uppercase font-semibold" style="color:#4338ca">Glossary · 词汇表</div>
           <div class="text-base sm:text-lg han font-bold text-ink">All {{ totalVocab }} words</div>
         </div>
-        <div class="ml-auto flex items-center gap-2">
+        <div class="ml-auto flex items-center gap-2" @click.stop>
           <input
             v-model="search"
             type="search"
             placeholder="Search 拼音 / chars / English…"
             class="px-3 py-1.5 text-sm rounded-lg bg-white focus:outline-none w-44 sm:w-64 border"
             style="border-color:rgba(67,56,202,.3);"
+            @focus="open.vocab = true"
           />
           <span class="text-[11px] font-mono px-2 py-0.5 rounded font-bold text-white"
                 style="background:#4338ca">{{ filteredVocab.length }}</span>
+          <span class="fold-caret text-lg leading-none cursor-pointer" style="color:#4338ca;" :class="{ 'is-open': open.vocab }" @click="toggle('vocab')">▸</span>
         </div>
       </header>
 
-      <div class="p-3 sm:p-5" style="background: linear-gradient(180deg,#fafaff,#fff);">
+      <div v-show="open.vocab" class="p-3 sm:p-5" style="background: linear-gradient(180deg,#fafaff,#fff);">
         <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
           <li v-for="(v, i) in filteredVocab" :key="i"
               class="glossary-card group relative grid grid-cols-[auto_1fr_auto] items-center gap-3 px-3.5 py-2.5
@@ -728,6 +750,12 @@ const filteredVocab = computed(() => {
 </template>
 
 <style scoped>
+/* Foldable section headers */
+.fold-head { transition: background-color .2s ease; }
+.fold-head:hover { filter: brightness(0.98); }
+.fold-caret { display: inline-block; transition: transform .2s ease; }
+.fold-caret.is-open { transform: rotate(90deg); }
+
 /* Single-component characters · amber hover */
 .char-row { transition: background-color .2s ease; }
 .char-row:hover { background-color: #fffbeb; }

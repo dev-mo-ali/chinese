@@ -12,6 +12,9 @@ const {
   search, pickLesson,
 } = useHskPage({ scrollTargetId: 'lesson-detail' })
 
+const open = reactive({ vocab: false })
+const toggle = (k) => { open[k] = !open[k] }
+
 const current = computed(() => HSK3_LESSONS.find(l => l.no === activeLesson.value))
 
 const totalVocab = computed(() => HSK3_LESSONS.reduce((s, l) => s + l.vocab.length, 0))
@@ -353,7 +356,9 @@ const filteredVocab = computed(() => {
     <article class="rounded-3xl shadow-card overflow-hidden border"
              style="background:#fff; border-color:rgba(67,56,202,.2);"
     >
-      <header class="flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b"
+      <header @click="toggle('vocab')"
+              :aria-expanded="open.vocab"
+              class="fold-head flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b cursor-pointer select-none"
               style="background: linear-gradient(135deg,#eef2ff,#f5f3ff); border-color:rgba(67,56,202,.18);"
       >
         <span class="flex items-center justify-center w-10 h-10 rounded-lg han text-xl font-bold text-white shadow-chip"
@@ -362,20 +367,22 @@ const filteredVocab = computed(() => {
           <div class="text-[10px] tracking-widest uppercase font-semibold" style="color:#4338ca">Glossary · 词汇表</div>
           <div class="text-base sm:text-lg han font-bold text-ink">All {{ totalVocab }} words</div>
         </div>
-        <div class="ml-auto flex items-center gap-2">
+        <div class="ml-auto flex items-center gap-2" @click.stop>
           <input
             v-model="search"
             type="search"
             placeholder="Search 拼音 / chars / English…"
             class="px-3 py-1.5 text-sm rounded-lg bg-white focus:outline-none w-44 sm:w-64 border"
             style="border-color:rgba(67,56,202,.3);"
+            @focus="open.vocab = true"
           />
           <span class="text-[11px] font-mono px-2 py-0.5 rounded font-bold text-white"
                 style="background:#4338ca">{{ filteredVocab.length }}</span>
+          <span class="fold-caret text-lg leading-none cursor-pointer" style="color:#4338ca;" :class="{ 'is-open': open.vocab }" @click="toggle('vocab')">▸</span>
         </div>
       </header>
 
-      <div class="p-3 sm:p-5" style="background: linear-gradient(180deg,#fafaff,#fff);">
+      <div v-show="open.vocab" class="p-3 sm:p-5" style="background: linear-gradient(180deg,#fafaff,#fff);">
         <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
           <li v-for="(v, i) in filteredVocab" :key="i"
               class="glossary-card group relative grid grid-cols-[auto_1fr_auto] items-center gap-3 px-3.5 py-2.5
@@ -429,6 +436,12 @@ const filteredVocab = computed(() => {
 </template>
 
 <style scoped>
+/* Foldable section headers */
+.fold-head { transition: background-color .2s ease; }
+.fold-head:hover { filter: brightness(0.98); }
+.fold-caret { display: inline-block; transition: transform .2s ease; }
+.fold-caret.is-open { transform: rotate(90deg); }
+
 .glossary-card { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease; }
 .glossary-card:hover {
   transform: translateY(-2px);
