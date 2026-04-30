@@ -12,8 +12,8 @@ export default {
       fontFamily: {
         sans:  ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
         serif: ['"Noto Serif SC"', 'Georgia', 'Cambria', '"Times New Roman"', 'serif'],
-        han:   ['"Noto Serif SC"', '"PingFang SC"', '"Songti SC"', 'serif'],
-        brush: ['"Ma Shan Zheng"', '"ZCOOL XiaoWei"', '"Long Cang"', '"Noto Serif SC"', 'serif'],
+        han:   ['"KaiTi"', '"STKaiti"', '"BiauKai"', '"DFKai-SB"', '"Kaiti SC"', '"Noto Sans SC"', '"PingFang SC"', 'serif'],
+        brush: ['"Ma Shan Zheng"', '"ZCOOL XiaoWei"', '"Long Cang"', '"KaiTi"', '"STKaiti"', 'serif'],
       },
       colors: {
         ink:    { DEFAULT: '#1a1209', soft: '#2a1f12' },
