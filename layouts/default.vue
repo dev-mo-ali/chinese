@@ -230,22 +230,20 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
         <div class="max-w-3xl mx-auto rounded-3xl bg-ink text-cream shadow-card overflow-hidden">
           <div class="px-5 sm:px-8 py-5 sm:py-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div class="flex items-start gap-3">
-              <div class="shrink-0 w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold han font-bold" aria-hidden="true" lang="zh-CN">师</div>
-              <div class="min-w-0">
-                <div class="text-[10px] tracking-[0.25em] uppercase text-gold-soft">Supervisor</div>
-                <div class="text-sm sm:text-base font-semibold text-cream truncate">Teacher: Wen</div>
+               <div class="min-w-0">
+                <div class="text-[10px] tracking-[0.25em] uppercase text-gold-soft"> </div>
+                <div class="text-sm sm:text-base font-semibold text-cream truncate"> </div>
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <div class="shrink-0 w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold han font-bold" aria-hidden="true" lang="zh-CN">作</div>
-              <div class="min-w-0">
-                <div class="text-[10px] tracking-[0.25em] uppercase text-gold-soft">Created by</div>
-                <div class="text-sm sm:text-base font-semibold text-cream truncate">Eng: Moh</div>
+                <div class="min-w-0">
+                <div class="text-[10px] tracking-[0.25em] uppercase text-gold-soft"> </div>
+                <div class="text-sm sm:text-base font-semibold text-cream truncate"> </div>
               </div>
             </div>
           </div>
           <div class="px-5 sm:px-8 py-3 border-t border-gold-deep/40 text-[10px] sm:text-xs text-gold-soft tracking-widest uppercase text-center">
-            CCC · China Culture Center · Kuala Lumpur, Malaysia
+              Kuala Lumpur, Malaysia
           </div>
         </div>
       </footer>
