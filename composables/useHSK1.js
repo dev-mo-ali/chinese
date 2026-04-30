@@ -1386,4 +1386,92 @@ export const HSK1_CHARACTERS = [
   { lesson: 15, c: '飞', p: 'fēi',  radical: '飞', en: 'to fly',      desc: 'A bird or insect flying with its wings — "to fly", "quick".' },
 ]
 
-export const useHSK1 = () => ({ HSK1_META, HSK1_LESSONS, HSK1_STROKES, HSK1_CHARACTERS, HSK1_RADICALS })
+// HSK 1 introduces 18 component radicals across Lessons 7–15.
+// Lessons 1–6 cover basic strokes only — no radicals are taught.
+// Each lesson teaches two easy, common radicals; for each radical the
+// textbook gives two example characters.
+export const HSK1_LESSON_RADICALS = [
+  {
+    lesson: 7,
+    items: [
+      { r: '氵', name: 'sānshuǐ',    en: 'water (3-dot water)', desc: 'Usually related to water, liquids and rivers.',
+        examples: [{ c: '没', p: 'méi', en: 'to not have' }, { c: '河', p: 'hé', en: 'river' }] },
+      { r: '讠', name: 'yánzìpáng',  en: 'speech',              desc: 'Usually related to language and speech.',
+        examples: [{ c: '谁', p: 'shéi', en: 'who, whom' }, { c: '说', p: 'shuō', en: 'to speak' }] },
+    ],
+  },
+  {
+    lesson: 8,
+    items: [
+      { r: '钅', name: 'jīnzìpáng',  en: 'metal',               desc: 'Usually related to metal.',
+        examples: [{ c: '钱', p: 'qián', en: 'money' }, { c: '银', p: 'yín', en: 'silver' }] },
+      { r: '口', name: 'kǒuzìpáng',  en: 'mouth',               desc: 'Usually related to the mouth (eating, speaking).',
+        examples: [{ c: '喝', p: 'hē', en: 'to drink' }, { c: '吃', p: 'chī', en: 'to eat' }] },
+    ],
+  },
+  {
+    lesson: 9,
+    items: [
+      { r: '辶', name: 'zǒuzhī',     en: 'walking',             desc: 'Usually related to walking and movement.',
+        examples: [{ c: '这', p: 'zhè', en: 'this' }, { c: '送', p: 'sòng', en: 'to send' }] },
+      { r: '门', name: 'ménzìkuàng', en: 'door · gate',         desc: 'Usually related to a room or a door.',
+        examples: [{ c: '问', p: 'wèn', en: 'to ask' }, { c: '间', p: 'jiān', en: 'measure word for rooms' }] },
+    ],
+  },
+  {
+    lesson: 10,
+    items: [
+      { r: '囗', name: 'wéizìkuàng', en: 'enclosure',           desc: 'Usually means being trapped or besieged.',
+        examples: [{ c: '国', p: 'guó', en: 'country, nation' }, { c: '困', p: 'kùn', en: 'to be trapped' }] },
+      { r: '礻', name: 'shìzìpáng',  en: 'altar / deity',       desc: 'A variant of 示 — usually related to deity, sacrificial rites and one’s fortune.',
+        examples: [{ c: '视', p: 'shì', en: 'to look, to view' }, { c: '祝', p: 'zhù', en: 'to wish' }] },
+    ],
+  },
+  {
+    lesson: 11,
+    items: [
+      { r: '阝', name: 'zuǒ’ěrdāo',  en: 'mound (left ear)',    desc: 'Usually related to a landform or location.',
+        examples: [{ c: '院', p: 'yuàn', en: 'courtyard' }, { c: '阳', p: 'yáng', en: 'sun' }] },
+      { r: '亻', name: 'dānrénpáng', en: 'person',              desc: 'Usually related to a person.',
+        examples: [{ c: '你', p: 'nǐ', en: '(singular) you' }, { c: '他', p: 'tā', en: 'he, him' }] },
+    ],
+  },
+  {
+    lesson: 12,
+    items: [
+      { r: '女', name: 'nǚzìpáng',   en: 'woman',               desc: 'Usually related to women.',
+        examples: [{ c: '姐', p: 'jiě', en: 'elder sister' }, { c: '妈', p: 'mā', en: 'mother' }] },
+      { r: '饣', name: 'shízìpáng',  en: 'food',                desc: 'Usually related to food.',
+        examples: [{ c: '饭', p: 'fàn', en: 'meal' }, { c: '饮', p: 'yǐn', en: 'to drink' }] },
+    ],
+  },
+  {
+    lesson: 13,
+    items: [
+      { r: '日', name: 'rìzìpáng',   en: 'sun · time',          desc: 'Usually related to time.',
+        examples: [{ c: '明', p: 'míng', en: 'next, bright' }, { c: '时', p: 'shí', en: 'time' }] },
+      { r: '目', name: 'mùzìpáng',   en: 'eye',                 desc: 'Usually related to the eyes.',
+        examples: [{ c: '眼', p: 'yǎn', en: 'eye' }, { c: '睡', p: 'shuì', en: 'to sleep' }] },
+    ],
+  },
+  {
+    lesson: 14,
+    items: [
+      { r: '月', name: 'ròuyuèpáng', en: 'flesh (moon-form)',   desc: 'Usually related to the human body or flesh.',
+        examples: [{ c: '服', p: 'fú', en: 'clothes' }, { c: '胖', p: 'pàng', en: 'fat' }] },
+      { r: '扌', name: 'tíshǒupáng', en: 'hand',                desc: 'Usually indicates an action related to a hand.',
+        examples: [{ c: '打', p: 'dǎ', en: 'to beat, to hit' }, { c: '找', p: 'zhǎo', en: 'to look for' }] },
+    ],
+  },
+  {
+    lesson: 15,
+    items: [
+      { r: '艹', name: 'cǎozìtóu',   en: 'grass / plants',      desc: 'Usually related to grass, trees or plants.',
+        examples: [{ c: '茶', p: 'chá', en: 'tea' }, { c: '菜', p: 'cài', en: 'vegetable' }] },
+      { r: '宀', name: 'bǎogàitóu',  en: 'roof',                desc: 'Usually related to houses.',
+        examples: [{ c: '安', p: 'ān', en: 'to settle, peace' }, { c: '家', p: 'jiā', en: 'home, family' }] },
+    ],
+  },
+]
+
+export const useHSK1 = () => ({ HSK1_META, HSK1_LESSONS, HSK1_STROKES, HSK1_CHARACTERS, HSK1_RADICALS, HSK1_LESSON_RADICALS })

@@ -1,5 +1,5 @@
 <script setup>
-import { HSK1_META, HSK1_LESSONS, HSK1_STROKES, HSK1_CHARACTERS, HSK1_RADICALS } from '~/composables/useHSK1.js'
+import { HSK1_META, HSK1_LESSONS, HSK1_STROKES, HSK1_CHARACTERS, HSK1_RADICALS, HSK1_LESSON_RADICALS } from '~/composables/useHSK1.js'
 import { useHskPage } from '~/composables/useHskPage.js'
 import { posColor } from '~/composables/useHSK.js'
 
@@ -17,6 +17,8 @@ const current = computed(() => HSK1_LESSONS.find(l => l.no === activeLesson.valu
 const totalVocab = computed(() => HSK1_LESSONS.reduce((s, l) => s + l.vocab.length, 0))
 const totalStrokes = computed(() => HSK1_STROKES.reduce((s, g) => s + g.items.length, 0))
 const totalChars = computed(() => HSK1_CHARACTERS.length)
+const totalRadicals = computed(() => HSK1_LESSON_RADICALS.reduce((s, g) => s + g.items.length, 0))
+const lessonRadicals = computed(() => HSK1_LESSON_RADICALS.find(g => g.lesson === activeLesson.value))
 const radicalInfo = (r) => HSK1_RADICALS[r] || { name: '', en: '', desc: '' }
 const charsByLesson = computed(() => {
   const map = new Map()
@@ -354,6 +356,56 @@ const filteredVocab = computed(() => {
         </div>
       </section>
 
+      <!-- LESSON RADICALS · slate-violet -->
+      <section v-if="lessonRadicals && lessonRadicals.items.length"
+               class="px-5 sm:px-7 py-6 sm:py-8 border-t"
+               style="background: linear-gradient(180deg,#f5f3ff,#eef2ff); border-color:rgba(91,33,182,.18);"
+      >
+        <div class="flex items-center gap-3 mb-5">
+          <span class="flex items-center justify-center w-9 h-9 rounded-lg han text-lg font-bold text-white shadow-chip"
+                style="background: linear-gradient(135deg,#5b21b6,#7c3aed);">部</span>
+          <div>
+            <div class="text-[10px] font-semibold tracking-widest uppercase" style="color:#5b21b6">
+              New Radicals
+            </div>
+            <div class="text-sm font-bold text-ink han">部首 · {{ lessonRadicals.items.length }} 个</div>
+          </div>
+          <span class="flex-1 h-px" style="background: linear-gradient(to right,#7c3aed 0%, transparent 100%);"></span>
+        </div>
+
+        <ul class="grid sm:grid-cols-2 gap-3">
+          <li v-for="(rad, ri) in lessonRadicals.items" :key="ri"
+              class="radical-card relative grid grid-cols-[auto_1fr] gap-3 px-3.5 py-3 rounded-xl bg-white border"
+              style="border-color:rgba(124,58,237,.25);"
+          >
+            <div class="radical-tile flex items-center justify-center w-16 h-16 rounded-lg shrink-0 border"
+                 style="background: linear-gradient(135deg,#ede9fe,#ddd6fe); border-color:rgba(91,33,182,.3);"
+            >
+              <span class="han font-bold leading-none" style="color:#3b0764; font-size:2.25rem;">{{ rad.r }}</span>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-baseline gap-2 mb-0.5">
+                <span class="text-[14px] font-bold text-ink">{{ rad.name }}</span>
+                <span class="text-[12px] tracking-wide font-semibold" style="color:#5b21b6">{{ rad.en }}</span>
+              </div>
+              <p class="text-[12px] text-ink-soft leading-snug mb-1.5">{{ rad.desc }}</p>
+              <div class="flex items-center flex-wrap gap-1.5">
+                <span class="font-mono text-[9px] tracking-widest px-1.5 py-0.5 rounded uppercase"
+                      style="background:#ede9fe;color:#5b21b6;">examples</span>
+                <span v-for="(ex, ei) in rad.examples" :key="ei"
+                      class="inline-flex items-baseline gap-1 px-1.5 py-0.5 rounded border"
+                      style="background:#faf5ff;border-color:rgba(124,58,237,.3);"
+                >
+                  <span class="han text-[14px] font-semibold" style="color:#3b0764;">{{ ex.c }}</span>
+                  <span class="text-[10px]" style="color:#7c3aed;">{{ ex.p }}</span>
+                  <span class="text-[10px] text-ink-soft italic">· {{ ex.en }}</span>
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
       <!-- footer nav -->
       <footer class="px-5 sm:px-7 py-3 border-t border-ink/10 flex items-center justify-between bg-cream/40">
         <button
@@ -465,6 +517,73 @@ const filteredVocab = computed(() => {
                 <div class="text-[11px] text-ink-soft italic leading-snug">{{ rule.en }}</div>
               </div>
               <span class="han text-2xl font-bold shrink-0" style="color:#134e4a;">{{ rule.ex }}</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </article>
+
+    <!-- ALL RADICALS · slate-violet directory -->
+    <article class="rounded-3xl shadow-card overflow-hidden border mb-8"
+             style="background:#fff; border-color:rgba(91,33,182,.22);"
+    >
+      <header class="flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b"
+              style="background: linear-gradient(135deg,#f5f3ff,#eef2ff); border-color:rgba(91,33,182,.18);"
+      >
+        <span class="flex items-center justify-center w-10 h-10 rounded-lg han text-xl font-bold text-white shadow-chip"
+              style="background: linear-gradient(135deg,#5b21b6,#7c3aed);">部</span>
+        <div>
+          <div class="text-[10px] tracking-widest uppercase font-semibold" style="color:#5b21b6">
+            All Radicals · 部首
+          </div>
+          <div class="text-base sm:text-lg han font-bold text-ink">{{ totalRadicals }} radicals · Lessons 7–15</div>
+        </div>
+        <span class="ml-auto text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded text-white"
+              style="background:#5b21b6;">2 / lesson</span>
+      </header>
+
+      <div class="p-4 sm:p-6 space-y-6"
+           style="background: linear-gradient(180deg,#faf5ff,#ffffff);">
+        <section v-for="group in HSK1_LESSON_RADICALS" :key="group.lesson">
+          <div class="flex items-center gap-3 mb-3">
+            <button type="button"
+                    class="font-mono text-[10px] font-bold tracking-widest text-white px-2 py-0.5 rounded hover:opacity-90"
+                    style="background:#5b21b6;"
+                    @click="pickLesson(group.lesson)"
+            >L{{ String(group.lesson).padStart(2,'0') }}</button>
+            <h4 class="text-sm font-bold tracking-wide" style="color:#3b0764;">Lesson {{ group.lesson }}</h4>
+            <span class="text-[10px] font-mono" style="color:#5b21b6;opacity:.6;">{{ group.items.length }} radicals</span>
+            <span class="flex-1 h-px" style="background: linear-gradient(to right,rgba(91,33,182,.4) 0%, transparent 100%);"></span>
+          </div>
+
+          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <li v-for="(rad, i) in group.items" :key="i"
+                class="radical-card group relative grid grid-cols-[auto_1fr] items-center gap-3 px-3.5 py-3 rounded-xl bg-white border"
+                style="border-color:rgba(124,58,237,.25);"
+            >
+              <div class="radical-tile flex items-center justify-center w-16 h-16 rounded-lg shrink-0 border"
+                   style="background: linear-gradient(135deg,#ede9fe,#ddd6fe); border-color:rgba(91,33,182,.3);"
+              >
+                <span class="han font-bold leading-none" style="color:#3b0764; font-size:2.25rem;">{{ rad.r }}</span>
+              </div>
+
+              <div class="min-w-0">
+                <div class="flex items-baseline gap-2 mb-0.5">
+                  <span class="text-[14px] font-bold text-ink">{{ rad.name }}</span>
+                  <span class="text-[12px] tracking-wide font-semibold" style="color:#5b21b6">{{ rad.en }}</span>
+                </div>
+                <p class="text-[12px] text-ink-soft leading-snug mb-1.5">{{ rad.desc }}</p>
+                <div class="flex items-center flex-wrap gap-1.5">
+                  <span v-for="(ex, ei) in rad.examples" :key="ei"
+                        class="inline-flex items-baseline gap-1 px-1.5 py-0.5 rounded border"
+                        style="background:#faf5ff;border-color:rgba(124,58,237,.3);"
+                  >
+                    <span class="han text-[14px] font-semibold" style="color:#3b0764;">{{ ex.c }}</span>
+                    <span class="text-[10px]" style="color:#7c3aed;">{{ ex.p }}</span>
+                    <span class="text-[10px] text-ink-soft italic">· {{ ex.en }}</span>
+                  </span>
+                </div>
+              </div>
             </li>
           </ul>
         </section>
@@ -693,6 +812,28 @@ const filteredVocab = computed(() => {
   background: linear-gradient(135deg, #d1fae5, #a7f3d0) !important;
   border-color: rgba(15, 118, 110, .55) !important;
   box-shadow: 0 6px 14px -6px rgba(15, 118, 110, .55);
+}
+
+/* Radicals · violet hover theme */
+.radical-card {
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .04);
+}
+.radical-card:hover {
+  transform: translateY(-2px);
+  border-color: #7c3aed !important;
+  background-color: #faf5ff;
+  box-shadow: 0 10px 24px -10px rgba(124, 58, 237, .35),
+              0 2px 6px -2px rgba(124, 58, 237, .25);
+}
+.radical-tile {
+  transition: transform .25s ease, background .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.radical-card:hover .radical-tile {
+  transform: rotate(-2deg) scale(1.05);
+  background: linear-gradient(135deg, #ddd6fe, #c4b5fd) !important;
+  border-color: rgba(91, 33, 182, .55) !important;
+  box-shadow: 0 6px 14px -6px rgba(91, 33, 182, .55);
 }
 
 /* Glossary · indigo hover theme */

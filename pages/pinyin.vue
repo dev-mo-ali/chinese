@@ -171,7 +171,7 @@ const maRow = [
                 <div class="min-w-0">
                   <div class="flex items-baseline gap-2">
                     <span class="font-mono text-[11px] font-semibold" :style="{ color: grp.color }">{{ it.ipa }}</span>
-                    <span class="han text-[12px] font-semibold text-ink truncate">{{ it.sample }}</span>
+                    <span class="text-[12px] font-semibold text-ink truncate">{{ it.sample }}</span>
                   </div>
                   <div class="text-[11px] text-ink-soft italic leading-snug">{{ it.hint }}</div>
                 </div>
@@ -213,7 +213,7 @@ const maRow = [
                 <span class="phon-tile flex items-center justify-center w-12 h-12 rounded-lg shrink-0 border han text-xl font-bold leading-none"
                       :style="{ color: grp.color, background: grp.color + '14', borderColor: grp.color + '55' }">{{ it.c }}</span>
                 <div class="min-w-0">
-                  <div class="text-[12px] han font-semibold text-ink truncate">{{ it.sample }}</div>
+                  <div class="text-[12px] font-semibold text-ink truncate">{{ it.sample }}</div>
                   <div class="text-[11px] text-ink-soft italic leading-snug">{{ it.hint }}</div>
                 </div>
               </div>

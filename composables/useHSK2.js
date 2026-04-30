@@ -1051,4 +1051,101 @@ export const HSK2_RADICALS = {
   '羊': { name: 'yáng', pinyin: 'yáng', en: 'sheep',       desc: 'A sheep’s head with curving horns; relates to sheep and goats.' },
 }
 
-export const useHSK2 = () => ({ HSK2_META, HSK2_LESSONS, HSK2_STROKES, HSK2_CHARACTERS, HSK2_RADICALS })
+// HSK 2 introduces 30 component radicals across the 15 lessons (2 per lesson).
+// The supplied OCR PDF preserves only Lessons 1–10 of the radical sections;
+// Lessons 11–15 are omitted because their glyphs and example characters could
+// not be recovered reliably from the OCR.
+export const HSK2_LESSON_RADICALS = [
+  {
+    lesson: 1,
+    items: [
+      { r: '王', name: 'wángzìpáng',  en: 'jade (slanting-jade)', desc: 'Sometimes called the "slanting-jade" radical; usually related to jade.',
+        examples: [{ c: '现', p: 'xiàn', en: 'now, present' }, { c: '球', p: 'qiú', en: 'ball' }] },
+      { r: '足', name: 'zúzìpáng',    en: 'foot',                  desc: 'Usually related to one’s feet.',
+        examples: [{ c: '跑', p: 'pǎo', en: 'to run' }, { c: '踢', p: 'tī', en: 'to kick' }] },
+    ],
+  },
+  {
+    lesson: 2,
+    items: [
+      { r: '口', name: 'kǒuzìpáng',   en: 'mouth movements',       desc: 'Usually related to movements of the mouth.',
+        examples: [{ c: '吹', p: 'chuī', en: 'to blow' }, { c: '唱', p: 'chàng', en: 'to sing' }] },
+      { r: '⺮', name: 'zhúzìtóu',    en: 'bamboo',                desc: 'Usually related to bamboo.',
+        examples: [{ c: '篮', p: 'lán', en: 'basket' }, { c: '笔', p: 'bǐ', en: 'pen' }] },
+    ],
+  },
+  {
+    lesson: 3,
+    items: [
+      { r: '艹', name: 'cǎozìtóu',    en: 'grass / plants',        desc: 'Usually related to plants.',
+        examples: [{ c: '草', p: 'cǎo', en: 'grass' }, { c: '花', p: 'huā', en: 'flower' }] },
+      { r: '刂', name: 'lìdāopáng',   en: 'knife / cutter',        desc: 'Usually related to cutters or knives.',
+        examples: [{ c: '别', p: 'bié', en: 'don’t · other' }, { c: '到', p: 'dào', en: 'to arrive' }] },
+    ],
+  },
+  {
+    lesson: 4,
+    items: [
+      { r: '纟', name: 'jiǎosīpáng',  en: 'silk',                  desc: 'Usually related to silk.',
+        examples: [{ c: '给', p: 'gěi', en: 'to give' }, { c: '结', p: 'jié', en: 'to tie, to knot' }] },
+      { r: '忄', name: 'shùxīnpáng',  en: 'heart / emotion',       desc: 'Usually related to one’s mental activities.',
+        examples: [{ c: '忙', p: 'máng', en: 'busy' }, { c: '快', p: 'kuài', en: 'fast, quick' }] },
+    ],
+  },
+  {
+    lesson: 5,
+    items: [
+      { r: '子', name: 'zǐzìpáng',    en: 'child',                 desc: 'Usually related to children.',
+        examples: [{ c: '孩', p: 'hái', en: 'child' }, { c: '孙', p: 'sūn', en: 'grandson' }] },
+      { r: '广', name: 'guǎngzìpáng', en: 'building / shelter',    desc: 'Usually related to buildings.',
+        examples: [{ c: '床', p: 'chuáng', en: 'bed' }, { c: '店', p: 'diàn', en: 'shop, store' }] },
+    ],
+  },
+  {
+    lesson: 6,
+    items: [
+      { r: '犭', name: 'fǎnquǎnpáng', en: 'animal (dog-form)',     desc: 'Usually related to animals.',
+        examples: [{ c: '猫', p: 'māo', en: 'cat' }, { c: '狗', p: 'gǒu', en: 'dog' }] },
+      { r: '心', name: 'xīnzìdǐ',     en: 'heart / emotion',       desc: 'Usually related to one’s mental activities and emotions.',
+        examples: [{ c: '想', p: 'xiǎng', en: 'to think · to miss' }, { c: '念', p: 'niàn', en: 'to miss · to read' }] },
+    ],
+  },
+  {
+    lesson: 7,
+    items: [
+      { r: '彳', name: 'shuāngrénpáng', en: 'walking (double-person)', desc: 'Usually related to the act of walking.',
+        examples: [{ c: '行', p: 'xíng', en: 'to walk · OK' }, { c: '很', p: 'hěn', en: 'very' }] },
+      { r: '攵', name: 'fǎnwénpáng',  en: 'beating / action',      desc: 'Usually related to the act of whipping or beating.',
+        examples: [{ c: '放', p: 'fàng', en: 'to let go, to set free' }, { c: '收', p: 'shōu', en: 'to receive, to accept' }] },
+    ],
+  },
+  {
+    lesson: 8,
+    items: [
+      { r: '又', name: 'yòuzìpáng',   en: 'right hand · variety',  desc: 'A radical that can have a variety of meanings.',
+        examples: [{ c: '欢', p: 'huān', en: 'merry, happy' }, { c: '对', p: 'duì', en: 'right, correct' }] },
+      { r: '巾', name: 'jīnzìpáng',   en: 'cloth · textile',       desc: 'Usually related to cotton or silk products or textiles.',
+        examples: [{ c: '帮', p: 'bāng', en: 'to help, to aid' }, { c: '帽', p: 'mào', en: 'hat, cap' }] },
+    ],
+  },
+  {
+    lesson: 9,
+    items: [
+      { r: '土', name: 'tǔzìpáng',    en: 'soil / land',           desc: 'Usually related to soil, land or buildings.',
+        examples: [{ c: '块', p: 'kuài', en: 'lump, piece' }, { c: '地', p: 'dì', en: 'earth, land, ground' }] },
+      { r: '灬', name: 'sìdiǎndǐ',    en: 'fire (4-dot fire)',     desc: 'Usually related to fire or the use of fire.',
+        examples: [{ c: '热', p: 'rè', en: 'hot' }, { c: '黑', p: 'hēi', en: 'black' }] },
+    ],
+  },
+  {
+    lesson: 10,
+    items: [
+      { r: '走', name: 'zǒuzìpáng',   en: 'running / walking',     desc: 'Usually related to the act of running or walking.',
+        examples: [{ c: '超', p: 'chāo', en: 'to exceed, to surpass' }, { c: '起', p: 'qǐ', en: 'to get up, to rise' }] },
+      { r: '穴', name: 'xuézìtóu',    en: 'hole / cave',           desc: 'Usually related to holes, caves or houses.',
+        examples: [{ c: '空', p: 'kōng', en: 'empty' }, { c: '穿', p: 'chuān', en: 'to pierce through · to wear' }] },
+    ],
+  },
+]
+
+export const useHSK2 = () => ({ HSK2_META, HSK2_LESSONS, HSK2_STROKES, HSK2_CHARACTERS, HSK2_RADICALS, HSK2_LESSON_RADICALS })
