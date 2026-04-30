@@ -52,8 +52,8 @@ export const HSK3_LESSONS = [
       {
         title: 'Text 3 · 聊旅游计划  Talking about travel plans',
         lines: [
-          { s: 'A', c: '下个月我去旅游，你能跟我一起去吗？', p: 'Xià ge yuè wǒ qù lǛyóu, nǐ néng gēn wǒ yìqǐ qù ma?', en: "Next month I'm travelling — can you come with me?" },
-          { s: 'B', c: '我还没想好。哪里最好玩儿？',     p: 'Wǒ hái méi xiǎnghǎo. Nǎr zuì hǎowánr?',  en: "I haven't decided yet — where's the best place to go?" },
+          { s: 'A', c: '下个月我去旅游，你能跟我一起去吗？', p: 'Xià ge yuè wǒ qù lǚyóu, nǐ néng gēn wǒ yìqǐ qù ma?', en: "Next month I'm travelling — can you come with me?" },
+          { s: 'B', c: '我还没想好。哪里最好玩儿？',     p: 'Wǒ hái méi xiǎnghǎo. Nǎlǐ zuì hǎowánr?',  en: "I haven't decided yet — where's the best place to go?" },
           { s: 'A', c: '去南方吧，去年我就是这个时候去的。', p: 'Qù nánfāng ba, qùnián wǒ jiù shì zhège shíhou qù de.', en: "Let's go south — I went around this same time last year." },
           { s: 'B', c: '南方太热了，北方不冷也不热，好一些。', p: 'Nánfāng tài rè le, běifāng bù lěng yě bú rè, hǎo yìxiē.', en: "The south is too hot — the north is neither cold nor hot, it's better." },
         ],
