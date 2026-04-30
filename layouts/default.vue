@@ -81,7 +81,8 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
     <!-- Header -->
     <header class="sticky top-0 z-30 bg-ink text-cream border-b-2 border-gold-deep/70 shadow-lg">
       <div class="max-w-6xl mx-auto px-4 pt-3 sm:pt-4 flex items-center gap-3">
-        <div class="han text-2xl sm:text-3xl font-bold text-cream leading-none select-none">
+        <div class="han text-2xl sm:text-3xl font-bold text-cream leading-none select-none"
+             aria-hidden="true" lang="zh-CN">
           {{ headerData.icon }}
         </div>
         <div class="flex-1 min-w-0">
@@ -101,7 +102,7 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
             :class="route.path === t.to ? 'text-cream' : 'text-gold-soft hover:text-cream'"
           >
             <span class="flex items-center gap-1.5">
-              <span class="han text-base">{{ t.han }}</span> {{ t.label }}
+              <span class="han text-base" aria-hidden="true" lang="zh-CN">{{ t.han }}</span> {{ t.label }}
             </span>
             <span v-if="route.path === t.to"
               class="absolute left-2 right-2 bottom-0 h-[3px] rounded-t bg-gold"></span>
@@ -121,14 +122,14 @@ onBeforeUnmount(() => window.removeEventListener('scroll', onScroll))
         <div class="max-w-3xl mx-auto rounded-3xl bg-ink text-cream shadow-card overflow-hidden">
           <div class="px-5 sm:px-8 py-5 sm:py-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div class="flex items-start gap-3">
-              <div class="shrink-0 w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold han font-bold">师</div>
+              <div class="shrink-0 w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold han font-bold" aria-hidden="true" lang="zh-CN">师</div>
               <div class="min-w-0">
                 <div class="text-[10px] tracking-[0.25em] uppercase text-gold-soft">Supervisor</div>
                 <div class="text-sm sm:text-base font-semibold text-cream truncate">Teacher: Wen</div>
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <div class="shrink-0 w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold han font-bold">作</div>
+              <div class="shrink-0 w-10 h-10 rounded-full bg-gold/15 border border-gold/40 flex items-center justify-center text-gold han font-bold" aria-hidden="true" lang="zh-CN">作</div>
               <div class="min-w-0">
                 <div class="text-[10px] tracking-[0.25em] uppercase text-gold-soft">Created by</div>
                 <div class="text-sm sm:text-base font-semibold text-cream truncate">Eng: Moh</div>

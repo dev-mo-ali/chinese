@@ -1,36 +1,16 @@
 <script setup>
 import { HSK2_META, HSK2_LESSONS, HSK2_STROKES, HSK2_CHARACTERS, HSK2_RADICALS } from '~/composables/useHSK2.js'
+import { useHskPage } from '~/composables/useHskPage.js'
+import { posColor } from '~/composables/useHSK.js'
 
 useHead({ title: 'HSK 2 · Standard Course · 15 Lessons' })
 
-const activeLesson = ref(1)
-const showAllVocab = ref(false)
-
-// Reading-practice mode: pinyin + English are hidden until revealed.
-const revealed = ref(new Set())
-const revealAll = ref(false)
-const lineKey = (ti, i) => `${activeLesson.value}-${ti}-${i}`
-const isRevealed = (ti, i) => revealAll.value || revealed.value.has(lineKey(ti, i))
-const toggleLine = (ti, i) => {
-  const k = lineKey(ti, i)
-  const s = new Set(revealed.value)
-  s.has(k) ? s.delete(k) : s.add(k)
-  revealed.value = s
-}
-const resetReveals = () => { revealed.value = new Set() }
-
-// Vocab reveal · same pattern, keyed per lesson + index
-const vocabRevealed = ref(new Set())
-const vocabRevealAll = ref(false)
-const vocabKey = (i) => `${activeLesson.value}-${i}`
-const isVocabRevealed = (i) => vocabRevealAll.value || vocabRevealed.value.has(vocabKey(i))
-const toggleVocab = (i) => {
-  const k = vocabKey(i)
-  const s = new Set(vocabRevealed.value)
-  s.has(k) ? s.delete(k) : s.add(k)
-  vocabRevealed.value = s
-}
-const resetVocabReveals = () => { vocabRevealed.value = new Set() }
+const {
+  activeLesson, showAllVocab,
+  revealed, revealAll, isRevealed, toggleLine,
+  vocabRevealed, vocabRevealAll, isVocabRevealed, toggleVocab,
+  search, pickLesson,
+} = useHskPage({ scrollTargetId: 'lesson-detail' })
 
 const current = computed(() => HSK2_LESSONS.find(l => l.no === activeLesson.value))
 
@@ -51,7 +31,6 @@ const allVocab = computed(() =>
   HSK2_LESSONS.flatMap(l => l.vocab.map(v => ({ ...v, lesson: l.no })))
 )
 
-const search = ref('')
 const filteredVocab = computed(() => {
   const q = search.value.trim().toLowerCase()
   if (!q) return allVocab.value
@@ -61,41 +40,6 @@ const filteredVocab = computed(() => {
     v.en.toLowerCase().includes(q)
   )
 })
-
-const pickLesson = (n) => {
-  activeLesson.value = n
-  showAllVocab.value = false
-  revealAll.value = false
-  resetReveals()
-  vocabRevealAll.value = false
-  resetVocabReveals()
-  if (process.client) {
-    nextTick(() => {
-      document.getElementById('lesson-detail')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    })
-  }
-}
-
-const posColors = {
-  'pron.':  '#7c3aed',
-  'v.':     '#9b2226',
-  'n.':     '#2d6a4f',
-  'adj.':   '#c2410c',
-  'adv.':   '#0369a1',
-  'num.':   '#1f1d1a',
-  'm.':     '#7c5a1e',
-  'part.':  '#6b7280',
-  'expr.':  '#9333ea',
-  'qty.':   '#7c5a1e',
-  'prep.':  '#0d9488',
-  'conj.':  '#7c3aed',
-  'v./n.':  '#9b2226',
-  'v./prep.': '#9b2226',
-  'v./aux.': '#9b2226',
-  'adj./adv.': '#c2410c',
-  'adv./n.': '#0369a1',
-}
-const posColor = (pos) => posColors[pos] || '#6b7280'
 </script>
 
 <template>
@@ -130,7 +74,7 @@ const posColor = (pos) => posColors[pos] || '#6b7280'
             {{ totalVocab }} new words
           </span>
           <span class="px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-gold/10 border border-gold-deep/30 text-ink-soft">
-            比 · 把 · 了 · 着 · 过
+            <span lang="zh-CN">比 · 把 · 了 · 着 · 过</span>
           </span>
         </div>
       </div>
