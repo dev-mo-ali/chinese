@@ -86,6 +86,29 @@ watch(() => route.path, closeMenu)
 const onKeydown = (e) => { if (e.key === 'Escape') closeMenu() }
 onMounted(() => window.addEventListener('keydown', onKeydown))
 onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
+
+// Visitors counter (counterapi.dev) — increments once per browser session.
+const visitors = ref(null)
+onMounted(async () => {
+  try {
+    const sessionKey = 'chinese-visit-counted'
+    const counted = sessionStorage.getItem(sessionKey)
+    const endpoint = counted
+      ? 'https://api.counterapi.dev/v1/dev-mo-ali/chinese-learn/'
+      : 'https://api.counterapi.dev/v1/dev-mo-ali/chinese-learn/up'
+    const res = await fetch(endpoint)
+    if (res.ok) {
+      const data = await res.json()
+      visitors.value = data.count
+      if (!counted) sessionStorage.setItem(sessionKey, '1')
+    }
+  } catch {
+    // Silent fail — counter is non-essential.
+  }
+})
+const formattedVisitors = computed(() =>
+  visitors.value == null ? '…' : visitors.value.toLocaleString()
+)
 </script>
 
 <template>
@@ -242,8 +265,14 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
               </div>
             </div>
           </div>
-          <div class="px-5 sm:px-8 py-3 border-t border-gold-deep/40 text-[10px] sm:text-xs text-gold-soft tracking-widest uppercase text-center">
-              Kuala Lumpur, Malaysia
+          <div class="px-5 sm:px-8 py-3 border-t border-gold-deep/40 text-[10px] sm:text-xs text-gold-soft tracking-widest uppercase text-center flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+            <span>Kuala Lumpur, Malaysia</span>
+            <span aria-hidden="true" class="opacity-50">·</span>
+            <span>
+              <span class="han mr-1" aria-hidden="true" lang="zh-CN">访</span>
+              Visitors:
+              <span class="text-cream font-semibold normal-case tracking-normal ml-1">{{ formattedVisitors }}</span>
+            </span>
           </div>
         </div>
       </footer>
