@@ -242,7 +242,7 @@ const filteredVocab = computed(() => {
             Read the Chinese first — tap a word to reveal pinyin &amp; English.
           </p>
           <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-            <li v-for="(v, i) in current.vocab" :key="i">
+            <li v-for="(v, i) in current.vocab" :key="i" class="flex flex-col gap-2">
               <button
                 type="button"
                 @click="toggleVocab(i)"
@@ -282,6 +282,18 @@ const filteredVocab = computed(() => {
                   </div>
                 </div>
               </button>
+
+              <div class="w-full flex flex-wrap items-start justify-center gap-3 p-2.5 rounded-lg border"
+                   style="background:#fffdf6; border-color:rgba(124,90,30,.2);"
+              >
+                <HanziPractice v-for="(ch, ci) in [...v.c]" :key="ci"
+                               :char="ch"
+                               :size="130"
+                               accent="#b45309"
+                               outline="#fde68a"
+                               highlight="#7c5a1e"
+                />
+              </div>
             </li>
           </ul>
         </section>

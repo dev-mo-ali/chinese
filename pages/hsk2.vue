@@ -12,8 +12,12 @@ const {
   search, pickLesson,
 } = useHskPage({ scrollTargetId: 'lesson-detail' })
 
-const open = reactive({ strokes: false, radicals: false, chars: false, vocab: false })
+const open = reactive({ lessons: true, detail: true, strokes: false, radicals: false, chars: false, vocab: false })
 const toggle = (k) => { open[k] = !open[k] }
+
+const practiceOpen = reactive({})
+const togglePractice = (key) => { practiceOpen[key] = !practiceOpen[key] }
+const isPracticeOpen = (key) => !!practiceOpen[key]
 
 const current = computed(() => HSK2_LESSONS.find(l => l.no === activeLesson.value))
 
@@ -90,41 +94,72 @@ const filteredVocab = computed(() => {
       </div>
     </article>
 
-    <!-- LESSON GRID -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3 mb-6">
-      <button
-        v-for="l in HSK2_LESSONS" :key="l.no"
-        @click="pickLesson(l.no)"
-        class="group relative rounded-xl border-2 bg-paper text-left
-               transition hover:-translate-y-0.5 hover:shadow-card overflow-hidden"
-        :class="activeLesson === l.no ? 'border-ink shadow-card' : 'border-gold-deep/25'"
-        :style="{ animationDelay: ((l.no - 1) * 35) + 'ms', animation: 'fadeUp .4s both' }"
+    <!-- LESSON GRID · foldable -->
+    <article class="rounded-3xl shadow-card overflow-hidden border mb-6"
+             style="background:#fff; border-color:rgba(124,90,30,.22);"
+    >
+      <header @click="toggle('lessons')"
+              :aria-expanded="open.lessons"
+              class="fold-head flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b cursor-pointer select-none"
+              style="background: linear-gradient(135deg,#fdfaf2,#fff8e0); border-color:rgba(124,90,30,.18);"
       >
-        <div class="absolute top-1.5 right-2 text-[9px] font-mono tracking-widest text-gold-soft">
-          № {{ String(l.no).padStart(2, '0') }}
+        <span class="flex items-center justify-center w-10 h-10 rounded-lg han text-xl font-bold text-white shadow-chip"
+              style="background: linear-gradient(135deg,#7c5a1e,#b45309);">课</span>
+        <div>
+          <div class="text-[10px] tracking-widest uppercase font-semibold" style="color:#7c5a1e">
+            Lessons · 课程
+          </div>
+          <div class="text-base sm:text-lg han font-bold text-ink">{{ HSK2_LESSONS.length }} lessons</div>
         </div>
-        <div class="p-3 sm:p-4 pt-5 sm:pt-6">
-          <div class="han text-lg sm:text-xl font-bold leading-tight text-ink line-clamp-2">{{ l.han }}</div>
-          <div class="text-[10px] sm:text-[11px] tracking-wide text-gold-deep mt-0.5 truncate">{{ l.pinyin }}</div>
-          <div class="text-xs text-ink-soft mt-1.5 line-clamp-2">{{ l.en }}</div>
+        <span class="ml-auto flex items-center gap-2">
+          <span class="text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded text-white"
+                style="background:#7c5a1e;">L{{ String(activeLesson).padStart(2,'0') }} · 当前</span>
+          <span class="fold-caret text-lg leading-none" style="color:#7c5a1e;" :class="{ 'is-open': open.lessons }">▸</span>
+        </span>
+      </header>
+
+      <div v-show="open.lessons" class="p-3 sm:p-5"
+           style="background: linear-gradient(180deg,#fffdf6,#ffffff);">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3">
+          <button
+            v-for="l in HSK2_LESSONS" :key="l.no"
+            @click="pickLesson(l.no)"
+            class="group relative rounded-xl border-2 bg-paper text-left
+                   transition hover:-translate-y-0.5 hover:shadow-card overflow-hidden"
+            :class="activeLesson === l.no ? 'border-ink shadow-card' : 'border-gold-deep/25'"
+            :style="{ animationDelay: ((l.no - 1) * 35) + 'ms', animation: 'fadeUp .4s both' }"
+          >
+            <div class="absolute top-1.5 right-2 text-[9px] font-mono tracking-widest text-gold-soft">
+              № {{ String(l.no).padStart(2, '0') }}
+            </div>
+            <div class="p-3 sm:p-4 pt-5 sm:pt-6">
+              <div class="han text-lg sm:text-xl font-bold leading-tight text-ink line-clamp-2">{{ l.han }}</div>
+              <div class="text-[10px] sm:text-[11px] tracking-wide text-gold-deep mt-0.5 truncate">{{ l.pinyin }}</div>
+              <div class="text-xs text-ink-soft mt-1.5 line-clamp-2">{{ l.en }}</div>
+            </div>
+            <div class="h-0.5 w-full transition"
+                 :class="activeLesson === l.no ? 'bg-ink' : 'bg-transparent group-hover:bg-gold/60'"></div>
+          </button>
         </div>
-        <div class="h-0.5 w-full transition"
-             :class="activeLesson === l.no ? 'bg-ink' : 'bg-transparent group-hover:bg-gold/60'"></div>
-      </button>
-    </div>
+      </div>
+    </article>
 
     <!-- LESSON DETAIL -->
     <article id="lesson-detail" v-if="current"
       class="rounded-3xl border-2 border-ink/15 bg-paper shadow-card overflow-hidden mb-8 animate-fadeUp"
       :key="current.no"
     >
-      <header class="px-5 sm:px-7 py-5 sm:py-6 border-b border-ink/10 flex items-start gap-4 sm:gap-6"
+      <header @click="toggle('detail')"
+              :aria-expanded="open.detail"
+              class="fold-head border-b border-ink/10 flex items-center gap-4 sm:gap-6 cursor-pointer select-none transition-all"
+              :class="open.detail ? 'px-5 sm:px-7 py-5 sm:py-6 items-start' : 'px-4 sm:px-5 py-2.5'"
               :style="{ background: 'linear-gradient(135deg,#fdfaf2,#fff8e0)' }">
         <div class="shrink-0 text-center">
-          <div class="text-[10px] tracking-[0.3em] uppercase text-gold-deep mb-1">Lesson</div>
-          <div class="font-mono text-3xl sm:text-4xl font-bold text-ink">{{ String(current.no).padStart(2, '0') }}</div>
+          <div v-if="open.detail" class="text-[10px] tracking-[0.3em] uppercase text-gold-deep mb-1">Lesson</div>
+          <div class="font-mono font-bold text-ink transition-all"
+               :class="open.detail ? 'text-3xl sm:text-4xl' : 'text-lg'">{{ String(current.no).padStart(2, '0') }}</div>
         </div>
-        <div class="min-w-0 flex-1">
+        <div v-if="open.detail" class="min-w-0 flex-1">
           <div class="han text-2xl sm:text-3xl font-bold text-ink leading-tight mb-1">{{ current.han }}</div>
           <div class="text-sm tracking-wider text-gold-deep mb-1">{{ current.pinyin }}</div>
           <div class="text-base sm:text-lg font-semibold text-ink-soft mb-2">{{ current.en }}</div>
@@ -133,8 +168,11 @@ const filteredVocab = computed(() => {
             <span>{{ current.focus }}</span>
           </div>
         </div>
+        <span v-else class="text-[10px] tracking-[0.3em] uppercase text-gold-deep">Lesson</span>
+        <span class="fold-caret text-xl leading-none text-gold-deep ml-auto" :class="{ 'is-open': open.detail, 'self-center': open.detail }">▸</span>
       </header>
 
+      <div v-show="open.detail">
       <div class="grid lg:grid-cols-2 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-ink/10">
 
         <!-- TEXTS · chat-bubble style -->
@@ -255,7 +293,7 @@ const filteredVocab = computed(() => {
             Read the Chinese first — tap a word to reveal pinyin &amp; English.
           </p>
           <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-            <li v-for="(v, i) in current.vocab" :key="i">
+            <li v-for="(v, i) in current.vocab" :key="i" class="flex flex-col gap-1.5">
               <button
                 type="button"
                 @click="toggleVocab(i)"
@@ -295,6 +333,18 @@ const filteredVocab = computed(() => {
                   </div>
                 </div>
               </button>
+
+              <div class="w-full flex flex-wrap items-start justify-center gap-3 p-2.5 rounded-lg border"
+                   style="background:#fffdf6; border-color:rgba(124,90,30,.2);"
+              >
+                <HanziPractice v-for="(ch, ci) in [...v.c]" :key="ci"
+                               :char="ch"
+                               :size="130"
+                               accent="#b45309"
+                               outline="#fde68a"
+                               highlight="#7c5a1e"
+                />
+              </div>
             </li>
           </ul>
         </section>
@@ -397,6 +447,7 @@ const filteredVocab = computed(() => {
           </li>
         </ul>
       </section>
+      </div>
 
       <footer class="px-5 sm:px-7 py-3 border-t border-ink/10 flex items-center justify-between bg-cream/40">
         <button
@@ -522,31 +573,39 @@ const filteredVocab = computed(() => {
 
           <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             <li v-for="(rad, i) in group.items" :key="i"
-                class="radical-card group relative grid grid-cols-[auto_1fr] items-center gap-3 px-3.5 py-3 rounded-xl bg-white border"
+                class="radical-card group relative rounded-xl bg-white border p-3.5"
                 style="border-color:rgba(124,58,237,.25);"
             >
-              <div class="radical-tile flex items-center justify-center w-16 h-16 rounded-lg shrink-0 border"
-                   style="background: linear-gradient(135deg,#ede9fe,#ddd6fe); border-color:rgba(91,33,182,.3);"
-              >
-                <span class="han font-bold leading-none" style="color:#3b0764; font-size:2.25rem;">{{ rad.r }}</span>
+              <div class="grid grid-cols-[auto_1fr] items-start gap-3">
+                <div class="radical-tile flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-lg shrink-0 border"
+                     style="background: linear-gradient(135deg,#ede9fe,#ddd6fe); border-color:rgba(91,33,182,.3);"
+                >
+                  <span class="han font-bold leading-none" style="color:#3b0764; font-size:2rem;">{{ rad.r }}</span>
+                </div>
+
+                <div class="min-w-0">
+                  <div class="flex items-baseline flex-wrap gap-x-2 gap-y-0.5 mb-0.5">
+                    <span class="text-[14px] font-bold text-ink">{{ rad.name }}</span>
+                    <span class="text-[12px] tracking-wide font-semibold" style="color:#5b21b6">{{ rad.en }}</span>
+                  </div>
+                  <p class="text-[12px] text-ink-soft leading-snug mb-1.5">{{ rad.desc }}</p>
+                  <div class="flex items-center flex-wrap gap-1.5">
+                    <span v-for="(ex, ei) in rad.examples" :key="ei"
+                          class="inline-flex items-baseline gap-1 px-1.5 py-0.5 rounded border"
+                          style="background:#faf5ff;border-color:rgba(124,58,237,.3);"
+                    >
+                      <span class="han text-[14px] font-semibold" style="color:#3b0764;">{{ ex.c }}</span>
+                      <span class="text-[10px]" style="color:#7c3aed;">{{ ex.p }}</span>
+                      <span class="text-[10px] text-ink-soft italic">· {{ ex.en }}</span>
+                    </span>
+                  </div>
+                </div>
               </div>
 
-              <div class="min-w-0">
-                <div class="flex items-baseline gap-2 mb-0.5">
-                  <span class="text-[14px] font-bold text-ink">{{ rad.name }}</span>
-                  <span class="text-[12px] tracking-wide font-semibold" style="color:#5b21b6">{{ rad.en }}</span>
-                </div>
-                <p class="text-[12px] text-ink-soft leading-snug mb-1.5">{{ rad.desc }}</p>
-                <div class="flex items-center flex-wrap gap-1.5">
-                  <span v-for="(ex, ei) in rad.examples" :key="ei"
-                        class="inline-flex items-baseline gap-1 px-1.5 py-0.5 rounded border"
-                        style="background:#faf5ff;border-color:rgba(124,58,237,.3);"
-                  >
-                    <span class="han text-[14px] font-semibold" style="color:#3b0764;">{{ ex.c }}</span>
-                    <span class="text-[10px]" style="color:#7c3aed;">{{ ex.p }}</span>
-                    <span class="text-[10px] text-ink-soft italic">· {{ ex.en }}</span>
-                  </span>
-                </div>
+              <div class="mt-2.5 pt-2.5 border-t flex flex-col items-center gap-2"
+                   style="border-color:rgba(124,58,237,.15);"
+              >
+                <HanziPractice :char="rad.r" :size="140" />
               </div>
             </li>
           </ul>
@@ -603,11 +662,12 @@ const filteredVocab = computed(() => {
                   <th class="px-3 py-2 text-[10px] font-mono uppercase tracking-widest font-bold w-96">Radical</th>
                   <th class="px-3 py-2 text-[10px] font-mono uppercase tracking-widest font-bold w-44">Meaning</th>
                   <th class="px-3 py-2 text-[10px] font-mono uppercase tracking-widest font-bold">Description</th>
+                  <th class="px-3 py-2 text-[10px] font-mono uppercase tracking-widest font-bold w-32 text-center">Practice</th>
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="(ch, i) in group.items" :key="i"
-                    class="char-row border-t"
+                <template v-for="(ch, i) in group.items" :key="i">
+                <tr class="char-row border-t"
                     style="border-color:rgba(124,90,30,.14);">
                   <td class="px-3 py-3 align-middle">
                     <span class="han font-bold leading-none" style="color:#5a3a06; font-size:2rem;">{{ ch.c }}</span>
@@ -630,7 +690,14 @@ const filteredVocab = computed(() => {
                   </td>
                   <td class="px-3 py-3 align-middle text-[13px] text-ink font-medium">{{ ch.en }}</td>
                   <td class="px-3 py-3 align-middle text-[12.5px] text-ink-soft leading-snug italic">{{ ch.desc }}</td>
+                  <td class="px-3 py-3 align-middle">
+                    <div class="flex justify-center">
+                      <HanziPractice :char="ch.c" :size="140"
+                                     accent="#b45309" outline="#fde68a" highlight="#7c5a1e" />
+                    </div>
+                  </td>
                 </tr>
+                </template>
               </tbody>
             </table>
           </div>
@@ -638,27 +705,34 @@ const filteredVocab = computed(() => {
           <!-- Card layout (mobile) -->
           <ul class="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-3">
             <li v-for="(ch, i) in group.items" :key="i"
-                class="char-card relative grid grid-cols-[auto_1fr] gap-3 px-3.5 py-3 rounded-xl bg-white border"
+                class="char-card relative rounded-xl bg-white border p-3.5"
                 style="border-color:rgba(124,90,30,.22);">
-              <div class="flex flex-col items-center justify-center gap-1">
-                <span class="han font-bold leading-none" style="color:#5a3a06; font-size:2.25rem;">{{ ch.c }}</span>
-                <span class="han text-[11px] font-bold inline-flex items-center justify-center w-7 h-7 rounded border"
-                      style="color:#5a3a06;background:#fffbeb;border-color:rgba(124,90,30,.3);"
-                      :title="`Radical: ${ch.radical} (${radicalInfo(ch.radical).name}) — ${radicalInfo(ch.radical).en}`">{{ ch.radical }}</span>
+              <div class="grid grid-cols-[auto_1fr] gap-3">
+                <div class="flex flex-col items-center justify-center gap-1">
+                  <span class="han font-bold leading-none" style="color:#5a3a06; font-size:2.25rem;">{{ ch.c }}</span>
+                  <span class="han text-[11px] font-bold inline-flex items-center justify-center w-7 h-7 rounded border"
+                        style="color:#5a3a06;background:#fffbeb;border-color:rgba(124,90,30,.3);"
+                        :title="`Radical: ${ch.radical} (${radicalInfo(ch.radical).name}) — ${radicalInfo(ch.radical).en}`">{{ ch.radical }}</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="flex items-baseline gap-2 mb-0.5">
+                    <span class="text-[13px] tracking-wide font-semibold" style="color:#7c5a1e">{{ ch.p }}</span>
+                    <span class="text-[12px] text-ink font-medium">· {{ ch.en }}</span>
+                  </div>
+                  <div class="text-[11.5px] text-ink-soft leading-snug italic">{{ ch.desc }}</div>
+                  <div class="mt-1.5 pt-1.5 border-t text-[11px]" style="border-color:rgba(124,90,30,.18);">
+                    <span class="font-mono uppercase tracking-widest text-[9px] font-bold" style="color:#7c5a1e">Radical</span>
+                    <span class="ml-1 font-semibold" style="color:#5a3a06">{{ ch.radical }}</span>
+                    <span class="ml-1" style="color:#7c5a1e">{{ radicalInfo(ch.radical).name }}</span>
+                    <span class="text-ink-soft"> · {{ radicalInfo(ch.radical).en }}</span>
+                    <div class="text-ink-soft italic leading-snug mt-0.5">{{ radicalInfo(ch.radical).desc }}</div>
+                  </div>
+                </div>
               </div>
-              <div class="min-w-0">
-                <div class="flex items-baseline gap-2 mb-0.5">
-                  <span class="text-[13px] tracking-wide font-semibold" style="color:#7c5a1e">{{ ch.p }}</span>
-                  <span class="text-[12px] text-ink font-medium">· {{ ch.en }}</span>
-                </div>
-                <div class="text-[11.5px] text-ink-soft leading-snug italic">{{ ch.desc }}</div>
-                <div class="mt-1.5 pt-1.5 border-t text-[11px]" style="border-color:rgba(124,90,30,.18);">
-                  <span class="font-mono uppercase tracking-widest text-[9px] font-bold" style="color:#7c5a1e">Radical</span>
-                  <span class="ml-1 font-semibold" style="color:#5a3a06">{{ ch.radical }}</span>
-                  <span class="ml-1" style="color:#7c5a1e">{{ radicalInfo(ch.radical).name }}</span>
-                  <span class="text-ink-soft"> · {{ radicalInfo(ch.radical).en }}</span>
-                  <div class="text-ink-soft italic leading-snug mt-0.5">{{ radicalInfo(ch.radical).desc }}</div>
-                </div>
+              <div class="mt-2.5 pt-2.5 border-t flex flex-col items-center gap-2"
+                   style="border-color:rgba(124,90,30,.18);">
+                <HanziPractice :char="ch.c" :size="140"
+                               accent="#b45309" outline="#fde68a" highlight="#7c5a1e" />
               </div>
             </li>
           </ul>
