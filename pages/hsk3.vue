@@ -12,7 +12,7 @@ const {
   search, pickLesson,
 } = useHskPage({ scrollTargetId: 'lesson-detail' })
 
-const open = reactive({ vocab: false })
+const open = reactive({ lessons: true, detail: true, vocab: false })
 const toggle = (k) => { open[k] = !open[k] }
 
 const current = computed(() => HSK3_LESSONS.find(l => l.no === activeLesson.value))
@@ -77,41 +77,72 @@ const filteredVocab = computed(() => {
       </div>
     </article>
 
-    <!-- LESSON GRID -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3 mb-6">
-      <button
-        v-for="l in HSK3_LESSONS" :key="l.no"
-        @click="pickLesson(l.no)"
-        class="group relative rounded-xl border-2 bg-paper text-left
-               transition hover:-translate-y-0.5 hover:shadow-card overflow-hidden"
-        :class="activeLesson === l.no ? 'border-ink shadow-card' : 'border-gold-deep/25'"
-        :style="{ animationDelay: ((l.no - 1) * 35) + 'ms', animation: 'fadeUp .4s both' }"
+    <!-- LESSON GRID · foldable -->
+    <article class="rounded-3xl shadow-card overflow-hidden border mb-6"
+             style="background:#fff; border-color:rgba(124,90,30,.22);"
+    >
+      <header @click="toggle('lessons')"
+              :aria-expanded="open.lessons"
+              class="fold-head flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b cursor-pointer select-none"
+              style="background: linear-gradient(135deg,#fdfaf2,#fff8e0); border-color:rgba(124,90,30,.18);"
       >
-        <div class="absolute top-1.5 right-2 text-[9px] font-mono tracking-widest text-gold-soft">
-          № {{ String(l.no).padStart(2, '0') }}
+        <span class="flex items-center justify-center w-10 h-10 rounded-lg han text-xl font-bold text-white shadow-chip"
+              style="background: linear-gradient(135deg,#7c5a1e,#b45309);">课</span>
+        <div>
+          <div class="text-[10px] tracking-widest uppercase font-semibold" style="color:#7c5a1e">
+            Lessons · 课程
+          </div>
+          <div class="text-base sm:text-lg han font-bold text-ink">{{ HSK3_LESSONS.length }} lessons</div>
         </div>
-        <div class="p-3 sm:p-4 pt-5 sm:pt-6">
-          <div class="han text-lg sm:text-xl font-bold leading-tight text-ink line-clamp-2">{{ l.han }}</div>
-          <div class="text-[10px] sm:text-[11px] tracking-wide text-gold-deep mt-0.5 truncate">{{ l.pinyin }}</div>
-          <div class="text-xs text-ink-soft mt-1.5 line-clamp-2">{{ l.en }}</div>
+        <span class="ml-auto flex items-center gap-2">
+          <span class="text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded text-white"
+                style="background:#7c5a1e;">L{{ String(activeLesson).padStart(2,'0') }} · 当前</span>
+          <span class="fold-caret text-lg leading-none" style="color:#7c5a1e;" :class="{ 'is-open': open.lessons }">▸</span>
+        </span>
+      </header>
+
+      <div v-show="open.lessons" class="p-3 sm:p-5"
+           style="background: linear-gradient(180deg,#fffdf6,#ffffff);">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3">
+          <button
+            v-for="l in HSK3_LESSONS" :key="l.no"
+            @click="pickLesson(l.no)"
+            class="group relative rounded-xl border-2 bg-paper text-left
+                   transition hover:-translate-y-0.5 hover:shadow-card overflow-hidden"
+            :class="activeLesson === l.no ? 'border-ink shadow-card' : 'border-gold-deep/25'"
+            :style="{ animationDelay: ((l.no - 1) * 35) + 'ms', animation: 'fadeUp .4s both' }"
+          >
+            <div class="absolute top-1.5 right-2 text-[9px] font-mono tracking-widest text-gold-soft">
+              № {{ String(l.no).padStart(2, '0') }}
+            </div>
+            <div class="p-3 sm:p-4 pt-5 sm:pt-6">
+              <div class="han text-lg sm:text-xl font-bold leading-tight text-ink line-clamp-2">{{ l.han }}</div>
+              <div class="text-[10px] sm:text-[11px] tracking-wide text-gold-deep mt-0.5 truncate">{{ l.pinyin }}</div>
+              <div class="text-xs text-ink-soft mt-1.5 line-clamp-2">{{ l.en }}</div>
+            </div>
+            <div class="h-0.5 w-full transition"
+                 :class="activeLesson === l.no ? 'bg-ink' : 'bg-transparent group-hover:bg-gold/60'"></div>
+          </button>
         </div>
-        <div class="h-0.5 w-full transition"
-             :class="activeLesson === l.no ? 'bg-ink' : 'bg-transparent group-hover:bg-gold/60'"></div>
-      </button>
-    </div>
+      </div>
+    </article>
 
     <!-- LESSON DETAIL -->
     <article id="lesson-detail" v-if="current"
       class="rounded-3xl border-2 border-ink/15 bg-paper shadow-card overflow-hidden mb-8 animate-fadeUp"
       :key="current.no"
     >
-      <header class="px-5 sm:px-7 py-5 sm:py-6 border-b border-ink/10 flex items-start gap-4 sm:gap-6"
+      <header @click="toggle('detail')"
+              :aria-expanded="open.detail"
+              class="fold-head border-b border-ink/10 flex items-center gap-4 sm:gap-6 cursor-pointer select-none transition-all"
+              :class="open.detail ? 'px-5 sm:px-7 py-5 sm:py-6 items-start' : 'px-4 sm:px-5 py-2.5'"
               :style="{ background: 'linear-gradient(135deg,#fdfaf2,#fff8e0)' }">
         <div class="shrink-0 text-center">
-          <div class="text-[10px] tracking-[0.3em] uppercase text-gold-deep mb-1">Lesson</div>
-          <div class="font-mono text-3xl sm:text-4xl font-bold text-ink">{{ String(current.no).padStart(2, '0') }}</div>
+          <div v-if="open.detail" class="text-[10px] tracking-[0.3em] uppercase text-gold-deep mb-1">Lesson</div>
+          <div class="font-mono font-bold text-ink transition-all"
+               :class="open.detail ? 'text-3xl sm:text-4xl' : 'text-lg'">{{ String(current.no).padStart(2, '0') }}</div>
         </div>
-        <div class="min-w-0 flex-1">
+        <div v-if="open.detail" class="min-w-0 flex-1">
           <div class="han text-2xl sm:text-3xl font-bold text-ink leading-tight mb-1">{{ current.han }}</div>
           <div class="text-sm tracking-wider text-gold-deep mb-1">{{ current.pinyin }}</div>
           <div class="text-base sm:text-lg font-semibold text-ink-soft mb-2">{{ current.en }}</div>
@@ -120,8 +151,11 @@ const filteredVocab = computed(() => {
             <span>{{ current.focus }}</span>
           </div>
         </div>
+        <span v-else class="text-[10px] tracking-[0.3em] uppercase text-gold-deep">Lesson</span>
+        <span class="fold-caret text-xl leading-none text-gold-deep ml-auto" :class="{ 'is-open': open.detail, 'self-center': open.detail }">▸</span>
       </header>
 
+      <div v-show="open.detail">
       <div class="grid lg:grid-cols-2 gap-0 divide-y lg:divide-y-0 lg:divide-x divide-ink/10">
 
         <!-- TEXTS · teal writing style -->
@@ -346,6 +380,8 @@ const filteredVocab = computed(() => {
           </article>
         </div>
       </section>
+
+      </div>
 
       <footer class="px-5 sm:px-7 py-3 border-t border-ink/10 flex items-center justify-between bg-cream/40">
         <button
