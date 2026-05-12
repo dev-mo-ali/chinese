@@ -9,6 +9,7 @@ const tabs = [
   { to: '/hsk1',     han: '一', label: 'HSK 1'    },
   { to: '/hsk2',     han: '二', label: 'HSK 2'    },
   { to: '/hsk3',     han: '三', label: 'HSK 3'    },
+  { to: '/allwords', han: '词', label: 'All Words'},
   { to: '/write',    han: '写', label: 'Write'    },
   { to: '/sentence', han: '句', label: 'Sentence' },
   { to: '/game',     han: '游', label: 'Game'     },
