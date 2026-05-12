@@ -12,7 +12,7 @@ const {
   search, pickLesson,
 } = useHskPage({ scrollTargetId: 'lesson-detail' })
 
-const open = reactive({ lessons: true, detail: true, strokes: false, radicals: false, chars: false, vocab: false })
+const open = reactive({ lessons: true, detail: true, lessonTexts: true, lessonVocab: true, lessonNotes: true, strokes: false, radicals: false, chars: false, vocab: false })
 const toggle = (k) => { open[k] = !open[k] }
 
 const practiceOpen = reactive({})
@@ -179,13 +179,16 @@ const filteredVocab = computed(() => {
         <!-- TEXTS · chat-bubble style -->
         <section class="p-5 sm:p-7">
           <div class="flex items-center justify-between gap-3 mb-4 flex-wrap">
-            <div class="flex items-baseline gap-2">
-              <div class="text-[10px] font-semibold tracking-widest uppercase text-ink/50">
+            <button type="button" @click="toggle('lessonTexts')"
+                    :aria-expanded="open.lessonTexts"
+                    class="flex items-baseline gap-2 cursor-pointer select-none group bg-transparent border-0 p-0">
+              <span class="fold-caret text-ink/50 text-sm leading-none" :class="{ 'is-open': open.lessonTexts }">▸</span>
+              <div class="text-[10px] font-semibold tracking-widest uppercase text-ink/50 group-hover:text-ink transition">
                 Texts · 课文
               </div>
               <span class="text-[10px] font-mono text-ink/40">{{ current.texts.length }}</span>
-            </div>
-            <div class="flex items-center gap-2">
+            </button>
+            <div v-show="open.lessonTexts" class="flex items-center gap-2">
               <button
                 type="button"
                 @click="revealAll = !revealAll"
@@ -208,11 +211,11 @@ const filteredVocab = computed(() => {
               </button>
             </div>
           </div>
-          <p class="text-[11px] text-ink/50 italic mb-4 -mt-2">
+          <p v-show="open.lessonTexts" class="text-[11px] text-ink/50 italic mb-4 -mt-2">
             Read the Chinese first — tap a bubble to reveal pinyin &amp; English.
           </p>
 
-          <div class="space-y-8">
+          <div v-show="open.lessonTexts" class="space-y-8">
             <div v-for="(text, ti) in current.texts" :key="ti" class="relative">
               <div class="flex items-center gap-3 mb-4">
                 <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-ink to-ink/70 text-paper font-mono text-[11px] font-bold shrink-0 shadow-chip">
@@ -264,10 +267,15 @@ const filteredVocab = computed(() => {
         <!-- VOCAB -->
         <section class="p-5 sm:p-7">
           <div class="flex items-center justify-between gap-3 mb-3 flex-wrap">
-            <div class="text-[10px] font-semibold tracking-widest uppercase text-ink/50">
-              New words · 生词 · {{ current.vocab.length }}
-            </div>
-            <div class="flex items-center gap-2">
+            <button type="button" @click="toggle('lessonVocab')"
+                    :aria-expanded="open.lessonVocab"
+                    class="flex items-baseline gap-2 cursor-pointer select-none group bg-transparent border-0 p-0">
+              <span class="fold-caret text-ink/50 text-sm leading-none" :class="{ 'is-open': open.lessonVocab }">▸</span>
+              <div class="text-[10px] font-semibold tracking-widest uppercase text-ink/50 group-hover:text-ink transition">
+                New words · 生词 · {{ current.vocab.length }}
+              </div>
+            </button>
+            <div v-show="open.lessonVocab" class="flex items-center gap-2">
               <button
                 type="button"
                 @click="vocabRevealAll = !vocabRevealAll"
@@ -290,10 +298,10 @@ const filteredVocab = computed(() => {
               </button>
             </div>
           </div>
-          <p class="text-[11px] text-ink/50 italic mb-3">
+          <p v-show="open.lessonVocab" class="text-[11px] text-ink/50 italic mb-3">
             Read the Chinese first — tap a word to reveal pinyin &amp; English.
           </p>
-          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          <ul v-show="open.lessonVocab" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             <li v-for="(v, i) in current.vocab" :key="i" class="flex flex-col gap-1.5">
               <button
                 type="button"
@@ -305,15 +313,15 @@ const filteredVocab = computed(() => {
                 :aria-expanded="isVocabRevealed(i)"
                 :title="isVocabRevealed(i) ? 'Click to hide pinyin & English' : 'Click to reveal pinyin & English'"
               >
-                <span class="vocab-tile flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-lg shrink-0 border"
+                <span class="vocab-tile flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-lg shrink-0 border"
                       :class="isVocabRevealed(i) ? 'vocab-tile-on' : 'vocab-tile-off'"
                 >
                   <span class="han font-bold leading-none text-center break-keep"
                         :style="{
-                          fontSize: v.c.length <= 1 ? '1.6rem'
-                                  : v.c.length === 2 ? '1.35rem'
-                                  : v.c.length === 3 ? '1.05rem'
-                                  : '0.9rem'
+                          fontSize: v.c.length <= 1 ? '2.4rem'
+                                  : v.c.length === 2 ? '1.9rem'
+                                  : v.c.length === 3 ? '1.45rem'
+                                  : '1.2rem'
                         }">{{ v.c }}</span>
                 </span>
 
@@ -356,7 +364,8 @@ const filteredVocab = computed(() => {
                class="px-5 sm:px-7 py-6 sm:py-8 border-t"
                style="background: linear-gradient(180deg,#fef2f2,#fff7ed); border-color:rgba(155,34,38,.18);"
       >
-        <div class="flex items-center gap-3 mb-5">
+        <div @click="toggle('lessonNotes')" :aria-expanded="open.lessonNotes"
+             class="fold-head flex items-center gap-3 mb-5 cursor-pointer select-none">
           <span class="flex items-center justify-center w-9 h-9 rounded-lg han text-lg font-bold text-white shadow-chip"
                 style="background: linear-gradient(135deg,#9b2226,#dc2626);">语</span>
           <div>
@@ -366,9 +375,10 @@ const filteredVocab = computed(() => {
             <div class="text-sm font-bold text-ink han">语法 · {{ current.notes.length }} 条</div>
           </div>
           <span class="flex-1 h-px" style="background: linear-gradient(to right,#dc2626 0%, transparent 100%);"></span>
+          <span class="fold-caret text-lg leading-none" style="color:#9b2226;" :class="{ 'is-open': open.lessonNotes }">▸</span>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-4">
+        <div v-show="open.lessonNotes" class="grid md:grid-cols-2 gap-4">
           <article v-for="(note, ni) in current.notes" :key="ni"
                    class="relative rounded-xl bg-white shadow-chip overflow-hidden border"
                    style="border-color:rgba(155,34,38,.2);"
