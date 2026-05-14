@@ -10,6 +10,7 @@ const tabs = [
   { to: '/hsk2',     han: '二', label: 'HSK 2'    },
   { to: '/hsk3',     han: '三', label: 'HSK 3'    },
   { to: '/allwords', han: '词', label: 'All Words'},
+  { to: '/grammar',  han: '语', label: 'Grammar'  },
   { to: '/write',    han: '写', label: 'Write'    },
   { to: '/sentence', han: '句', label: 'Sentence' },
   { to: '/game',     han: '游', label: 'Game'     },
@@ -22,6 +23,7 @@ const isRadicals = computed(() => route.path.startsWith('/radicals'))
 const isWrite    = computed(() => route.path.startsWith('/write'))
 const isSentence = computed(() => route.path.startsWith('/sentence'))
 const isGame     = computed(() => route.path.startsWith('/game'))
+const isGrammar  = computed(() => route.path.startsWith('/grammar'))
 const hskMatch   = computed(() => route.path.match(/^\/hsk([123])/))
 
 const headerData = computed(() => {
@@ -56,6 +58,10 @@ const headerData = computed(() => {
   }
   if (isGame.value) {
     return { icon: '游戏', eyebrow: 'Memory Game', title: 'Quiz · Match · Remember Hanzi',
+             sourceHref: '' }
+  }
+  if (isGrammar.value) {
+    return { icon: '语法', eyebrow: 'Grammar · 语法', title: 'All grammar notes · HSK 1 · 2 · 3',
              sourceHref: '' }
   }
   return { icon: '汉语', eyebrow: 'Welcome · 欢迎', title: 'Learn Chinese · Step by step',
