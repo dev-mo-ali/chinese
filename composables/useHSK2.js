@@ -28,6 +28,32 @@ export const HSK2_LESSONS = [
     pinyin: 'Jiǔyuè qù Běijīng lǚyóu zuì hǎo',
     en: 'September is the best time to visit Beijing',
     focus: '想 (Aux) · 最 (Adv of degree) · 几 / 多 (approximate numbers)',
+    notes: [
+      {
+        title: 'The Auxiliary Verb 想',
+        summary: 'Placed before a verb, 想 expresses a wish or intention (“want to / would like to”). The negative form is 不想.',
+        examples: [
+          { c: '我想去北京旅游。', p: 'Wǒ xiǎng qù Běijīng lǚyóu.', en: 'I’d like to take a trip to Beijing.' },
+          { c: '我不想去看电影。', p: 'Wǒ bù xiǎng qù kàn diànyǐng.', en: 'I don’t want to go to the cinema.' },
+        ],
+      },
+      {
+        title: 'The Adverb of Degree 最',
+        summary: '最 means “most” — singling out the highest degree among things of the same kind or in a certain aspect.',
+        examples: [
+          { c: '我最喜欢踢足球。', p: 'Wǒ zuì xǐhuan tī zúqiú.', en: 'I like playing football most.' },
+          { c: '九月去北京最好。', p: 'Jiǔyuè qù Běijīng zuì hǎo.', en: 'September is the best time to visit Beijing.' },
+        ],
+      },
+      {
+        title: 'Approximate Numbers · 几 and 多',
+        summary: '几 + measure word indicates an indefinite number (usually under 10). 多 after a numeral-measure phrase indicates “a bit more than” that quantity.',
+        examples: [
+          { c: '我买了几个椅子。', p: 'Wǒ mǎi le jǐ ge yǐzi.', en: 'I bought a few chairs.' },
+          { c: '它六个多月了。', p: 'Tā liù ge duō yuè le.', en: 'It is over six months old.' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在学校 · At school',
@@ -92,6 +118,32 @@ export const HSK2_LESSONS = [
     pinyin: 'Wǒ měi tiān liù diǎn qǐchuáng',
     en: 'I get up at six every day',
     focus: '是不是 questions · Pronoun 每 · Interrogative 多',
+    notes: [
+      {
+        title: 'Questions with 是不是',
+        summary: '是不是 placed before the predicate seeks confirmation of an assumption — “…isn’t it / aren’t you?”',
+        examples: [
+          { c: '你是不是喜欢运动？', p: 'Nǐ shì bu shì xǐhuan yùndòng?', en: 'You like sports, don’t you?' },
+          { c: '他是不是你同学？', p: 'Tā shì bu shì nǐ tóngxué?', en: 'Isn’t he your classmate?' },
+        ],
+      },
+      {
+        title: 'The Pronoun 每',
+        summary: '每 means “every / each” and is normally paired with the adverb 都 in the predicate.',
+        examples: [
+          { c: '我每天六点起床。', p: 'Wǒ měi tiān liù diǎn qǐchuáng.', en: 'I get up at six every day.' },
+          { c: '他每天回来都很累。', p: 'Tā měi tiān huílai dōu hěn lèi.', en: 'Every day he comes home exhausted.' },
+        ],
+      },
+      {
+        title: 'The Interrogative 多 + Adjective',
+        summary: '多 + monosyllabic adjective (大, 高, 远…) asks about degree or extent — “how + adj?”.',
+        examples: [
+          { c: '大卫今年多大？', p: 'Dàwèi jīnnián duō dà?', en: 'How old is David?' },
+          { c: '他多高？', p: 'Tā duō gāo?', en: 'How tall is he?' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在操场 · On the playground',
@@ -158,6 +210,32 @@ export const HSK2_LESSONS = [
     pinyin: 'Zuǒbian nàge hóngsè de shì wǒ de',
     en: 'The red one on the left is mine',
     focus: '的 phrase · 一下 (numeral) · Modal Adv 真',
+    notes: [
+      {
+        title: 'The 的 Phrase',
+        summary: 'A modifier + 的 (without a following noun) forms a noun-like phrase whose head is understood from context — “the … one”.',
+        examples: [
+          { c: '左边那个红色的是我的。', p: 'Zuǒbian nàge hóngsè de shì wǒ de.', en: 'The red one on the left is mine.' },
+          { c: '这是我妈妈做的。', p: 'Zhè shì wǒ māma zuò de.', en: 'This is the one my mother made.' },
+        ],
+      },
+      {
+        title: 'The Numeral-Classifier 一下',
+        summary: 'V + 一下 softens a verb, suggesting a brief or casual action — “to V a bit / for a moment”.',
+        examples: [
+          { c: '请你介绍一下。', p: 'Qǐng nǐ jièshào yíxià.', en: 'Please give a brief introduction.' },
+          { c: '我看一下。', p: 'Wǒ kàn yíxià.', en: 'Let me have a quick look.' },
+        ],
+      },
+      {
+        title: 'The Modal Adverb 真',
+        summary: '真 before an adjective expresses the speaker’s real, often emphatic, feeling — “really / truly”.',
+        examples: [
+          { c: '真漂亮！', p: 'Zhēn piàoliang!', en: 'How beautiful!' },
+          { c: '这件衣服真贵。', p: 'Zhè jiàn yīfu zhēn guì.', en: 'This piece of clothing is really expensive.' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在房间 · In the room',
@@ -221,6 +299,32 @@ export const HSK2_LESSONS = [
     pinyin: 'Tā tuījiàn wǒ zuò zhège gōngzuò',
     en: 'He recommended me for this job',
     focus: '是…的 · 已经…了 · Adv 就',
+    notes: [
+      {
+        title: 'The 是…的 Structure',
+        summary: 'When an action is already completed, 是…的 emphasizes the time, place, manner, or agent of that action. 是 may be omitted in affirmative sentences.',
+        examples: [
+          { c: '我是昨天来的。', p: 'Wǒ shì zuótiān lái de.', en: 'It was yesterday that I came.' },
+          { c: '他是坐飞机来的。', p: 'Tā shì zuò fēijī lái de.', en: 'He came by plane.' },
+        ],
+      },
+      {
+        title: '已经…了',
+        summary: '已经 (“already”) combines with sentence-final 了 to indicate that a situation has occurred or a state has been reached.',
+        examples: [
+          { c: '我已经吃了。', p: 'Wǒ yǐjīng chī le.', en: 'I have already eaten.' },
+          { c: '他已经回家了。', p: 'Tā yǐjīng huí jiā le.', en: 'He has already gone home.' },
+        ],
+      },
+      {
+        title: 'The Adverb 就',
+        summary: 'Before a verb, 就 stresses that something happens very soon, easily or as a matter of course.',
+        examples: [
+          { c: '我马上就来。', p: 'Wǒ mǎshàng jiù lái.', en: 'I’ll come right away.' },
+          { c: '吃完饭就走。', p: 'Chī wán fàn jiù zǒu.', en: 'We’ll leave as soon as we finish eating.' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在教室 · In the classroom',
@@ -283,6 +387,32 @@ export const HSK2_LESSONS = [
     pinyin: 'Jiù mǎi zhè jiàn ba',
     en: 'Take this one',
     focus: 'Adv 就 · Modal Adv 还 (1) · Modal Particle 吧',
+    notes: [
+      {
+        title: 'The Adverb 就 (Range / Limitation)',
+        summary: '就 can narrow the focus to a single item — “just / only this one”.',
+        examples: [
+          { c: '我就要这个。', p: 'Wǒ jiù yào zhège.', en: 'I just want this one.' },
+          { c: '他就喜欢看书。', p: 'Tā jiù xǐhuan kàn shū.', en: 'He only likes reading.' },
+        ],
+      },
+      {
+        title: 'The Modal Adverb 还 (1)',
+        summary: '还 before a verb / adjective means “in addition / also / still”, adding extra information or actions.',
+        examples: [
+          { c: '我还想买一件。', p: 'Wǒ hái xiǎng mǎi yí jiàn.', en: 'I’d like to buy another one as well.' },
+          { c: '外面还在下雨。', p: 'Wàimiàn hái zài xià yǔ.', en: 'It is still raining outside.' },
+        ],
+      },
+      {
+        title: 'The Modal Particle 吧 — Suggestion',
+        summary: 'Sentence-final 吧 softens an utterance into a suggestion, request, or polite imperative.',
+        examples: [
+          { c: '我们一起去吧。', p: 'Wǒmen yìqǐ qù ba.', en: 'Let’s go together.' },
+          { c: '你来试试吧。', p: 'Nǐ lái shìshi ba.', en: 'Come and have a try.' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在家 · At home',
@@ -346,6 +476,32 @@ export const HSK2_LESSONS = [
     pinyin: 'Nǐ zěnme bù duō chī diǎnr',
     en: "Why don't you eat more",
     focus: 'Interrogative 怎么 · Measure-word reduplication · 因为…所以…',
+    notes: [
+      {
+        title: 'The Interrogative 怎么',
+        summary: '怎么 asks about manner (“how?”) or reason/cause (“how come / why?”) depending on context.',
+        examples: [
+          { c: '这个字怎么写？', p: 'Zhège zì zěnme xiě?', en: 'How do you write this character?' },
+          { c: '你怎么不吃了？', p: 'Nǐ zěnme bù chī le?', en: 'How come you’re not eating any more?' },
+        ],
+      },
+      {
+        title: 'Reduplication of Measure Words',
+        summary: 'A reduplicated measure word (个个, 天天, 件件) means “every / each one” and usually pairs with 都.',
+        examples: [
+          { c: '他天天都跑步。', p: 'Tā tiāntiān dōu pǎo bù.', en: 'He goes jogging every day.' },
+          { c: '个个都很漂亮。', p: 'Gègè dōu hěn piàoliang.', en: 'Every one of them is beautiful.' },
+        ],
+      },
+      {
+        title: '因为…所以… · Cause and Result',
+        summary: 'A paired conjunction linking a cause clause (因为…) with a result clause (所以…). Either half may be omitted in conversation.',
+        examples: [
+          { c: '因为下雨，所以我们不去了。', p: 'Yīnwèi xià yǔ, suǒyǐ wǒmen bú qù le.', en: 'Because it’s raining, we’re not going.' },
+          { c: '因为他生病了，所以没来。', p: 'Yīnwèi tā shēng bìng le, suǒyǐ méi lái.', en: 'He didn’t come because he was sick.' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在学校 · At school',
@@ -408,6 +564,32 @@ export const HSK2_LESSONS = [
     pinyin: 'Nǐ jiā lí gōngsī yuǎn ma',
     en: 'Do you live far from your company',
     focus: 'Modal Adv 还 (2) · Adv 就 · Verb 离 · Particle 呢',
+    notes: [
+      {
+        title: 'The Modal Adverb 还 (2)',
+        summary: 'In comparisons or descriptions, 还 means “even more” — pushing a quality further than expected.',
+        examples: [
+          { c: '今天比昨天还冷。', p: 'Jīntiān bǐ zuótiān hái lěng.', en: 'Today is even colder than yesterday.' },
+          { c: '他比我还高。', p: 'Tā bǐ wǒ hái gāo.', en: 'He is even taller than I am.' },
+        ],
+      },
+      {
+        title: 'The Verb 离',
+        summary: '离 expresses distance between two places or moments in time: A 离 B + 远 / 近 / 多远.',
+        examples: [
+          { c: '我家离公司很近。', p: 'Wǒ jiā lí gōngsī hěn jìn.', en: 'My home is close to the company.' },
+          { c: '学校离这儿不远。', p: 'Xuéxiào lí zhèr bù yuǎn.', en: 'The school isn’t far from here.' },
+        ],
+      },
+      {
+        title: 'The Modal Particle 呢',
+        summary: 'Sentence-final 呢 can form a follow-up question (“and you?”) or emphasize that a state is still ongoing.',
+        examples: [
+          { c: '我很好，你呢？', p: 'Wǒ hěn hǎo, nǐ ne?', en: 'I’m fine, and you?' },
+          { c: '他还在睡觉呢。', p: 'Tā hái zài shuì jiào ne.', en: 'He’s still sleeping.' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在家 · At home',
@@ -470,6 +652,40 @@ export const HSK2_LESSONS = [
     pinyin: 'Ràng wǒ xiǎngxiang zài gàosu nǐ',
     en: "Let me think about it and I'll tell you later",
     focus: 'Interrogative + 吗 · Adv 再 · Pivotal sentences · Verb reduplication',
+    notes: [
+      {
+        title: 'Interrogative Pronoun + 吗',
+        summary: 'An interrogative pronoun (什么, 谁, 哪儿…) used with 吗 forms a rhetorical question whose meaning is the opposite of its surface form.',
+        examples: [
+          { c: '你知道什么吗？', p: 'Nǐ zhīdào shénme ma?', en: 'What do you really know? (= You don’t know anything.)' },
+          { c: '他来过这儿吗？', p: 'Tā lái guo zhèr ma?', en: 'Has he ever been here? (rhetorical)' },
+        ],
+      },
+      {
+        title: 'The Adverb 再',
+        summary: '再 before a verb means “again” or “then” — placing an action after another in sequence.',
+        examples: [
+          { c: '让我想想再告诉你。', p: 'Ràng wǒ xiǎngxiang zài gàosu nǐ.', en: 'Let me think it over and then tell you.' },
+          { c: '请你再说一遍。', p: 'Qǐng nǐ zài shuō yí biàn.', en: 'Please say it once more.' },
+        ],
+      },
+      {
+        title: 'Pivotal Sentences',
+        summary: 'A pivotal sentence has two verbs sharing one noun: the object of V1 (often 让 / 请 / 叫) is also the subject of V2.',
+        examples: [
+          { c: '老师让我们读课文。', p: 'Lǎoshī ràng wǒmen dú kèwén.', en: 'The teacher has us read the text.' },
+          { c: '我请他吃饭。', p: 'Wǒ qǐng tā chī fàn.', en: 'I invited him to dinner.' },
+        ],
+      },
+      {
+        title: 'Reduplication of Verbs',
+        summary: 'A reduplicated monosyllabic verb (看看, 试试) suggests a brief, casual or tentative action. Disyllabic verbs follow the pattern ABAB (休息休息).',
+        examples: [
+          { c: '你看看这个。', p: 'Nǐ kànkan zhège.', en: 'Take a look at this.' },
+          { c: '我们休息休息吧。', p: 'Wǒmen xiūxi xiūxi ba.', en: 'Let’s take a little rest.' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在教室 · In the classroom',
@@ -529,6 +745,32 @@ export const HSK2_LESSONS = [
     pinyin: 'Tí tài duō, wǒ méi dōu zuòwán',
     en: "There were too many questions; I didn't finish all of them",
     focus: 'Result complements · Prep 从 · 第~ (order)',
+    notes: [
+      {
+        title: 'Complements of Result',
+        summary: 'A verb + result-element (完, 到, 见, 好, 懂…) describes the outcome of an action. Negation uses 没(有) before the verb.',
+        examples: [
+          { c: '问题太多，我没回答完。', p: 'Wèntí tài duō, wǒ méi huídá wán.', en: 'There were too many questions; I didn’t finish answering them.' },
+          { c: '我听懂了。', p: 'Wǒ tīng dǒng le.', en: 'I understood (heard it clearly).' },
+        ],
+      },
+      {
+        title: 'The Preposition 从',
+        summary: '从 introduces a starting point in time or place — “from …”. It often pairs with 到 (“… to …”).',
+        examples: [
+          { c: '我从北京来。', p: 'Wǒ cóng Běijīng lái.', en: 'I come from Beijing.' },
+          { c: '从九点到十一点上课。', p: 'Cóng jiǔ diǎn dào shíyī diǎn shàng kè.', en: 'Class is from 9 to 11.' },
+        ],
+      },
+      {
+        title: '第~ · Ordinal Numbers',
+        summary: '第 + numeral + measure word forms an ordinal — “the first, the second…”.',
+        examples: [
+          { c: '这是我第一次来中国。', p: 'Zhè shì wǒ dì yī cì lái Zhōngguó.', en: 'This is my first time in China.' },
+          { c: '第三个问题最难。', p: 'Dì sān ge wèntí zuì nán.', en: 'The third question is the hardest.' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在电话 · On the phone',
@@ -588,6 +830,24 @@ export const HSK2_LESSONS = [
     pinyin: 'Bié zhǎo shǒujī le, shǒujī zài zhuōzi shang ne',
     en: 'Stop looking for your cell phone — it’s on the desk',
     focus: 'Imperative sentences (别…了 / 不要…了) · Prep 对',
+    notes: [
+      {
+        title: 'Imperative: 别…了 / 不要…了',
+        summary: 'These patterns advise the listener to stop doing — or not to start — something. 了 marks the change of state.',
+        examples: [
+          { c: '别找了，手机在桌子上。', p: 'Bié zhǎo le, shǒujī zài zhuōzi shàng.', en: 'Stop looking — the phone is on the table.' },
+          { c: '不要哭了。', p: 'Búyào kū le.', en: 'Don’t cry any more.' },
+        ],
+      },
+      {
+        title: 'The Preposition 对',
+        summary: '对 + N introduces the target or recipient of an attitude or action — “toward / to / about (someone)”.',
+        examples: [
+          { c: '他对我很好。', p: 'Tā duì wǒ hěn hǎo.', en: 'He treats me very well.' },
+          { c: '我对中国文化很感兴趣。', p: 'Wǒ duì Zhōngguó wénhuà hěn gǎn xìngqù.', en: 'I’m very interested in Chinese culture.' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在家 · At home',
@@ -648,6 +908,32 @@ export const HSK2_LESSONS = [
     pinyin: 'Tā bǐ wǒ dà sān suì',
     en: 'He is three years older than me',
     focus: 'V (P) as attributive · 比 sentence (1) · Aux 可能',
+    notes: [
+      {
+        title: 'Verb (Phrase) + 的 as Attributive',
+        summary: 'A verb or verb-phrase plus 的 modifies a noun, behaving like a relative clause in English.',
+        examples: [
+          { c: '这是我买的书。', p: 'Zhè shì wǒ mǎi de shū.', en: 'This is the book that I bought.' },
+          { c: '昨天来的人是我同学。', p: 'Zuótiān lái de rén shì wǒ tóngxué.', en: 'The person who came yesterday is my classmate.' },
+        ],
+      },
+      {
+        title: 'The 比 Sentence (1)',
+        summary: 'A 比 B + Adj compares two things — “A is more Adj than B”. The adverbs 很 / 真 / 非常 cannot appear before the adjective.',
+        examples: [
+          { c: '他比我大三岁。', p: 'Tā bǐ wǒ dà sān suì.', en: 'He is three years older than I am.' },
+          { c: '今天比昨天热。', p: 'Jīntiān bǐ zuótiān rè.', en: 'Today is hotter than yesterday.' },
+        ],
+      },
+      {
+        title: 'The Auxiliary Verb 可能',
+        summary: '可能 before a verb expresses possibility — “may / might / be likely to”. Negative: 不可能.',
+        examples: [
+          { c: '明天可能下雨。', p: 'Míngtiān kěnéng xià yǔ.', en: 'It may rain tomorrow.' },
+          { c: '他不可能不知道。', p: 'Tā bù kěnéng bù zhīdào.', en: 'It’s impossible that he doesn’t know.' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在卡拉OK · In a karaoke bar',
@@ -708,6 +994,24 @@ export const HSK2_LESSONS = [
     pinyin: 'Nǐ chuān de tài shǎo le',
     en: 'You wear too little',
     focus: 'Degree complements (V + 得 + Adj) · 比 sentence (2)',
+    notes: [
+      {
+        title: 'Complement of Degree · V 得 + Adj',
+        summary: 'V 得 + adjective describes how an action is performed (“…well / fast / a lot”). With an object: (V) O V 得 + Adj.',
+        examples: [
+          { c: '他汉语说得很好。', p: 'Tā Hànyǔ shuō de hěn hǎo.', en: 'He speaks Chinese very well.' },
+          { c: '你穿得太少了。', p: 'Nǐ chuān de tài shǎo le.', en: 'You’re wearing too little.' },
+        ],
+      },
+      {
+        title: 'The 比 Sentence (2)',
+        summary: 'After the adjective in a 比 sentence, add 一点儿 / 一些 (a little more), 多 / 得多 (much more), or 还 / 更 (even more) to specify the difference.',
+        examples: [
+          { c: '他比我大三岁。', p: 'Tā bǐ wǒ dà sān suì.', en: 'He is three years older than me.' },
+          { c: '今天比昨天冷得多。', p: 'Jīntiān bǐ zuótiān lěng de duō.', en: 'Today is much colder than yesterday.' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在教室 · In the classroom',
@@ -766,6 +1070,32 @@ export const HSK2_LESSONS = [
     pinyin: 'Mén kāi zhe ne',
     en: 'The door is open',
     focus: 'Particle 着 · 不是…吗 (rhetorical) · Prep 往',
+    notes: [
+      {
+        title: 'The Structural Particle 着',
+        summary: 'V + 着 indicates that the state resulting from an action is continuing — “to be V-ing / to remain V-ed”.',
+        examples: [
+          { c: '门开着呢。', p: 'Mén kāi zhe ne.', en: 'The door is open.' },
+          { c: '他穿着一件白衣服。', p: 'Tā chuān zhe yí jiàn bái yīfu.', en: 'He is wearing a white shirt.' },
+        ],
+      },
+      {
+        title: 'Rhetorical Question · 不是…吗',
+        summary: '不是…吗 affirms a fact by phrasing it as a question, often expressing mild surprise or reminder.',
+        examples: [
+          { c: '他不是你哥哥吗？', p: 'Tā bú shì nǐ gēge ma?', en: 'Isn’t he your older brother?' },
+          { c: '你不是已经吃过了吗？', p: 'Nǐ bú shì yǐjīng chī guo le ma?', en: 'Haven’t you already eaten?' },
+        ],
+      },
+      {
+        title: 'The Preposition 往',
+        summary: '往 + direction / place + V indicates the direction of movement — “toward / to (somewhere)”.',
+        examples: [
+          { c: '一直往前走。', p: 'Yìzhí wǎng qián zǒu.', en: 'Walk straight ahead.' },
+          { c: '往右拐。', p: 'Wǎng yòu guǎi.', en: 'Turn right.' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在办公室 · In the office',
@@ -826,6 +1156,32 @@ export const HSK2_LESSONS = [
     pinyin: 'Nǐ kàn guo nàge diànyǐng méiyǒu',
     en: 'Have you seen that movie',
     focus: 'Particle 过 · 虽然…但是… · Frequency 次',
+    notes: [
+      {
+        title: 'The Aspect Particle 过',
+        summary: 'V + 过 indicates that an action has been experienced at some time in the past. Negative: 没(有) + V + 过.',
+        examples: [
+          { c: '你看过那个电影吗？', p: 'Nǐ kàn guo nàge diànyǐng ma?', en: 'Have you seen that movie?' },
+          { c: '我没去过中国。', p: 'Wǒ méi qù guo Zhōngguó.', en: 'I have never been to China.' },
+        ],
+      },
+      {
+        title: '虽然…但是… · Although / But',
+        summary: 'A paired conjunction expressing concession: 虽然 introduces the conceded fact, 但是 introduces the contrasting result.',
+        examples: [
+          { c: '虽然累，但是很高兴。', p: 'Suīrán lèi, dànshì hěn gāoxìng.', en: 'Although tired, I’m very happy.' },
+          { c: '虽然下雨，但是我们还去。', p: 'Suīrán xià yǔ, dànshì wǒmen hái qù.', en: 'Even though it’s raining, we’re still going.' },
+        ],
+      },
+      {
+        title: 'Complement of Frequency · 次',
+        summary: 'Numeral + 次 after a verb tells how many times an action occurs. With an object, the order is V + Num + 次 + O.',
+        examples: [
+          { c: '我去过两次北京。', p: 'Wǒ qù guo liǎng cì Běijīng.', en: 'I’ve been to Beijing twice.' },
+          { c: '他看了三次。', p: 'Tā kàn le sān cì.', en: 'He watched it three times.' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在教室 · In the classroom',
@@ -882,6 +1238,24 @@ export const HSK2_LESSONS = [
     pinyin: 'Xīnnián jiù yào dào le',
     en: 'The New Year is coming',
     focus: '就要…了 / 快要…了 (imminent action) · 都…了 (already)',
+    notes: [
+      {
+        title: '就要…了 / 快要…了 · Imminent Action',
+        summary: 'Both patterns express that something is about to happen. 就要…了 may be preceded by a specific time word; 快要…了 cannot.',
+        examples: [
+          { c: '新年就要到了。', p: 'Xīnnián jiùyào dào le.', en: 'The New Year is coming.' },
+          { c: '飞机快要起飞了。', p: 'Fēijī kuàiyào qǐfēi le.', en: 'The plane is about to take off.' },
+        ],
+      },
+      {
+        title: '都…了 · Already',
+        summary: '都 + Numeral / Time + 了 emphasizes that a situation has already reached or passed a point — often expressing surprise or impatience.',
+        examples: [
+          { c: '都十二点了，快睡吧。', p: 'Dōu shí’èr diǎn le, kuài shuì ba.', en: 'It’s already 12 o’clock — get to sleep!' },
+          { c: '都春天了，还这么冷。', p: 'Dōu chūntiān le, hái zhème lěng.', en: 'It’s already spring and yet it’s still so cold.' },
+        ],
+      },
+    ],
     texts: [
       {
         title: 'Text 1 · 在公司 · In the company',
