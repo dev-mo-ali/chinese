@@ -11,6 +11,7 @@ const tabs = [
   { to: '/hsk3',     han: '三', label: 'HSK 3'    },
   { to: '/allwords', han: '词', label: 'All Words'},
   { to: '/grammar',  han: '语', label: 'Grammar'  },
+  { to: '/topics',   han: '题', label: 'Topics'   },
   { to: '/write',    han: '写', label: 'Write'    },
   { to: '/sentence', han: '句', label: 'Sentence' },
   { to: '/game',     han: '游', label: 'Game'     },
@@ -24,7 +25,11 @@ const isWrite    = computed(() => route.path.startsWith('/write'))
 const isSentence = computed(() => route.path.startsWith('/sentence'))
 const isGame     = computed(() => route.path.startsWith('/game'))
 const isGrammar  = computed(() => route.path.startsWith('/grammar'))
+const isTopics   = computed(() => route.path.startsWith('/topics'))
 const hskMatch   = computed(() => route.path.match(/^\/hsk([123])/))
+const isActiveTab = (to) => to === '/'
+  ? route.path === '/'
+  : route.path === to || route.path.startsWith(`${to}/`)
 
 const headerData = computed(() => {
   if (hskMatch.value) {
@@ -62,6 +67,10 @@ const headerData = computed(() => {
   }
   if (isGrammar.value) {
     return { icon: '语法', eyebrow: 'Grammar · 语法', title: 'All grammar notes · HSK 1 · 2 · 3',
+             sourceHref: '' }
+  }
+  if (isTopics.value) {
+    return { icon: '主题', eyebrow: 'Topics · 主题', title: 'Thematic vocabulary',
              sourceHref: '' }
   }
   return { icon: '汉语', eyebrow: 'Welcome · 欢迎', title: 'Learn Chinese · Step by step',
@@ -204,12 +213,12 @@ const formattedVisitors = computed(() =>
           <NuxtLink
             v-for="t in tabs" :key="t.to" :to="t.to"
             class="relative px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold tracking-wide uppercase transition whitespace-nowrap"
-            :class="route.path === t.to ? 'text-cream' : 'text-gold-soft hover:text-cream'"
+            :class="isActiveTab(t.to) ? 'text-cream' : 'text-gold-soft hover:text-cream'"
           >
             <span class="flex items-center gap-1.5">
               <span class="han text-base" aria-hidden="true" lang="zh-CN">{{ t.han }}</span> {{ t.label }}
             </span>
-            <span v-if="route.path === t.to"
+            <span v-if="isActiveTab(t.to)"
               class="absolute left-2 right-2 bottom-0 h-[3px] rounded-t bg-gold"></span>
           </NuxtLink>
         </nav>
@@ -236,7 +245,7 @@ const formattedVisitors = computed(() =>
                 :to="t.to"
                 @click="closeMenu"
                 class="flex items-center gap-2 px-3 py-3 rounded-lg border transition"
-                :class="route.path === t.to
+                :class="isActiveTab(t.to)
                   ? 'bg-gold/15 border-gold text-cream'
                   : 'bg-ink/40 border-gold-deep/40 text-gold-soft hover:bg-gold-deep/30 hover:text-cream'"
               >

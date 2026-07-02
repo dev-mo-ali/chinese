@@ -17,6 +17,78 @@
 //   <template><TopicPage :topic="topic" /></template>
 
 export const TOPICS = [
+  // ──────────────────────────── Numbers ────────────────────────────
+  {
+    slug: 'numbers',
+    han: '数字',
+    pinyin: 'shùzì',
+    en: 'Numbers',
+    icon: '数',
+    accent: '#2563eb',
+    intro: 'Numbers for counting, prices, order, dates, phone numbers, and everyday quantities in Mandarin.',
+    sections: [
+      {
+        title: 'Basics · 基本数字',
+        words: [
+          { c: '零', p: 'líng', en: 'zero', e: '0️⃣' },
+          { c: '一', p: 'yī', en: 'one', e: '1️⃣' },
+          { c: '二', p: 'èr', en: 'two', e: '2️⃣' },
+          { c: '三', p: 'sān', en: 'three', e: '3️⃣' },
+          { c: '四', p: 'sì', en: 'four', e: '4️⃣' },
+          { c: '五', p: 'wǔ', en: 'five', e: '5️⃣' },
+          { c: '六', p: 'liù', en: 'six', e: '6️⃣' },
+          { c: '七', p: 'qī', en: 'seven', e: '7️⃣' },
+          { c: '八', p: 'bā', en: 'eight', e: '8️⃣' },
+          { c: '九', p: 'jiǔ', en: 'nine', e: '9️⃣' },
+          { c: '十', p: 'shí', en: 'ten', e: '🔟' },
+        ],
+      },
+      {
+        title: 'Tens & hundreds · 十和百',
+        words: [
+          { c: '十一', p: 'shíyī', en: 'eleven', e: '11' },
+          { c: '十二', p: 'shíèr', en: 'twelve', e: '12' },
+          { c: '二十', p: 'èrshí', en: 'twenty', e: '20' },
+          { c: '二十一', p: 'èrshíyī', en: 'twenty-one', e: '21' },
+          { c: '三十', p: 'sānshí', en: 'thirty', e: '30' },
+          { c: '五十', p: 'wǔshí', en: 'fifty', e: '50' },
+          { c: '九十九', p: 'jiǔshíjiǔ', en: 'ninety-nine', e: '99' },
+          { c: '一百', p: 'yìbǎi', en: 'one hundred', e: '100' },
+          { c: '两百', p: 'liǎngbǎi', en: 'two hundred', e: '200' },
+          { c: '一百零一', p: 'yìbǎi líng yī', en: 'one hundred one', e: '101' },
+        ],
+      },
+      {
+        title: 'Large numbers · 大数',
+        words: [
+          { c: '千', p: 'qiān', en: 'thousand', e: '1,000' },
+          { c: '一千', p: 'yìqiān', en: 'one thousand', e: '1,000' },
+          { c: '万', p: 'wàn', en: 'ten thousand', e: '10,000' },
+          { c: '一万', p: 'yíwàn', en: 'ten thousand', e: '10,000' },
+          { c: '十万', p: 'shíwàn', en: 'one hundred thousand', e: '100k' },
+          { c: '百万', p: 'bǎiwàn', en: 'one million', e: '1M' },
+          { c: '千万', p: 'qiānwàn', en: 'ten million', e: '10M' },
+          { c: '亿', p: 'yì', en: 'one hundred million', e: '100M' },
+        ],
+      },
+      {
+        title: 'Everyday use · 日常用法',
+        words: [
+          { c: '第', p: 'dì', en: 'ordinal prefix', e: '№' },
+          { c: '第一', p: 'dì yī', en: 'first', e: '🥇' },
+          { c: '第二', p: 'dì èr', en: 'second', e: '🥈' },
+          { c: '个', p: 'gè', en: 'general measure word', e: '🔢' },
+          { c: '几个', p: 'jǐ ge', en: 'how many', e: '?' },
+          { c: '多少', p: 'duōshao', en: 'how many · how much', e: '?' },
+          { c: '号码', p: 'hàomǎ', en: 'number · code', e: '#' },
+          { c: '电话号码', p: 'diànhuà hàomǎ', en: 'phone number', e: '☎️' },
+          { c: '一半', p: 'yíbàn', en: 'half', e: '½' },
+          { c: '百分之', p: 'bǎi fēn zhī', en: 'percent', e: '%' },
+        ],
+      },
+    ],
+  },
+
   // ──────────────────────────── Body parts ────────────────────────────
   {
     slug: 'body',

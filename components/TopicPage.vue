@@ -58,6 +58,17 @@ const setView = (m) => {
   viewMode.value = m
   if (import.meta.client) sessionStorage.setItem('topic-view-mode-touched', '1')
 }
+
+const HAN_RE = /[\u4e00-\u9fff]/
+const hasWritingPractice = computed(() => props.topic.slug === 'numbers')
+const hanziChars = (text) => {
+  const seen = new Set()
+  return [...String(text || '')].filter((ch) => {
+    if (!HAN_RE.test(ch) || seen.has(ch)) return false
+    seen.add(ch)
+    return true
+  })
+}
 </script>
 
 <template>
@@ -229,30 +240,45 @@ const setView = (m) => {
 
         <!-- GALLERY MODE: tap-to-reveal flashcards with image/emoji visual -->
         <div v-if="viewMode === 'gallery'" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 p-4">
-          <button
+          <article
             v-for="(w, wi) in sec.words" :key="wi"
-            type="button"
-            @click="toggleVocab(`${si}-${wi}`)"
             class="group relative rounded-xl border border-gold-deep/25 bg-cream/60 hover:border-ink/40 hover:shadow-card transition text-left overflow-hidden flex flex-col"
-            :aria-pressed="isVocabRevealed(`${si}-${wi}`) || vocabRevealAll"
           >
-            <div class="aspect-square w-full flex items-center justify-center bg-paper border-b border-gold-deep/15">
-              <img v-if="w.img" :src="w.img" :alt="w.en" class="w-full h-full object-cover" loading="lazy" />
-              <span v-else-if="w.e" class="text-5xl sm:text-6xl leading-none select-none" aria-hidden="true">{{ w.e }}</span>
-              <span v-else class="han text-5xl sm:text-6xl text-gold-deep/40 font-bold" aria-hidden="true" lang="zh-CN">{{ w.c }}</span>
+            <button
+              type="button"
+              @click="toggleVocab(`${si}-${wi}`)"
+              class="w-full text-left flex flex-col"
+              :aria-pressed="isVocabRevealed(`${si}-${wi}`) || vocabRevealAll"
+            >
+              <div class="aspect-square w-full flex items-center justify-center bg-paper border-b border-gold-deep/15">
+                <img v-if="w.img" :src="w.img" :alt="w.en" class="w-full h-full object-cover" loading="lazy" />
+                <span v-else-if="w.e" class="text-5xl sm:text-6xl leading-none select-none" aria-hidden="true">{{ w.e }}</span>
+                <span v-else class="han text-5xl sm:text-6xl text-gold-deep/40 font-bold" aria-hidden="true" lang="zh-CN">{{ w.c }}</span>
+              </div>
+              <div class="p-2.5 text-center w-full">
+                <div class="han text-xl sm:text-2xl font-bold text-ink leading-tight" lang="zh-CN">{{ w.c }}</div>
+                <div
+                  class="text-[11px] tracking-wide text-gold-deep mt-0.5 transition"
+                  :class="{ 'opacity-0': !isVocabRevealed(`${si}-${wi}`) && !vocabRevealAll }"
+                >{{ w.p }}</div>
+                <div
+                  class="text-xs text-ink-soft leading-snug mt-0.5 transition"
+                  :class="{ 'opacity-0': !isVocabRevealed(`${si}-${wi}`) && !vocabRevealAll }"
+                >{{ w.en }}</div>
+              </div>
+            </button>
+            <div v-if="hasWritingPractice" class="px-2.5 pb-3 flex flex-col gap-2">
+              <HanziPractice
+                v-for="ch in hanziChars(w.c)"
+                :key="`${si}-${wi}-${ch}`"
+                :char="ch"
+                :size="112"
+                :accent="topic.accent"
+                outline="#bfdbfe"
+                highlight="#1d4ed8"
+              />
             </div>
-            <div class="p-2.5 text-center">
-              <div class="han text-xl sm:text-2xl font-bold text-ink leading-tight" lang="zh-CN">{{ w.c }}</div>
-              <div
-                class="text-[11px] tracking-wide text-gold-deep mt-0.5 transition"
-                :class="{ 'opacity-0': !isVocabRevealed(`${si}-${wi}`) && !vocabRevealAll }"
-              >{{ w.p }}</div>
-              <div
-                class="text-xs text-ink-soft leading-snug mt-0.5 transition"
-                :class="{ 'opacity-0': !isVocabRevealed(`${si}-${wi}`) && !vocabRevealAll }"
-              >{{ w.en }}</div>
-            </div>
-          </button>
+          </article>
         </div>
 
         <!-- LIST MODE: dense rows with leading visual -->
@@ -284,6 +310,21 @@ const setView = (m) => {
               class="justify-self-end text-[10px] font-mono uppercase tracking-widest px-2 py-1 rounded border border-gold-deep/30 text-ink/60 hover:border-ink hover:text-ink transition"
               :aria-pressed="isVocabRevealed(`${si}-${wi}`) || vocabRevealAll"
             >{{ (isVocabRevealed(`${si}-${wi}`) || vocabRevealAll) ? 'Hide' : 'Show' }}</button>
+
+            <div
+              v-if="hasWritingPractice"
+              class="col-span-3 sm:col-span-5 flex flex-wrap gap-2 pt-2"
+            >
+              <HanziPractice
+                v-for="ch in hanziChars(w.c)"
+                :key="`${si}-${wi}-${ch}`"
+                :char="ch"
+                :size="112"
+                :accent="topic.accent"
+                outline="#bfdbfe"
+                highlight="#1d4ed8"
+              />
+            </div>
           </li>
         </ul>
       </section>
