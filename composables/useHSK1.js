@@ -1394,9 +1394,9 @@ export const HSK1_LESSON_RADICALS = [
   {
     lesson: 7,
     items: [
-      { r: '氵', name: 'sānshuǐ',    en: 'water (3-dot water)', desc: 'Usually related to water, liquids and rivers.',
+      { r: '氵', name: '三点水 (sāndiǎnshuǐ)',    en: 'water (3-dot water)', desc: 'Usually related to water, liquids and rivers.',
         examples: [{ c: '没', p: 'méi', en: 'to not have' }, { c: '河', p: 'hé', en: 'river' }] },
-      { r: '讠', name: 'yánzìpáng',  en: 'speech',              desc: 'Usually related to language and speech.',
+      { r: '讠', name: '言字旁 (yánzìpáng)',  en: 'speech',              desc: 'Usually related to language and speech.',
         examples: [{ c: '谁', p: 'shéi', en: 'who, whom' }, { c: '说', p: 'shuō', en: 'to speak' }] },
     ],
   },
@@ -1412,18 +1412,18 @@ export const HSK1_LESSON_RADICALS = [
   {
     lesson: 9,
     items: [
-      { r: '辶', name: 'zǒuzhī',     en: 'walking',             desc: 'Usually related to walking and movement.',
+      { r: '辶', name: '走之旁 (zǒuzhīpáng)',     en: 'walking',             desc: 'Usually related to walking and movement.',
         examples: [{ c: '这', p: 'zhè', en: 'this' }, { c: '送', p: 'sòng', en: 'to send' }] },
-      { r: '门', name: 'ménzìkuàng', en: 'door · gate',         desc: 'Usually related to a room or a door.',
+      { r: '门', name: '门字框 (ménzìkuàng)', en: 'door frame . door · gate',         desc: 'Usually related to a room or a door.',
         examples: [{ c: '问', p: 'wèn', en: 'to ask' }, { c: '间', p: 'jiān', en: 'measure word for rooms' }] },
     ],
   },
   {
     lesson: 10,
     items: [
-      { r: '囗', name: 'wéizìkuàng', en: 'enclosure',           desc: 'Usually means being trapped or besieged.',
+      { r: '囗', name: '国字框 (guózìkuàng)', en: 'enclosure',           desc: 'Usually means being trapped or besieged.',
         examples: [{ c: '国', p: 'guó', en: 'country, nation' }, { c: '困', p: 'kùn', en: 'to be trapped' }] },
-      { r: '礻', name: 'shìzìpáng',  en: 'altar / deity',       desc: 'A variant of 示 — usually related to deity, sacrificial rites and one’s fortune.',
+      { r: '礻', name: '示字旁 (shìzìpáng)',  en: 'altar / deity',       desc: 'he side component variant of the standalone character 示 (shì - to show/reveal) — Historically derived from drawings of an altar table, characters with 礻 are tightly bound to ancestors, gods, blessings, fortune, rituals, and spiritual views.',
         examples: [{ c: '视', p: 'shì', en: 'to look, to view' }, { c: '祝', p: 'zhù', en: 'to wish' }] },
     ],
   },
