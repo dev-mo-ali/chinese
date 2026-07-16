@@ -1403,9 +1403,9 @@ export const HSK1_LESSON_RADICALS = [
   {
     lesson: 8,
     items: [
-      { r: '钅', name: 'jīnzìpáng',  en: 'metal',               desc: 'Usually related to metal.',
+      { r: '钅', name: '金字旁 (jīnzìpáng)',  en: 'metal',               desc: 'Usually related to metal. the side component variant of 金 (jīn - gold/metal)',
         examples: [{ c: '钱', p: 'qián', en: 'money' }, { c: '银', p: 'yín', en: 'silver' }] },
-      { r: '口', name: 'kǒuzìpáng',  en: 'mouth',               desc: 'Usually related to the mouth (eating, speaking).',
+      { r: '口', name: '口字旁 (kǒuzìpáng)',  en: 'mouth',               desc: 'Usually related to the mouth (eating, speaking).',
         examples: [{ c: '喝', p: 'hē', en: 'to drink' }, { c: '吃', p: 'chī', en: 'to eat' }] },
     ],
   },
