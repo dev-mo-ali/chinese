@@ -1136,6 +1136,7 @@ export const HSK1_LESSONS = [
       { c: '后', p: 'hòu', pos: 'n.', en: 'after · later' },
       { c: '衣服', p: 'yīfu', pos: 'n.', en: 'clothes' },
       { c: '漂亮', p: 'piàoliang', pos: 'adj.', en: 'beautiful · pretty' },
+      { c: '啊', p: 'a', pos: 'part.', en: '(modal particle)' },
       { c: '呀', p: 'ya', pos: 'part.', en: '(modal particle)' },
       { c: '少', p: 'shǎo', pos: 'adj.', en: 'few · little' },
       { c: '不少', p: 'bù shǎo', pos: 'adj.', en: 'quite a few · many' },
