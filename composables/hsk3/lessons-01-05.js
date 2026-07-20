@@ -1,0 +1,495 @@
+// HSK Standard Course 3, lessons 1-5.
+// Transcribed and reconciled against the rendered source pages listed per lesson.
+// The `vocab` arrays contain only the numbered New Words, in source order.
+// Proper-noun sidebars are intentionally not mixed into the New Words arrays.
+
+export const HSK3_LESSONS_01_05 = [
+  // Source: PDF pages 17-26.
+  {
+    no: 1,
+    han: '周末你有什么打算',
+    pinyin: 'Zhōumò nǐ yǒu shénme dǎsuàn',
+    en: "What's your plan for the weekend",
+    focus: '结果补语“好” · “一……也/都 + 不/没……”表示否定 · 连词“那”',
+    texts: [
+      {
+        title: 'Text 1 · 谈周末的打算 · Talking about the plan for the weekend',
+        lines: [
+          { s: 'A', c: '周末你有什么打算？', p: 'Zhōumò nǐ yǒu shénme dǎsuàn?', en: 'What are your plans for the weekend?' },
+          { s: 'B', c: '我早就想好了，请你吃饭、看电影、喝咖啡。', p: 'Wǒ zǎo jiù xiǎnghǎo le, qǐng nǐ chī fàn, kàn diànyǐng, hē kāfēi.', en: 'I decided long ago: I will treat you to a meal, a movie, and coffee.' },
+          { s: 'A', c: '请我？', p: 'Qǐng wǒ?', en: 'Treat me?' },
+          { s: 'B', c: '是啊，我已经找好饭馆儿了，电影票也买好了。', p: 'Shì a, wǒ yǐjīng zhǎohǎo fànguǎnr le, diànyǐngpiào yě mǎihǎo le.', en: 'Yes. I have already found a restaurant, and I have bought the movie tickets too.' },
+          { s: 'A', c: '我还没想好要不要跟你去呢。', p: 'Wǒ hái méi xiǎnghǎo yào bu yào gēn nǐ qù ne.', en: "I still haven't decided whether I want to go with you." },
+        ],
+      },
+      {
+        title: 'Text 2 · 在家 · At home',
+        lines: [
+          { s: 'A', c: '你一直玩儿电脑游戏，作业写完了吗？', p: 'Nǐ yìzhí wánr diànnǎo yóuxì, zuòyè xiěwán le ma?', en: 'You have been playing computer games all this time. Have you finished your homework?' },
+          { s: 'B', c: '都写完了。', p: 'Dōu xiěwán le.', en: 'I have finished all of it.' },
+          { s: 'A', c: '明天不是有考试吗？你怎么一点儿也不着急？', p: 'Míngtiān bú shì yǒu kǎoshì ma? Nǐ zěnme yìdiǎnr yě bù zháojí?', en: "Isn't there an exam tomorrow? Why aren't you worried at all?" },
+          { s: 'B', c: '我早就复习好了。', p: 'Wǒ zǎo jiù fùxí hǎo le.', en: 'I finished reviewing long ago.' },
+          { s: 'A', c: '那也不能一直玩儿啊。', p: 'Nà yě bù néng yìzhí wánr a.', en: "Even so, you can't keep playing all the time." },
+        ],
+      },
+      {
+        title: 'Text 3 · 聊旅游计划 · Talking about the travel plan',
+        lines: [
+          { s: 'A', c: '下个月我去旅游，你能跟我一起去吗？', p: 'Xià ge yuè wǒ qù lǚyóu, nǐ néng gēn wǒ yìqǐ qù ma?', en: 'I am going travelling next month. Can you go with me?' },
+          { s: 'B', c: '我还没想好呢。你觉得哪儿最好玩儿？', p: 'Wǒ hái méi xiǎnghǎo ne. Nǐ juéde nǎr zuì hǎowánr?', en: "I haven't decided yet. Where do you think is the most fun?" },
+          { s: 'A', c: '南方啊，我们去年就是这个时候去的。', p: 'Nánfāng a, wǒmen qùnián jiù shì zhège shíhou qù de.', en: 'The south. We went at exactly this time last year.' },
+          { s: 'B', c: '南方太热了，北方好一些，不冷也不热。', p: 'Nánfāng tài rè le, běifāng hǎo yìxiē, bù lěng yě bú rè.', en: 'The south is too hot. The north is better: neither cold nor hot.' },
+        ],
+      },
+      {
+        title: 'Text 4 · 准备去旅游 · Preparing for their trip',
+        lines: [
+          { s: 'A', c: '水果、面包、茶都准备好了，我们还带什么？', p: 'Shuǐguǒ, miànbāo, chá dōu zhǔnbèi hǎo le, wǒmen hái dài shénme?', en: 'The fruit, bread, and tea are all ready. What else should we take?' },
+          { s: 'B', c: '手机、电脑、地图，一个也不能少。', p: 'Shǒujī, diànnǎo, dìtú, yí ge yě bù néng shǎo.', en: "The phone, computer, and map: we can't leave out a single one." },
+          { s: 'A', c: '这些我昨天下午就准备好了。', p: 'Zhèxiē wǒ zuótiān xiàwǔ jiù zhǔnbèi hǎo le.', en: 'I got all of these ready yesterday afternoon.' },
+          { s: 'B', c: '再多带几件衣服吧。', p: 'Zài duō dài jǐ jiàn yīfu ba.', en: 'Take a few more items of clothing.' },
+          { s: 'A', c: '我们是去旅游，不是搬家，还是少带一些吧。', p: 'Wǒmen shì qù lǚyóu, bú shì bān jiā, háishi shǎo dài yìxiē ba.', en: "We are going travelling, not moving house. We'd better take less." },
+        ],
+      },
+    ],
+    vocab: [
+      { c: '周末', p: 'zhōumò', pos: 'n.', en: 'weekend' },
+      { c: '打算', p: 'dǎsuàn', pos: 'n./v.', en: 'plan; to intend' },
+      { c: '啊', p: 'a', pos: 'part.', en: 'used at the end of a sentence to indicate confirmation or defense' },
+      { c: '跟', p: 'gēn', pos: 'prep.', en: 'with' },
+      { c: '一直', p: 'yìzhí', pos: 'adv.', en: 'all the time' },
+      { c: '游戏', p: 'yóuxì', pos: 'n.', en: 'game' },
+      { c: '作业', p: 'zuòyè', pos: 'n.', en: 'homework' },
+      { c: '着急', p: 'zháojí', pos: 'adj.', en: 'worried, anxious' },
+      { c: '复习', p: 'fùxí', pos: 'v.', en: 'to review' },
+      { c: '南（方）', p: 'nán (fāng)', pos: 'n.', en: 'south, southern part' },
+      { c: '北方', p: 'běifāng', pos: 'n.', en: 'north, northern part' },
+      { c: '面包', p: 'miànbāo', pos: 'n.', en: 'bread' },
+      { c: '带', p: 'dài', pos: 'v.', en: 'to take along, to bring' },
+      { c: '地图', p: 'dìtú', pos: 'n.', en: 'map' },
+      { c: '搬', p: 'bān', pos: 'v.', en: 'to move, to carry' },
+    ],
+    notes: [
+      {
+        title: '结果补语“好” · The Complement of Result “好”',
+        summary: '好 follows a verb to show that the action has been satisfactorily completed. Unlike a plain completion with 完, it also emphasizes that the result is ready or satisfactory.',
+        examples: [
+          { c: '今晚的电影小刚已经买好票了。', p: 'Jīnwǎn de diànyǐng Xiǎogāng yǐjīng mǎihǎo piào le.', en: 'Xiaogang has already bought the tickets for tonight’s movie.' },
+          { c: '饭还没做好，请你等一会儿。', p: 'Fàn hái méi zuòhǎo, qǐng nǐ děng yíhuìr.', en: 'The meal is not ready yet; please wait a moment.' },
+          { c: '去旅游的东西准备好了吗？', p: 'Qù lǚyóu de dōngxi zhǔnbèi hǎo le ma?', en: 'Are the things for the trip ready?' },
+          { c: '我还没想好要不要跟你去呢。', p: 'Wǒ hái méi xiǎnghǎo yào bu yào gēn nǐ qù ne.', en: "I still haven't decided whether I want to go with you." },
+        ],
+      },
+      {
+        title: '“一……也/都 + 不/没……”表示否定 · The Negative Structure “一……也/都 + 不/没……”',
+        summary: '一 + measure word + noun + 也/都 + 不/没 + verb expresses complete negation. 一点儿 can replace the numeral-measure phrase; with an adjectival predicate, use 一点儿也/都 + 不 + adjective.',
+        examples: [
+          { c: '我一个苹果也不想吃。', p: 'Wǒ yí ge píngguǒ yě bù xiǎng chī.', en: "I don't want to eat even one apple." },
+          { c: '昨天他一件衣服都没买。', p: 'Zuótiān tā yí jiàn yīfu dōu méi mǎi.', en: "He didn't buy a single item of clothing yesterday." },
+          { c: '手机、电脑、地图，一个也不能少（带）。', p: 'Shǒujī, diànnǎo, dìtú, yí ge yě bù néng shǎo (dài).', en: 'The phone, computer, and map: not one can be left out.' },
+          { c: '你怎么一点儿也不着急？', p: 'Nǐ zěnme yìdiǎnr yě bù zháojí?', en: "Why aren't you worried at all?" },
+        ],
+      },
+      {
+        title: '连词“那” · The Conjunction “那”',
+        summary: 'At the beginning of a sentence, 那 introduces a result or response drawn from what was just said.',
+        examples: [
+          { c: 'A：我不想去看电影。B：那我也不去了。', p: 'A: Wǒ bù xiǎng qù kàn diànyǐng. B: Nà wǒ yě bú qù le.', en: "A: I don't want to see the movie. B: Then I won't go either." },
+          { c: 'A：（明天的考试）我早就复习好了。B：那也不能一直玩儿啊。', p: 'A: (Míngtiān de kǎoshì) wǒ zǎo jiù fùxí hǎo le. B: Nà yě bù néng yìzhí wánr a.', en: "A: I finished reviewing for tomorrow's exam long ago. B: Even so, you can't keep playing all the time." },
+        ],
+      },
+    ],
+  },
+  // Source: PDF pages 27-35.
+  {
+    no: 2,
+    han: '他什么时候回来',
+    pinyin: 'Tā shénme shíhou huílái',
+    en: 'When will he come back',
+    focus: '简单趋向补语 · 两个动作连续发生 · 反问的表达：能……吗？',
+    texts: [
+      {
+        title: 'Text 1 · 下山的路上 · On the way going down the mountain',
+        lines: [
+          { s: 'A', c: '休息一下吧。', p: 'Xiūxi yíxià ba.', en: "Let's take a break." },
+          { s: 'B', c: '怎么了？', p: 'Zěnme le?', en: "What's wrong?" },
+          { s: 'A', c: '我现在腿也疼，脚也疼。', p: 'Wǒ xiànzài tuǐ yě téng, jiǎo yě téng.', en: 'Now both my legs and my feet hurt.' },
+          { s: 'B', c: '好，那边树多，我们过去坐一下吧。', p: 'Hǎo, nàbian shù duō, wǒmen guòqu zuò yíxià ba.', en: "All right. There are lots of trees over there; let's go over and sit for a while." },
+          { s: 'A', c: '上来的时候我怎么没觉得这么累？', p: 'Shànglái de shíhou wǒ zěnme méi juéde zhème lèi?', en: "Why didn't I feel this tired when we came up?" },
+          { s: 'B', c: '上山容易下山难，你不知道？', p: 'Shàng shān róngyì xià shān nán, nǐ bù zhīdào?', en: "Going up a mountain is easy, but coming down is hard. Didn't you know?" },
+        ],
+      },
+      {
+        title: 'Text 2 · 在打电话 · On the phone',
+        lines: [
+          { s: 'A', c: '喂，你好，请问周明在吗？', p: 'Wèi, nǐ hǎo, qǐngwèn Zhōu Míng zài ma?', en: 'Hello. May I ask whether Zhou Ming is there?' },
+          { s: 'B', c: '周经理出去了，不在办公室。', p: 'Zhōu jīnglǐ chūqu le, bú zài bàngōngshì.', en: 'Manager Zhou has gone out; he is not in the office.' },
+          { s: 'A', c: '他去哪儿了？什么时候回来？', p: 'Tā qù nǎr le? Shénme shíhou huílái?', en: 'Where did he go? When will he come back?' },
+          { s: 'B', c: '他出去办事了，下午回来。', p: 'Tā chūqu bàn shì le, xiàwǔ huílái.', en: 'He went out on business and will return this afternoon.' },
+          { s: 'A', c: '回来了就让他给我打个电话。', p: 'Huílái le jiù ràng tā gěi wǒ dǎ ge diànhuà.', en: 'When he returns, have him call me.' },
+          { s: 'B', c: '好的，他到了办公室我就告诉他。', p: 'Hǎo de, tā dào le bàngōngshì wǒ jiù gàosu tā.', en: "All right. I'll tell him as soon as he gets to the office." },
+        ],
+      },
+      {
+        title: 'Text 3 · 在楼门口送朋友 · Parting at the exit of the building',
+        lines: [
+          { s: 'A', c: '雨下得真大。你怎么回去？我送你吧。', p: 'Yǔ xià de zhēn dà. Nǐ zěnme huíqù? Wǒ sòng nǐ ba.', en: 'It is raining really hard. How will you get back? Let me see you off.' },
+          { s: 'B', c: '没事，我出去叫辆出租车就行了。', p: 'Méi shì, wǒ chūqu jiào liàng chūzūchē jiù xíng le.', en: "It's fine. I can just go out and call a taxi." },
+          { s: 'A', c: '那你等等，我上楼去给你拿把伞。', p: 'Nà nǐ děngdeng, wǒ shàng lóu qù gěi nǐ ná bǎ sǎn.', en: 'Then wait a moment. I will go upstairs and get an umbrella for you.' },
+          { s: 'B', c: '好的。我跟你一起上去吧。', p: 'Hǎo de. Wǒ gēn nǐ yìqǐ shàngqu ba.', en: "All right. I'll go up with you." },
+          { s: 'A', c: '你在这儿等吧，我拿了伞就下来。', p: 'Nǐ zài zhèr děng ba, wǒ ná le sǎn jiù xiàlái.', en: "Wait here. I'll come down as soon as I get the umbrella." },
+        ],
+      },
+      {
+        title: 'Text 4 · 在家 · At home',
+        lines: [
+          { s: 'A', c: '你看，我这么胖，怎么办呢？', p: 'Nǐ kàn, wǒ zhème pàng, zěnme bàn ne?', en: 'Look at how fat I am. What should I do?' },
+          { s: 'B', c: '你每天晚上吃了饭就睡觉，也不出去走走，能不胖吗？', p: 'Nǐ měi tiān wǎnshang chī le fàn jiù shuì jiào, yě bù chūqu zǒuzou, néng bù pàng ma?', en: 'Every evening you go to sleep right after dinner and never go out for a walk. How could you not gain weight?' },
+          { s: 'A', c: '其实我每天都运动。', p: 'Qíshí wǒ měi tiān dōu yùndòng.', en: 'Actually, I exercise every day.' },
+          { s: 'B', c: '但是你一点儿也没瘦！你做什么运动了？', p: 'Dànshì nǐ yìdiǎnr yě méi shòu! Nǐ zuò shénme yùndòng le?', en: "But you haven't lost any weight at all! What exercise did you do?" },
+          { s: 'A', c: '做饭啊。', p: 'Zuò fàn a.', en: 'Cooking.' },
+        ],
+      },
+    ],
+    vocab: [
+      { c: '腿', p: 'tuǐ', pos: 'n.', en: 'leg' },
+      { c: '疼', p: 'téng', pos: 'adj.', en: 'hurt, painful' },
+      { c: '脚', p: 'jiǎo', pos: 'n.', en: 'foot' },
+      { c: '树', p: 'shù', pos: 'n.', en: 'tree' },
+      { c: '容易', p: 'róngyì', pos: 'adj.', en: 'easy' },
+      { c: '难', p: 'nán', pos: 'adj.', en: 'difficult' },
+      { c: '太太', p: 'tàitai', pos: 'n.', en: 'Mrs., madam', supplementary: true },
+      { c: '秘书', p: 'mìshū', pos: 'n.', en: 'secretary', supplementary: true },
+      { c: '经理', p: 'jīnglǐ', pos: 'n.', en: 'manager' },
+      { c: '办公室', p: 'bàngōngshì', pos: 'n.', en: 'office' },
+      { c: '辆', p: 'liàng', pos: 'm.', en: 'used for vehicles' },
+      { c: '楼', p: 'lóu', pos: 'n.', en: 'building' },
+      { c: '拿', p: 'ná', pos: 'v.', en: 'to take, to fetch' },
+      { c: '把', p: 'bǎ', pos: 'm.', en: 'used for things with a handle' },
+      { c: '伞', p: 'sǎn', pos: 'n.', en: 'umbrella' },
+      { c: '胖', p: 'pàng', pos: 'adj.', en: 'fat' },
+      { c: '其实', p: 'qíshí', pos: 'adv.', en: 'actually' },
+      { c: '瘦', p: 'shòu', pos: 'adj.', en: 'thin' },
+    ],
+    notes: [
+      {
+        title: '简单趋向补语 · Simple Complements of Direction',
+        summary: 'Verb + 来/去 indicates the direction of an action: 来 is toward the speaker and 去 is away. A place object comes before 来/去; a thing object may come either before or after it.',
+        examples: [
+          { c: '我们在楼上等你呢，你上来吧。', p: 'Wǒmen zài lóushang děng nǐ ne, nǐ shànglái ba.', en: 'We are waiting for you upstairs. Come up.' },
+          { c: '谁在外边？你出去看看吧。', p: 'Shéi zài wàibian? Nǐ chūqu kànkan ba.', en: 'Who is outside? Go out and take a look.' },
+          { c: '那边树多，我们过去坐一下吧。', p: 'Nàbian shù duō, wǒmen guòqu zuò yíxià ba.', en: "There are lots of trees over there; let's go over and sit for a while." },
+          { c: '我上楼去。', p: 'Wǒ shàng lóu qù.', en: 'I am going upstairs.' },
+          { c: '这次旅游，我想带去这本书。', p: 'Zhè cì lǚyóu, wǒ xiǎng dài qù zhè běn shū.', en: 'I want to take this book along on this trip.' },
+        ],
+      },
+      {
+        title: '两个动作连续发生 · The Successive Occurrence of Two Actions',
+        summary: 'V₁了……就V₂…… shows that the second action follows immediately after the first. If the clauses have different subjects, the second subject is placed directly before 就.',
+        examples: [
+          { c: '我下了课就吃饭。', p: 'Wǒ xià le kè jiù chī fàn.', en: 'I eat as soon as class ends.' },
+          { c: '妈妈起了床就做早饭。', p: 'Māma qǐ le chuáng jiù zuò zǎofàn.', en: 'Mum makes breakfast as soon as she gets up.' },
+          { c: '小刚拿了伞就下来。', p: 'Xiǎogāng ná le sǎn jiù xiàlái.', en: 'Xiaogang will come down as soon as he gets the umbrella.' },
+          { c: '他到了办公室我就告诉他。', p: 'Tā dào le bàngōngshì wǒ jiù gàosu tā.', en: "I'll tell him as soon as he gets to the office." },
+        ],
+      },
+      {
+        title: '反问的表达：能……吗？ · The Rhetoric Question “能……吗？”',
+        summary: '能……吗？ can form a rhetorical question. A positive form conveys a negative meaning, while a negative form conveys a positive meaning.',
+        examples: [
+          { c: 'A：为什么我的汉语学得不好？B：你不做作业，也不练习，能学好吗？', p: 'A: Wèishénme wǒ de Hànyǔ xué de bù hǎo? B: Nǐ bù zuò zuòyè, yě bù liànxí, néng xué hǎo ma?', en: "A: Why isn't my Chinese good? B: If you don't do homework or practise, how could you learn it well?" },
+          { c: 'A：你看我这么胖，怎么办呢？B：你每天晚上吃了饭就睡觉，也不出去走走，能不胖吗？', p: 'A: Nǐ kàn wǒ zhème pàng, zěnme bàn ne? B: Nǐ měi tiān wǎnshang chī le fàn jiù shuì jiào, yě bù chūqu zǒuzou, néng bù pàng ma?', en: 'A: Look at how fat I am. What should I do? B: You sleep right after dinner every night and never take a walk; how could you not gain weight?' },
+        ],
+      },
+    ],
+  },
+  // Source: PDF pages 36-44.
+  {
+    no: 3,
+    han: '桌子上放着很多饮料',
+    pinyin: 'Zhuōzi shang fàngzhe hěn duō yǐnliào',
+    en: 'There are plenty of drinks on the table',
+    focus: '“还是”和“或者” · 存在的表达：Location Word + V着 + Numeral + Measure Word + N · “会”表示可能',
+    texts: [
+      {
+        title: "Text 1 · 在小丽家 · At Xiaoli's home",
+        lines: [
+          { s: 'A', c: '明天是晴天还是阴天？', p: 'Míngtiān shì qíngtiān háishi yīntiān?', en: 'Will tomorrow be sunny or cloudy?' },
+          { s: 'B', c: '阴天，电视上说多云。怎么了？有事？', p: 'Yīntiān, diànshì shang shuō duōyún. Zěnme le? Yǒu shì?', en: 'Cloudy; the television says it will be overcast. What is it? Is something up?' },
+          { s: 'A', c: '没事，我们明天要去爬山。', p: 'Méi shì, wǒmen míngtiān yào qù pá shān.', en: "Nothing. We're going to climb a mountain tomorrow." },
+          { s: 'B', c: '爬山的时候要小心点儿。', p: 'Pá shān de shíhou yào xiǎoxīn diǎnr.', en: 'Be careful when climbing the mountain.' },
+          { s: 'A', c: '好，你也去吗？', p: 'Hǎo, nǐ yě qù ma?', en: 'All right. Are you going too?' },
+          { s: 'B', c: '我不去，我有事。', p: 'Wǒ bú qù, wǒ yǒu shì.', en: "I'm not going; I have something to do." },
+        ],
+      },
+      {
+        title: 'Text 2 · 在商场 · In a mall',
+        lines: [
+          { s: 'A', c: '你觉得这条裤子怎么样？', p: 'Nǐ juéde zhè tiáo kùzi zěnmeyàng?', en: 'What do you think of these trousers?' },
+          { s: 'B', c: '我记得你已经有两条这样的裤子了。', p: 'Wǒ jìde nǐ yǐjīng yǒu liǎng tiáo zhèyàng de kùzi le.', en: 'I remember that you already have two pairs of trousers like these.' },
+          { s: 'A', c: '那我们再看看别的。', p: 'Nà wǒmen zài kànkan biéde.', en: "Then let's look at some others." },
+          { s: 'B', c: '这件衬衫怎么样？', p: 'Zhè jiàn chènshān zěnmeyàng?', en: 'How about this shirt?' },
+          { s: 'A', c: '还不错，多少钱？', p: 'Hái búcuò, duōshao qián?', en: 'Not bad. How much is it?' },
+          { s: 'B', c: '这上面写着320元。', p: 'Zhè shàngmian xiězhe sān bǎi èrshí yuán.', en: 'It says 320 yuan on it.' },
+          { s: 'A', c: '买一件。', p: 'Mǎi yí jiàn.', en: "Let's buy one." },
+        ],
+      },
+      {
+        title: 'Text 3 · 在水果店 · In a fruit store',
+        lines: [
+          { s: 'A', c: '这些水果真新鲜，我们买西瓜还是苹果？', p: 'Zhèxiē shuǐguǒ zhēn xīnxiān, wǒmen mǎi xīguā háishi píngguǒ?', en: 'This fruit is really fresh. Shall we buy a watermelon or apples?' },
+          { s: 'B', c: '西瓜吧。你看，这上面写着“西瓜不甜不要钱”。', p: 'Xīguā ba. Nǐ kàn, zhè shàngmian xiězhe “xīguā bù tián bú yào qián”.', en: 'A watermelon. Look, it says, “If the watermelon is not sweet, it is free.”' },
+          { s: 'A', c: '那我们买一个大点儿的吧。', p: 'Nà wǒmen mǎi yí ge dà diǎnr de ba.', en: "Then let's buy a bigger one." },
+          { s: 'B', c: '再买几个苹果。', p: 'Zài mǎi jǐ ge píngguǒ.', en: "Let's buy a few apples too." },
+          { s: 'A', c: '好啊，今天晚上只吃水果不吃饭！', p: 'Hǎo a, jīntiān wǎnshang zhǐ chī shuǐguǒ bù chī fàn!', en: "Great. Tonight we'll eat only fruit and no meal!" },
+        ],
+      },
+      {
+        title: 'Text 4 · 在休息室 · In the lounge',
+        lines: [
+          { s: 'A', c: '桌子上放着很多饮料，你喝什么？', p: 'Zhuōzi shang fàngzhe hěn duō yǐnliào, nǐ hē shénme?', en: 'There are lots of drinks on the table. What will you have?' },
+          { s: 'B', c: '茶或者咖啡都可以。你呢？你喝什么？', p: 'Chá huòzhě kāfēi dōu kěyǐ. Nǐ ne? Nǐ hē shénme?', en: 'Tea or coffee is fine. What about you? What will you have?' },
+          { s: 'A', c: '我喝茶，茶是我的最爱。天冷了或者工作累了的时候，喝杯热茶会很舒服。', p: 'Wǒ hē chá, chá shì wǒ de zuì ài. Tiān lěng le huòzhě gōngzuò lèi le de shíhou, hē bēi rè chá huì hěn shūfu.', en: 'I will have tea; tea is my favourite. When it is cold or I am tired from work, a cup of hot tea feels very comforting.' },
+          { s: 'B', c: '你喜欢喝什么茶？', p: 'Nǐ xǐhuan hē shénme chá?', en: 'What kind of tea do you like?' },
+          { s: 'A', c: '花茶、绿茶、红茶，我都喜欢。', p: 'Huāchá, lǜchá, hóngchá, wǒ dōu xǐhuan.', en: 'Scented tea, green tea, and black tea: I like them all.' },
+        ],
+      },
+    ],
+    vocab: [
+      { c: '还是', p: 'háishi', pos: 'conj.', en: 'or' },
+      { c: '爬山', p: 'pá shān', pos: 'v.', en: 'to climb a mountain' },
+      { c: '小心', p: 'xiǎoxīn', pos: 'adj.', en: 'careful' },
+      { c: '条', p: 'tiáo', pos: 'm.', en: 'used for pants, dresses, etc.' },
+      { c: '裤子', p: 'kùzi', pos: 'n.', en: 'pants' },
+      { c: '记得', p: 'jìde', pos: 'v.', en: 'to remember' },
+      { c: '衬衫', p: 'chènshān', pos: 'n.', en: 'shirt' },
+      { c: '元', p: 'yuán', pos: 'm.', en: 'unit of money' },
+      { c: '新鲜', p: 'xīnxiān', pos: 'adj.', en: 'fresh' },
+      { c: '甜', p: 'tián', pos: 'adj.', en: 'sweet' },
+      { c: '只', p: 'zhǐ', pos: 'adv.', en: 'only, solely' },
+      { c: '放', p: 'fàng', pos: 'v.', en: 'to put, to place' },
+      { c: '饮料', p: 'yǐnliào', pos: 'n.', en: 'drink, beverage' },
+      { c: '或者', p: 'huòzhě', pos: 'conj.', en: 'or' },
+      { c: '舒服', p: 'shūfu', pos: 'adj.', en: 'comfortable' },
+      { c: '花', p: 'huā', pos: 'n.', en: 'flower' },
+      { c: '绿', p: 'lǜ', pos: 'adj.', en: 'green' },
+    ],
+    notes: [
+      {
+        title: '“还是”和“或者” · Comparison of “还是” and “或者”',
+        summary: 'Both connect alternatives. 还是 is normally used in questions, while 或者 is used in statements. In an interrogative subordinate clause, only 还是 is used.',
+        examples: [
+          { c: '你要喝咖啡还是喝茶？', p: 'Nǐ yào hē kāfēi háishi hē chá?', en: 'Do you want coffee or tea?' },
+          { c: '明天是晴天还是阴天？', p: 'Míngtiān shì qíngtiān háishi yīntiān?', en: 'Will tomorrow be sunny or cloudy?' },
+          { c: '今天晚上吃米饭或者面条都可以。', p: 'Jīntiān wǎnshang chī mǐfàn huòzhě miàntiáo dōu kěyǐ.', en: 'Rice or noodles are both fine for dinner tonight.' },
+          { c: '天冷了或者工作累了的时候，喝杯热茶很舒服。', p: 'Tiān lěng le huòzhě gōngzuò lèi le de shíhou, hē bēi rè chá hěn shūfu.', en: 'When it is cold or you are tired from work, a cup of hot tea is very comforting.' },
+        ],
+      },
+      {
+        title: '存在的表达：Location Word + V着 + Numeral + Measure Word + N · The Expression of Existence: Location Word + V着 + Numeral + Measure Word + N',
+        summary: 'Location word + V着 + noun phrase states what exists somewhere, commonly with 放、写、坐、住. The noun phrase is indefinite. The negative form is location word + 没 V着 + noun phrase, without a measure word before the noun phrase.',
+        examples: [
+          { c: '桌子上放着一杯咖啡。', p: 'Zhuōzi shang fàngzhe yì bēi kāfēi.', en: 'There is a cup of coffee on the table.' },
+          { c: '我家楼上住着一个老师。', p: 'Wǒ jiā lóushang zhùzhe yí ge lǎoshī.', en: 'A teacher lives upstairs from my home.' },
+          { c: '上面写着320元。', p: 'Shàngmian xiězhe sān bǎi èrshí yuán.', en: 'It says 320 yuan on it.' },
+          { c: '桌子上放着很多饮料。', p: 'Zhuōzi shang fàngzhe hěn duō yǐnliào.', en: 'There are lots of drinks on the table.' },
+          { c: '桌子上没放着咖啡。', p: 'Zhuōzi shang méi fàngzhe kāfēi.', en: 'There is no coffee on the table.' },
+        ],
+      },
+      {
+        title: '“会”表示可能 · “会” Indicating the Possibility',
+        summary: 'The auxiliary 会 can indicate that something may happen, usually referring to an event that has not yet occurred.',
+        examples: [
+          { c: '你穿得那么少，会感冒的。', p: 'Nǐ chuān de nàme shǎo, huì gǎnmào de.', en: 'You are wearing so little; you may catch a cold.' },
+          { c: '别担心，我会照顾好自己。', p: 'Bié dānxīn, wǒ huì zhàogù hǎo zìjǐ.', en: "Don't worry; I will take good care of myself." },
+          { c: '你不给他打电话吗，他会不高兴的。', p: 'Nǐ bù gěi tā dǎ diànhuà ma, tā huì bù gāoxìng de.', en: "If you don't call him, he may be unhappy." },
+          { c: '喝杯热茶会很舒服。', p: 'Hē bēi rè chá huì hěn shūfu.', en: 'A cup of hot tea will feel very comforting.' },
+        ],
+      },
+    ],
+  },
+  // Source: PDF pages 45-52.
+  {
+    no: 4,
+    han: '她总是笑着跟客人说话',
+    pinyin: 'Tā zǒngshì xiàozhe gēn kèrén shuōhuà',
+    en: 'She always smiles when talking to customers',
+    focus: '又……又…… · 动作的伴随：V₁着（O₁）+ V₂（O₂）',
+    texts: [
+      {
+        title: 'Text 1 · 在教室 · In the classroom',
+        lines: [
+          { s: 'A', c: '这是你们比赛的照片吗？', p: 'Zhè shì nǐmen bǐsài de zhàopiàn ma?', en: 'Is this a photo of your competition?' },
+          { s: 'B', c: '是，这是我们比赛后照的。', p: 'Shì, zhè shì wǒmen bǐsài hòu zhào de.', en: 'Yes, this was taken after our competition.' },
+          { s: 'A', c: '照得不错，你们都是一个年级的吗？', p: 'Zhào de búcuò, nǐmen dōu shì yí ge niánjí de ma?', en: 'It was taken well. Are you all in the same grade?' },
+          { s: 'B', c: '不是。那个又高又漂亮的女孩儿是二年级的。', p: 'Bú shì. Nàge yòu gāo yòu piàoliang de nǚháir shì èr niánjí de.', en: 'No. That tall and pretty girl is in the second grade.' },
+          { s: 'A', c: '旁边那个拿着书笑的人是谁？', p: 'Pángbiān nàge názhe shū xiào de rén shì shéi?', en: 'Who is the person beside her, holding a book and smiling?' },
+          { s: 'B', c: '那是我！', p: 'Nà shì wǒ!', en: "That's me!" },
+        ],
+      },
+      {
+        title: 'Text 2 · 在教室 · In the classroom',
+        lines: [
+          { s: 'A', c: '你觉得小红怎么样？', p: 'Nǐ juéde Xiǎohóng zěnmeyàng?', en: 'What do you think of Xiaohong?' },
+          { s: 'B', c: '她又聪明又热情，也很努力。', p: 'Tā yòu cōngming yòu rèqíng, yě hěn nǔlì.', en: 'She is clever and enthusiastic, and also very hard-working.' },
+          { s: 'A', c: '我看她总是笑着回答老师的问题。', p: 'Wǒ kàn tā zǒngshì xiàozhe huídá lǎoshī de wèntí.', en: 'I see that she always smiles while answering the teacher’s questions.' },
+          { s: 'B', c: '她对每个人都笑，也常常对我笑。', p: 'Tā duì měi ge rén dōu xiào, yě chángcháng duì wǒ xiào.', en: 'She smiles at everyone and often smiles at me too.' },
+          { s: 'A', c: '你是不是喜欢她啊？', p: 'Nǐ shì bú shì xǐhuan tā a?', en: 'Do you like her?' },
+          { s: 'B', c: '喜欢她的人太多了，你看那些拿着鲜花站在门口的，都是等她的。', p: 'Xǐhuan tā de rén tài duō le, nǐ kàn nàxiē názhe xiānhuā zhàn zài ménkǒu de, dōu shì děng tā de.', en: 'Too many people like her. Look at those people standing at the entrance with flowers: they are all waiting for her.' },
+        ],
+      },
+      {
+        title: 'Text 3 · 在超市门口 · At the entrance of a supermarket',
+        lines: [
+          { s: 'A', c: '我有点儿饿了，我们进超市买点儿东西吧。', p: 'Wǒ yǒudiǎnr è le, wǒmen jìn chāoshì mǎi diǎnr dōngxi ba.', en: "I'm a little hungry. Let's go into the supermarket and buy something." },
+          { s: 'B', c: '好啊，这家超市的蛋糕又便宜又好吃，一块只要2.99元。', p: 'Hǎo a, zhè jiā chāoshì de dàngāo yòu piányi yòu hǎochī, yí kuàir zhǐ yào èr diǎn jiǔ jiǔ yuán.', en: 'Sure. The cakes at this supermarket are both cheap and tasty; one piece costs only 2.99 yuan.' },
+          { s: 'A', c: '我们买两块，回家吃着蛋糕看电视，怎么样？', p: 'Wǒmen mǎi liǎng kuàir, huí jiā chīzhe dàngāo kàn diànshì, zěnmeyàng?', en: 'How about buying two and watching television at home while eating cake?' },
+          { s: 'B', c: '好啊，我再去买一些喝的。', p: 'Hǎo a, wǒ zài qù mǎi yìxiē hē de.', en: "All right. I'll go buy something to drink too." },
+          { s: 'A', c: '喝着咖啡吃蛋糕，太好了！', p: 'Hēzhe kāfēi chī dàngāo, tài hǎo le!', en: 'Eating cake while drinking coffee: wonderful!' },
+        ],
+      },
+      {
+        title: 'Text 4 · 在饭馆 · In a restaurant',
+        lines: [
+          { s: 'A', c: '您好！您找谁？', p: 'Nín hǎo! Nín zhǎo shéi?', en: 'Hello! Who are you looking for?' },
+          { s: 'B', c: '你们这儿是不是有一个又年轻又漂亮的服务员？', p: 'Nǐmen zhèr shì bú shì yǒu yí ge yòu niánqīng yòu piàoliang de fúwùyuán?', en: 'Do you have a young and pretty server here?' },
+          { s: 'A', c: '我们这儿年轻、漂亮的服务员有很多。', p: 'Wǒmen zhèr niánqīng, piàoliang de fúwùyuán yǒu hěn duō.', en: 'We have many young and pretty servers here.' },
+          { s: 'B', c: '她工作又认真又热情。', p: 'Tā gōngzuò yòu rènzhēn yòu rèqíng.', en: 'She is both conscientious and enthusiastic in her work.' },
+          { s: 'A', c: '您能再说说吗？', p: 'Nín néng zài shuōshuo ma?', en: 'Could you say a little more?' },
+          { s: 'B', c: '她总是笑着跟客人说话。', p: 'Tā zǒngshì xiàozhe gēn kèrén shuōhuà.', en: 'She always talks to customers with a smile.' },
+          { s: 'A', c: '啊，我知道了，你说的是李小美吧？', p: 'A, wǒ zhīdào le, nǐ shuō de shì Lǐ Xiǎoměi ba?', en: 'Ah, I know. You mean Li Xiaomei, right?' },
+        ],
+      },
+    ],
+    vocab: [
+      { c: '比赛', p: 'bǐsài', pos: 'n.', en: 'match, competition' },
+      { c: '照片', p: 'zhàopiàn', pos: 'n.', en: 'photo' },
+      { c: '年级', p: 'niánjí', pos: 'n.', en: 'grade' },
+      { c: '又', p: 'yòu', pos: 'adv.', en: 'and' },
+      { c: '聪明', p: 'cōngming', pos: 'adj.', en: 'clever, smart' },
+      { c: '热情', p: 'rèqíng', pos: 'adj.', en: 'warm, enthusiastic' },
+      { c: '努力', p: 'nǔlì', pos: 'adj.', en: 'hard-working' },
+      { c: '总是', p: 'zǒngshì', pos: 'adv.', en: 'always' },
+      { c: '回答', p: 'huídá', pos: 'v.', en: 'to answer' },
+      { c: '站', p: 'zhàn', pos: 'v.', en: 'to stand' },
+      { c: '饿', p: 'è', pos: 'adj.', en: 'hungry' },
+      { c: '超市', p: 'chāoshì', pos: 'n.', en: 'supermarket' },
+      { c: '蛋糕', p: 'dàngāo', pos: 'n.', en: 'cake' },
+      { c: '年轻', p: 'niánqīng', pos: 'adj.', en: 'young' },
+      { c: '认真', p: 'rènzhēn', pos: 'adj.', en: 'serious, earnest' },
+      { c: '客人', p: 'kèrén', pos: 'n.', en: 'customer, guest' },
+    ],
+    notes: [
+      {
+        title: '又……又…… · The Structure “又……又……”',
+        summary: '又 + adjective 1 + 又 + adjective 2 describes two qualities present in the same person or thing.',
+        examples: [
+          { c: '这个西瓜又大又甜。', p: 'Zhège xīguā yòu dà yòu tián.', en: 'This watermelon is both big and sweet.' },
+          { c: '外边又黑又冷。', p: 'Wàibian yòu hēi yòu lěng.', en: 'Outside it is both dark and cold.' },
+          { c: '服务员又年轻又漂亮。', p: 'Fúwùyuán yòu niánqīng yòu piàoliang.', en: 'The server is both young and pretty.' },
+          { c: '她工作又认真又热情。', p: 'Tā gōngzuò yòu rènzhēn yòu rèqíng.', en: 'She is both conscientious and enthusiastic in her work.' },
+        ],
+      },
+      {
+        title: '动作的伴随：V₁着（O₁）+V₂（O₂） · The Accompanying Action: V₁着（O₁） + V₂（O₂）',
+        summary: 'V₁着 (object 1) + V₂ (object 2) presents two simultaneous actions. V₁ is the accompanying state or manner in which the main action V₂ is performed.',
+        examples: [
+          { c: '弟弟吃着苹果写作业。', p: 'Dìdi chīzhe píngguǒ xiě zuòyè.', en: 'The younger brother does his homework while eating an apple.' },
+          { c: '周先生和周太太坐着看电视。', p: 'Zhōu xiānsheng hé Zhōu tàitai zuòzhe kàn diànshì.', en: 'Mr. and Mrs. Zhou watch television while sitting.' },
+          { c: '很多人拿着鲜花站在门口。', p: 'Hěn duō rén názhe xiānhuā zhàn zài ménkǒu.', en: 'Many people are standing at the entrance holding flowers.' },
+          { c: '她总是笑着跟客人说话。', p: 'Tā zǒngshì xiàozhe gēn kèrén shuōhuà.', en: 'She always talks to customers with a smile.' },
+        ],
+      },
+    ],
+  },
+  // Source: PDF pages 53-61.
+  {
+    no: 5,
+    han: '我最近越来越胖了',
+    pinyin: 'Wǒ zuìjìn yuè lái yuè pàng le',
+    en: 'I am getting fatter and fatter lately',
+    focus: '“了”表示变化 · 越来越 + Adj/Mental V',
+    texts: [
+      {
+        title: "Text 1 · 在小丽家 · At Xiaoli's home",
+        lines: [
+          { s: 'A', c: '我听说你身体不舒服，怎么了？', p: 'Wǒ tīngshuō nǐ shēntǐ bù shūfu, zěnme le?', en: "I heard that you haven't been feeling well. What's wrong?" },
+          { s: 'B', c: '前几天有点儿发烧，现在好多了。', p: 'Qián jǐ tiān yǒudiǎnr fā shāo, xiànzài hǎoduō le.', en: 'I had a bit of a fever a few days ago, but I am much better now.' },
+          { s: 'A', c: '喝杯茶吧，这是我为你买的绿茶，很不错。', p: 'Hē bēi chá ba, zhè shì wǒ wèi nǐ mǎi de lǜchá, hěn búcuò.', en: 'Have a cup of tea. This is green tea that I bought for you; it is very good.' },
+          { s: 'B', c: '谢谢，我要吃药，不喝茶了。', p: 'Xièxie, wǒ yào chī yào, bù hē chá le.', en: "Thank you. I need to take medicine, so I won't drink tea now." },
+          { s: 'A', c: '那喝杯水吧。', p: 'Nà hē bēi shuǐ ba.', en: 'Then have a cup of water.' },
+          { s: 'B', c: '好的。', p: 'Hǎo de.', en: 'All right.' },
+        ],
+      },
+      {
+        title: 'Text 2 · 在打电话 · On the phone',
+        lines: [
+          { s: 'A', c: '对不起，我明天不能和你们出去玩儿了。', p: 'Duìbuqǐ, wǒ míngtiān bù néng hé nǐmen chūqu wánr le.', en: "I'm sorry, but I can't go out with you tomorrow." },
+          { s: 'B', c: '为什么？怎么了？', p: 'Wèi shénme? Zěnme le?', en: 'Why? What happened?' },
+          { s: 'A', c: '我儿子生病了，我要在家照顾他。', p: 'Wǒ érzi shēng bìng le, wǒ yào zài jiā zhàogù tā.', en: 'My son is ill, and I need to look after him at home.' },
+          { s: 'B', c: '他吃药了吗？要不要去医院？', p: 'Tā chī yào le ma? Yào bu yào qù yīyuàn?', en: 'Has he taken medicine? Does he need to go to the hospital?' },
+          { s: 'A', c: '不用去医院，昨天吃了感冒药，现在好一些了。', p: 'Búyòng qù yīyuàn, zuótiān chī le gǎnmào yào, xiànzài hǎo yìxiē le.', en: "There's no need to go to the hospital. He took cold medicine yesterday and is a little better now." },
+          { s: 'B', c: '那我们下次再一起出去玩儿吧。', p: 'Nà wǒmen xià cì zài yìqǐ chūqu wánr ba.', en: "Then let's go out together next time." },
+        ],
+      },
+      {
+        title: "Text 3 · 在小刚家 · At Xiaogang's home",
+        lines: [
+          { s: 'A', c: '你最喜欢哪个季节？', p: 'Nǐ zuì xǐhuan nǎge jìjié?', en: 'Which season do you like best?' },
+          { s: 'B', c: '当然是春天，天气不那么冷了，草和树都绿了，花也开了。', p: 'Dāngrán shì chūntiān, tiānqì bù nàme lěng le, cǎo hé shù dōu lǜ le, huā yě kāi le.', en: 'Spring, of course. The weather is no longer so cold, the grass and trees have turned green, and the flowers have bloomed.' },
+          { s: 'A', c: '我最喜欢夏天，因为我可以穿漂亮的裙子了。', p: 'Wǒ zuì xǐhuan xiàtiān, yīnwèi wǒ kěyǐ chuān piàoliang de qúnzi le.', en: 'I like summer best because I can wear pretty dresses.' },
+          { s: 'B', c: '那我也喜欢夏天了。', p: 'Nà wǒ yě xǐhuan xiàtiān le.', en: 'Then I like summer now too.' },
+          { s: 'A', c: '怎么？你也有漂亮的裙子？', p: 'Zěnme? Nǐ yě yǒu piàoliang de qúnzi?', en: 'What? Do you have pretty dresses too?' },
+          { s: 'B', c: '不，我喜欢看你穿漂亮的裙子。', p: 'Bù, wǒ xǐhuan kàn nǐ chuān piàoliang de qúnzi.', en: 'No. I like seeing you wear pretty dresses.' },
+        ],
+      },
+      {
+        title: "Text 4 · 在小刚家 · At Xiaogang's home",
+        lines: [
+          { s: 'A', c: '我最近越来越胖了。', p: 'Wǒ zuìjìn yuè lái yuè pàng le.', en: "I've been getting fatter and fatter lately." },
+          { s: 'B', c: '谁说的？我觉得你越来越漂亮了。', p: 'Shéi shuō de? Wǒ juéde nǐ yuè lái yuè piàoliang le.', en: 'Who says so? I think you are getting prettier and prettier.' },
+          { s: 'A', c: '你看，这条裙子是去年买的，今年就不能穿了。', p: 'Nǐ kàn, zhè tiáo qúnzi shì qùnián mǎi de, jīnnián jiù bù néng chuān le.', en: "Look, I bought this dress last year, but this year I can't wear it anymore." },
+          { s: 'B', c: '那是因为你吃得太多了，少吃点儿吧。', p: 'Nà shì yīnwèi nǐ chī de tài duō le, shǎo chī diǎnr ba.', en: "That's because you eat too much. Eat a little less." },
+          { s: 'A', c: '我做的饭越来越好吃，我能少吃吗？', p: 'Wǒ zuò de fàn yuè lái yuè hǎochī, wǒ néng shǎo chī ma?', en: 'The food I cook is getting tastier and tastier. How could I eat less?' },
+        ],
+      },
+    ],
+    vocab: [
+      { c: '发烧', p: 'fā shāo', pos: 'v.', en: 'to have a fever' },
+      { c: '为', p: 'wèi', pos: 'prep.', en: 'for' },
+      { c: '照顾', p: 'zhàogù', pos: 'v.', en: 'to take care of' },
+      { c: '用', p: 'yòng', pos: 'v.', en: 'to need' },
+      { c: '感冒', p: 'gǎnmào', pos: 'v.', en: 'to catch a cold' },
+      { c: '季节', p: 'jìjié', pos: 'n.', en: 'season' },
+      { c: '当然', p: 'dāngrán', pos: 'adv.', en: 'of course' },
+      { c: '春（天）', p: 'chūn (tiān)', pos: 'n.', en: 'spring' },
+      { c: '草', p: 'cǎo', pos: 'n.', en: 'grass' },
+      { c: '夏（天）', p: 'xià (tiān)', pos: 'n.', en: 'summer' },
+      { c: '裙子', p: 'qúnzi', pos: 'n.', en: 'dress, skirt' },
+      { c: '最近', p: 'zuìjìn', pos: 'adv.', en: 'lately, recently' },
+      { c: '越', p: 'yuè', pos: 'adv.', en: 'more, to a greater degree' },
+    ],
+    notes: [
+      {
+        title: '“了”表示变化 · “了” Indicating a Change',
+        summary: 'Sentence-final 了 indicates a change in the situation or the appearance of a new situation.',
+        examples: [
+          { c: '上个月很冷，现在天气不那么冷了。', p: 'Shàng ge yuè hěn lěng, xiànzài tiānqì bù nàme lěng le.', en: 'Last month was very cold; now the weather is not so cold.' },
+          { c: '我前几天有点儿发烧，现在好多了。', p: 'Wǒ qián jǐ tiān yǒudiǎnr fā shāo, xiànzài hǎoduō le.', en: 'I had a slight fever a few days ago, but I am much better now.' },
+          { c: '我现在喜欢夏天了。', p: 'Wǒ xiànzài xǐhuan xiàtiān le.', en: 'I like summer now.' },
+          { c: '这条裙子是去年买的，今年就不能穿了。', p: 'Zhè tiáo qúnzi shì qùnián mǎi de, jīnnián jiù bù néng chuān le.', en: "I bought this dress last year, but this year I can't wear it anymore." },
+        ],
+      },
+      {
+        title: '越来越+Adj/Mental V · The Structure “越来越+Adj/Mental V”',
+        summary: '越来越 followed by an adjective or mental verb expresses a change in degree as time passes. A degree adverb cannot be inserted before that adjective or mental verb.',
+        examples: [
+          { c: '我认识的汉字越来越多。', p: 'Wǒ rènshi de Hànzì yuè lái yuè duō.', en: 'I know more and more Chinese characters.' },
+          { c: '你越来越漂亮。', p: 'Nǐ yuè lái yuè piàoliang.', en: 'You are getting prettier and prettier.' },
+          { c: '我越来越喜欢运动。', p: 'Wǒ yuè lái yuè xǐhuan yùndòng.', en: 'I like exercise more and more.' },
+          { c: '我做的饭越来越好吃。', p: 'Wǒ zuò de fàn yuè lái yuè hǎochī.', en: 'The food I cook is getting tastier and tastier.' },
+        ],
+      },
+    ],
+  },
+]

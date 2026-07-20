@@ -7,8 +7,8 @@ useHead({ title: 'HSK 3 · Standard Course · 20 Lessons' })
 
 const {
   activeLesson, showAllVocab,
-  revealed, revealAll, isRevealed, toggleLine,
-  vocabRevealed, vocabRevealAll, isVocabRevealed, toggleVocab,
+  revealed, revealAll, isRevealed, toggleLine, resetReveals,
+  vocabRevealed, vocabRevealAll, isVocabRevealed, toggleVocab, resetVocabReveals,
   search, pickLesson,
 } = useHskPage({ scrollTargetId: 'lesson-detail' })
 
@@ -18,6 +18,13 @@ const toggle = (k) => { open[k] = !open[k] }
 const current = computed(() => HSK3_LESSONS.find(l => l.no === activeLesson.value))
 
 const totalVocab = computed(() => HSK3_LESSONS.reduce((s, l) => s + l.vocab.length, 0))
+const coreVocab = computed(() => HSK3_LESSONS.reduce(
+  (sum, lesson) => sum + lesson.vocab.filter(word => !word.supplementary).length,
+  0,
+))
+const supplementaryVocab = computed(() => totalVocab.value - coreVocab.value)
+const charsOf = value => [...String(value || '')].filter(char => /[\u3400-\u9fff]/.test(char))
+const hanziLength = value => charsOf(value).length
 
 const allVocab = computed(() =>
   HSK3_LESSONS.flatMap(l => l.vocab.map(v => ({ ...v, lesson: l.no })))
@@ -63,7 +70,10 @@ const filteredVocab = computed(() => {
             {{ HSK3_LESSONS.length }} lessons
           </span>
           <span class="px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-gold/10 border border-gold-deep/30 text-ink-soft">
-            {{ totalVocab }} new words
+            {{ coreVocab }} core entries
+          </span>
+          <span class="px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-gold/10 border border-gold-deep/30 text-ink-soft">
+            {{ supplementaryVocab }} supplementary
           </span>
           <span class="px-3 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider bg-gold/10 border border-gold-deep/30 text-ink-soft">
             <span lang="zh-CN">把 · 被 · 越…越 · 着</span>
@@ -150,6 +160,9 @@ const filteredVocab = computed(() => {
             <span class="w-2 h-2 rounded-full bg-gold-deep"></span>
             <span>{{ current.focus }}</span>
           </div>
+          <div v-if="current.bookPage" class="mt-2 text-[10px] font-mono uppercase tracking-widest text-ink/45">
+            Source book p. {{ current.bookPage }} · PDF p. {{ current.pdfPage }}
+          </div>
         </div>
         <span v-else class="text-[10px] tracking-[0.3em] uppercase text-gold-deep">Lesson</span>
         <span class="fold-caret text-xl leading-none text-gold-deep ml-auto" :class="{ 'is-open': open.detail, 'self-center': open.detail }">▸</span>
@@ -204,7 +217,7 @@ const filteredVocab = computed(() => {
                   {{ String(ti + 1).padStart(2, '0') }}
                 </span>
                 <div class="min-w-0">
-                  <div class="text-[9px] font-mono uppercase tracking-[0.3em] text-gold-deep/70">Dialogue</div>
+                  <div class="text-[9px] font-mono uppercase tracking-[0.3em] text-gold-deep/70">Text</div>
                   <h4 class="text-sm font-semibold text-ink tracking-wide leading-tight">{{ text.title }}</h4>
                 </div>
                 <span class="flex-1 h-px bg-gradient-to-r from-gold-deep/40 to-transparent"></span>
@@ -213,20 +226,23 @@ const filteredVocab = computed(() => {
               <ul class="space-y-3">
                 <li v-for="(line, i) in text.lines" :key="i"
                     class="dialogue-row flex gap-2.5"
-                    :class="line.s === 'A' ? 'justify-start' : 'justify-end flex-row-reverse'"
+                    :class="line.s !== 'B' ? 'justify-start' : 'justify-end flex-row-reverse'"
                 >
                   <span class="speaker-chip flex items-center justify-center w-9 h-9 rounded-full font-mono text-xs font-bold text-white shadow-chip shrink-0 mt-1"
-                        :class="line.s === 'A' ? 'chip-a' : 'chip-b'"
+                        :class="line.s !== 'B' ? 'chip-a' : 'chip-b'"
                   >{{ line.s }}</span>
 
                   <button
                     type="button"
                     @click="toggleLine(ti, i)"
                     class="dialogue-bubble relative flex-1 rounded-2xl border px-4 py-3 text-left cursor-pointer w-full"
-                    :class="[line.s === 'A' ? 'bubble-a' : 'bubble-b', isRevealed(ti, i) ? 'is-revealed' : 'is-hidden']"
+                    :class="[line.s !== 'B' ? 'bubble-a' : 'bubble-b', isRevealed(ti, i) ? 'is-revealed' : 'is-hidden']"
                     :aria-expanded="isRevealed(ti, i)"
                     :title="isRevealed(ti, i) ? 'Click to hide pinyin & English' : 'Click to reveal pinyin & English'"
                   >
+                    <div v-if="line.speaker" class="mb-1 text-[9px] font-mono font-bold uppercase tracking-widest text-ink/45">
+                      {{ line.speaker }}
+                    </div>
                     <div class="han text-base font-semibold text-ink leading-snug">{{ line.c }}</div>
 
                     <template v-if="isRevealed(ti, i)">
@@ -265,23 +281,23 @@ const filteredVocab = computed(() => {
                 :class="vocabRevealAll
                   ? 'bg-ink text-paper border-ink'
                   : 'bg-white text-ink/70 border-ink/20 hover:border-gold-deep/50 hover:text-ink'"
-                :title="vocabRevealAll ? 'Hide pinyin & English' : 'Show pinyin & English'"
+                :title="vocabRevealAll ? 'Hide English meanings' : 'Show English meanings'"
               >
-                {{ vocabRevealAll ? 'Hide all' : 'Show all' }}
+                {{ vocabRevealAll ? 'Hide meanings' : 'Show meanings' }}
               </button>
               <button
                 v-if="!vocabRevealAll && vocabRevealed.size"
                 type="button"
                 @click="resetVocabReveals"
                 class="text-[10px] font-mono uppercase tracking-widest px-2.5 py-1 rounded-md border border-ink/20 bg-white text-ink/60 hover:text-ink hover:border-gold-deep/50 transition"
-                title="Hide all revealed words"
+                title="Hide all revealed English meanings"
               >
                 Reset
               </button>
             </div>
           </div>
           <p v-show="open.lessonVocab" class="text-[11px] text-ink/50 italic mb-3">
-            Read the Chinese first — tap a word to reveal pinyin &amp; English.
+            Pinyin is always shown — tap a word to reveal its English meaning.
           </p>
           <ul v-show="open.lessonVocab" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             <li v-for="(v, i) in current.vocab" :key="i" class="flex flex-col gap-2">
@@ -293,34 +309,38 @@ const filteredVocab = computed(() => {
                   ? 'vocab-revealed'
                   : 'vocab-hidden border-dashed border-ink/15 hover:border-gold-deep/45 hover:-translate-y-0.5'"
                 :aria-expanded="isVocabRevealed(i)"
-                :title="isVocabRevealed(i) ? 'Click to hide pinyin & English' : 'Click to reveal pinyin & English'"
+                :title="isVocabRevealed(i) ? 'Click to hide the English meaning' : 'Click to reveal the English meaning'"
               >
                 <span class="vocab-tile flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-lg shrink-0 border"
                       :class="isVocabRevealed(i) ? 'vocab-tile-on' : 'vocab-tile-off'"
                 >
                   <span class="han font-bold leading-none text-center break-keep"
                         :style="{
-                          fontSize: v.c.length <= 1 ? '2.4rem'
-                                  : v.c.length === 2 ? '1.9rem'
-                                  : v.c.length === 3 ? '1.45rem'
+                          fontSize: hanziLength(v.c) <= 1 ? '2.4rem'
+                                  : hanziLength(v.c) === 2 ? '1.9rem'
+                                  : hanziLength(v.c) === 3 ? '1.45rem'
                                   : '1.2rem'
                         }">{{ v.c }}</span>
                 </span>
 
                 <div class="min-w-0 flex-1">
+                  <div class="flex flex-wrap items-baseline gap-x-2 gap-y-1 mb-0.5">
+                    <span class="max-w-full shrink-0 text-[13px] tracking-wide font-semibold leading-snug text-gold-deep break-words">{{ v.p }}</span>
+                    <span v-if="v.pos" class="text-[9px] font-mono uppercase px-1.5 py-0.5 rounded shrink-0"
+                          :style="{ color: posColor(v.pos), background: posColor(v.pos) + '14' }">
+                      {{ v.pos }}
+                    </span>
+                    <span v-if="v.supplementary"
+                          class="text-[8px] font-mono uppercase px-1.5 py-0.5 rounded shrink-0 text-amber-800 bg-amber-100">
+                      supplementary
+                    </span>
+                  </div>
                   <template v-if="isVocabRevealed(i)">
-                    <div class="flex items-baseline gap-2 mb-0.5">
-                      <span class="text-[13px] tracking-wide font-semibold text-gold-deep truncate">{{ v.p }}</span>
-                      <span class="text-[9px] font-mono uppercase px-1.5 py-0.5 rounded shrink-0"
-                            :style="{ color: posColor(v.pos), background: posColor(v.pos) + '14' }">
-                        {{ v.pos }}
-                      </span>
-                    </div>
                     <div class="text-[13px] text-ink-soft leading-snug truncate">{{ v.en }}</div>
                   </template>
                   <div v-else class="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-widest text-ink/35 group-hover:text-gold-deep transition">
                     <span class="inline-block w-1.5 h-1.5 rounded-full bg-current"></span>
-                    <span>Tap to reveal</span>
+                    <span>Tap for English</span>
                   </div>
                 </div>
               </button>
@@ -328,7 +348,7 @@ const filteredVocab = computed(() => {
               <div class="w-full flex flex-wrap items-start justify-center gap-3 p-2.5 rounded-lg border"
                    style="background:#fffdf6; border-color:rgba(124,90,30,.2);"
               >
-                <HanziPractice v-for="(ch, ci) in [...v.c]" :key="ci"
+                <HanziPractice v-for="(ch, ci) in charsOf(v.c)" :key="ci"
                                :char="ch"
                                :size="130"
                                accent="#b45309"
@@ -423,7 +443,7 @@ const filteredVocab = computed(() => {
               style="background: linear-gradient(135deg,#4338ca,#6366f1);">词</span>
         <div>
           <div class="text-[10px] tracking-widest uppercase font-semibold" style="color:#4338ca">Glossary · 词汇表</div>
-          <div class="text-base sm:text-lg han font-bold text-ink">All {{ totalVocab }} words</div>
+          <div class="text-base sm:text-lg han font-bold text-ink">All {{ totalVocab }} vocabulary entries</div>
         </div>
         <div class="ml-auto flex items-center gap-2" @click.stop>
           <input
@@ -454,20 +474,21 @@ const filteredVocab = computed(() => {
               <span class="han font-bold leading-tight text-center break-keep"
                     :style="{
                       color:'#312e81',
-                      fontSize: v.c.length <= 1 ? '1.75rem'
-                              : v.c.length === 2 ? '1.5rem'
-                              : v.c.length === 3 ? '1.15rem'
+                      fontSize: hanziLength(v.c) <= 1 ? '1.75rem'
+                              : hanziLength(v.c) === 2 ? '1.5rem'
+                              : hanziLength(v.c) === 3 ? '1.15rem'
                               : '0.95rem'
                     }">{{ v.c }}</span>
             </div>
 
             <div class="min-w-0">
-              <div class="flex items-baseline gap-2">
-                <span class="glossary-pinyin text-[12px] tracking-wide font-semibold truncate" style="color:#4338ca">{{ v.p }}</span>
-                <span class="text-[9px] font-mono uppercase px-1.5 py-0.5 rounded shrink-0"
+              <div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                <span class="glossary-pinyin max-w-full shrink-0 text-[12px] tracking-wide font-semibold leading-snug break-words" style="color:#4338ca">{{ v.p }}</span>
+                <span v-if="v.pos" class="text-[9px] font-mono uppercase px-1.5 py-0.5 rounded shrink-0"
                       :style="{ color: posColor(v.pos), background: posColor(v.pos) + '14' }">
                   {{ v.pos }}
                 </span>
+                <span v-if="v.supplementary" class="text-[8px] font-mono uppercase text-amber-700">supp.</span>
               </div>
               <div class="text-[12px] text-ink-soft leading-snug truncate">{{ v.en }}</div>
             </div>
@@ -487,7 +508,7 @@ const filteredVocab = computed(() => {
     </article>
 
     <p class="mt-6 text-center text-xs text-ink-soft/70 italic">
-      Curriculum based on <span class="font-semibold">HSK 标准教程 3</span> · 20 lessons · Confucius Institute Headquarters
+      Source-aligned with <span class="font-semibold">HSK 标准教程 3</span> · about 300 core words plus supplementary entries · 20 lessons
     </p>
 
   </section>

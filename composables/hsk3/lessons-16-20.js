@@ -1,0 +1,560 @@
+// Source-aligned data for HSK Standard Course 3, lessons 16-20.
+// Source: assets/data/HSK-3 standard-course-OCR .pdf
+// PDF pages: L16 151-158, L17 159-166, L18 167-174,
+//            L19 175-183, L20 184-192.
+// The object shape matches HSK3_LESSONS in composables/useHSK3.js.
+
+export const HSK3_LESSONS_16_20 = [
+  {
+    no: 16,
+    han: '我现在累得下了班就想睡觉',
+    pinyin: 'Wǒ xiànzài lèi de xiàle bān jiù xiǎng shuì jiào',
+    en: 'I am so tired that I want to do nothing but sleep after work',
+    focus: '如果……（的话），（S）就…… · 复杂的状态补语 · 单音节形容词重叠',
+    texts: [
+      {
+        title: '在公司 · In the company',
+        lines: [
+          {
+            s: 'A',
+            c: '我不喜欢一直住在同一个城市，想去其他城市看一看。',
+            p: 'Wǒ bù xǐhuan yìzhí zhù zài tóng yí ge chéngshì, xiǎng qù qítā chéngshì kàn yi kàn.',
+            en: "I don't like living in the same city all the time; I'd like to visit some other cities.",
+          },
+          {
+            s: 'B',
+            c: '我年轻的时候也这么想，但是那时候没有钱，如果有钱，就去了。',
+            p: 'Wǒ niánqīng de shíhou yě zhème xiǎng, dànshì nà shíhou méiyǒu qián, rúguǒ yǒu qián, jiù qù le.',
+            en: "I thought the same way when I was young, but I had no money then. If I'd had money, I would have gone.",
+          },
+          {
+            s: 'A',
+            c: '那您现在为什么不去？',
+            p: 'Nà nín xiànzài wèishénme bù qù?',
+            en: "Then why don't you go now?",
+          },
+          {
+            s: 'B',
+            c: '现在钱不是问题了，主要是没有时间。',
+            p: 'Xiànzài qián bú shì wèntí le, zhǔyào shì méiyǒu shíjiān.',
+            en: "Money isn't the problem now; the main problem is that I don't have time.",
+          },
+          {
+            s: 'A',
+            c: '我认为现在您有时间也不会出去玩儿。',
+            p: 'Wǒ rènwéi xiànzài nín yǒu shíjiān yě bú huì chūqu wánr.',
+            en: "I think that even if you had time now, you still wouldn't go out travelling.",
+          },
+          {
+            s: 'B',
+            c: '你说得对，我现在累得下了班就想睡觉。',
+            p: 'Nǐ shuō de duì, wǒ xiànzài lèi de xiàle bān jiù xiǎng shuì jiào.',
+            en: "You're right. These days I'm so tired that all I want to do after work is sleep.",
+          },
+        ],
+      },
+      {
+        title: "在同事家 · At a colleague's home",
+        lines: [
+          {
+            s: 'A',
+            c: '谢谢你们来看我女儿。你送的小皮鞋和小帽子真漂亮！',
+            p: 'Xièxie nǐmen lái kàn wǒ nǚ’ér. Nǐ sòng de xiǎo píxié hé xiǎo màozi zhēn piàoliang!',
+            en: 'Thank you for coming to see my daughter. The little leather shoes and cap you gave her are beautiful!',
+          },
+          {
+            s: 'B',
+            c: '别客气，你女儿长得白白的、胖胖的，真可爱！现在多高了？',
+            p: 'Bié kèqi, nǐ nǚ’ér zhǎng de báibái de, pàngpàng de, zhēn kě’ài! Xiànzài duō gāo le?',
+            en: "You're welcome. Your daughter is fair and chubby - she's adorable! How tall is she now?",
+          },
+          {
+            s: 'A',
+            c: '快1米了，25公斤。',
+            p: 'Kuài yì mǐ le, èrshíwǔ gōngjīn.',
+            en: "She's almost one metre tall and weighs 25 kilograms.",
+          },
+          {
+            s: 'B',
+            c: '你看她鼻子小小的，头发黑黑的；长得像谁？',
+            p: 'Nǐ kàn tā bízi xiǎoxiǎo de, tóufa hēihēi de; zhǎng de xiàng shéi?',
+            en: 'Look at her little nose and jet-black hair. Who does she take after?',
+          },
+          {
+            s: 'A',
+            c: '像她爸爸，刚出生时她爸爸高兴得一个晚上都没睡着。',
+            p: 'Xiàng tā bàba, gāng chūshēng shí tā bàba gāoxìng de yí ge wǎnshang dōu méi shuìzháo.',
+            en: "Her father. When she was born, he was so happy that he couldn't sleep all night.",
+          },
+        ],
+      },
+      {
+        title: '在公司 · In the company',
+        lines: [
+          {
+            s: 'A',
+            c: '我的牙还是很疼。',
+            p: 'Wǒ de yá háishi hěn téng.',
+            en: 'My tooth still hurts a lot.',
+          },
+          {
+            s: 'B',
+            c: '如果不舒服，就去医院检查一下吧。',
+            p: 'Rúguǒ bù shūfu, jiù qù yīyuàn jiǎnchá yíxià ba.',
+            en: "If you don't feel well, go to the hospital and have it checked.",
+          },
+          {
+            s: 'A',
+            c: '检查好几次了，但是没什么用。',
+            p: 'Jiǎnchá hǎo jǐ cì le, dànshì méi shénme yòng.',
+            en: "I've had it checked several times, but it hasn't helped.",
+          },
+          {
+            s: 'B',
+            c: '大夫怎么说的？',
+            p: 'Dàifu zěnme shuō de?',
+            en: 'What did the doctor say?',
+          },
+          {
+            s: 'A',
+            c: '每次医生都告诉我，回家好好儿刷牙。',
+            p: 'Měi cì yīshēng dōu gàosu wǒ, huí jiā hǎohāor shuā yá.',
+            en: 'Every time, the doctor tells me to go home and brush my teeth properly.',
+          },
+        ],
+      },
+      {
+        title: '课文 16-4 · Text 16-4',
+        lines: [
+          {
+            s: 'A',
+            c: '很多人都觉得现在人和人的关系冷冷的，这可能是因为工作太忙，忙得没时间跟别人见面，累得不愿意和别人多说话。',
+            p: 'Hěn duō rén dōu juéde xiànzài rén hé rén de guānxi lěnglěng de, zhè kěnéng shì yīnwèi gōngzuò tài máng, máng de méi shíjiān gēn biérén jiàn miàn, lèi de bù yuànyì hé biérén duō shuō huà.',
+            en: 'Many people feel that relationships nowadays are rather distant. This may be because work keeps people too busy to meet others and too tired to talk much with them.',
+          },
+          {
+            s: 'A',
+            c: '其实，我们应该多对别人笑笑，说话时如果能多用一些“您好”“谢谢”这样的词语，和别人的关系就会变得更好。',
+            p: 'Qíshí, wǒmen yīnggāi duō duì biérén xiàoxiao, shuō huà shí rúguǒ néng duō yòng yìxiē “nín hǎo”“xièxie” zhèyàng de cíyǔ, hé biérén de guānxi jiù huì biàn de gèng hǎo.',
+            en: 'In fact, we should smile at others more. If we use expressions such as “hello” and “thank you” more often, our relationships with others will improve.',
+          },
+        ],
+      },
+    ],
+    vocab: [
+      { c: '城市', p: 'chéngshì', pos: 'n.', en: 'city' },
+      { c: '如果', p: 'rúguǒ', pos: 'conj.', en: 'if; in case' },
+      { c: '认为', p: 'rènwéi', pos: 'v.', en: 'to think; to believe' },
+      { c: '皮鞋', p: 'píxié', pos: 'n.', en: 'leather shoes' },
+      { c: '帽子', p: 'màozi', pos: 'n.', en: 'hat; cap' },
+      { c: '长', p: 'zhǎng', pos: 'v.', en: 'to grow; to develop' },
+      { c: '可爱', p: 'kě’ài', pos: 'adj.', en: 'lovely; adorable' },
+      { c: '米', p: 'mǐ', pos: 'n.', en: 'metre' },
+      { c: '公斤', p: 'gōngjīn', pos: 'n.', en: 'kilogram' },
+      { c: '鼻子', p: 'bízi', pos: 'n.', en: 'nose' },
+      { c: '头发', p: 'tóufa', pos: 'n.', en: 'hair' },
+      { c: '检查', p: 'jiǎnchá', pos: 'v.', en: 'to check; to examine' },
+      { c: '刷牙', p: 'shuā yá', pos: 'v.', en: 'to brush the teeth' },
+      { c: '关系', p: 'guānxi', pos: 'n.', en: 'relationship' },
+      { c: '别人', p: 'biérén', pos: 'n.', en: 'other people' },
+      { c: '词语', p: 'cíyǔ', pos: 'n.', en: 'word; expression', supplementary: true },
+    ],
+    notes: [
+      {
+        title: '如果……（的话），（S）就…… · The Structure “如果……（的话），（S）就……”',
+        summary: '“如果” introduces a hypothetical condition, and the clause with “就” gives the result. The subject of the result clause comes immediately before “就”.',
+        examples: [
+          { c: '如果你太累了，就休息一会儿。', p: 'Rúguǒ nǐ tài lèi le, jiù xiūxi yíhuìr.', en: "If you're too tired, rest for a while." },
+          { c: '如果你喜欢，我就给你买。', p: 'Rúguǒ nǐ xǐhuan, wǒ jiù gěi nǐ mǎi.', en: "If you like it, I'll buy it for you." },
+          { c: '如果有钱的话，我就去旅游。', p: 'Rúguǒ yǒu qián de huà, wǒ jiù qù lǚyóu.', en: 'If I had the money, I would go travelling.' },
+          { c: '如果不舒服，就去医院检查一下吧。', p: 'Rúguǒ bù shūfu, jiù qù yīyuàn jiǎnchá yíxià ba.', en: "If you don't feel well, go to the hospital for a check-up." },
+        ],
+      },
+      {
+        title: '复杂的状态补语 · Complex Complements of State',
+        summary: '“得” follows an adjective or verb and introduces a verb phrase that describes the resulting state or degree.',
+        examples: [
+          { c: '孩子们玩儿得不想回家。', p: 'Háizimen wánr de bù xiǎng huí jiā.', en: "The children are having so much fun that they don't want to go home." },
+          { c: '弟弟高兴得跳了起来。', p: 'Dìdi gāoxìng de tiào le qilai.', en: 'The younger brother was so happy that he jumped up.' },
+          { c: '儿子累得下了班就睡觉了。', p: 'Érzi lèi de xiàle bān jiù shuì jiào le.', en: 'The son was so tired that he went to sleep as soon as he got off work.' },
+          { c: '人们忙得没时间跟别人见面。', p: 'Rénmen máng de méi shíjiān gēn biérén jiàn miàn.', en: 'People are so busy that they have no time to meet others.' },
+        ],
+      },
+      {
+        title: '单音节形容词重叠 · Reduplication of Monosyllabic Adjectives',
+        summary: 'A monosyllabic adjective can be reduplicated as “AA的” to describe a person or thing vividly and with a stronger degree.',
+        examples: [
+          { c: '你送的花红红的，我很喜欢。', p: 'Nǐ sòng de huā hónghóng de, wǒ hěn xǐhuan.', en: 'The flowers you gave me are bright red; I like them very much.' },
+          { c: '这些草绿绿的，真漂亮。', p: 'Zhèxiē cǎo lǜlǜ de, zhēn piàoliang.', en: 'This grass is so green; it is really beautiful.' },
+          { c: '他鼻子小小的，长得像谁？', p: 'Tā bízi xiǎoxiǎo de, zhǎng de xiàng shéi?', en: 'His nose is small. Who does he look like?' },
+          { c: '你女儿长得白白的、胖胖的，真可爱！', p: 'Nǐ nǚ’ér zhǎng de báibái de, pàngpàng de, zhēn kě’ài!', en: 'Your daughter is fair and chubby - she is adorable!' },
+        ],
+      },
+    ],
+  },
+
+  {
+    no: 17,
+    han: '谁都有办法看好你的“病”',
+    pinyin: 'Shéi dōu yǒu bànfǎ kànhǎo nǐ de “bìng”',
+    en: 'Everybody is able to cure your “disease”',
+    focus: '双音节动词重叠 · 疑问代词活用3',
+    texts: [
+      {
+        title: '在公司 · In the company',
+        lines: [
+          { s: 'A', c: '周经理，下个星期我可以请几天假吗？', p: 'Zhōu jīnglǐ, xià ge xīngqī wǒ kěyǐ qǐng jǐ tiān jià ma?', en: 'Manager Zhou, may I take a few days off next week?' },
+          { s: 'B', c: '你有什么事？', p: 'Nǐ yǒu shénme shì?', en: "What's the occasion?" },
+          { s: 'A', c: '我的一个老朋友结婚，我跟他两年没见了。', p: 'Wǒ de yí ge lǎo péngyou jié hūn, wǒ gēn tā liǎng nián méi jiàn le.', en: "An old friend of mine is getting married. I haven't seen him for two years." },
+          { s: 'B', c: '你一共想请几天假？', p: 'Nǐ yígòng xiǎng qǐng jǐ tiān jià?', en: 'How many days off would you like altogether?' },
+          { s: 'A', c: '三天。', p: 'Sān tiān.', en: 'Three days.' },
+        ],
+      },
+      {
+        title: '在公司 · In the company',
+        lines: [
+          { s: 'A', c: '小丽，那个高高的男人是你们公司的吗？你对他了解吗？', p: 'Xiǎolì, nàge gāogāo de nánrén shì nǐmen gōngsī de ma? Nǐ duì tā liǎojiě ma?', en: 'Xiaoli, is that tall man from your company? Do you know him well?' },
+          { s: 'B', c: '我们过去是邻居，后来是大学同学，关系一直很不错。', p: 'Wǒmen guòqù shì línjū, hòulái shì dàxué tóngxué, guānxi yìzhí hěn búcuò.', en: 'We used to be neighbours and later became university classmates. We have always had a good relationship.' },
+          { s: 'A', c: '他一般喜欢做什么？', p: 'Tā yìbān xǐhuan zuò shénme?', en: 'What does he generally like to do?' },
+          { s: 'B', c: '他有很多爱好，唱歌、画画儿、踢足球，什么都会。', p: 'Tā yǒu hěn duō àihào, chàng gē, huà huàr, tī zúqiú, shénme dōu huì.', en: 'He has many hobbies: singing, drawing and playing football. He can do everything.' },
+          { s: 'A', c: '真的？那你介绍我们认识认识吧。', p: 'Zhēn de? Nà nǐ jièshào wǒmen rènshi rènshi ba.', en: 'Really? Then introduce us so we can get acquainted.' },
+          { s: 'B', c: '不行，现在他是我丈夫。', p: 'Bù xíng, xiànzài tā shì wǒ zhàngfu.', en: "No - he's my husband now." },
+        ],
+      },
+      {
+        title: '在家 · At home',
+        lines: [
+          { s: 'A', c: '最近我觉得哪儿都不舒服，你带我去医院检查检查吧。', p: 'Zuìjìn wǒ juéde nǎr dōu bù shūfu, nǐ dài wǒ qù yīyuàn jiǎnchá jiǎncha ba.', en: "Lately I haven't felt well anywhere. Take me to the hospital for a check-up." },
+          { s: 'B', c: '不用去医院，谁都有办法看好你的“病”。我问你，你多久没运动了？', p: 'Búyòng qù yīyuàn, shéi dōu yǒu bànfǎ kànhǎo nǐ de “bìng”. Wǒ wèn nǐ, nǐ duō jiǔ méi yùndòng le?', en: "There's no need to go to the hospital; anyone could cure your “illness”. Tell me, how long has it been since you exercised?" },
+          { s: 'A', c: '我三年没运动了。', p: 'Wǒ sān nián méi yùndòng le.', en: "I haven't exercised for three years." },
+          { s: 'B', c: '谁都知道运动对身体好。但是你吃饱了就睡。', p: 'Shéi dōu zhīdào yùndòng duì shēntǐ hǎo. Dànshì nǐ chībǎo le jiù shuì.', en: 'Everyone knows exercise is good for the body, but you go to sleep as soon as you have eaten your fill.' },
+          { s: 'A', c: '为了健康，我真应该多锻炼锻炼了。从明天起，我决定每天去长跑。', p: 'Wèile jiànkāng, wǒ zhēn yīnggāi duō duànliàn duànlian le. Cóng míngtiān qǐ, wǒ juédìng měi tiān qù chángpǎo.', en: "For my health, I really should exercise more. Starting tomorrow, I've decided to go running every day." },
+        ],
+      },
+      {
+        title: '课文 17-4 · Text 17-4',
+        lines: [
+          { s: 'A', c: '“运动很重要”这句话谁都懂。但是你知道怎么运动吗？', p: '“Yùndòng hěn zhòngyào” zhè jù huà shéi dōu dǒng. Dànshì nǐ zhīdào zěnme yùndòng ma?', en: 'Everyone understands the statement “Exercise is important”. But do you know how to exercise?' },
+          { s: 'A', c: '第一，要选择“对”的时间。一般来说，早上9点是最好的时间，冬天要再晚一些。', p: 'Dì yī, yào xuǎnzé “duì” de shíjiān. Yìbān lái shuō, zǎoshang jiǔ diǎn shì zuì hǎo de shíjiān, dōngtiān yào zài wǎn yìxiē.', en: 'First, choose the “right” time. Generally, 9 a.m. is best; in winter it should be a little later.' },
+          { s: 'A', c: '第二，要选择“对”的地点，公园、山上、游泳馆，这些地方都可以运动。', p: 'Dì èr, yào xuǎnzé “duì” de dìdiǎn, gōngyuán, shānshang, yóuyǒngguǎn, zhèxiē dìfang dōu kěyǐ yùndòng.', en: 'Second, choose the “right” place. A park, a mountain or a swimming pool are all suitable places to exercise.' },
+          { s: 'A', c: '第三，必须要根据自己的健康情况运动。', p: 'Dì sān, bìxū yào gēnjù zìjǐ de jiànkāng qíngkuàng yùndòng.', en: 'Third, you must exercise according to your own state of health.' },
+          { s: 'A', c: '如果你很久没爬山或者游泳了，运动一会儿就一定要休息休息。', p: 'Rúguǒ nǐ hěn jiǔ méi pá shān huòzhě yóu yǒng le, yùndòng yíhuìr jiù yídìng yào xiūxi xiūxi.', en: "If you haven't hiked or swum for a long time, you must rest after exercising for a while." },
+          { s: 'A', c: '还要记得刚运动完口渴的时候，不要马上喝水。', p: 'Hái yào jìde gāng yùndòng wán kǒu kě de shíhou, búyào mǎshàng hē shuǐ.', en: 'Also remember not to drink water immediately when you feel thirsty just after exercising.' },
+        ],
+      },
+    ],
+    vocab: [
+      { c: '请假', p: 'qǐng jià', pos: 'v.', en: 'to ask for leave' },
+      { c: '一共', p: 'yígòng', pos: 'adv.', en: 'in total' },
+      { c: '邻居', p: 'línjū', pos: 'n.', en: 'neighbour' },
+      { c: '后来', p: 'hòulái', pos: 'n.', en: 'later; afterwards' },
+      { c: '爱好', p: 'àihào', pos: 'n.', en: 'hobby; interest' },
+      { c: '办法', p: 'bànfǎ', pos: 'n.', en: 'way; approach' },
+      { c: '饱', p: 'bǎo', pos: 'adj.', en: "full; having eaten one's fill" },
+      { c: '为了', p: 'wèile', pos: 'prep.', en: 'for the sake of' },
+      { c: '决定', p: 'juédìng', pos: 'v.', en: 'to decide' },
+      { c: '选择', p: 'xuǎnzé', pos: 'v.', en: 'to choose' },
+      { c: '冬（天）', p: 'dōng (tiān)', pos: 'n.', en: 'winter' },
+      { c: '必须', p: 'bìxū', pos: 'adv.', en: 'must' },
+      { c: '根据', p: 'gēnjù', pos: 'prep.', en: 'according to; based on' },
+      { c: '情况', p: 'qíngkuàng', pos: 'n.', en: 'condition; situation', supplementary: true },
+      { c: '口', p: 'kǒu', pos: 'n.', en: 'mouth' },
+      { c: '渴', p: 'kě', pos: 'adj.', en: 'thirsty' },
+    ],
+    notes: [
+      {
+        title: '双音节动词重叠 · Reduplication of Disyllabic Verbs',
+        summary: 'A disyllabic verb is reduplicated as “ABAB” to express a brief or tentative action.',
+        examples: [
+          { c: '他是谁？你介绍我们认识认识吧。', p: 'Tā shì shéi? Nǐ jièshào wǒmen rènshi rènshi ba.', en: 'Who is he? Introduce us so we can get acquainted.' },
+          { c: '他是新来的，有时间你帮助帮助他吧。', p: 'Tā shì xīn lái de, yǒu shíjiān nǐ bāngzhù bāngzhu tā ba.', en: 'He is new here. Help him out when you have time.' },
+          { c: '这是本新书，你学习学习吧。', p: 'Zhè shì běn xīn shū, nǐ xuéxí xuéxi ba.', en: 'This is a new book; study it a little.' },
+          { c: '我真应该多锻炼锻炼了。', p: 'Wǒ zhēn yīnggāi duō duànliàn duànlian le.', en: 'I really should get some more exercise.' },
+        ],
+      },
+      {
+        title: '疑问代词活用3 · Flexible Use of Interrogative Pronouns 3',
+        summary: '“谁”“什么”“怎么”“哪儿” can refer to every member of a set. With “都”, they mean that all members are alike, without exception.',
+        examples: [
+          { c: '谁都喜欢小丽。', p: 'Shéi dōu xǐhuan Xiǎolì.', en: 'Everyone likes Xiaoli.' },
+          { c: '小刚什么都喜欢吃。', p: 'Xiǎogāng shénme dōu xǐhuan chī.', en: 'Xiaogang likes to eat everything.' },
+          { c: '我们怎么去公园都可以。', p: 'Wǒmen zěnme qù gōngyuán dōu kěyǐ.', en: 'Any way of getting to the park is fine for us.' },
+          { c: '最近我觉得哪儿都不舒服。', p: 'Zuìjìn wǒ juéde nǎr dōu bù shūfu.', en: "Lately I don't feel well anywhere." },
+        ],
+      },
+    ],
+  },
+
+  {
+    no: 18,
+    han: '我相信他们会同意的',
+    pinyin: 'Wǒ xiāngxìn tāmen huì tóngyì de',
+    en: "I believe they'll agree",
+    focus: '只要……就…… · 介词“关于”',
+    texts: [
+      {
+        title: '在打电话 · On the phone',
+        lines: [
+          { s: 'A', c: '老周，我打算买房子了，想向你借点儿钱。', p: 'Lǎo Zhōu, wǒ dǎsuàn mǎi fángzi le, xiǎng xiàng nǐ jiè diǎnr qián.', en: "Old Zhou, I'm planning to buy a home and would like to borrow some money from you." },
+          { s: 'B', c: '没问题，只要我有，就一定会借给你的。还差多少？', p: 'Méi wèntí, zhǐyào wǒ yǒu, jiù yídìng huì jiè gěi nǐ de. Hái chà duōshao?', en: 'No problem. As long as I have it, I will certainly lend it to you. How much more do you need?' },
+          { s: 'A', c: '还差5万块钱。', p: 'Hái chà wǔ wàn kuài qián.', en: 'I still need 50,000 yuan.' },
+          { s: 'B', c: '好，钱下午打给你。你打算在哪儿买房？', p: 'Hǎo, qián xiàwǔ dǎ gěi nǐ. Nǐ dǎsuàn zài nǎr mǎi fáng?', en: "All right, I'll transfer the money to you this afternoon. Where are you planning to buy?" },
+          { s: 'A', c: '就在我们医院前面。', p: 'Jiù zài wǒmen yīyuàn qiánmian.', en: 'Right in front of our hospital.' },
+          { s: 'B', c: '那你以后去医院就方便了。', p: 'Nà nǐ yǐhòu qù yīyuàn jiù fāngbiàn le.', en: 'Then it will be convenient for you to get to the hospital.' },
+        ],
+      },
+      {
+        title: '在商店 · In a store',
+        lines: [
+          { s: 'A', c: '妈妈，你看那只狗多可爱，眼睛大大的，嘴小小的，我们买回去吧。', p: 'Māma, nǐ kàn nà zhī gǒu duō kě’ài, yǎnjing dàdà de, zuǐ xiǎoxiǎo de, wǒmen mǎi huíqu ba.', en: 'Mum, look how adorable that dog is, with its big eyes and little mouth. Let us buy it and take it home.' },
+          { s: 'B', c: '动物和小孩儿一样，都需要人照顾。买回家去，谁照顾它啊？', p: 'Dòngwù hé xiǎoháir yíyàng, dōu xūyào rén zhàogù. Mǎi huí jiā qù, shéi zhàogù tā a?', en: 'Animals are like children; they all need someone to care for them. If we take it home, who will look after it?' },
+          { s: 'A', c: '我照顾啊。', p: 'Wǒ zhàogù a.', en: 'I will.' },
+          { s: 'B', c: '这段时间你自己的衣服都没洗，你能照顾好它吗？', p: 'Zhè duàn shíjiān nǐ zìjǐ de yīfu dōu méi xǐ, nǐ néng zhàogù hǎo tā ma?', en: "You haven't even washed your own clothes lately. Can you take good care of it?" },
+          { s: 'A', c: '只要你给我买，我就能照顾好它。', p: 'Zhǐyào nǐ gěi wǒ mǎi, wǒ jiù néng zhàogù hǎo tā.', en: 'As long as you buy it for me, I can take good care of it.' },
+        ],
+      },
+      {
+        title: '在公司 · In the company',
+        lines: [
+          { s: 'A', c: '说说你为什么选择来我们公司工作。', p: 'Shuōshuo nǐ wèishénme xuǎnzé lái wǒmen gōngsī gōngzuò.', en: 'Tell me why you chose to work at our company.' },
+          { s: 'B', c: '贵公司不但很有名，而且工作环境好。', p: 'Guì gōngsī bùdàn hěn yǒumíng, érqiě gōngzuò huánjìng hǎo.', en: 'Your company is not only famous, but also has a good working environment.' },
+          { s: 'A', c: '做这个工作有点儿累，需要经常去外地。你家人同意吗？', p: 'Zuò zhège gōngzuò yǒudiǎnr lèi, xūyào jīngcháng qù wàidì. Nǐ jiārén tóngyì ma?', en: 'This job is a little tiring and requires frequent travel. Does your family agree?' },
+          { s: 'B', c: '只要我愿意，我相信他们就会同意的。', p: 'Zhǐyào wǒ yuànyì, wǒ xiāngxìn tāmen jiù huì tóngyì de.', en: "As long as I want to do it, I believe they'll agree." },
+          { s: 'A', c: '好，那你明天来上班吧。关于这个工作，还有什么问题吗？', p: 'Hǎo, nà nǐ míngtiān lái shàng bān ba. Guānyú zhège gōngzuò, hái yǒu shénme wèntí ma?', en: 'All right, come to work tomorrow. Do you have any other questions about this job?' },
+          { s: 'B', c: '没有了，谢谢您给我这个机会，我会努力的。', p: 'Méiyǒu le, xièxie nín gěi wǒ zhège jīhuì, wǒ huì nǔlì de.', en: "No. Thank you for giving me this opportunity; I'll work hard." },
+        ],
+      },
+      {
+        title: '课文 18-4 · Text 18-4',
+        lines: [
+          { s: 'A', c: '不同的国家有不同的文化，每种文化都有自己的特点。', p: 'Bùtóng de guójiā yǒu bùtóng de wénhuà, měi zhǒng wénhuà dōu yǒu zìjǐ de tèdiǎn.', en: 'Different countries have different cultures, and every culture has its own characteristics.' },
+          { s: 'A', c: '到了一个新环境，你会觉得什么都很新鲜，而且还会觉得有点儿奇怪：有些国家的人名写在姓前面，有些国家的人名写在姓后面，但是只要经过一段时间，就会慢慢地习惯。', p: 'Dàole yí ge xīn huánjìng, nǐ huì juéde shénme dōu hěn xīnxiān, érqiě hái huì juéde yǒudiǎnr qíguài: yǒuxiē guójiā de rénmíng xiě zài xìng qiánmian, yǒuxiē guójiā de rénmíng xiě zài xìng hòumian, dànshì zhǐyào jīngguò yí duàn shíjiān, jiù huì mànmàn de xíguàn.', en: 'In a new environment everything may feel novel and a little strange. In some countries given names come before surnames; in others they come after. But after some time, you will gradually get used to it.' },
+        ],
+      },
+    ],
+    vocab: [
+      { c: '向', p: 'xiàng', pos: 'prep.', en: 'towards' },
+      { c: '万', p: 'wàn', pos: 'num.', en: 'ten thousand' },
+      { c: '只', p: 'zhī', pos: 'm.', en: 'measure word for certain animals' },
+      { c: '嘴', p: 'zuǐ', pos: 'n.', en: 'mouth' },
+      { c: '动物', p: 'dòngwù', pos: 'n.', en: 'animal' },
+      { c: '段', p: 'duàn', pos: 'm.', en: 'measure word for sections or periods' },
+      { c: '不但……而且……', p: 'bùdàn…érqiě…', pos: 'conj.', en: 'not only... but also...' },
+      { c: '有名', p: 'yǒumíng', pos: 'adj.', en: 'famous' },
+      { c: '同意', p: 'tóngyì', pos: 'v.', en: 'to agree' },
+      { c: '相信', p: 'xiāngxìn', pos: 'v.', en: 'to believe' },
+      { c: '关于', p: 'guānyú', pos: 'prep.', en: 'about; regarding' },
+      { c: '机会', p: 'jīhuì', pos: 'n.', en: 'opportunity' },
+      { c: '国家', p: 'guójiā', pos: 'n.', en: 'country; nation' },
+      { c: '种', p: 'zhǒng', pos: 'm.', en: 'kind; type' },
+      { c: '特点', p: 'tèdiǎn', pos: 'n.', en: 'feature', supplementary: true },
+      { c: '奇怪', p: 'qíguài', pos: 'adj.', en: 'strange; odd' },
+      { c: '地', p: 'de', pos: 'part.', en: 'used to connect an adverbial modifier and the verb it modifies' },
+    ],
+    notes: [
+      {
+        title: '只要……就…… · The Structure “只要……，就……”',
+        summary: '“只要” introduces a sufficient condition, and “就” introduces the result. A second subject, if present, comes immediately before “就”.',
+        examples: [
+          { c: '只要我有时间，就一定跟你去旅游。', p: 'Zhǐyào wǒ yǒu shíjiān, jiù yídìng gēn nǐ qù lǚyóu.', en: 'As long as I have time, I will certainly travel with you.' },
+          { c: '我只要喜欢，就一定会买。', p: 'Wǒ zhǐyào xǐhuan, jiù yídìng huì mǎi.', en: 'As long as I like it, I will definitely buy it.' },
+          { c: '只要你想去，我就跟你去。', p: 'Zhǐyào nǐ xiǎng qù, wǒ jiù gēn nǐ qù.', en: 'As long as you want to go, I will go with you.' },
+          { c: '只要你给我买，我就能照顾好它。', p: 'Zhǐyào nǐ gěi wǒ mǎi, wǒ jiù néng zhàogù hǎo tā.', en: 'As long as you buy it for me, I can take good care of it.' },
+        ],
+      },
+      {
+        title: '介词“关于” · The Preposition “关于”',
+        summary: '“关于” is followed by a noun and introduces the topic or object under discussion.',
+        examples: [
+          { c: '我最近看了一些关于中国文化的电影。', p: 'Wǒ zuìjìn kànle yìxiē guānyú Zhōngguó wénhuà de diànyǐng.', en: 'Recently I watched some films about Chinese culture.' },
+          { c: '关于这件事，我们还没有决定呢。', p: 'Guānyú zhè jiàn shì, wǒmen hái méiyǒu juédìng ne.', en: "We haven't yet decided about this matter." },
+          { c: '关于出国学习的事，妈妈已经同意了。', p: 'Guānyú chūguó xuéxí de shì, māma yǐjīng tóngyì le.', en: 'Mum has already agreed about studying abroad.' },
+          { c: '关于这个工作，还有什么问题吗？', p: 'Guānyú zhège gōngzuò, hái yǒu shénme wèntí ma?', en: 'Are there any other questions about this job?' },
+        ],
+      },
+    ],
+  },
+
+  {
+    no: 19,
+    han: '你没看出来吗',
+    pinyin: 'Nǐ méi kàn chulai ma',
+    en: "Didn't you recognise him",
+    focus: '趋向补语的引申义 · “使”“叫”“让”',
+    texts: [
+      {
+        title: '在家 · At home',
+        lines: [
+          { s: 'A', c: '女儿最近喜欢把头发放在耳朵后面，你知道为什么吗？', p: 'Nǚ’ér zuìjìn xǐhuan bǎ tóufa fàng zài ěrduo hòumian, nǐ zhīdào wèishénme ma?', en: 'Our daughter has recently started putting her hair behind her ears. Do you know why?' },
+          { s: 'B', c: '这样可以使她的脸看上去漂亮一些。', p: 'Zhèyàng kěyǐ shǐ tā de liǎn kàn shangqu piàoliang yìxiē.', en: 'That makes her face look a little prettier.' },
+          { s: 'A', c: '我最近觉得她和以前不太一样了。', p: 'Wǒ zuìjìn juéde tā hé yǐqián bú tài yíyàng le.', en: 'Lately I feel that she is rather different from before.' },
+          { s: 'B', c: '女儿变化不小，她小时候喜欢短头发，像男孩子一样。', p: 'Nǚ’ér biànhuà bù xiǎo, tā xiǎo shíhou xǐhuan duǎn tóufa, xiàng nán háizi yíyàng.', en: 'Our daughter has changed quite a bit. When she was little, she liked short hair and looked like a boy.' },
+          { s: 'A', c: '我也想起来了。她现在慢慢地开始像个女孩子了。', p: 'Wǒ yě xiǎng qilai le. Tā xiànzài mànmàn de kāishǐ xiàng ge nǚ háizi le.', en: "Now I remember. She's gradually beginning to look like a young woman." },
+        ],
+      },
+      {
+        title: '在看照片 · Looking at photos',
+        lines: [
+          { s: 'A', c: '上次我们参加骑马比赛的照片，我选了几张洗出来了。', p: 'Shàng cì wǒmen cānjiā qí mǎ bǐsài de zhàopiàn, wǒ xuǎnle jǐ zhāng xǐ chulai le.', en: 'I chose a few photos from the horse-riding competition we entered last time and had them developed.' },
+          { s: 'B', c: '快给我看看。骑得最快的这位是谁？', p: 'Kuài gěi wǒ kànkan. Qí de zuì kuài de zhè wèi shì shéi?', en: 'Let me see them. Who is the person riding the fastest?' },
+          { s: 'A', c: '你没看出来吗？他是小刚啊。', p: 'Nǐ méi kàn chulai ma? Tā shì Xiǎogāng a.', en: "Didn't you recognise him? That's Xiaogang." },
+          { s: 'B', c: '怎么看上去跟现在不太一样？', p: 'Zěnme kàn shangqu gēn xiànzài bú tài yíyàng?', en: 'Why does he look rather different from now?' },
+          { s: 'A', c: '他上班穿西服、衬衫，比赛的时候穿的是运动服。', p: 'Tā shàng bān chuān xīfú, chènshān, bǐsài de shíhou chuān de shì yùndòngfú.', en: 'He wears a suit and shirt to work, but wore sportswear during the competition.' },
+          { s: 'B', c: '他今天穿蓝西服，看上去像40多岁，还是穿运动服让他更年轻。', p: 'Tā jīntiān chuān lán xīfú, kàn shangqu xiàng sìshí duō suì, háishi chuān yùndòngfú ràng tā gèng niánqīng.', en: 'In his blue suit today, he looks over forty. Sportswear makes him look younger.' },
+        ],
+      },
+      {
+        title: "在小丽家 · At Xiaoli's home",
+        lines: [
+          { s: 'A', c: '我们一年没见面了吧？', p: 'Wǒmen yì nián méi jiàn miàn le ba?', en: "We haven't seen each other for a year, have we?" },
+          { s: 'B', c: '听说你都有女儿了？她多大了？', p: 'Tīngshuō nǐ dōu yǒu nǚ’ér le? Tā duō dà le?', en: 'I heard you even have a daughter now. How old is she?' },
+          { s: 'A', c: '她去年秋天出生的，刚过完一岁生日。', p: 'Tā qùnián qiūtiān chūshēng de, gāng guòwán yí suì shēngrì.', en: 'She was born last autumn and has just had her first birthday.' },
+          { s: 'B', c: '她喜欢什么？我送给她。', p: 'Tā xǐhuan shénme? Wǒ sònggěi tā.', en: 'What does she like? I will give it to her as a present.' },
+          { s: 'A', c: '她就喜欢听她爸爸学鸟叫。哭的时候，只要她爸爸学小鸟叫，她马上就安静下来了。', p: 'Tā jiù xǐhuan tīng tā bàba xué niǎo jiào. Kū de shíhou, zhǐyào tā bàba xué xiǎo niǎo jiào, tā mǎshàng jiù ānjìng xialai le.', en: 'She only likes hearing her father imitate birds. Whenever she cries, she quietens down as soon as he imitates a little bird.' },
+          { s: 'B', c: '啊？这个礼物我没办法送。', p: 'Á? Zhège lǐwù wǒ méi bànfǎ sòng.', en: "What? There's no way I can give her that present." },
+        ],
+      },
+      {
+        title: '课文 19-4 · Text 19-4',
+        lines: [
+          { s: 'A', c: '这次旅游，我去了不少地方，每个地方都让我非常难忘。', p: 'Zhè cì lǚyóu, wǒ qùle bù shǎo dìfang, měi ge dìfang dōu ràng wǒ fēicháng nánwàng.', en: 'On this trip I visited quite a few places, and every one of them was unforgettable.' },
+          { s: 'A', c: '我先去看了黄河，黄河是中国有名的大河，我坐在船上，一边看一边照相。', p: 'Wǒ xiān qù kànle Huáng Hé, Huáng Hé shì Zhōngguó yǒumíng de dà hé, wǒ zuò zài chuán shang, yìbiān kàn yìbiān zhào xiàng.', en: "First I went to see the Yellow River, one of China's famous great rivers. I sat on a boat, looking and taking photos at the same time." },
+          { s: 'A', c: '一路上经过了很多地方，每个地方都不一样。', p: 'Yí lù shang jīngguòle hěn duō dìfang, měi ge dìfang dōu bù yíyàng.', en: 'We passed many places along the way, and every place was different.' },
+          { s: 'A', c: '我想快点儿把照片发给大家，叫朋友们也高兴高兴。', p: 'Wǒ xiǎng kuài diǎnr bǎ zhàopiàn fāgěi dàjiā, jiào péngyoumen yě gāoxìng gāoxing.', en: 'I want to send everyone the photos quickly so that my friends can enjoy them too.' },
+        ],
+      },
+    ],
+    vocab: [
+      { c: '耳朵', p: 'ěrduo', pos: 'n.', en: 'ear' },
+      { c: '脸', p: 'liǎn', pos: 'n.', en: 'face' },
+      { c: '短', p: 'duǎn', pos: 'adj.', en: 'short' },
+      { c: '马', p: 'mǎ', pos: 'n.', en: 'horse' },
+      { c: '张', p: 'zhāng', pos: 'm.', en: 'measure word for flat objects such as photos' },
+      { c: '位', p: 'wèi', pos: 'm.', en: 'polite measure word for people' },
+      { c: '蓝', p: 'lán', pos: 'adj.', en: 'blue' },
+      { c: '秋（天）', p: 'qiū (tiān)', pos: 'n.', en: 'autumn; fall' },
+      { c: '过', p: 'guò', pos: 'v.', en: 'to spend; to pass' },
+      { c: '鸟', p: 'niǎo', pos: 'n.', en: 'bird' },
+      { c: '哭', p: 'kū', pos: 'v.', en: 'to cry' },
+      { c: '黄河', p: 'Huáng Hé', pos: 'n.', en: 'Yellow River; the second-longest river in China' },
+      { c: '船', p: 'chuán', pos: 'n.', en: 'boat; ship' },
+      { c: '经过', p: 'jīngguò', pos: 'v.', en: 'to pass by' },
+    ],
+    notes: [
+      {
+        title: '趋向补语的引申义 · Extension of the Complements of Direction',
+        summary: 'Directional complements can have extended meanings: “出来” can show emergence or recognition; “下来” a change from movement or intensity toward stillness; “起来” successful recall; and “看上去/看起来” an estimate based on appearance.',
+        examples: [
+          { c: '这个字你能写出来吗？', p: 'Zhège zì nǐ néng xiě chulai ma?', en: 'Can you write this character out?' },
+          { c: '你没看出来吗？他是小刚啊。', p: 'Nǐ méi kàn chulai ma? Tā shì Xiǎogāng a.', en: "Didn't you recognise him? That's Xiaogang." },
+          { c: '天黑下来了，孩子们要回家了。', p: 'Tiān hēi xialai le, háizimen yào huí jiā le.', en: 'It has grown dark, so the children need to go home.' },
+          { c: '我想起来了，她小时候像个男孩子。', p: 'Wǒ xiǎng qilai le, tā xiǎo shíhou xiàng ge nán háizi.', en: 'I remember now: she looked like a boy when she was little.' },
+          { c: '把头发放在耳朵后边，可以使脸看上去漂亮一些。', p: 'Bǎ tóufa fàng zài ěrduo hòubian, kěyǐ shǐ liǎn kàn shangqu piàoliang yìxiē.', en: 'Putting the hair behind the ears can make the face look prettier.' },
+        ],
+      },
+      {
+        title: '“使”“叫”“让” · Comparison of “使”, “叫” and “让”',
+        summary: 'All three causative verbs can be followed by a pivotal element to mean “make/cause”. “使” is common in written language, while “叫” is common in speech.',
+        examples: [
+          { c: '读书使我快乐。', p: 'Dú shū shǐ wǒ kuàilè.', en: 'Reading makes me happy.' },
+          { c: '考试让我很紧张。', p: 'Kǎoshì ràng wǒ hěn jǐnzhāng.', en: 'Exams make me very nervous.' },
+          { c: '穿运动服让他更年轻。', p: 'Chuān yùndòngfú ràng tā gèng niánqīng.', en: 'Wearing sportswear makes him look younger.' },
+          { c: '我想快点儿把照片发给大家，叫朋友们也高兴高兴。', p: 'Wǒ xiǎng kuài diǎnr bǎ zhàopiàn fāgěi dàjiā, jiào péngyoumen yě gāoxìng gāoxing.', en: 'I want to send everyone the photos quickly so that my friends can enjoy them too.' },
+        ],
+      },
+    ],
+  },
+
+  {
+    no: 20,
+    han: '我被他影响了',
+    pinyin: 'Wǒ bèi tā yǐngxiǎng le',
+    en: "I've been influenced by him",
+    focus: '“被”字句 · 只有……才……',
+    texts: [
+      {
+        title: '在休息室 · In the lounge',
+        lines: [
+          { s: 'A', c: '我的照相机被谁拿走了？怎么找不到了？', p: 'Wǒ de zhàoxiàngjī bèi shéi názǒu le? Zěnme zhǎo bu dào le?', en: 'Who took my camera? Why can I not find it?' },
+          { s: 'B', c: '你再找找。是不是没带来？', p: 'Nǐ zài zhǎozhao. Shì bu shì méi dàilai?', en: "Look again. Could it be that you didn't bring it?" },
+          { s: 'A', c: '我找了，没找到啊。', p: 'Wǒ zhǎo le, méi zhǎodào a.', en: "I've looked, but I couldn't find it." },
+          { s: 'B', c: '别难过，再买一个吧，公司东门外不就有一个大商场吗？', p: 'Bié nánguò, zài mǎi yí ge ba, gōngsī dōngmén wài bú jiù yǒu yí ge dà shāngchǎng ma?', en: "Don't be upset; buy another one. Isn't there a big shopping centre just outside the company's east gate?" },
+          { s: 'A', c: '但是我这个月信用卡里的钱已经花得差不多了。', p: 'Dànshì wǒ zhège yuè xìnyòngkǎ li de qián yǐjīng huā de chàbuduō le.', en: "But I've already spent nearly all the money on my credit card this month." },
+        ],
+      },
+      {
+        title: '在教室 · In the classroom',
+        lines: [
+          { s: 'A', c: '你怎么突然关心起体育来了？', p: 'Nǐ zěnme tūrán guānxīn qi tǐyù lái le?', en: 'Why have you suddenly become interested in sport?' },
+          { s: 'B', c: '我的男朋友喜欢看足球比赛，我被他影响的。', p: 'Wǒ de nánpéngyou xǐhuan kàn zúqiú bǐsài, wǒ bèi tā yǐngxiǎng de.', en: 'My boyfriend likes watching football matches; I was influenced by him.' },
+          { s: 'A', c: '看来只有爱，才能让人有变化。', p: 'Kànlái zhǐyǒu ài, cái néng ràng rén yǒu biànhuà.', en: 'It seems that only love can make a person change.' },
+          { s: 'B', c: '是啊，为了和他的爱好一样，我天天看球赛。', p: 'Shì a, wèile hé tā de àihào yíyàng, wǒ tiāntiān kàn qiúsài.', en: 'Yes. To share his hobby, I watch ball games every day.' },
+          { s: 'A', c: '除了足球，他还影响你什么了？', p: 'Chúle zúqiú, tā hái yǐngxiǎng nǐ shénme le?', en: 'Besides football, what else has he influenced you to do?' },
+          { s: 'B', c: '我最近天天上网玩儿游戏，我的成绩差极了。', p: 'Wǒ zuìjìn tiāntiān shàng wǎng wánr yóuxì, wǒ de chéngjì chà jí le.', en: 'Recently I have been going online to play games every day, and my grades are terrible.' },
+        ],
+      },
+      {
+        title: '在饭馆 · In the restaurant',
+        lines: [
+          { s: 'A', c: '那个拿着碗吃饭的人是你哥哥吗？他和你长得真像。', p: 'Nàge názhe wǎn chī fàn de rén shì nǐ gēge ma? Tā hé nǐ zhǎng de zhēn xiàng.', en: 'Is the person eating with the bowl in his hand your elder brother? He looks exactly like you.' },
+          { s: 'B', c: '我们经常被别人认错。', p: 'Wǒmen jīngcháng bèi biérén rèncuò.', en: 'Other people often mistake us for each other.' },
+          { s: 'A', c: '只有你们的爸爸妈妈才能分出来哪个是哥哥，哪个是弟弟吧。', p: 'Zhǐyǒu nǐmen de bàba māma cái néng fēn chulai nǎge shì gēge, nǎge shì dìdi ba.', en: 'I suppose only your parents can tell which one is the elder brother and which is the younger.' },
+          { s: 'B', c: '除了父母以外，还有我们自己也能啊。', p: 'Chúle fùmǔ yǐwài, hái yǒu wǒmen zìjǐ yě néng a.', en: 'Apart from our parents, we ourselves can too.' },
+          { s: 'A', c: '你们两个除了长得像，还有什么相同的地方？', p: 'Nǐmen liǎng ge chúle zhǎng de xiàng, hái yǒu shénme xiāngtóng de dìfang?', en: 'Besides looking alike, what else do the two of you have in common?' },
+          { s: 'B', c: '我们住在同一个楼、同一个房间……', p: 'Wǒmen zhù zài tóng yí ge lóu, tóng yí ge fángjiān...', en: 'We live in the same building and the same room...' },
+        ],
+      },
+      {
+        title: '课文 20-4 · Text 20-4',
+        lines: [
+          { s: 'A', c: '年轻人遇到难题，常常很着急，不知道怎么办。', p: 'Niánqīng rén yùdào nántí, chángcháng hěn zháojí, bù zhīdào zěnme bàn.', en: 'When young people encounter a difficult problem, they often become anxious and do not know what to do.' },
+          { s: 'A', c: '其实，不同的问题有不同的解决办法。', p: 'Qíshí, bùtóng de wèntí yǒu bùtóng de jiějué bànfǎ.', en: 'In fact, different problems have different solutions.' },
+          { s: 'A', c: '有些问题看上去很难，但是做起来非常简单，所以得试着做做。', p: 'Yǒuxiē wèntí kàn shangqu hěn nán, dànshì zuò qilai fēicháng jiǎndān, suǒyǐ děi shìzhe zuòzuo.', en: 'Some problems look difficult but are very simple once you start, so you have to try doing them.' },
+          { s: 'A', c: '有些问题看上去虽然简单，但是解决起来难极了。', p: 'Yǒuxiē wèntí kàn shangqu suīrán jiǎndān, dànshì jiějué qilai nán jí le.', en: 'Some problems look simple but are extremely difficult to solve.' },
+          { s: 'A', c: '所以只有真正做事情的时候，才能了解有多难。', p: 'Suǒyǐ zhǐyǒu zhēnzhèng zuò shìqing de shíhou, cái néng liǎojiě yǒu duō nán.', en: 'Therefore, only when you actually do something can you understand how difficult it is.' },
+          { s: 'A', c: '不过，我们一定要相信：多么难的问题，都会被解决的。', p: 'Búguò, wǒmen yídìng yào xiāngxìn: duōme nán de wèntí, dōu huì bèi jiějué de.', en: 'However, we must believe that no matter how difficult a problem is, it will be solved.' },
+        ],
+      },
+    ],
+    vocab: [
+      { c: '照相机', p: 'zhàoxiàngjī', pos: 'n.', en: 'camera' },
+      { c: '被', p: 'bèi', pos: 'prep.', en: 'used to indicate the passive voice' },
+      { c: '难过', p: 'nánguò', pos: 'adj.', en: 'sad' },
+      { c: '东', p: 'dōng', pos: 'n.', en: 'east' },
+      { c: '信用卡', p: 'xìnyòngkǎ', pos: 'n.', en: 'credit card' },
+      { c: '关心', p: 'guānxīn', pos: 'v.', en: 'to care for; to be interested in' },
+      { c: '只有……才……', p: 'zhǐyǒu…cái…', pos: 'conj.', en: 'only... (that/can...)' },
+      { c: '成绩', p: 'chéngjì', pos: 'n.', en: 'grade; performance; achievement' },
+      { c: '碗', p: 'wǎn', pos: 'n.', en: 'bowl' },
+      { c: '分', p: 'fēn', pos: 'v.', en: 'to distinguish' },
+      { c: '解决', p: 'jiějué', pos: 'v.', en: 'to solve' },
+      { c: '试', p: 'shì', pos: 'v.', en: 'to try' },
+      { c: '真正', p: 'zhēnzhèng', pos: 'adv.', en: 'really; truly', supplementary: true },
+      { c: '多么', p: 'duōme', pos: 'adv.', en: 'very; to a great extent' },
+    ],
+    notes: [
+      {
+        title: '“被”字句 · The Bei-Sentence',
+        summary: 'The passive pattern is “subject + 被/叫/让 + agent + verb + other elements”. The subject receives the action and the agent performs it. The agent may be omitted after “被”, but not after “叫” or “让”. Negative adverbs and modal verbs precede “被”.',
+        examples: [
+          { c: '我被男朋友影响了。', p: 'Wǒ bèi nánpéngyou yǐngxiǎng le.', en: 'I was influenced by my boyfriend.' },
+          { c: '帽子被刮跑了。', p: 'Màozi bèi guā pǎo le.', en: 'The hat was blown away.' },
+          { c: '蛋糕让弟弟吃完了。', p: 'Dàngāo ràng dìdi chīwán le.', en: 'The cake was eaten up by the younger brother.' },
+          { c: '我的照相机被谁拿走了？', p: 'Wǒ de zhàoxiàngjī bèi shéi názǒu le?', en: 'Who took my camera?' },
+          { c: '问题还没有被解决呢。', p: 'Wèntí hái méiyǒu bèi jiějué ne.', en: 'The problem has not been solved yet.' },
+          { c: '我们经常被别人认错。', p: 'Wǒmen jīngcháng bèi biérén rèncuò.', en: 'Other people often mistake us for each other.' },
+        ],
+      },
+      {
+        title: '只有……才…… · The Structure “只有……才……”',
+        summary: '“只有” introduces the sole necessary condition, and “才” introduces the result that can occur only when that condition is met.',
+        examples: [
+          { c: '只有写完作业，才能看电视。', p: 'Zhǐyǒu xiěwán zuòyè, cái néng kàn diànshì.', en: 'Only after finishing the homework can you watch television.' },
+          { c: '只有妈妈做的饭，她才爱吃。', p: 'Zhǐyǒu māma zuò de fàn, tā cái ài chī.', en: "She only likes food cooked by her mother." },
+          { c: '只有爸爸、妈妈才能分出来。', p: 'Zhǐyǒu bàba, māma cái néng fēn chulai.', en: 'Only Mum and Dad can tell them apart.' },
+          { c: '看来只有爱，才能让人有变化。', p: 'Kànlái zhǐyǒu ài, cái néng ràng rén yǒu biànhuà.', en: 'It seems that only love can make a person change.' },
+        ],
+      },
+    ],
+  },
+];
