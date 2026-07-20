@@ -954,6 +954,8 @@ export const HSK1_LESSONS = [
       { c: '小姐', p: 'xiǎojiě', pos: 'n.', en: 'Miss · young lady' },
       { c: '来', p: 'lái', pos: 'v.', en: 'to come' },
       { c: '身体', p: 'shēntǐ', pos: 'n.', en: 'body · health' },
+      { c: '爱', p: 'ài', pos: 'v.', en: 'to like · to love' },
+      { c: '些', p: 'xiē', pos: 'm.', en: 'some · a few' },
       { c: '水果', p: 'shuǐguǒ', pos: 'n.', en: 'fruit' },
       { c: '水', p: 'shuǐ', pos: 'n.', en: 'water' },
     ],
