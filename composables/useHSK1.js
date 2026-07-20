@@ -1035,6 +1035,7 @@ export const HSK1_LESSONS = [
     ],
     vocab: [
       { c: '喂', p: 'wèi', pos: 'expr.', en: 'hello · hey' },
+      { c: '呢', p: 'ne', pos: 'part.', en: '(ongoing action · what about…?)' },
       { c: '也', p: 'yě', pos: 'adv.', en: 'also · too' },
       { c: '学习', p: 'xuéxí', pos: 'v.', en: 'to study · to learn' },
       { c: '上午', p: 'shàngwǔ', pos: 'n.', en: 'morning (before noon)' },
