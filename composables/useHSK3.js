@@ -38,3 +38,8 @@ export const HSK3_LESSONS = lessons.map((lesson, index) => ({
     }
   }),
 }))
+
+// HSK Standard Course 3 does not include a dedicated lesson-radical directory
+// in the current source data. Keep the shared export available so aggregate
+// views can consume all HSK levels through the same interface.
+export const HSK3_LESSON_RADICALS = []

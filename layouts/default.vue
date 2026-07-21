@@ -10,6 +10,7 @@ const tabs = [
   { to: '/hsk2',     han: '二', label: 'HSK 2'    },
   { to: '/hsk3',     han: '三', label: 'HSK 3'    },
   { to: '/allwords', han: '词', label: 'All Words'},
+  { to: '/allradicals', han: '部', label: 'All Radicals' },
   { to: '/grammar',  han: '语', label: 'Grammar'  },
   { to: '/topics',   han: '题', label: 'Topics'   },
   { to: '/write',    han: '写', label: 'Write'    },
@@ -21,6 +22,7 @@ const isHome     = computed(() => route.path === '/')
 const isStrokes  = computed(() => route.path.startsWith('/strokes'))
 const isPinyin   = computed(() => route.path.startsWith('/pinyin'))
 const isRadicals = computed(() => route.path.startsWith('/radicals'))
+const isAllRadicals = computed(() => route.path.startsWith('/allradicals'))
 const isWrite    = computed(() => route.path.startsWith('/write'))
 const isSentence = computed(() => route.path.startsWith('/sentence'))
 const isGame     = computed(() => route.path.startsWith('/game'))
@@ -49,7 +51,7 @@ const headerData = computed(() => {
     return { icon: '拼音', eyebrow: 'Hanyu Pinyin', title: 'Initials · Finals · Tones · Audio',
              sourceHref: 'https://www.digmandarin.com/chinese-pinyin-chart' }
   }
-  if (isRadicals.value) {
+  if (isRadicals.value || isAllRadicals.value) {
     return { icon: '部首', eyebrow: 'Chinese Radicals', title: 'Top 40 · Top 100 · All 214',
              sourceHref: 'https://www.hackingchinese.com/the-100-most-common-radicals-in-chinese/' }
   }
