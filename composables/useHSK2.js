@@ -1442,10 +1442,10 @@ export const HSK2_LESSON_RADICALS = [
   {
     lesson: 2,
     items: [
-      { r: '口', name: 'kǒuzìpáng',   en: 'mouth movements',       desc: 'Usually related to movements of the mouth.',
-        examples: [{ c: '吹', p: 'chuī', en: 'to blow' }, { c: '唱', p: 'chàng', en: 'to sing' }] },
-      { r: '⺮', name: 'zhúzìtóu',    en: 'bamboo',                desc: 'Usually related to bamboo.',
+      { r: '⺮', name: 'zhúzìtóu',    en: 'bamboo crown · 竹字头', desc: 'Usually related to bamboo.',
         examples: [{ c: '篮', p: 'lán', en: 'basket' }, { c: '笔', p: 'bǐ', en: 'pen' }] },
+      { r: '欠', name: 'qiànzìpáng',  en: 'yawning / mouth action · 欠字旁', desc: 'Usually related to yawning, breathing, or movements of the mouth.',
+        examples: [{ c: '欢', p: 'huān', en: 'happy' }, { c: '次', p: 'cì', en: 'next' }] },
     ],
   },
   {
