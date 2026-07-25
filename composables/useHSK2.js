@@ -187,11 +187,13 @@ export const HSK2_LESSONS = [
     vocab: [
       { c: '生病',   p: 'shēng bìng', pos: 'v.',    en: 'to fall ill · to be sick' },
       { c: '每',     p: 'měi',        pos: 'pron.', en: 'every · each' },
+      { c: '都',     p: 'dōu',        pos: 'adv.',  en: 'all · both' },
       { c: '早上',   p: 'zǎoshang',   pos: 'n.',    en: 'morning' },
       { c: '跑步',   p: 'pǎo bù',     pos: 'v.',    en: 'to run · to jog' },
       { c: '起床',   p: 'qǐchuáng',   pos: 'v.',    en: 'to get up · to get out of bed' },
       { c: '药',     p: 'yào',        pos: 'n.',    en: 'medicine · drug' },
       { c: '身体',   p: 'shēntǐ',     pos: 'n.',    en: 'body · health' },
+      { c: '多',     p: 'duō',        pos: 'pron.', en: 'how · how much · how many' },
       { c: '出院',   p: 'chū yuàn',   pos: 'v.',    en: 'to leave hospital' },
       { c: '出',     p: 'chū',        pos: 'v.',    en: 'to come/go out' },
       { c: '高',     p: 'gāo',        pos: 'adj.',  en: 'tall · high' },
