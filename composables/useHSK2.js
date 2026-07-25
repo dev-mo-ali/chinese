@@ -1466,9 +1466,9 @@ export const HSK2_LESSON_RADICALS = [
   {
     lesson: 4,
     items: [
-      { r: '纟', name: 'jiǎosīpáng',  en: 'silk',                  desc: 'Usually related to silk.',
+      { r: '纟', name: 'jiǎosīpáng',  en: 'Silk Radical · 绞丝旁', desc: 'Usually related to silk.',
         examples: [{ c: '给', p: 'gěi', en: 'to give' }, { c: '结', p: 'jié', en: 'to tie, to knot' }] },
-      { r: '忄', name: 'shùxīnpáng',  en: 'heart / emotion',       desc: 'Usually related to one’s mental activities.',
+      { r: '忄', name: 'shùxīnpáng',  en: 'Standing Heart Radical · 竖心旁', desc: 'Usually related to one’s mental activities.',
         examples: [{ c: '忙', p: 'máng', en: 'busy' }, { c: '快', p: 'kuài', en: 'fast, quick' }] },
     ],
   },
