@@ -513,6 +513,7 @@ const filteredVocab = computed(() => {
                 <div class="min-w-0">
                   <div class="flex items-baseline flex-wrap gap-x-2 gap-y-0.5 mb-0.5">
                     <span class="text-[14px] font-bold text-ink">{{ rad.name }}</span>
+                    <span class="han text-[13px] font-semibold" style="color:#3b0764">{{ rad.cn }}</span>
                     <span class="text-[12px] tracking-wide font-semibold" style="color:#5b21b6">{{ rad.en }}</span>
                   </div>
                   <p class="text-[12px] text-ink-soft leading-snug mb-1.5">{{ rad.desc }}</p>
@@ -673,6 +674,7 @@ const filteredVocab = computed(() => {
                 <div class="min-w-0">
                   <div class="flex items-baseline flex-wrap gap-x-2 gap-y-0.5 mb-0.5">
                     <span class="text-[14px] font-bold text-ink">{{ rad.name }}</span>
+                    <span class="han text-[13px] font-semibold" style="color:#3b0764">{{ rad.cn }}</span>
                     <span class="text-[12px] tracking-wide font-semibold" style="color:#5b21b6">{{ rad.en }}</span>
                   </div>
                   <p class="text-[12px] text-ink-soft leading-snug mb-1.5">{{ rad.desc }}</p>
