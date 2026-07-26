@@ -1432,9 +1432,6 @@ export const HSK2_RADICALS = {
 }
 
 // HSK 2 introduces 30 component radicals across the 15 lessons (2 per lesson).
-// The supplied OCR PDF preserves only Lessons 1–10 of the radical sections;
-// Lessons 11–15 are omitted because their glyphs and example characters could
-// not be recovered reliably from the OCR.
 export const HSK2_LESSON_RADICALS = [
   {
     lesson: 1,
@@ -1524,6 +1521,51 @@ export const HSK2_LESSON_RADICALS = [
         examples: [{ c: '超', p: 'chāo', en: 'to exceed, to surpass' }, { c: '起', p: 'qǐ', en: 'to get up, to rise' }] },
       { r: '穴', name: 'xuézìtóu',    en: 'hole / cave',           desc: 'Usually related to holes, caves or houses.',
         examples: [{ c: '空', p: 'kōng', en: 'empty' }, { c: '穿', p: 'chuān', en: 'to pierce through · to wear' }] },
+    ],
+  },
+  {
+    lesson: 11,
+    items: [
+      { r: '疒', name: 'bìngzìtóu',    en: 'sickness · 病字头',     desc: 'Usually related to diseases.',
+        examples: [{ c: '病', p: 'bìng', en: 'disease · to be ill' }, { c: '疯', p: 'fēng', en: 'mad, crazy' }] },
+      { r: '冫', name: 'liǎngdiǎnshuǐ', en: 'two-drop water · 两点水', desc: 'Usually related to ice or coldness.',
+        examples: [{ c: '冷', p: 'lěng', en: 'cold' }, { c: '冰', p: 'bīng', en: 'ice' }] },
+    ],
+  },
+  {
+    lesson: 12,
+    items: [
+      { r: '止', name: 'zhǐzìpáng',    en: 'stop / foot · 止字旁', desc: 'Usually related to toes or walking.',
+        examples: [{ c: '趾', p: 'zhǐ', en: 'toe' }, { c: '步', p: 'bù', en: 'step' }] },
+      { r: '冂', name: 'tóngzìkuāng',  en: 'open box · 同字框',   desc: 'Usually related to relationships among things or their images.',
+        examples: [{ c: '同', p: 'tóng', en: 'same' }, { c: '网', p: 'wǎng', en: 'net' }] },
+    ],
+  },
+  {
+    lesson: 13,
+    items: [
+      { r: '斤', name: 'jīnzìpáng',    en: 'axe · 斤字旁',         desc: 'Usually related to axes or the action of cutting or whittling.',
+        examples: [{ c: '新', p: 'xīn', en: 'new' }, { c: '所', p: 'suǒ', en: 'place' }] },
+      { r: '页', name: 'yèzìpáng',     en: 'head / face · 页字旁', desc: 'Usually related to the human head or face.',
+        examples: [{ c: '颜', p: 'yán', en: 'face, look' }, { c: '须', p: 'xū', en: 'beard, mustache' }] },
+    ],
+  },
+  {
+    lesson: 14,
+    items: [
+      { r: '雨', name: 'yǔzìtóu',     en: 'rain crown · 雨字头',  desc: 'Usually related to weather phenomena such as clouds and rain.',
+        examples: [{ c: '雪', p: 'xuě', en: 'snow' }, { c: '雾', p: 'wù', en: 'fog, mist' }] },
+      { r: '贝', name: 'bèizìpáng',    en: 'shell / money · 贝字旁', desc: 'Usually related to money or ancient utensils.',
+        examples: [{ c: '财', p: 'cái', en: 'wealth, money' }, { c: '货', p: 'huò', en: 'goods, commodity' }] },
+    ],
+  },
+  {
+    lesson: 15,
+    items: [
+      { r: '山', name: 'shānzìpáng',   en: 'mountain · 山字旁',    desc: 'Usually related to the names, types and forms of mountains or islands.',
+        examples: [{ c: '岭', p: 'lǐng', en: 'mountain ridge' }, { c: '崎', p: 'qí', en: 'rugged, rough' }] },
+      { r: '大', name: 'dàzìpáng',     en: 'big / person · 大字旁', desc: 'Usually related to people.',
+        examples: [{ c: '天', p: 'tiān', en: 'sky' }, { c: '夫', p: 'fū', en: 'husband' }] },
     ],
   },
 ]

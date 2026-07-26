@@ -1,0 +1,6 @@
+{
+    "port":  3000,
+    "out":  "D:\\PROJECTS\\chinese\\tmp\\hsk2-dev-3000.out.log",
+    "pid":  30552,
+    "err":  "D:\\PROJECTS\\chinese\\tmp\\hsk2-dev-3000.err.log"
+}
