@@ -54,15 +54,26 @@ const toggle = radical => {
 }
 
 const accentFor = level => level === 1 ? '#15803d' : level === 2 ? '#a16207' : '#92400e'
+const radicalTileStyle = level => {
+  if (level === 1) return { color: '#14532d', background: '#dcfce7', borderColor: '#86efac' }
+  if (level === 2) return { color: '#713f12', background: '#fef3c7', borderColor: '#fcd34d' }
+  return { color: '#7c2d12', background: '#ffedd5', borderColor: '#fdba74' }
+}
 </script>
 
 <template>
   <section class="max-w-6xl mx-auto px-3 sm:px-6 pt-6 pb-10">
-    <h1 class="text-3xl font-bold mb-2 text-center">All HSK Radicals</h1>
-    <p class="text-center text-ink-soft mb-6 max-w-3xl mx-auto">
+    <div class="mb-6 border-b border-ink/10 pb-5">
+      <div class="flex items-center justify-center gap-3 mb-2">
+        <span class="han flex items-center justify-center w-11 h-11 rounded-lg text-2xl font-bold text-white"
+              style="background:#312e81;">部</span>
+        <h1 class="text-2xl sm:text-3xl font-bold text-ink">All HSK Radicals</h1>
+      </div>
+      <p class="text-center text-ink-soft max-w-3xl mx-auto">
       Browse and search the radicals introduced in HSK 1, HSK 2, and HSK 3.
       Each entry shows its name, meaning, explanation, examples, lesson, and level.
-    </p>
+      </p>
+    </div>
 
     <div class="flex justify-center mb-6">
       <input
@@ -71,13 +82,16 @@ const accentFor = level => level === 1 ? '#15803d' : level === 2 ? '#a16207' : '
         autocomplete="off"
         spellcheck="false"
         placeholder="Search by radical, name, meaning, example, lesson, or level..."
-        class="border rounded px-3 py-2 w-full max-w-xl shadow focus:outline-none focus:ring"
+        class="border-2 rounded-lg px-4 py-2.5 w-full max-w-xl bg-white shadow-chip
+               focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-600"
+        style="border-color:rgba(49,46,129,.25);"
       />
     </div>
 
-    <div class="overflow-x-auto rounded shadow">
-      <table class="min-w-full bg-white border">
-        <thead class="bg-indigo-50">
+    <div class="overflow-x-auto rounded-xl border bg-white shadow-card"
+         style="border-color:rgba(49,46,129,.18);">
+      <table class="min-w-full bg-white">
+        <thead>
           <tr>
             <th class="px-3 py-2 border-b text-left">#</th>
             <th class="px-3 py-2 border-b text-left">Radical</th>
@@ -92,20 +106,34 @@ const accentFor = level => level === 1 ? '#15803d' : level === 2 ? '#a16207' : '
         </thead>
         <tbody>
           <template v-for="(radical, i) in filteredRadicals" :key="rowKey(radical)">
-            <tr :class="i % 2 ? 'bg-indigo-50/30' : ''">
+            <tr class="radical-row" :class="i % 2 ? 'bg-indigo-50/30' : ''">
               <td class="px-3 py-2 border-b text-xs text-ink-soft">{{ i + 1 }}</td>
-              <td class="px-3 py-2 border-b text-2xl han font-bold text-ink">{{ radical.r }}</td>
-              <td class="px-3 py-2 border-b text-indigo-700 min-w-36">
-                <div>{{ radical.name }}</div>
-                <div v-if="radical.cn" class="han text-sm font-semibold text-ink">{{ radical.cn }}</div>
+              <td class="px-3 py-2 border-b">
+                <div class="radical-glyph han flex items-center justify-center w-14 h-14 rounded-lg border-2 text-4xl font-bold"
+                     :style="radicalTileStyle(radical.level)">
+                  {{ radical.r }}
+                </div>
               </td>
-              <td class="px-3 py-2 border-b min-w-36">{{ radical.en }}</td>
+              <td class="px-3 py-2 border-b text-indigo-700 min-w-36">
+                <div class="font-semibold">{{ radical.name }}</div>
+                <div v-if="radical.cn" class="han mt-0.5 text-sm font-bold text-ink">{{ radical.cn }}</div>
+              </td>
+              <td class="px-3 py-2 border-b min-w-36">
+                <span class="inline-block rounded-md px-2 py-1 text-sm font-semibold bg-indigo-50 text-indigo-950">
+                  {{ radical.en }}
+                </span>
+              </td>
               <td class="px-3 py-2 border-b text-sm text-ink/70 min-w-64">{{ radical.desc }}</td>
               <td class="px-3 py-2 border-b min-w-52">
-                <span v-for="(example, ei) in radical.examples" :key="`${example.c}-${ei}`" class="whitespace-nowrap">
-                  <span class="han font-bold">{{ example.c }}</span>
-                  <span class="text-xs text-ink-soft"> {{ example.p }} · {{ example.en }}</span><span v-if="ei < radical.examples.length - 1">; </span>
-                </span>
+                <div class="flex flex-col gap-1">
+                  <span v-for="(example, ei) in radical.examples" :key="`${example.c}-${ei}`"
+                        class="inline-flex items-baseline gap-1.5 whitespace-nowrap">
+                    <span class="han inline-flex items-center justify-center min-w-7 h-7 px-1 rounded border bg-white font-bold text-ink"
+                          style="border-color:rgba(49,46,129,.2);">{{ example.c }}</span>
+                    <span class="text-xs text-indigo-700 font-medium">{{ example.p }}</span>
+                    <span class="text-xs text-ink-soft">· {{ example.en }}</span>
+                  </span>
+                </div>
               </td>
               <td class="px-3 py-2 border-b text-sm whitespace-nowrap">Lesson {{ radical.lesson }}</td>
               <td class="px-3 py-2 border-b font-semibold">
@@ -118,10 +146,11 @@ const accentFor = level => level === 1 ? '#15803d' : level === 2 ? '#a16207' : '
                 <button
                   type="button"
                   @click="toggle(radical)"
-                  class="text-xs font-semibold px-2 py-1 rounded border border-indigo-300 text-indigo-700 hover:bg-indigo-50 transition whitespace-nowrap"
+                  class="text-xs font-semibold px-2.5 py-1.5 rounded-md border border-indigo-300 text-indigo-700
+                         hover:bg-indigo-50 hover:border-indigo-500 transition whitespace-nowrap"
                   :aria-expanded="expanded.has(rowKey(radical))"
                 >
-                  {{ expanded.has(rowKey(radical)) ? '✕ Close' : '✎ Practice' }}
+                  {{ expanded.has(rowKey(radical)) ? 'Close' : 'Practice' }}
                 </button>
               </td>
             </tr>
@@ -150,6 +179,28 @@ const accentFor = level => level === 1 ? '#15803d' : level === 2 ? '#a16207' : '
 </template>
 
 <style scoped>
-th, td { transition: background .2s; }
+thead {
+  color: #312e81;
+  background: linear-gradient(180deg, #eef2ff, #e0e7ff);
+}
+th {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+th, td {
+  border-color: rgba(49, 46, 129, .12);
+}
+.radical-row {
+  transition: background-color .18s ease;
+}
+.radical-row:hover {
+  background: #f8fafc;
+}
+.radical-glyph {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), 0 2px 8px rgba(49, 46, 129, .1);
+}
 input { font-size: 1rem; }
 </style>
