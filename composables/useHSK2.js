@@ -548,6 +548,9 @@ export const HSK2_LESSONS = [
       },
     ],
     vocab: [
+      { c: '怎么',   p: 'zěnme',      pos: 'pron.',  en: 'how · why · how come' },
+      { c: '都',     p: 'dōu',        pos: 'adv.',   en: 'all · both' },
+      { c: '因为……，所以……', p: 'yīnwèi..., suǒyǐ...', pos: 'conj. pair', en: 'because... therefore...' },
       { c: '门',     p: 'mén',        pos: 'n.',    en: 'door · gate' },
       { c: '外',     p: 'wài',        pos: 'n.',    en: 'outer · outside' },
       { c: '自行车', p: 'zìxíngchē',  pos: 'n.',    en: 'bike · bicycle' },

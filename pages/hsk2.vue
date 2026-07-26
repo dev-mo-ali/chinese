@@ -317,12 +317,14 @@ const filteredVocab = computed(() => {
                 <span class="vocab-tile flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-lg shrink-0 border"
                       :class="isVocabRevealed(i) ? 'vocab-tile-on' : 'vocab-tile-off'"
                 >
-                  <span class="han font-bold leading-none text-center break-keep"
+                  <span class="han font-bold leading-tight text-center break-all px-1"
                         :style="{
                           fontSize: v.c.length <= 1 ? '2.4rem'
                                   : v.c.length === 2 ? '1.9rem'
                                   : v.c.length === 3 ? '1.45rem'
-                                  : '1.2rem'
+                                  : v.c.length <= 5 ? '1.15rem'
+                                  : v.c.length <= 8 ? '0.95rem'
+                                  : '0.8rem'
                         }">{{ v.c }}</span>
                 </span>
 
