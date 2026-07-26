@@ -23,24 +23,49 @@ const allRadicals = computed(() => [
 ])
 
 const search = ref('')
+const filterLevel = ref('all')
+const filterLesson = ref('all')
+const sortBy = ref('course')
+const sortDirection = ref('asc')
+
+const lessonOptions = computed(() => {
+  const rows = filterLevel.value === 'all'
+    ? allRadicals.value
+    : allRadicals.value.filter(radical => radical.level === Number(filterLevel.value))
+  return [...new Set(rows.map(radical => radical.lesson))].sort((a, b) => a - b)
+})
+
 const filteredRadicals = computed(() => {
   const q = search.value.trim().toLowerCase()
-  if (!q) return allRadicals.value
+  const rows = allRadicals.value.filter(radical => {
+    const matchesSearch = !q
+      || radical.r.includes(q)
+      || radical.name.toLowerCase().includes(q)
+      || radical.cn?.includes(q)
+      || radical.en.toLowerCase().includes(q)
+      || radical.desc.toLowerCase().includes(q)
+      || `hsk ${radical.level}`.includes(q)
+      || `lesson ${radical.lesson}`.includes(q)
+      || radical.examples.some(example =>
+        example.c.includes(q)
+        || example.p.toLowerCase().includes(q)
+        || example.en.toLowerCase().includes(q)
+      )
+    const matchesLevel = filterLevel.value === 'all' || radical.level === Number(filterLevel.value)
+    const matchesLesson = filterLesson.value === 'all' || radical.lesson === Number(filterLesson.value)
+    return matchesSearch && matchesLevel && matchesLesson
+  })
 
-  return allRadicals.value.filter(radical =>
-    radical.r.includes(q)
-    || radical.name.toLowerCase().includes(q)
-    || radical.cn?.includes(q)
-    || radical.en.toLowerCase().includes(q)
-    || radical.desc.toLowerCase().includes(q)
-    || `hsk ${radical.level}`.includes(q)
-    || `lesson ${radical.lesson}`.includes(q)
-    || radical.examples.some(example =>
-      example.c.includes(q)
-      || example.p.toLowerCase().includes(q)
-      || example.en.toLowerCase().includes(q)
-    )
-  )
+  const collator = new Intl.Collator(undefined, { sensitivity: 'base', numeric: true })
+  const compare = {
+    course: (a, b) => a.level - b.level || a.lesson - b.lesson || a.sourceIndex - b.sourceIndex,
+    radical: (a, b) => a.r.localeCompare(b.r, 'zh-CN'),
+    name: (a, b) => collator.compare(a.name, b.name),
+    chineseName: (a, b) => (a.cn || '').localeCompare(b.cn || '', 'zh-CN'),
+    english: (a, b) => collator.compare(a.en, b.en),
+  }[sortBy.value]
+  const direction = sortDirection.value === 'asc' ? 1 : -1
+  return [...rows].sort((a, b) => direction * compare(a, b))
 })
 
 const expanded = ref(new Set())
@@ -59,6 +84,16 @@ const radicalTileStyle = level => {
   if (level === 2) return { color: '#713f12', background: '#fef3c7', borderColor: '#fcd34d' }
   return { color: '#7c2d12', background: '#ffedd5', borderColor: '#fdba74' }
 }
+const hasActiveFilters = computed(() =>
+  search.value || filterLevel.value !== 'all' || filterLesson.value !== 'all'
+)
+const resetFilters = () => {
+  search.value = ''
+  filterLevel.value = 'all'
+  filterLesson.value = 'all'
+  sortBy.value = 'course'
+  sortDirection.value = 'asc'
+}
 </script>
 
 <template>
@@ -75,17 +110,62 @@ const radicalTileStyle = level => {
       </p>
     </div>
 
-    <div class="flex justify-center mb-6">
-      <input
-        v-model="search"
-        type="search"
-        autocomplete="off"
-        spellcheck="false"
-        placeholder="Search by radical, name, meaning, example, lesson, or level..."
-        class="border-2 rounded-lg px-4 py-2.5 w-full max-w-xl bg-white shadow-chip
-               focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-600"
-        style="border-color:rgba(49,46,129,.25);"
-      />
+    <div class="mb-6 border-y border-indigo-100 bg-indigo-50/40 px-3 py-4">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-[minmax(16rem,2fr)_repeat(4,minmax(8rem,1fr))] gap-3 items-end">
+        <label class="block">
+          <span class="control-label">Search</span>
+          <input
+            v-model="search"
+            type="search"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="Radical, name, meaning, or example..."
+            class="control-field w-full"
+          />
+        </label>
+        <label class="block">
+          <span class="control-label">HSK level</span>
+          <select v-model="filterLevel" class="control-field w-full" @change="filterLesson = 'all'">
+            <option value="all">All levels</option>
+            <option value="1">HSK 1</option>
+            <option value="2">HSK 2</option>
+            <option value="3">HSK 3</option>
+          </select>
+        </label>
+        <label class="block">
+          <span class="control-label">Lesson</span>
+          <select v-model="filterLesson" class="control-field w-full">
+            <option value="all">All lessons</option>
+            <option v-for="lesson in lessonOptions" :key="lesson" :value="String(lesson)">Lesson {{ lesson }}</option>
+          </select>
+        </label>
+        <label class="block">
+          <span class="control-label">Sort by</span>
+          <select v-model="sortBy" class="control-field w-full">
+            <option value="course">Course order</option>
+            <option value="radical">Radical</option>
+            <option value="name">Pinyin name</option>
+            <option value="chineseName">Chinese name</option>
+            <option value="english">English</option>
+          </select>
+        </label>
+        <label class="block">
+          <span class="control-label">Direction</span>
+          <select v-model="sortDirection" class="control-field w-full">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+          </select>
+        </label>
+      </div>
+      <div class="mt-3 flex items-center justify-between gap-3">
+        <span class="text-xs font-semibold text-indigo-950">
+          {{ filteredRadicals.length }} of {{ allRadicals.length }} radicals
+        </span>
+        <button v-if="hasActiveFilters" type="button" @click="resetFilters"
+                class="text-xs font-semibold text-indigo-700 hover:text-indigo-950">
+          Reset filters
+        </button>
+      </div>
     </div>
 
     <div class="overflow-x-auto rounded-xl border bg-white shadow-card"
@@ -202,5 +282,27 @@ th, td {
 .radical-glyph {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), 0 2px 8px rgba(49, 46, 129, .1);
 }
-input { font-size: 1rem; }
+.control-label {
+  display: block;
+  margin-bottom: .3rem;
+  color: #4338ca;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.control-field {
+  min-height: 2.5rem;
+  border: 1px solid rgba(67, 56, 202, .25);
+  border-radius: .5rem;
+  background: #fff;
+  padding: .5rem .65rem;
+  color: #1f2937;
+  font-size: .875rem;
+}
+.control-field:focus {
+  border-color: #4f46e5;
+  outline: 2px solid rgba(99, 102, 241, .2);
+  outline-offset: 1px;
+}
 </style>
