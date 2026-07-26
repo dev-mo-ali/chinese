@@ -12,7 +12,7 @@ const {
   search, pickLesson,
 } = useHskPage({ scrollTargetId: 'lesson-detail' })
 
-const open = reactive({ lessons: true, detail: true, lessonTexts: true, lessonVocab: true, lessonNotes: true, strokes: false, radicals: false, chars: false, vocab: false })
+const open = reactive({ lessons: true, detail: true, lessonTexts: true, lessonVocab: true, lessonNotes: true, lessonCharacters: true, strokes: false, radicals: false, chars: false, vocab: false })
 const toggle = (k) => { open[k] = !open[k] }
 
 const practiceOpen = reactive({})
@@ -25,6 +25,8 @@ const totalVocab = computed(() => HSK2_LESSONS.reduce((s, l) => s + l.vocab.leng
 const totalStrokes = computed(() => HSK2_STROKES.reduce((s, g) => s + g.items.length, 0))
 const totalChars = computed(() => HSK2_CHARACTERS.length)
 const totalRadicals = computed(() => HSK2_LESSON_RADICALS.reduce((s, g) => s + g.items.length, 0))
+const lessonStrokes = computed(() => HSK2_STROKES.find(g => g.lesson === activeLesson.value))
+const lessonCharacters = computed(() => HSK2_CHARACTERS.filter(ch => ch.lesson === activeLesson.value))
 const lessonRadicals = computed(() => HSK2_LESSON_RADICALS.find(g => g.lesson === activeLesson.value))
 const radicalInfo = (r) => HSK2_RADICALS[r] || { name: '', en: '', desc: '' }
 const charsByLesson = computed(() => {
@@ -408,54 +410,130 @@ const filteredVocab = computed(() => {
         </div>
       </section>
 
-      <!-- LESSON RADICALS · slate-violet -->
-      <section v-if="lessonRadicals && lessonRadicals.items.length"
+      <!-- LESSON CHARACTERS -->
+      <section v-if="lessonStrokes || lessonCharacters.length || (lessonRadicals && lessonRadicals.items.length)"
                class="px-5 sm:px-7 py-6 sm:py-8 border-t"
                style="background: linear-gradient(180deg,#f5f3ff,#eef2ff); border-color:rgba(91,33,182,.18);"
       >
-        <div class="flex items-center gap-3 mb-5">
+        <div @click="toggle('lessonCharacters')" :aria-expanded="open.lessonCharacters"
+             class="fold-head flex items-center gap-3 mb-5 cursor-pointer select-none">
           <span class="flex items-center justify-center w-9 h-9 rounded-lg han text-lg font-bold text-white shadow-chip"
-                style="background: linear-gradient(135deg,#5b21b6,#7c3aed);">部</span>
+                style="background: linear-gradient(135deg,#5b21b6,#7c3aed);">字</span>
           <div>
             <div class="text-[10px] font-semibold tracking-widest uppercase" style="color:#5b21b6">
-              New Radicals
+              Characters
             </div>
-            <div class="text-sm font-bold text-ink han">部首 · {{ lessonRadicals.items.length }} 个</div>
+            <div class="text-sm font-bold text-ink han">
+              汉字
+              <span class="font-normal text-ink-soft">
+                · {{ lessonStrokes?.items.length || 0 }} 笔画
+                · {{ lessonCharacters.length }} 单体字
+                · {{ lessonRadicals?.items.length || 0 }} 偏旁
+              </span>
+            </div>
           </div>
           <span class="flex-1 h-px" style="background: linear-gradient(to right,#7c3aed 0%, transparent 100%);"></span>
+          <span class="fold-caret text-lg leading-none" style="color:#5b21b6;"
+                :class="{ 'is-open': open.lessonCharacters }">▸</span>
         </div>
 
-        <ul class="grid sm:grid-cols-2 gap-3">
-          <li v-for="(rad, ri) in lessonRadicals.items" :key="ri"
-              class="radical-card relative grid grid-cols-[auto_1fr] gap-3 px-3.5 py-3 rounded-xl bg-white border"
-              style="border-color:rgba(124,58,237,.25);"
-          >
-            <div class="radical-tile flex items-center justify-center w-16 h-16 rounded-lg shrink-0 border"
-                 style="background: linear-gradient(135deg,#ede9fe,#ddd6fe); border-color:rgba(91,33,182,.3);"
+        <div v-show="open.lessonCharacters" class="space-y-6">
+          <div v-if="lessonStrokes">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="font-mono text-[9px] font-bold uppercase tracking-widest text-white px-2 py-0.5 rounded"
+                    style="background:#0f766e;">Strokes · 笔画</span>
+              <span class="text-[11px] font-semibold text-ink-soft">{{ lessonStrokes.title }}</span>
+              <span class="flex-1 h-px" style="background:rgba(15,118,110,.22);"></span>
+            </div>
+            <ul class="grid sm:grid-cols-2 gap-3">
+              <li v-for="(stroke, si) in lessonStrokes.items" :key="si"
+                  class="grid grid-cols-[auto_1fr] items-center gap-3 px-3.5 py-3 rounded-xl bg-white border"
+                  style="border-color:rgba(15,118,110,.25);">
+                <div class="flex items-center justify-center w-16 h-16 rounded-lg border"
+                     style="background:#ecfdf5;border-color:rgba(15,118,110,.3);">
+                  <span class="han text-4xl font-bold" style="color:#134e4a;">{{ stroke.glyph }}</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="flex items-baseline flex-wrap gap-x-2">
+                    <span class="han text-sm font-bold text-ink">{{ stroke.name }}</span>
+                    <span class="text-xs font-semibold" style="color:#0f766e;">{{ stroke.pinyin }}</span>
+                  </div>
+                  <div class="text-xs text-ink-soft">{{ stroke.en }}</div>
+                  <div class="mt-1 text-[11px]">
+                    <span class="font-mono" style="color:#0f766e;">{{ stroke.direction }}</span>
+                    <span class="han ml-2 font-semibold text-ink-soft">{{ stroke.ex }}</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div v-if="lessonCharacters.length">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="font-mono text-[9px] font-bold uppercase tracking-widest text-white px-2 py-0.5 rounded"
+                    style="background:#b45309;">Single-component · 单体字</span>
+              <span class="flex-1 h-px" style="background:rgba(180,83,9,.22);"></span>
+            </div>
+            <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <li v-for="(ch, ci) in lessonCharacters" :key="ci"
+                  class="grid grid-cols-[auto_1fr] gap-3 px-3.5 py-3 rounded-xl bg-white border"
+                  style="border-color:rgba(180,83,9,.25);">
+                <div class="flex flex-col items-center gap-1">
+                  <span class="han text-4xl font-bold leading-none" style="color:#7c2d12;">{{ ch.c }}</span>
+                  <span class="han text-xs font-bold inline-flex items-center justify-center w-7 h-7 rounded border"
+                        style="color:#7c2d12;background:#fffbeb;border-color:rgba(180,83,9,.3);">{{ ch.radical }}</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="flex items-baseline flex-wrap gap-x-2">
+                    <span class="text-xs font-semibold" style="color:#b45309;">{{ ch.p }}</span>
+                    <span class="text-xs font-medium text-ink">{{ ch.en }}</span>
+                  </div>
+                  <p class="mt-1 text-[11.5px] text-ink-soft leading-snug">{{ ch.desc }}</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div v-if="lessonRadicals && lessonRadicals.items.length">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="font-mono text-[9px] font-bold uppercase tracking-widest text-white px-2 py-0.5 rounded"
+                    style="background:#5b21b6;">Radicals · 偏旁</span>
+              <span class="flex-1 h-px" style="background:rgba(91,33,182,.22);"></span>
+            </div>
+            <ul class="grid sm:grid-cols-2 gap-3">
+              <li v-for="(rad, ri) in lessonRadicals.items" :key="ri"
+                  class="radical-card relative grid grid-cols-[auto_1fr] gap-3 px-3.5 py-3 rounded-xl bg-white border"
+                  style="border-color:rgba(124,58,237,.25);"
             >
-              <span class="han font-bold leading-none" style="color:#3b0764; font-size:2.25rem;">{{ rad.r }}</span>
-            </div>
-            <div class="min-w-0">
-              <div class="flex items-baseline gap-2 mb-0.5">
-                <span class="text-[14px] font-bold text-ink">{{ rad.name }}</span>
-                <span class="text-[12px] tracking-wide font-semibold" style="color:#5b21b6">{{ rad.en }}</span>
-              </div>
-              <p class="text-[12px] text-ink-soft leading-snug mb-1.5">{{ rad.desc }}</p>
-              <div class="flex items-center flex-wrap gap-1.5">
-                <span class="font-mono text-[9px] tracking-widest px-1.5 py-0.5 rounded uppercase"
-                      style="background:#ede9fe;color:#5b21b6;">examples</span>
-                <span v-for="(ex, ei) in rad.examples" :key="ei"
-                      class="inline-flex items-baseline gap-1 px-1.5 py-0.5 rounded border"
-                      style="background:#faf5ff;border-color:rgba(124,58,237,.3);"
+                <div class="radical-tile flex items-center justify-center w-16 h-16 rounded-lg shrink-0 border"
+                     style="background: linear-gradient(135deg,#ede9fe,#ddd6fe); border-color:rgba(91,33,182,.3);"
                 >
-                  <span class="han text-[14px] font-semibold" style="color:#3b0764;">{{ ex.c }}</span>
-                  <span class="text-[10px]" style="color:#7c3aed;">{{ ex.p }}</span>
-                  <span class="text-[10px] text-ink-soft italic">· {{ ex.en }}</span>
-                </span>
-              </div>
-            </div>
-          </li>
-        </ul>
+                  <span class="han font-bold leading-none" style="color:#3b0764; font-size:2.25rem;">{{ rad.r }}</span>
+                </div>
+                <div class="min-w-0">
+                  <div class="flex items-baseline flex-wrap gap-x-2 gap-y-0.5 mb-0.5">
+                    <span class="text-[14px] font-bold text-ink">{{ rad.name }}</span>
+                    <span class="han text-[13px] font-semibold" style="color:#3b0764">{{ rad.cn }}</span>
+                    <span class="text-[12px] tracking-wide font-semibold" style="color:#5b21b6">{{ rad.en }}</span>
+                  </div>
+                  <p class="text-[12px] text-ink-soft leading-snug mb-1.5">{{ rad.desc }}</p>
+                  <div class="flex items-center flex-wrap gap-1.5">
+                    <span class="font-mono text-[9px] tracking-widest px-1.5 py-0.5 rounded uppercase"
+                          style="background:#ede9fe;color:#5b21b6;">examples</span>
+                    <span v-for="(ex, ei) in rad.examples" :key="ei"
+                          class="inline-flex items-baseline gap-1 px-1.5 py-0.5 rounded border"
+                          style="background:#faf5ff;border-color:rgba(124,58,237,.3);"
+                    >
+                      <span class="han text-[14px] font-semibold" style="color:#3b0764;">{{ ex.c }}</span>
+                      <span class="text-[10px]" style="color:#7c3aed;">{{ ex.p }}</span>
+                      <span class="text-[10px] text-ink-soft italic">· {{ ex.en }}</span>
+                    </span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
       </div>
 
@@ -558,7 +636,7 @@ const filteredVocab = computed(() => {
           <div class="text-[10px] tracking-widest uppercase font-semibold" style="color:#5b21b6">
             All Radicals · 部首
           </div>
-          <div class="text-base sm:text-lg han font-bold text-ink">{{ totalRadicals }} radicals · Lessons 1–10</div>
+          <div class="text-base sm:text-lg han font-bold text-ink">{{ totalRadicals }} radicals · Lessons 1–15</div>
         </div>
         <span class="ml-auto flex items-center gap-2">
           <span class="text-[10px] font-mono tracking-widest uppercase px-2.5 py-1 rounded text-white"
@@ -596,6 +674,7 @@ const filteredVocab = computed(() => {
                 <div class="min-w-0">
                   <div class="flex items-baseline flex-wrap gap-x-2 gap-y-0.5 mb-0.5">
                     <span class="text-[14px] font-bold text-ink">{{ rad.name }}</span>
+                    <span class="han text-[13px] font-semibold" style="color:#3b0764">{{ rad.cn }}</span>
                     <span class="text-[12px] tracking-wide font-semibold" style="color:#5b21b6">{{ rad.en }}</span>
                   </div>
                   <p class="text-[12px] text-ink-soft leading-snug mb-1.5">{{ rad.desc }}</p>
@@ -622,7 +701,7 @@ const filteredVocab = computed(() => {
         </section>
 
         <p class="text-center text-[11px] text-ink-soft/70 italic pt-2">
-          Note · The HSK 2 textbook introduces 30 radicals across 15 lessons; the supplied OCR PDF preserves the radical pages for Lessons 1–10 only.
+          The HSK 2 textbook introduces 30 radicals across all 15 lessons.
         </p>
       </div>
     </article>

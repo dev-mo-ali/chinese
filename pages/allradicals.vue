@@ -30,6 +30,7 @@ const filteredRadicals = computed(() => {
   return allRadicals.value.filter(radical =>
     radical.r.includes(q)
     || radical.name.toLowerCase().includes(q)
+    || radical.cn?.includes(q)
     || radical.en.toLowerCase().includes(q)
     || radical.desc.toLowerCase().includes(q)
     || `hsk ${radical.level}`.includes(q)
@@ -94,7 +95,10 @@ const accentFor = level => level === 1 ? '#15803d' : level === 2 ? '#a16207' : '
             <tr :class="i % 2 ? 'bg-indigo-50/30' : ''">
               <td class="px-3 py-2 border-b text-xs text-ink-soft">{{ i + 1 }}</td>
               <td class="px-3 py-2 border-b text-2xl han font-bold text-ink">{{ radical.r }}</td>
-              <td class="px-3 py-2 border-b text-indigo-700 min-w-36">{{ radical.name }}</td>
+              <td class="px-3 py-2 border-b text-indigo-700 min-w-36">
+                <div>{{ radical.name }}</div>
+                <div v-if="radical.cn" class="han text-sm font-semibold text-ink">{{ radical.cn }}</div>
+              </td>
               <td class="px-3 py-2 border-b min-w-36">{{ radical.en }}</td>
               <td class="px-3 py-2 border-b text-sm text-ink/70 min-w-64">{{ radical.desc }}</td>
               <td class="px-3 py-2 border-b min-w-52">
