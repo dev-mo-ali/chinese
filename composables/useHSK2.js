@@ -378,6 +378,7 @@ export const HSK2_LESSONS = [
       { c: '问',     p: 'wèn',       pos: 'v.',    en: 'to ask' },
       { c: '非常',   p: 'fēicháng',  pos: 'adv.',  en: 'very · extremely' },
       { c: '开始',   p: 'kāishǐ',    pos: 'v.',    en: 'to begin · to start' },
+      { c: '……的时候', p: '... de shíhou', pos: 'time expr.', en: 'when · during' },
       { c: '已经',   p: 'yǐjīng',    pos: 'adv.',  en: 'already' },
       { c: '长',     p: 'cháng',     pos: 'adj.',  en: 'long' },
       { c: '两',     p: 'liǎng',     pos: 'num.',  en: 'two' },
