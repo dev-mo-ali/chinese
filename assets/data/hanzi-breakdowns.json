@@ -1,0 +1,7755 @@
+{
+  "阿": {
+    "pinyin": [
+      "ā"
+    ],
+    "radical": "阝",
+    "decomposition": "⿰阝可",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "place",
+      "semantic": "阝",
+      "phonetic": "可"
+    }
+  },
+  "啊": {
+    "pinyin": [
+      "a"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口阿",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "阿"
+    }
+  },
+  "矮": {
+    "pinyin": [
+      "ǎi"
+    ],
+    "radical": "矢",
+    "decomposition": "⿰矢委",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "dart",
+      "semantic": "矢",
+      "phonetic": "委"
+    }
+  },
+  "爱": {
+    "pinyin": [
+      "ài"
+    ],
+    "radical": "爫",
+    "decomposition": "⿱⿱爫冖友",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To bring a friend 友 into one's house 冖",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "安": {
+    "pinyin": [
+      "ān"
+    ],
+    "radical": "宀",
+    "decomposition": "⿱宀女",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A woman 女 safe in a house 宀",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "八": {
+    "pinyin": [
+      "bā"
+    ],
+    "radical": "八",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Two bent lines meaning \"to divide\"",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "把": {
+    "pinyin": [
+      "bǎ"
+    ],
+    "radical": "扌",
+    "decomposition": "⿰扌巴",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "hand",
+      "semantic": "扌",
+      "phonetic": "巴"
+    }
+  },
+  "爸": {
+    "pinyin": [
+      "bà"
+    ],
+    "radical": "父",
+    "decomposition": "⿱父巴",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "father",
+      "semantic": "父",
+      "phonetic": "巴"
+    }
+  },
+  "吧": {
+    "pinyin": [
+      "bā"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口巴",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "巴"
+    }
+  },
+  "白": {
+    "pinyin": [
+      "bái"
+    ],
+    "radical": "白",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A burning candle; the rays of the sun",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "百": {
+    "pinyin": [
+      "bǎi"
+    ],
+    "radical": "白",
+    "decomposition": "⿱一白",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "one",
+      "semantic": "一",
+      "phonetic": "白"
+    }
+  },
+  "班": {
+    "pinyin": [
+      "bān"
+    ],
+    "radical": "王",
+    "decomposition": "⿲王刂王",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Cutting 刂 a piece of jade 王 in two, symbolizing two classes",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "般": {
+    "pinyin": [
+      "bān"
+    ],
+    "radical": "舟",
+    "decomposition": "⿰舟殳",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Using a tool 殳 to sort items on a tray 舟",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "搬": {
+    "pinyin": [
+      "bān"
+    ],
+    "radical": "扌",
+    "decomposition": "⿰扌般",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "hand",
+      "semantic": "扌",
+      "phonetic": "般"
+    }
+  },
+  "板": {
+    "pinyin": [
+      "bǎn"
+    ],
+    "radical": "木",
+    "decomposition": "⿰木反",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "wood",
+      "semantic": "木",
+      "phonetic": "反"
+    }
+  },
+  "办": {
+    "pinyin": [
+      "bàn"
+    ],
+    "radical": "力",
+    "decomposition": "⿻力八",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "strength",
+      "semantic": "力",
+      "phonetic": "八"
+    }
+  },
+  "半": {
+    "pinyin": [
+      "bàn"
+    ],
+    "radical": "十",
+    "decomposition": "⿻丷牛",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A cow 牛 splitting 丷 wood in half",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "帮": {
+    "pinyin": [
+      "bāng"
+    ],
+    "radical": "巾",
+    "decomposition": "⿱邦巾",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A nation's 邦 flag 巾; 邦 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "包": {
+    "pinyin": [
+      "bāo"
+    ],
+    "radical": "勹",
+    "decomposition": "⿹勹巳",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To swaddle 勹 a baby 巳; 勹 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "饱": {
+    "pinyin": [
+      "bǎo"
+    ],
+    "radical": "饣",
+    "decomposition": "⿰饣包",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "food",
+      "semantic": "饣",
+      "phonetic": "包"
+    }
+  },
+  "报": {
+    "pinyin": [
+      "bào"
+    ],
+    "radical": "扌",
+    "decomposition": "⿰扌⿸卩又",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A hand 扌 cuffing 又 a criminal 卩, representing sentencing",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "杯": {
+    "pinyin": [
+      "bēi"
+    ],
+    "radical": "木",
+    "decomposition": "⿰木不",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "tree",
+      "semantic": "木",
+      "phonetic": "不"
+    }
+  },
+  "北": {
+    "pinyin": [
+      "běi"
+    ],
+    "radical": "匕",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Two people 匕 sitting back-to-back; phonetic loan for \"north\"",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "备": {
+    "pinyin": [
+      "bèi"
+    ],
+    "radical": "夂",
+    "decomposition": "⿱夂田",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To go 夂 to the farm 田 to prepare for a harvest",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "被": {
+    "pinyin": [
+      "bèi"
+    ],
+    "radical": "衤",
+    "decomposition": "⿰衤皮",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "cloth",
+      "semantic": "衤",
+      "phonetic": "皮"
+    }
+  },
+  "本": {
+    "pinyin": [
+      "běn"
+    ],
+    "radical": "木",
+    "decomposition": "⿻木一",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A tree 木 with its roots highlighted",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "鼻": {
+    "pinyin": [
+      "bí"
+    ],
+    "radical": "鼻",
+    "decomposition": "⿱自畀",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "self",
+      "semantic": "自",
+      "phonetic": "畀"
+    }
+  },
+  "比": {
+    "pinyin": [
+      "bǐ"
+    ],
+    "radical": "比",
+    "decomposition": "⿰匕匕",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Two spoons 匕 side-by-side; 匕 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "笔": {
+    "pinyin": [
+      "bǐ"
+    ],
+    "radical": "⺮",
+    "decomposition": "⿱⺮毛",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A bamboo rod ⺮ tipped with hair 毛",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "必": {
+    "pinyin": [
+      "bì"
+    ],
+    "radical": "心",
+    "decomposition": "⿻心丿",
+    "etymology": null
+  },
+  "边": {
+    "pinyin": [
+      "biān"
+    ],
+    "radical": "辶",
+    "decomposition": "⿺辶力",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "walk",
+      "semantic": "辶",
+      "phonetic": "臱"
+    }
+  },
+  "变": {
+    "pinyin": [
+      "biàn"
+    ],
+    "radical": "又",
+    "decomposition": "⿱亦又",
+    "etymology": null
+  },
+  "便": {
+    "pinyin": [
+      "biàn"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻更",
+    "etymology": null
+  },
+  "表": {
+    "pinyin": [
+      "biǎo"
+    ],
+    "radical": "衣",
+    "decomposition": "⿱毛衣",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Fur 毛 clothing 衣; a shawl or wrap",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "别": {
+    "pinyin": [
+      "bié"
+    ],
+    "radical": "刂",
+    "decomposition": "⿰另刂",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To draw boundaries 刂 between classes 另",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "宾": {
+    "pinyin": [
+      "bīn"
+    ],
+    "radical": "宀",
+    "decomposition": "⿱宀兵",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A solider 兵 quartered under one's roof 宀",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "冰": {
+    "pinyin": [
+      "bīng"
+    ],
+    "radical": "冫",
+    "decomposition": "⿰冫水",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Ice-cold冫 water 水",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "病": {
+    "pinyin": [
+      "bìng"
+    ],
+    "radical": "疒",
+    "decomposition": "⿸疒丙",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "sickness",
+      "semantic": "疒",
+      "phonetic": "丙"
+    }
+  },
+  "不": {
+    "pinyin": [
+      "bù"
+    ],
+    "radical": "一",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A bird flying toward the sky 一",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "步": {
+    "pinyin": [
+      "bù"
+    ],
+    "radical": "止",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Modern form of 歨; putting one foot 止 in front of the other",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "才": {
+    "pinyin": [
+      "cái"
+    ],
+    "radical": "扌",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A sprout growing in the ground, representing a budding talent",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "菜": {
+    "pinyin": [
+      "cài"
+    ],
+    "radical": "艹",
+    "decomposition": "⿱艹采",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "plant",
+      "semantic": "艹",
+      "phonetic": "采"
+    }
+  },
+  "参": {
+    "pinyin": [
+      "cān"
+    ],
+    "radical": "厶",
+    "decomposition": "⿱⿱厶大彡",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": null,
+      "semantic": null,
+      "phonetic": "彡"
+    }
+  },
+  "草": {
+    "pinyin": [
+      "cǎo"
+    ],
+    "radical": "艹",
+    "decomposition": "⿱艹早",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "grass",
+      "semantic": "艹",
+      "phonetic": "早"
+    }
+  },
+  "层": {
+    "pinyin": [
+      "céng"
+    ],
+    "radical": "尸",
+    "decomposition": "⿸尸云",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Simplified form of 層; 曾 provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "查": {
+    "pinyin": [
+      "chá"
+    ],
+    "radical": "木",
+    "decomposition": "⿱木旦",
+    "etymology": null
+  },
+  "茶": {
+    "pinyin": [
+      "chá"
+    ],
+    "radical": "艹",
+    "decomposition": "⿱艹⿱人木",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "plant",
+      "semantic": "艹",
+      "phonetic": null
+    }
+  },
+  "差": {
+    "pinyin": [
+      "chà"
+    ],
+    "radical": "工",
+    "decomposition": "⿸羊工",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Work 工 done by a sheep 羊; incompetence",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "常": {
+    "pinyin": [
+      "cháng"
+    ],
+    "radical": "巾",
+    "decomposition": "⿱尚巾",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "cloth",
+      "semantic": "巾",
+      "phonetic": "尚"
+    }
+  },
+  "场": {
+    "pinyin": [
+      "chǎng"
+    ],
+    "radical": "土",
+    "decomposition": "⿰土勿",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "earth",
+      "semantic": "土",
+      "phonetic": "昜"
+    }
+  },
+  "唱": {
+    "pinyin": [
+      "chàng"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口昌",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "昌"
+    }
+  },
+  "超": {
+    "pinyin": [
+      "chāo"
+    ],
+    "radical": "走",
+    "decomposition": "⿺走召",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "run",
+      "semantic": "走",
+      "phonetic": "召"
+    }
+  },
+  "车": {
+    "pinyin": [
+      "chē"
+    ],
+    "radical": "车",
+    "decomposition": "⿻七十",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Simplified form of 車, a cart with two wheels, seen from above",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "衬": {
+    "pinyin": [
+      "chèn"
+    ],
+    "radical": "衤",
+    "decomposition": "⿰衤寸",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "clothes",
+      "semantic": "衤",
+      "phonetic": "寸"
+    }
+  },
+  "成": {
+    "pinyin": [
+      "chéng"
+    ],
+    "radical": "戈",
+    "decomposition": "⿰丁戈",
+    "etymology": null
+  },
+  "城": {
+    "pinyin": [
+      "chéng"
+    ],
+    "radical": "土",
+    "decomposition": "⿰土成",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "earth",
+      "semantic": "土",
+      "phonetic": "成"
+    }
+  },
+  "吃": {
+    "pinyin": [
+      "chī"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口乞",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "乞"
+    }
+  },
+  "迟": {
+    "pinyin": [
+      "chí"
+    ],
+    "radical": "辶",
+    "decomposition": "⿺辶尺",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "walk",
+      "semantic": "辶",
+      "phonetic": "尺"
+    }
+  },
+  "出": {
+    "pinyin": [
+      "chū"
+    ],
+    "radical": "凵",
+    "decomposition": "⿱屮凵",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A sprout 屮 growing out of a container 凵",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "除": {
+    "pinyin": [
+      "chú"
+    ],
+    "radical": "阝",
+    "decomposition": "⿰阝余",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "The waste 余 produced by a city 阝",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "楚": {
+    "pinyin": [
+      "chǔ"
+    ],
+    "radical": "木",
+    "decomposition": "⿱林疋",
+    "etymology": null
+  },
+  "穿": {
+    "pinyin": [
+      "chuān"
+    ],
+    "radical": "穴",
+    "decomposition": "⿱穴牙",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "tooth",
+      "semantic": "牙",
+      "phonetic": "穴"
+    }
+  },
+  "船": {
+    "pinyin": [
+      "chuán"
+    ],
+    "radical": "舟",
+    "decomposition": "⿰舟⿱几口",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "ship",
+      "semantic": "舟",
+      "phonetic": null
+    }
+  },
+  "床": {
+    "pinyin": [
+      "chuáng"
+    ],
+    "radical": "广",
+    "decomposition": "⿸广木",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A house 广 made out of wood 木; 广 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "春": {
+    "pinyin": [
+      "chūn"
+    ],
+    "radical": "日",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "sun",
+      "semantic": "日",
+      "phonetic": null
+    }
+  },
+  "词": {
+    "pinyin": [
+      "cí"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠司",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "words",
+      "semantic": "讠",
+      "phonetic": "司"
+    }
+  },
+  "次": {
+    "pinyin": [
+      "cì"
+    ],
+    "radical": "欠",
+    "decomposition": "⿰冫欠",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person 欠 yawning multiple times 冫",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "聪": {
+    "pinyin": [
+      "cōng"
+    ],
+    "radical": "耳",
+    "decomposition": "⿰耳总",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "ear",
+      "semantic": "耳",
+      "phonetic": "总"
+    }
+  },
+  "从": {
+    "pinyin": [
+      "cóng"
+    ],
+    "radical": "人",
+    "decomposition": "⿰人人",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "One person 人 following another",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "错": {
+    "pinyin": [
+      "cuò"
+    ],
+    "radical": "钅",
+    "decomposition": "⿰钅昔",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Gold 钅 that once was 昔 but is lost",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "答": {
+    "pinyin": [
+      "dá"
+    ],
+    "radical": "⺮",
+    "decomposition": "⿱⺮合",
+    "etymology": null
+  },
+  "打": {
+    "pinyin": [
+      "dǎ"
+    ],
+    "radical": "扌",
+    "decomposition": "⿰扌丁",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "hand",
+      "semantic": "扌",
+      "phonetic": "丁"
+    }
+  },
+  "大": {
+    "pinyin": [
+      "dà"
+    ],
+    "radical": "大",
+    "decomposition": "⿻一人",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A man 人 with outstretched arms",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "带": {
+    "pinyin": [
+      "dài"
+    ],
+    "radical": "巾",
+    "decomposition": "⿱卅⿱冖巾",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A belt, creasing one's robe above 卅 but not below 巾",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "单": {
+    "pinyin": [
+      "dān"
+    ],
+    "radical": "丷",
+    "decomposition": null,
+    "etymology": null
+  },
+  "担": {
+    "pinyin": [
+      "dān"
+    ],
+    "radical": "扌",
+    "decomposition": "⿰扌旦",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "hand",
+      "semantic": "扌",
+      "phonetic": "旦"
+    }
+  },
+  "但": {
+    "pinyin": [
+      "dàn"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻旦",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": null,
+      "semantic": null,
+      "phonetic": "旦"
+    }
+  },
+  "蛋": {
+    "pinyin": [
+      "dàn"
+    ],
+    "radical": "虫",
+    "decomposition": "⿱疋虫",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "insect",
+      "semantic": "虫",
+      "phonetic": "延"
+    }
+  },
+  "当": {
+    "pinyin": [
+      "dāng"
+    ],
+    "radical": "⺌",
+    "decomposition": "⿱⺌彐",
+    "etymology": null
+  },
+  "到": {
+    "pinyin": [
+      "dào"
+    ],
+    "radical": "刂",
+    "decomposition": "⿰至刂",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "arrive",
+      "semantic": "至",
+      "phonetic": "刂"
+    }
+  },
+  "道": {
+    "pinyin": [
+      "dào"
+    ],
+    "radical": "辶",
+    "decomposition": "⿺辶首",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "walk",
+      "semantic": "辶",
+      "phonetic": "首"
+    }
+  },
+  "得": {
+    "pinyin": [
+      "dé"
+    ],
+    "radical": "彳",
+    "decomposition": "⿰彳⿱旦寸",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A hand 寸 grabbing a shell 旦",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "地": {
+    "pinyin": [
+      "de"
+    ],
+    "radical": "土",
+    "decomposition": "⿰土也",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "earth",
+      "semantic": "土",
+      "phonetic": "也"
+    }
+  },
+  "的": {
+    "pinyin": [
+      "de"
+    ],
+    "radical": "白",
+    "decomposition": "⿰白勺",
+    "etymology": null
+  },
+  "灯": {
+    "pinyin": [
+      "dēng"
+    ],
+    "radical": "火",
+    "decomposition": "⿰火丁",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "fire",
+      "semantic": "火",
+      "phonetic": "丁"
+    }
+  },
+  "等": {
+    "pinyin": [
+      "děng"
+    ],
+    "radical": "⺮",
+    "decomposition": "⿱⺮寺",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Bamboo strips ⺮ laid before a court 寺",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "弟": {
+    "pinyin": [
+      "dì"
+    ],
+    "radical": "弓",
+    "decomposition": null,
+    "etymology": null
+  },
+  "第": {
+    "pinyin": [
+      "dì"
+    ],
+    "radical": "⺮",
+    "decomposition": "⿱⺮弟",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Bamboo strips ⺮ arrayed in sequence; 弟 provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "典": {
+    "pinyin": [
+      "diǎn"
+    ],
+    "radical": "八",
+    "decomposition": "⿱曲八",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Two hands 八 holding a book 冊",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "点": {
+    "pinyin": [
+      "diǎn"
+    ],
+    "radical": "灬",
+    "decomposition": "⿱占灬",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "fire",
+      "semantic": "灬",
+      "phonetic": "占"
+    }
+  },
+  "电": {
+    "pinyin": [
+      "diàn"
+    ],
+    "radical": "曰",
+    "decomposition": "⿻曰乚",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Simplified form of 電; lightning 申 from a storm cloud 雨",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "店": {
+    "pinyin": [
+      "diàn"
+    ],
+    "radical": "广",
+    "decomposition": "⿸广占",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "building",
+      "semantic": "广",
+      "phonetic": "占"
+    }
+  },
+  "调": {
+    "pinyin": [
+      "diào"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠周",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "speech",
+      "semantic": "讠",
+      "phonetic": "周"
+    }
+  },
+  "定": {
+    "pinyin": [
+      "dìng"
+    ],
+    "radical": "宀",
+    "decomposition": "⿱宀疋",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person 疋 settling under a roof 宀",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "东": {
+    "pinyin": [
+      "dōng"
+    ],
+    "radical": "一",
+    "decomposition": "⿻七小",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Simplified form of 東, the sun 日 rising behind a tree 木",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "冬": {
+    "pinyin": [
+      "dōng"
+    ],
+    "radical": "⺀",
+    "decomposition": "⿱夂⺀",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A man walking 夂 on ice ⺀",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "懂": {
+    "pinyin": [
+      "dǒng"
+    ],
+    "radical": "忄",
+    "decomposition": "⿰忄董",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mind",
+      "semantic": "忄",
+      "phonetic": "董"
+    }
+  },
+  "动": {
+    "pinyin": [
+      "dòng"
+    ],
+    "radical": "力",
+    "decomposition": "⿰云力",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "strength",
+      "semantic": "力",
+      "phonetic": null
+    }
+  },
+  "都": {
+    "pinyin": [
+      "dōu"
+    ],
+    "radical": "阝",
+    "decomposition": "⿰者阝",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "city",
+      "semantic": "阝",
+      "phonetic": "者"
+    }
+  },
+  "读": {
+    "pinyin": [
+      "dú"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠卖",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To show off 卖 one's literacy 讠",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "度": {
+    "pinyin": [
+      "dù"
+    ],
+    "radical": "广",
+    "decomposition": "⿸广⿱廿又",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Twenty 廿 people 又 meeting inside a building 广 to deliberate",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "短": {
+    "pinyin": [
+      "duǎn"
+    ],
+    "radical": "矢",
+    "decomposition": "⿰矢豆",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "dart",
+      "semantic": "矢",
+      "phonetic": "豆"
+    }
+  },
+  "段": {
+    "pinyin": [
+      "duàn"
+    ],
+    "radical": "殳",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A hand using a chisel 殳 to cut stone",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "锻": {
+    "pinyin": [
+      "duàn"
+    ],
+    "radical": "钅",
+    "decomposition": "⿰钅段",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "metal",
+      "semantic": "钅",
+      "phonetic": "段"
+    }
+  },
+  "对": {
+    "pinyin": [
+      "duì"
+    ],
+    "radical": "寸",
+    "decomposition": "⿰又寸",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A pair 又 of hands 寸",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "多": {
+    "pinyin": [
+      "duō"
+    ],
+    "radical": "夕",
+    "decomposition": "⿱夕夕",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Two nights 夕, suggesting many",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "朵": {
+    "pinyin": [
+      "duǒ"
+    ],
+    "radical": "木",
+    "decomposition": "⿱几木",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Flowers 几 blooming on a tree 木",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "饿": {
+    "pinyin": [
+      "è"
+    ],
+    "radical": "饣",
+    "decomposition": "⿰饣我",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To want 我 food 饣; 我 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "儿": {
+    "pinyin": [
+      "ér"
+    ],
+    "radical": "儿",
+    "decomposition": "⿰丿乚",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Simplified form of 兒, a picture of a child; compare 人",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "而": {
+    "pinyin": [
+      "ér"
+    ],
+    "radical": "而",
+    "decomposition": null,
+    "etymology": null
+  },
+  "耳": {
+    "pinyin": [
+      "ěr"
+    ],
+    "radical": "耳",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "An ear",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "二": {
+    "pinyin": [
+      "èr"
+    ],
+    "radical": "二",
+    "decomposition": "⿱一一",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Two  parallel lines; compare 一 (one) and 三 (three)",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "发": {
+    "pinyin": [
+      "fā"
+    ],
+    "radical": "又",
+    "decomposition": null,
+    "etymology": null
+  },
+  "法": {
+    "pinyin": [
+      "fǎ"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵去",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "The course 去 followed by a stream 氵",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "饭": {
+    "pinyin": [
+      "fàn"
+    ],
+    "radical": "饣",
+    "decomposition": "⿰饣反",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "food",
+      "semantic": "饣",
+      "phonetic": "反"
+    }
+  },
+  "方": {
+    "pinyin": [
+      "fāng"
+    ],
+    "radical": "方",
+    "decomposition": null,
+    "etymology": null
+  },
+  "房": {
+    "pinyin": [
+      "fáng"
+    ],
+    "radical": "户",
+    "decomposition": "⿸户方",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "door",
+      "semantic": "户",
+      "phonetic": "方"
+    }
+  },
+  "放": {
+    "pinyin": [
+      "fàng"
+    ],
+    "radical": "攵",
+    "decomposition": "⿰方攵",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "let go",
+      "semantic": "攵",
+      "phonetic": "方"
+    }
+  },
+  "飞": {
+    "pinyin": [
+      "fēi"
+    ],
+    "radical": "飞",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A bird flapping its wings",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "非": {
+    "pinyin": [
+      "fēi"
+    ],
+    "radical": "非",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Two bird's wings opposed; two people back-to-back",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "啡": {
+    "pinyin": [
+      "fēi"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口非",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "非"
+    }
+  },
+  "分": {
+    "pinyin": [
+      "fēn"
+    ],
+    "radical": "刀",
+    "decomposition": "⿱八刀",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Pieces 八 being further subdivided with a knife 刀 ",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "粉": {
+    "pinyin": [
+      "fěn"
+    ],
+    "radical": "米",
+    "decomposition": "⿰米分",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "grain",
+      "semantic": "米",
+      "phonetic": "分"
+    }
+  },
+  "风": {
+    "pinyin": [
+      "fēng"
+    ],
+    "radical": "风",
+    "decomposition": "⿵几乂",
+    "etymology": null
+  },
+  "夫": {
+    "pinyin": [
+      "fū"
+    ],
+    "radical": "大",
+    "decomposition": "⿻一大",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A man 大 wearing a coming-of-age hairpin 一",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "服": {
+    "pinyin": [
+      "fú"
+    ],
+    "radical": "月",
+    "decomposition": "⿰月⿸卩又",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person 卩 putting on 又 a coat 月",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "附": {
+    "pinyin": [
+      "fù"
+    ],
+    "radical": "阝",
+    "decomposition": "⿰阝付",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "place",
+      "semantic": "阝",
+      "phonetic": "付"
+    }
+  },
+  "复": {
+    "pinyin": [
+      "fù"
+    ],
+    "radical": "夊",
+    "decomposition": "⿱亻⿱日夂",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person 亻 who goes  somewhere 夂 every day 日",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "该": {
+    "pinyin": [
+      "gāi"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠亥",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "speech",
+      "semantic": "讠",
+      "phonetic": "亥"
+    }
+  },
+  "感": {
+    "pinyin": [
+      "gǎn"
+    ],
+    "radical": "心",
+    "decomposition": "⿱咸心",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Two hearts 心 beating together 咸",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "干": {
+    "pinyin": [
+      "gàn"
+    ],
+    "radical": "十",
+    "decomposition": "⿱一十",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A club or axe",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "刚": {
+    "pinyin": [
+      "gāng"
+    ],
+    "radical": "刂",
+    "decomposition": "⿰冈刂",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "knife",
+      "semantic": "刂",
+      "phonetic": "冈"
+    }
+  },
+  "高": {
+    "pinyin": [
+      "gāo"
+    ],
+    "radical": "高",
+    "decomposition": "⿳亠口冋",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A tall palace",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "糕": {
+    "pinyin": [
+      "gāo"
+    ],
+    "radical": "米",
+    "decomposition": "⿰米羔",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "rice",
+      "semantic": "米",
+      "phonetic": "羔"
+    }
+  },
+  "告": {
+    "pinyin": [
+      "gào"
+    ],
+    "radical": "口",
+    "decomposition": "⿱牛口",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To speak 口 with the force of an ox 牛",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "哥": {
+    "pinyin": [
+      "gē"
+    ],
+    "radical": "口",
+    "decomposition": "⿱可可",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "One person talking 可 over another 可",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "歌": {
+    "pinyin": [
+      "gē"
+    ],
+    "radical": "欠",
+    "decomposition": "⿰哥欠",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "breath",
+      "semantic": "欠",
+      "phonetic": "哥"
+    }
+  },
+  "个": {
+    "pinyin": [
+      "gè"
+    ],
+    "radical": "丨",
+    "decomposition": "⿱人丨",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A tally 丨 of people 人",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "各": {
+    "pinyin": [
+      "gè"
+    ],
+    "radical": "口",
+    "decomposition": "⿱夂口",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Walking 夂 and talking 口",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "给": {
+    "pinyin": [
+      "gěi"
+    ],
+    "radical": "纟",
+    "decomposition": "⿰纟合",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "thread",
+      "semantic": "纟",
+      "phonetic": "合"
+    }
+  },
+  "根": {
+    "pinyin": [
+      "gēn"
+    ],
+    "radical": "木",
+    "decomposition": "⿰木艮",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "tree",
+      "semantic": "木",
+      "phonetic": "艮"
+    }
+  },
+  "跟": {
+    "pinyin": [
+      "gēn"
+    ],
+    "radical": "足",
+    "decomposition": "⿰足艮",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "foot",
+      "semantic": "足",
+      "phonetic": "艮"
+    }
+  },
+  "更": {
+    "pinyin": [
+      "gèng"
+    ],
+    "radical": "曰",
+    "decomposition": "⿱一⿻曰乂",
+    "etymology": null
+  },
+  "工": {
+    "pinyin": [
+      "gōng"
+    ],
+    "radical": "工",
+    "decomposition": "⿱一丄",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A spade or other workman's tool",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "公": {
+    "pinyin": [
+      "gōng"
+    ],
+    "radical": "八",
+    "decomposition": "⿱八厶",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To divide 八 what is private 厶",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "共": {
+    "pinyin": [
+      "gòng"
+    ],
+    "radical": "八",
+    "decomposition": "⿳廾一八",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Two hands 八 holding one object 廾",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "狗": {
+    "pinyin": [
+      "gǒu"
+    ],
+    "radical": "犭",
+    "decomposition": "⿰犭句",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "dog",
+      "semantic": "犭",
+      "phonetic": "句"
+    }
+  },
+  "故": {
+    "pinyin": [
+      "gù"
+    ],
+    "radical": "攵",
+    "decomposition": "⿰古攵",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "tap",
+      "semantic": "攵",
+      "phonetic": "古"
+    }
+  },
+  "顾": {
+    "pinyin": [
+      "gù"
+    ],
+    "radical": "页",
+    "decomposition": "⿰厄页",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "head",
+      "semantic": "页",
+      "phonetic": "厄"
+    }
+  },
+  "瓜": {
+    "pinyin": [
+      "guā"
+    ],
+    "radical": "瓜",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Vines growing with a melon at their base",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "刮": {
+    "pinyin": [
+      "guā"
+    ],
+    "radical": "刂",
+    "decomposition": "⿰舌刂",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "knife",
+      "semantic": "刂",
+      "phonetic": "舌"
+    }
+  },
+  "怪": {
+    "pinyin": [
+      "guài"
+    ],
+    "radical": "忄",
+    "decomposition": "⿰忄圣",
+    "etymology": null
+  },
+  "关": {
+    "pinyin": [
+      "guān"
+    ],
+    "radical": "丷",
+    "decomposition": "⿱丷天",
+    "etymology": null
+  },
+  "馆": {
+    "pinyin": [
+      "guǎn"
+    ],
+    "radical": "饣",
+    "decomposition": "⿰饣官",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A public 官 building where food 饣 is served; 官 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "惯": {
+    "pinyin": [
+      "guàn"
+    ],
+    "radical": "忄",
+    "decomposition": "⿰忄贯",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "heart",
+      "semantic": "忄",
+      "phonetic": "贯"
+    }
+  },
+  "贵": {
+    "pinyin": [
+      "guì"
+    ],
+    "radical": "贝",
+    "decomposition": "⿱⿱中一贝",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "money",
+      "semantic": "贝",
+      "phonetic": null
+    }
+  },
+  "国": {
+    "pinyin": [
+      "guó"
+    ],
+    "radical": "囗",
+    "decomposition": "⿴囗玉",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Treasure 玉 within a country's borders 囗",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "果": {
+    "pinyin": [
+      "guǒ"
+    ],
+    "radical": "木",
+    "decomposition": "⿱田木",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Fruit 田 growing on a tree 木",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "过": {
+    "pinyin": [
+      "guò"
+    ],
+    "radical": "辶",
+    "decomposition": "⿺辶寸",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "walk",
+      "semantic": "辶",
+      "phonetic": "咼"
+    }
+  },
+  "还": {
+    "pinyin": [
+      "hái"
+    ],
+    "radical": "辶",
+    "decomposition": "⿺辶不",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Not 不 moving 辶",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "孩": {
+    "pinyin": [
+      "hái"
+    ],
+    "radical": "子",
+    "decomposition": "⿰子亥",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "child",
+      "semantic": "子",
+      "phonetic": "亥"
+    }
+  },
+  "害": {
+    "pinyin": [
+      "hài"
+    ],
+    "radical": "宀",
+    "decomposition": "⿱宀⿱丰口",
+    "etymology": null
+  },
+  "汉": {
+    "pinyin": [
+      "hàn"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵又",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Simplified form of 漢; the Han 𦰩 river 氵",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "好": {
+    "pinyin": [
+      "hǎo"
+    ],
+    "radical": "女",
+    "decomposition": "⿰女子",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A woman 女 with a son 子",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "号": {
+    "pinyin": [
+      "hào"
+    ],
+    "radical": "口",
+    "decomposition": "⿱口丂",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "丂"
+    }
+  },
+  "喝": {
+    "pinyin": [
+      "hē"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口曷",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "曷"
+    }
+  },
+  "和": {
+    "pinyin": [
+      "hé"
+    ],
+    "radical": "口",
+    "decomposition": "⿰禾口",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "禾"
+    }
+  },
+  "河": {
+    "pinyin": [
+      "hé"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵可",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "water",
+      "semantic": "氵",
+      "phonetic": "可"
+    }
+  },
+  "黑": {
+    "pinyin": [
+      "hēi"
+    ],
+    "radical": "黑",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A man's face blacked by soot from a fire 灬",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "很": {
+    "pinyin": [
+      "hěn"
+    ],
+    "radical": "彳",
+    "decomposition": "⿰彳艮",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "step",
+      "semantic": "彳",
+      "phonetic": "艮"
+    }
+  },
+  "红": {
+    "pinyin": [
+      "hóng"
+    ],
+    "radical": "纟",
+    "decomposition": "⿰纟工",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "silk",
+      "semantic": "纟",
+      "phonetic": "工"
+    }
+  },
+  "后": {
+    "pinyin": [
+      "hòu"
+    ],
+    "radical": "口",
+    "decomposition": null,
+    "etymology": null
+  },
+  "候": {
+    "pinyin": [
+      "hòu"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻矦",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "person",
+      "semantic": "亻",
+      "phonetic": "矦"
+    }
+  },
+  "乎": {
+    "pinyin": [
+      "hū"
+    ],
+    "radical": "丿",
+    "decomposition": null,
+    "etymology": null
+  },
+  "护": {
+    "pinyin": [
+      "hù"
+    ],
+    "radical": "扌",
+    "decomposition": "⿰扌户",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Guarding 扌 a home 户; 户 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "花": {
+    "pinyin": [
+      "huā"
+    ],
+    "radical": "艹",
+    "decomposition": "⿱艹化",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A flower 艹 in bloom 化; 化 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "化": {
+    "pinyin": [
+      "huà"
+    ],
+    "radical": "匕",
+    "decomposition": "⿰亻匕",
+    "etymology": null
+  },
+  "画": {
+    "pinyin": [
+      "huà"
+    ],
+    "radical": "田",
+    "decomposition": "⿱一⿶凵田",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A painting on an easel; compare 畫, which includes the brush",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "话": {
+    "pinyin": [
+      "huà"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠舌",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A spoken 讠 tongue 舌; 舌 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "坏": {
+    "pinyin": [
+      "huài"
+    ],
+    "radical": "土",
+    "decomposition": "⿰土不",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "earth",
+      "semantic": "土",
+      "phonetic": "不"
+    }
+  },
+  "欢": {
+    "pinyin": [
+      "huān"
+    ],
+    "radical": "欠",
+    "decomposition": "⿰又欠",
+    "etymology": null
+  },
+  "环": {
+    "pinyin": [
+      "huán"
+    ],
+    "radical": "王",
+    "decomposition": "⿰王不",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "jade",
+      "semantic": "王",
+      "phonetic": "不"
+    }
+  },
+  "换": {
+    "pinyin": [
+      "huàn"
+    ],
+    "radical": "扌",
+    "decomposition": "⿰扌奂",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "hand",
+      "semantic": "扌",
+      "phonetic": "奂"
+    }
+  },
+  "黄": {
+    "pinyin": [
+      "huáng"
+    ],
+    "radical": "黄",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A jade pendant",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "回": {
+    "pinyin": [
+      "huí"
+    ],
+    "radical": "囗",
+    "decomposition": "⿴囗口",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Originally, a spiral signifying return",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "会": {
+    "pinyin": [
+      "huì"
+    ],
+    "radical": "人",
+    "decomposition": "⿱人云",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "People 人 speaking 云",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "婚": {
+    "pinyin": [
+      "hūn"
+    ],
+    "radical": "女",
+    "decomposition": "⿰女昏",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "woman",
+      "semantic": "女",
+      "phonetic": "昏"
+    }
+  },
+  "活": {
+    "pinyin": [
+      "huó"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵舌",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "water",
+      "semantic": "氵",
+      "phonetic": "舌"
+    }
+  },
+  "火": {
+    "pinyin": [
+      "huǒ"
+    ],
+    "radical": "火",
+    "decomposition": "⿻丷人",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Flames",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "或": {
+    "pinyin": [
+      "huò"
+    ],
+    "radical": "戈",
+    "decomposition": "⿹戈⿱口一",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To defend yourself 口 with a spear 戈; \"or else\"",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "机": {
+    "pinyin": [
+      "jī"
+    ],
+    "radical": "木",
+    "decomposition": "⿰木几",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A table 几 made of wood 木; 几 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "鸡": {
+    "pinyin": [
+      "jī"
+    ],
+    "radical": "鸟",
+    "decomposition": "⿰又鸟",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Another 又 kind of bird 鸟",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "级": {
+    "pinyin": [
+      "jí"
+    ],
+    "radical": "纟",
+    "decomposition": "⿰纟及",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "silk",
+      "semantic": "纟",
+      "phonetic": "及"
+    }
+  },
+  "极": {
+    "pinyin": [
+      "jí"
+    ],
+    "radical": "木",
+    "decomposition": "⿰木及",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "wood",
+      "semantic": "木",
+      "phonetic": "及"
+    }
+  },
+  "急": {
+    "pinyin": [
+      "jí"
+    ],
+    "radical": "心",
+    "decomposition": "⿱刍心",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "heart",
+      "semantic": "心",
+      "phonetic": "刍"
+    }
+  },
+  "几": {
+    "pinyin": [
+      "jǐ"
+    ],
+    "radical": "几",
+    "decomposition": "⿰丿乙",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A small table; compare 丌",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "己": {
+    "pinyin": [
+      "jǐ"
+    ],
+    "radical": "己",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A loom woven with thread",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "记": {
+    "pinyin": [
+      "jì"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠己",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A private 己 note 讠; 己 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "季": {
+    "pinyin": [
+      "jì"
+    ],
+    "radical": "子",
+    "decomposition": "⿱禾子",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "The time for planting seeds 子 of grain 禾",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "绩": {
+    "pinyin": [
+      "jī"
+    ],
+    "radical": "纟",
+    "decomposition": "⿰纟责",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To complete 纟 one's duties 责; 责 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "加": {
+    "pinyin": [
+      "jiā"
+    ],
+    "radical": "力",
+    "decomposition": "⿰力口",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Supporting a cause with the strength 力 of one's words 口",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "家": {
+    "pinyin": [
+      "jiā"
+    ],
+    "radical": "宀",
+    "decomposition": "⿱宀豕",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "roof",
+      "semantic": "宀",
+      "phonetic": "豕"
+    }
+  },
+  "假": {
+    "pinyin": [
+      "jiǎ"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻叚",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A false 叚 person 亻; 叚 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "间": {
+    "pinyin": [
+      "jiān"
+    ],
+    "radical": "门",
+    "decomposition": "⿵门日",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "The sun 日 shining through a doorway 门",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "检": {
+    "pinyin": [
+      "jiǎn"
+    ],
+    "radical": "木",
+    "decomposition": "⿰木佥",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "wood",
+      "semantic": "木",
+      "phonetic": "佥"
+    }
+  },
+  "简": {
+    "pinyin": [
+      "jiǎn"
+    ],
+    "radical": "⺮",
+    "decomposition": "⿱⺮间",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "bamboo",
+      "semantic": "⺮",
+      "phonetic": "间"
+    }
+  },
+  "见": {
+    "pinyin": [
+      "jiàn"
+    ],
+    "radical": "见",
+    "decomposition": "⿵冂儿",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Simplified form of 見; a man 儿 with the eye 目 emphasized",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "件": {
+    "pinyin": [
+      "jiàn"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻牛",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A man 亻 dividing up a cow 牛",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "健": {
+    "pinyin": [
+      "jiàn"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻建",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Someone 亻 who can build 建 things; 建 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "讲": {
+    "pinyin": [
+      "jiǎng"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠井",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "speech",
+      "semantic": "讠",
+      "phonetic": "井"
+    }
+  },
+  "蕉": {
+    "pinyin": [
+      "jiāo"
+    ],
+    "radical": "艹",
+    "decomposition": "⿱艹焦",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "plant",
+      "semantic": "艹",
+      "phonetic": "焦"
+    }
+  },
+  "脚": {
+    "pinyin": [
+      "jiǎo"
+    ],
+    "radical": "⺼",
+    "decomposition": "⿰⺼却",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "flesh",
+      "semantic": "⺼",
+      "phonetic": "却"
+    }
+  },
+  "叫": {
+    "pinyin": [
+      "jiào"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口丩",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "丩"
+    }
+  },
+  "较": {
+    "pinyin": [
+      "jiào"
+    ],
+    "radical": "车",
+    "decomposition": "⿰车交",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "cart",
+      "semantic": "车",
+      "phonetic": "交"
+    }
+  },
+  "教": {
+    "pinyin": [
+      "jiào"
+    ],
+    "radical": "攵",
+    "decomposition": "⿰孝攵",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "script",
+      "semantic": "攵",
+      "phonetic": "孝"
+    }
+  },
+  "接": {
+    "pinyin": [
+      "jiē"
+    ],
+    "radical": "扌",
+    "decomposition": "⿰扌妾",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "hand",
+      "semantic": "扌",
+      "phonetic": "妾"
+    }
+  },
+  "街": {
+    "pinyin": [
+      "jiē"
+    ],
+    "radical": "行",
+    "decomposition": "⿻行圭",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "walk",
+      "semantic": "行",
+      "phonetic": "圭"
+    }
+  },
+  "节": {
+    "pinyin": [
+      "jié"
+    ],
+    "radical": "艹",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Simplified form of 節; sections of bamboo ⺮",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "结": {
+    "pinyin": [
+      "jié"
+    ],
+    "radical": "纟",
+    "decomposition": "⿰纟吉",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "thread",
+      "semantic": "纟",
+      "phonetic": "吉"
+    }
+  },
+  "姐": {
+    "pinyin": [
+      "jiě"
+    ],
+    "radical": "女",
+    "decomposition": "⿰女且",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "woman",
+      "semantic": "女",
+      "phonetic": "且"
+    }
+  },
+  "解": {
+    "pinyin": [
+      "jiě"
+    ],
+    "radical": "角",
+    "decomposition": "⿰角⿱刀牛",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To cut 刀 the horns 角 off of an ox 牛; 角 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "介": {
+    "pinyin": [
+      "jiè"
+    ],
+    "radical": "人",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A border 八 dividing people 人",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "界": {
+    "pinyin": [
+      "jiè"
+    ],
+    "radical": "田",
+    "decomposition": "⿱田介",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "farm",
+      "semantic": "田",
+      "phonetic": "介"
+    }
+  },
+  "借": {
+    "pinyin": [
+      "jiè"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻昔",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "person",
+      "semantic": "亻",
+      "phonetic": "昔"
+    }
+  },
+  "今": {
+    "pinyin": [
+      "jīn"
+    ],
+    "radical": "人",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A mouth 亼 talking about things",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "斤": {
+    "pinyin": [
+      "jīn"
+    ],
+    "radical": "斤",
+    "decomposition": "⿸厂下",
+    "etymology": null
+  },
+  "近": {
+    "pinyin": [
+      "jìn"
+    ],
+    "radical": "辶",
+    "decomposition": "⿺辶斤",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "walk",
+      "semantic": "辶",
+      "phonetic": "斤"
+    }
+  },
+  "进": {
+    "pinyin": [
+      "jìn"
+    ],
+    "radical": "辶",
+    "decomposition": "⿺辶井",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "walk",
+      "semantic": "辶",
+      "phonetic": "井"
+    }
+  },
+  "京": {
+    "pinyin": [
+      "jīng"
+    ],
+    "radical": "亠",
+    "decomposition": "⿳亠口小",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A capital building on a hill",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "经": {
+    "pinyin": [
+      "jīng"
+    ],
+    "radical": "纟",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "thread",
+      "semantic": "纟",
+      "phonetic": "工"
+    }
+  },
+  "睛": {
+    "pinyin": [
+      "jīng"
+    ],
+    "radical": "目",
+    "decomposition": "⿰目青",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "eye",
+      "semantic": "目",
+      "phonetic": "青"
+    }
+  },
+  "净": {
+    "pinyin": [
+      "jìng"
+    ],
+    "radical": "冫",
+    "decomposition": "⿰冫争",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "water",
+      "semantic": "冫",
+      "phonetic": "争"
+    }
+  },
+  "境": {
+    "pinyin": [
+      "jìng"
+    ],
+    "radical": "土",
+    "decomposition": "⿰土竟",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "earth",
+      "semantic": "土",
+      "phonetic": "竟"
+    }
+  },
+  "静": {
+    "pinyin": [
+      "jìng"
+    ],
+    "radical": "青",
+    "decomposition": "⿰青争",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "nature",
+      "semantic": "青",
+      "phonetic": "争"
+    }
+  },
+  "镜": {
+    "pinyin": [
+      "jìng"
+    ],
+    "radical": "钅",
+    "decomposition": "⿰钅竟",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "metal",
+      "semantic": "钅",
+      "phonetic": "竟"
+    }
+  },
+  "九": {
+    "pinyin": [
+      "jiǔ"
+    ],
+    "radical": "乙",
+    "decomposition": "⿻丿乙",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "An elbow",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "久": {
+    "pinyin": [
+      "jiǔ"
+    ],
+    "radical": "丿",
+    "decomposition": null,
+    "etymology": null
+  },
+  "酒": {
+    "pinyin": [
+      "jiǔ"
+    ],
+    "radical": "酉",
+    "decomposition": "⿰氵酉",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A jar 酉 of wine 氵; 酉 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "旧": {
+    "pinyin": [
+      "jiù"
+    ],
+    "radical": "日",
+    "decomposition": "⿰丨日",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Older than 丨 the sun 日",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "就": {
+    "pinyin": [
+      "jiù"
+    ],
+    "radical": "尢",
+    "decomposition": "⿰京尤",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "specialty",
+      "semantic": "尤",
+      "phonetic": "京"
+    }
+  },
+  "居": {
+    "pinyin": [
+      "jū"
+    ],
+    "radical": "户",
+    "decomposition": "⿸户古",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "door",
+      "semantic": "户",
+      "phonetic": "古"
+    }
+  },
+  "举": {
+    "pinyin": [
+      "jǔ"
+    ],
+    "radical": "丶",
+    "decomposition": "⿱兴扌",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "hand",
+      "semantic": "扌",
+      "phonetic": "舉"
+    }
+  },
+  "句": {
+    "pinyin": [
+      "jù",
+      "gōu"
+    ],
+    "radical": "口",
+    "decomposition": "⿹勹口",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A phrase 勹 from the mouth 口",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "据": {
+    "pinyin": [
+      "jù"
+    ],
+    "radical": "扌",
+    "decomposition": "⿰扌居",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "hand",
+      "semantic": "扌",
+      "phonetic": "居"
+    }
+  },
+  "决": {
+    "pinyin": [
+      "jué"
+    ],
+    "radical": "冫",
+    "decomposition": "⿰冫夬",
+    "etymology": null
+  },
+  "觉": {
+    "pinyin": [
+      "jué"
+    ],
+    "radical": "见",
+    "decomposition": "⿳⺍冖见",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "see",
+      "semantic": "见",
+      "phonetic": "⺍"
+    }
+  },
+  "咖": {
+    "pinyin": [
+      "kā"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口加",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "加"
+    }
+  },
+  "卡": {
+    "pinyin": [
+      "kǎ"
+    ],
+    "radical": "卜",
+    "decomposition": "⿱上卜",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A card squeezed between 上 and 下",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "开": {
+    "pinyin": [
+      "kāi"
+    ],
+    "radical": "廾",
+    "decomposition": "⿱一廾",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Simplified form of 開; hands 廾 lifting the latch 一 of a door",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "看": {
+    "pinyin": [
+      "kàn"
+    ],
+    "radical": "目",
+    "decomposition": "⿱手目",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Shielding one's eyes 目 with a hand 手 to look to the distance",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "康": {
+    "pinyin": [
+      "kāng"
+    ],
+    "radical": "广",
+    "decomposition": "⿸广隶",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A home 广 with a servant 隶",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "考": {
+    "pinyin": [
+      "kǎo"
+    ],
+    "radical": "耂",
+    "decomposition": "⿸耂丂",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "old",
+      "semantic": "耂",
+      "phonetic": "丂"
+    }
+  },
+  "可": {
+    "pinyin": [
+      "kě"
+    ],
+    "radical": "口",
+    "decomposition": "⿻丁口",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "vigorous",
+      "semantic": "丁",
+      "phonetic": "口"
+    }
+  },
+  "渴": {
+    "pinyin": [
+      "kě"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵曷",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "water",
+      "semantic": "氵",
+      "phonetic": "曷"
+    }
+  },
+  "刻": {
+    "pinyin": [
+      "kè"
+    ],
+    "radical": "刂",
+    "decomposition": "⿰亥刂",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "knife",
+      "semantic": "刂",
+      "phonetic": "亥"
+    }
+  },
+  "客": {
+    "pinyin": [
+      "kè"
+    ],
+    "radical": "宀",
+    "decomposition": "⿱宀各",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person 各 welcomed under one's roof 宀; 各 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "课": {
+    "pinyin": [
+      "kè"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠果",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "speech",
+      "semantic": "讠",
+      "phonetic": "果"
+    }
+  },
+  "空": {
+    "pinyin": [
+      "kōng"
+    ],
+    "radical": "穴",
+    "decomposition": "⿱穴工",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "cave",
+      "semantic": "穴",
+      "phonetic": "工"
+    }
+  },
+  "口": {
+    "pinyin": [
+      "kǒu"
+    ],
+    "radical": "口",
+    "decomposition": "⿱冂一",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "An open mouth",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "哭": {
+    "pinyin": [
+      "kū"
+    ],
+    "radical": "口",
+    "decomposition": "⿱⿰口口犬",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To shed a tear from your eyes 口 over a person 犬",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "裤": {
+    "pinyin": [
+      "kù"
+    ],
+    "radical": "衤",
+    "decomposition": "⿰衤库",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "clothes",
+      "semantic": "衤",
+      "phonetic": "库"
+    }
+  },
+  "块": {
+    "pinyin": [
+      "kuài"
+    ],
+    "radical": "土",
+    "decomposition": "⿰土夬",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "earth",
+      "semantic": "土",
+      "phonetic": "夬"
+    }
+  },
+  "快": {
+    "pinyin": [
+      "kuài"
+    ],
+    "radical": "忄",
+    "decomposition": "⿰忄夬",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A decisive 夬 will 忄; 夬 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "筷": {
+    "pinyin": [
+      "kuài"
+    ],
+    "radical": "⺮",
+    "decomposition": "⿱⺮快",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "bamboo",
+      "semantic": "⺮",
+      "phonetic": "快"
+    }
+  },
+  "况": {
+    "pinyin": [
+      "kuàng"
+    ],
+    "radical": "冫",
+    "decomposition": "⿰冫兄",
+    "etymology": null
+  },
+  "来": {
+    "pinyin": [
+      "lái"
+    ],
+    "radical": "木",
+    "decomposition": "⿻未丷",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A wheat plant that has not yet borne fruit; compare 來",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "蓝": {
+    "pinyin": [
+      "lán"
+    ],
+    "radical": "艹",
+    "decomposition": "⿱艹监",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "plant",
+      "semantic": "艹",
+      "phonetic": "监"
+    }
+  },
+  "篮": {
+    "pinyin": [
+      "lán"
+    ],
+    "radical": "⺮",
+    "decomposition": "⿱⺮监",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "bamboo",
+      "semantic": "⺮",
+      "phonetic": "监"
+    }
+  },
+  "老": {
+    "pinyin": [
+      "lǎo"
+    ],
+    "radical": "老",
+    "decomposition": "⿱耂匕",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A person bent over with long hair 匕 and a crutch; compare 耂",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "乐": {
+    "pinyin": [
+      "lè"
+    ],
+    "radical": "丿",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Simplified form of 樂, a musical instrument with wood 木, strings 幺, and a pick 白",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "了": {
+    "pinyin": [
+      "le",
+      "liǎo"
+    ],
+    "radical": "亅",
+    "decomposition": "⿱乛亅",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A child swaddled in blanklets; compare 子",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "冷": {
+    "pinyin": [
+      "lěng"
+    ],
+    "radical": "冫",
+    "decomposition": "⿰冫令",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "ice",
+      "semantic": "冫",
+      "phonetic": "令"
+    }
+  },
+  "离": {
+    "pinyin": [
+      "lí"
+    ],
+    "radical": "禸",
+    "decomposition": "⿱⿱亠凶禸",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "An animal standing straight; 亠 is the head",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "礼": {
+    "pinyin": [
+      "lǐ"
+    ],
+    "radical": "礻",
+    "decomposition": "⿰礻乚",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "spirit",
+      "semantic": "礻",
+      "phonetic": "乚"
+    }
+  },
+  "李": {
+    "pinyin": [
+      "lǐ"
+    ],
+    "radical": "木",
+    "decomposition": "⿱木子",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "wood",
+      "semantic": "木",
+      "phonetic": "子"
+    }
+  },
+  "里": {
+    "pinyin": [
+      "lǐ"
+    ],
+    "radical": "里",
+    "decomposition": "⿱田土",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Unit of measure for farm 田 land 土",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "理": {
+    "pinyin": [
+      "lǐ"
+    ],
+    "radical": "王",
+    "decomposition": "⿰王里",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "king",
+      "semantic": "王",
+      "phonetic": "里"
+    }
+  },
+  "力": {
+    "pinyin": [
+      "lì"
+    ],
+    "radical": "力",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A plow's head representing strength",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "历": {
+    "pinyin": [
+      "lì"
+    ],
+    "radical": "厂",
+    "decomposition": "⿸厂力",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "calendar",
+      "semantic": "厤",
+      "phonetic": "力"
+    }
+  },
+  "脸": {
+    "pinyin": [
+      "liǎn"
+    ],
+    "radical": "⺼",
+    "decomposition": "⿰⺼佥",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "flesh",
+      "semantic": "⺼",
+      "phonetic": "佥"
+    }
+  },
+  "练": {
+    "pinyin": [
+      "liàn"
+    ],
+    "radical": "纟",
+    "decomposition": "⿰纟柬",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "thread",
+      "semantic": "纟",
+      "phonetic": "柬"
+    }
+  },
+  "炼": {
+    "pinyin": [
+      "liàn"
+    ],
+    "radical": "火",
+    "decomposition": "⿰火柬",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "fire",
+      "semantic": "火",
+      "phonetic": "柬"
+    }
+  },
+  "两": {
+    "pinyin": [
+      "liǎng"
+    ],
+    "radical": "一",
+    "decomposition": "⿱一⿻冂从",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Two people 从 together in a cart",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "亮": {
+    "pinyin": [
+      "liàng"
+    ],
+    "radical": "亠",
+    "decomposition": "⿳亠口⿱冖几",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A lit oil lamp",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "辆": {
+    "pinyin": [
+      "liàng"
+    ],
+    "radical": "车",
+    "decomposition": "⿰车两",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Two 两 carts 车; 两 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "聊": {
+    "pinyin": [
+      "liáo"
+    ],
+    "radical": "耳",
+    "decomposition": "⿰耳卯",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "ear",
+      "semantic": "耳",
+      "phonetic": "卯"
+    }
+  },
+  "料": {
+    "pinyin": [
+      "liào"
+    ],
+    "radical": "斗",
+    "decomposition": "⿰米斗",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A hand measuring 斗 a cup of rice 米",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "邻": {
+    "pinyin": [
+      "lín"
+    ],
+    "radical": "阝",
+    "decomposition": "⿰令阝",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "town",
+      "semantic": "阝",
+      "phonetic": "令"
+    }
+  },
+  "零": {
+    "pinyin": [
+      "líng"
+    ],
+    "radical": "雨",
+    "decomposition": "⿱雨令",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "raindrop",
+      "semantic": "雨",
+      "phonetic": "令"
+    }
+  },
+  "留": {
+    "pinyin": [
+      "liú"
+    ],
+    "radical": "田",
+    "decomposition": "⿱卯田",
+    "etymology": null
+  },
+  "六": {
+    "pinyin": [
+      "liù"
+    ],
+    "radical": "八",
+    "decomposition": "⿱亠八",
+    "etymology": null
+  },
+  "楼": {
+    "pinyin": [
+      "lóu"
+    ],
+    "radical": "木",
+    "decomposition": "⿰木娄",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "wood",
+      "semantic": "木",
+      "phonetic": "娄"
+    }
+  },
+  "路": {
+    "pinyin": [
+      "lù"
+    ],
+    "radical": "足",
+    "decomposition": "⿰足各",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "foot",
+      "semantic": "足",
+      "phonetic": "各"
+    }
+  },
+  "旅": {
+    "pinyin": [
+      "lǚ"
+    ],
+    "radical": "方",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A man 方 traveling with a pack 氏 on his back",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "绿": {
+    "pinyin": [
+      "lǜ"
+    ],
+    "radical": "纟",
+    "decomposition": "⿰纟录",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "silk",
+      "semantic": "纟",
+      "phonetic": "录"
+    }
+  },
+  "妈": {
+    "pinyin": [
+      "mā"
+    ],
+    "radical": "女",
+    "decomposition": "⿰女马",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "woman",
+      "semantic": "女",
+      "phonetic": "马"
+    }
+  },
+  "马": {
+    "pinyin": [
+      "mǎ"
+    ],
+    "radical": "马",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Simplified form of 馬, a horse galloping to the left",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "吗": {
+    "pinyin": [
+      "ma"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口马",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "马"
+    }
+  },
+  "买": {
+    "pinyin": [
+      "mǎi"
+    ],
+    "radical": "大",
+    "decomposition": "⿱乛头",
+    "etymology": null
+  },
+  "满": {
+    "pinyin": [
+      "mǎn"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵⿱艹两",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "water",
+      "semantic": "氵",
+      "phonetic": "㒼"
+    }
+  },
+  "慢": {
+    "pinyin": [
+      "màn"
+    ],
+    "radical": "忄",
+    "decomposition": "⿰忄曼",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "heart",
+      "semantic": "忄",
+      "phonetic": "曼"
+    }
+  },
+  "忙": {
+    "pinyin": [
+      "máng"
+    ],
+    "radical": "忄",
+    "decomposition": "⿰忄亡",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A heart 忄 faced with death 亡; 亡 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "猫": {
+    "pinyin": [
+      "māo"
+    ],
+    "radical": "犭",
+    "decomposition": "⿰犭苗",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "animal",
+      "semantic": "犭",
+      "phonetic": "苗"
+    }
+  },
+  "冒": {
+    "pinyin": [
+      "mào"
+    ],
+    "radical": "冂",
+    "decomposition": "⿱日目",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": null,
+      "semantic": "目",
+      "phonetic": "冃"
+    }
+  },
+  "帽": {
+    "pinyin": [
+      "mào"
+    ],
+    "radical": "巾",
+    "decomposition": "⿰巾冒",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "towel",
+      "semantic": "巾",
+      "phonetic": "冒"
+    }
+  },
+  "么": {
+    "pinyin": [
+      "me"
+    ],
+    "radical": "丿",
+    "decomposition": "⿱丿厶",
+    "etymology": null
+  },
+  "没": {
+    "pinyin": [
+      "méi"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵殳",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "water",
+      "semantic": "氵",
+      "phonetic": "殳"
+    }
+  },
+  "每": {
+    "pinyin": [
+      "měi"
+    ],
+    "radical": "母",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": null,
+      "semantic": null,
+      "phonetic": "母"
+    }
+  },
+  "美": {
+    "pinyin": [
+      "měi"
+    ],
+    "radical": "羊",
+    "decomposition": "⿱羊大",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person 大 wearing an elegant crown 羊",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "妹": {
+    "pinyin": [
+      "mèi"
+    ],
+    "radical": "女",
+    "decomposition": "⿰女未",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "woman",
+      "semantic": "女",
+      "phonetic": "未"
+    }
+  },
+  "门": {
+    "pinyin": [
+      "mén"
+    ],
+    "radical": "门",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "An open doorway or gate",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "们": {
+    "pinyin": [
+      "men"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻门",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "people",
+      "semantic": "亻",
+      "phonetic": "门"
+    }
+  },
+  "米": {
+    "pinyin": [
+      "mǐ"
+    ],
+    "radical": "米",
+    "decomposition": "⿻丷木",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Grains of rice",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "秘": {
+    "pinyin": [
+      "mì"
+    ],
+    "radical": "禾",
+    "decomposition": "⿰禾必",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "grain",
+      "semantic": "禾",
+      "phonetic": "必"
+    }
+  },
+  "面": {
+    "pinyin": [
+      "miàn"
+    ],
+    "radical": "面",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A person's face",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "名": {
+    "pinyin": [
+      "míng"
+    ],
+    "radical": "口",
+    "decomposition": "⿸夕口",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A name called out 口 to hail someone at night 夕",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "明": {
+    "pinyin": [
+      "míng"
+    ],
+    "radical": "日",
+    "decomposition": "⿰日月",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "The light of the sun 日 and moon 月",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "末": {
+    "pinyin": [
+      "mò"
+    ],
+    "radical": "木",
+    "decomposition": "⿻木一",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "The top 一 of a tree 木",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "目": {
+    "pinyin": [
+      "mù"
+    ],
+    "radical": "目",
+    "decomposition": "⿴口二",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "An eye drawn on its side",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "拿": {
+    "pinyin": [
+      "ná"
+    ],
+    "radical": "手",
+    "decomposition": "⿱合手",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "hand",
+      "semantic": "手",
+      "phonetic": "合"
+    }
+  },
+  "哪": {
+    "pinyin": [
+      "nǎ"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口那",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "那"
+    }
+  },
+  "那": {
+    "pinyin": [
+      "nà"
+    ],
+    "radical": "阝",
+    "decomposition": null,
+    "etymology": null
+  },
+  "奶": {
+    "pinyin": [
+      "nǎi"
+    ],
+    "radical": "女",
+    "decomposition": "⿰女乃",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "woman",
+      "semantic": "女",
+      "phonetic": "乃"
+    }
+  },
+  "男": {
+    "pinyin": [
+      "nán"
+    ],
+    "radical": "田",
+    "decomposition": "⿱田力",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Someone who can work 力 the farm 田",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "南": {
+    "pinyin": [
+      "nán"
+    ],
+    "radical": "十",
+    "decomposition": "⿱十⿵冂⿱丷干",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A musical bell",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "难": {
+    "pinyin": [
+      "nán"
+    ],
+    "radical": "又",
+    "decomposition": "⿰又隹",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A hand 又 trying to grasp at a bird 隹",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "脑": {
+    "pinyin": [
+      "nǎo"
+    ],
+    "radical": "⺼",
+    "decomposition": "⿰⺼⿱亠凶",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "flesh",
+      "semantic": "⺼",
+      "phonetic": null
+    }
+  },
+  "呢": {
+    "pinyin": [
+      "né",
+      "ne"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口尼",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "尼"
+    }
+  },
+  "能": {
+    "pinyin": [
+      "néng"
+    ],
+    "radical": "⺼",
+    "decomposition": "⿰⿱厶⺼⿱匕匕",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A bear's head 厶, body ⺼, and claws 匕",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "你": {
+    "pinyin": [
+      "nǐ"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻尔",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Pronoun 尔 for a person 亻",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "年": {
+    "pinyin": [
+      "nián"
+    ],
+    "radical": "干",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A man 干 carrying grain, representing the annual harvest",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "鸟": {
+    "pinyin": [
+      "niǎo"
+    ],
+    "radical": "鸟",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Simplified form of 烏, a bird",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "您": {
+    "pinyin": [
+      "nín"
+    ],
+    "radical": "心",
+    "decomposition": "⿱你心",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "You 你 said with affection 心",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "牛": {
+    "pinyin": [
+      "niú"
+    ],
+    "radical": "牛",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "An ox's horned head",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "努": {
+    "pinyin": [
+      "nǔ"
+    ],
+    "radical": "力",
+    "decomposition": "⿱奴力",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "strength",
+      "semantic": "力",
+      "phonetic": "奴"
+    }
+  },
+  "女": {
+    "pinyin": [
+      "nǚ"
+    ],
+    "radical": "女",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A woman turned to the side",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "爬": {
+    "pinyin": [
+      "pá"
+    ],
+    "radical": "爪",
+    "decomposition": "⿺爪巴",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "claw",
+      "semantic": "爪",
+      "phonetic": "巴"
+    }
+  },
+  "怕": {
+    "pinyin": [
+      "pà"
+    ],
+    "radical": "忄",
+    "decomposition": "⿰忄白",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "heart",
+      "semantic": "忄",
+      "phonetic": "白"
+    }
+  },
+  "盘": {
+    "pinyin": [
+      "pán"
+    ],
+    "radical": "皿",
+    "decomposition": "⿱舟皿",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "dish",
+      "semantic": "皿",
+      "phonetic": "般"
+    }
+  },
+  "旁": {
+    "pinyin": [
+      "páng"
+    ],
+    "radical": "方",
+    "decomposition": "⿱立方",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "stand",
+      "semantic": "立",
+      "phonetic": "方"
+    }
+  },
+  "胖": {
+    "pinyin": [
+      "pàng"
+    ],
+    "radical": "⺼",
+    "decomposition": "⿰⺼半",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "flesh",
+      "semantic": "⺼",
+      "phonetic": "半"
+    }
+  },
+  "跑": {
+    "pinyin": [
+      "pǎo"
+    ],
+    "radical": "足",
+    "decomposition": "⿰足包",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "foot",
+      "semantic": "足",
+      "phonetic": "包"
+    }
+  },
+  "朋": {
+    "pinyin": [
+      "péng"
+    ],
+    "radical": "月",
+    "decomposition": "⿰月月",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Two people 月 walking together",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "皮": {
+    "pinyin": [
+      "pí"
+    ],
+    "radical": "皮",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A hand using a tool 攴 to strip the hide from a carcass",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "啤": {
+    "pinyin": [
+      "pí"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口卑",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "卑"
+    }
+  },
+  "片": {
+    "pinyin": [
+      "piàn"
+    ],
+    "radical": "片",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Half of a tree trunk; compare 爿",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "票": {
+    "pinyin": [
+      "piào"
+    ],
+    "radical": "示",
+    "decomposition": "⿱覀示",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Flames 覀 over an altar 示, referring to a Chinese tradition of burning fake money as an offering",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "漂": {
+    "pinyin": [
+      "piào"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵票",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "water",
+      "semantic": "氵",
+      "phonetic": "票"
+    }
+  },
+  "平": {
+    "pinyin": [
+      "píng"
+    ],
+    "radical": "广",
+    "decomposition": "⿻干丷",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A leveling scale",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "苹": {
+    "pinyin": [
+      "píng"
+    ],
+    "radical": "艹",
+    "decomposition": "⿱艹平",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "plant",
+      "semantic": "艹",
+      "phonetic": "平"
+    }
+  },
+  "瓶": {
+    "pinyin": [
+      "píng"
+    ],
+    "radical": "瓦",
+    "decomposition": "⿰并瓦",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "pottery",
+      "semantic": "瓦",
+      "phonetic": "并"
+    }
+  },
+  "七": {
+    "pinyin": [
+      "qī"
+    ],
+    "radical": "一",
+    "decomposition": "⿻一乚",
+    "etymology": null
+  },
+  "妻": {
+    "pinyin": [
+      "qī"
+    ],
+    "radical": "女",
+    "decomposition": "⿱⿻十彐女",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A woman 女 holding a broom 十 in her hand 彐",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "期": {
+    "pinyin": [
+      "qī"
+    ],
+    "radical": "月",
+    "decomposition": "⿰其月",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "moon",
+      "semantic": "月",
+      "phonetic": "其"
+    }
+  },
+  "其": {
+    "pinyin": [
+      "qí"
+    ],
+    "radical": "八",
+    "decomposition": "⿱甘⿱一八",
+    "etymology": null
+  },
+  "奇": {
+    "pinyin": [
+      "qí"
+    ],
+    "radical": "大",
+    "decomposition": "⿱大可",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person 大 riding a horse 可",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "骑": {
+    "pinyin": [
+      "qí"
+    ],
+    "radical": "马",
+    "decomposition": "⿰马奇",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "horse",
+      "semantic": "马",
+      "phonetic": "奇"
+    }
+  },
+  "起": {
+    "pinyin": [
+      "qǐ"
+    ],
+    "radical": "走",
+    "decomposition": "⿺走己",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "walk",
+      "semantic": "走",
+      "phonetic": "己"
+    }
+  },
+  "气": {
+    "pinyin": [
+      "qì"
+    ],
+    "radical": "气",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person 亻 breathing air",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "汽": {
+    "pinyin": [
+      "qì"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵气",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Liquid 氵 gas 气; 气 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "千": {
+    "pinyin": [
+      "qiān"
+    ],
+    "radical": "十",
+    "decomposition": "⿱丿十",
+    "etymology": null
+  },
+  "铅": {
+    "pinyin": [
+      "qiān"
+    ],
+    "radical": "钅",
+    "decomposition": "⿰钅⿱几口",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "metal",
+      "semantic": "钅",
+      "phonetic": "几"
+    }
+  },
+  "前": {
+    "pinyin": [
+      "qián"
+    ],
+    "radical": "刂",
+    "decomposition": "⿱⿱丷一刖",
+    "etymology": null
+  },
+  "钱": {
+    "pinyin": [
+      "qián"
+    ],
+    "radical": "钅",
+    "decomposition": "⿰钅戋",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "money",
+      "semantic": "钅",
+      "phonetic": "戋"
+    }
+  },
+  "且": {
+    "pinyin": [
+      "qiě"
+    ],
+    "radical": "一",
+    "decomposition": "⿱月一",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A stone altar",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "轻": {
+    "pinyin": [
+      "qīng"
+    ],
+    "radical": "车",
+    "decomposition": "⿰车⿱又工",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "cart",
+      "semantic": "车",
+      "phonetic": "工"
+    }
+  },
+  "清": {
+    "pinyin": [
+      "qīng"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵青",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "water",
+      "semantic": "氵",
+      "phonetic": "青"
+    }
+  },
+  "情": {
+    "pinyin": [
+      "qíng"
+    ],
+    "radical": "忄",
+    "decomposition": "⿰忄青",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "heart",
+      "semantic": "忄",
+      "phonetic": "青"
+    }
+  },
+  "晴": {
+    "pinyin": [
+      "qíng"
+    ],
+    "radical": "日",
+    "decomposition": "⿰日青",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "sun",
+      "semantic": "日",
+      "phonetic": "青"
+    }
+  },
+  "请": {
+    "pinyin": [
+      "qǐng"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠青",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "speech",
+      "semantic": "讠",
+      "phonetic": "青"
+    }
+  },
+  "秋": {
+    "pinyin": [
+      "qiū"
+    ],
+    "radical": "禾",
+    "decomposition": "⿰禾火",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "The time of year when farmers would burn 禾 crops 火",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "求": {
+    "pinyin": [
+      "qiú"
+    ],
+    "radical": "氺",
+    "decomposition": "⿻一氺",
+    "etymology": null
+  },
+  "球": {
+    "pinyin": [
+      "qiú"
+    ],
+    "radical": "王",
+    "decomposition": "⿰王求",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "jade",
+      "semantic": "王",
+      "phonetic": "求"
+    }
+  },
+  "去": {
+    "pinyin": [
+      "qù"
+    ],
+    "radical": "厶",
+    "decomposition": "⿱土厶",
+    "etymology": null
+  },
+  "趣": {
+    "pinyin": [
+      "qù"
+    ],
+    "radical": "走",
+    "decomposition": "⿺走取",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "walk",
+      "semantic": "走",
+      "phonetic": "取"
+    }
+  },
+  "裙": {
+    "pinyin": [
+      "qún"
+    ],
+    "radical": "衤",
+    "decomposition": "⿰衤君",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "clothes",
+      "semantic": "衤",
+      "phonetic": "君"
+    }
+  },
+  "然": {
+    "pinyin": [
+      "rán"
+    ],
+    "radical": "灬",
+    "decomposition": "⿱肰灬",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "fire",
+      "semantic": "灬",
+      "phonetic": "肰"
+    }
+  },
+  "让": {
+    "pinyin": [
+      "ràng"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠上",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "speech",
+      "semantic": "讠",
+      "phonetic": "上"
+    }
+  },
+  "热": {
+    "pinyin": [
+      "rè"
+    ],
+    "radical": "灬",
+    "decomposition": "⿱执灬",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "fire",
+      "semantic": "灬",
+      "phonetic": "执"
+    }
+  },
+  "人": {
+    "pinyin": [
+      "rén"
+    ],
+    "radical": "人",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "The legs of a human being",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "认": {
+    "pinyin": [
+      "rèn"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠人",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "speech",
+      "semantic": "讠",
+      "phonetic": "人"
+    }
+  },
+  "日": {
+    "pinyin": [
+      "rì"
+    ],
+    "radical": "日",
+    "decomposition": "⿴口一",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "The sun",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "容": {
+    "pinyin": [
+      "róng"
+    ],
+    "radical": "宀",
+    "decomposition": "⿱宀谷",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "roof",
+      "semantic": "宀",
+      "phonetic": null
+    }
+  },
+  "肉": {
+    "pinyin": [
+      "ròu"
+    ],
+    "radical": "肉",
+    "decomposition": "⿻冂仌",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Meat on the ribs of an animal",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "如": {
+    "pinyin": [
+      "rú"
+    ],
+    "radical": "女",
+    "decomposition": "⿰女口",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A wife 女 following her husband's words 口",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "赛": {
+    "pinyin": [
+      "sài"
+    ],
+    "radical": "贝",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "money",
+      "semantic": "贝",
+      "phonetic": "宀"
+    }
+  },
+  "三": {
+    "pinyin": [
+      "sān"
+    ],
+    "radical": "一",
+    "decomposition": "⿱一二",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Three  parallel lines; compare 一 (one) and 二 (two)",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "伞": {
+    "pinyin": [
+      "sǎn"
+    ],
+    "radical": "人",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "An umbrella",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "扫": {
+    "pinyin": [
+      "sǎo"
+    ],
+    "radical": "扌",
+    "decomposition": "⿰扌彐",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Simplified form of 掃; to use 扌 a broom 帚; 帚 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "色": {
+    "pinyin": [
+      "sè"
+    ],
+    "radical": "色",
+    "decomposition": "⿱⺈巴",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "What a person ⺈ desires 巴",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "山": {
+    "pinyin": [
+      "shān"
+    ],
+    "radical": "山",
+    "decomposition": "⿶凵丨",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Three mountain peaks",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "衫": {
+    "pinyin": [
+      "shān"
+    ],
+    "radical": "衤",
+    "decomposition": "⿰衤彡",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "clothes",
+      "semantic": "衤",
+      "phonetic": "彡"
+    }
+  },
+  "商": {
+    "pinyin": [
+      "shāng"
+    ],
+    "radical": "口",
+    "decomposition": "⿱⿱亠丷冏",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "bright",
+      "semantic": "冏",
+      "phonetic": "章"
+    }
+  },
+  "上": {
+    "pinyin": [
+      "shàng"
+    ],
+    "radical": "一",
+    "decomposition": "⿱⺊一",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "One stroke on top of another; compare 下 (below)",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "烧": {
+    "pinyin": [
+      "shāo"
+    ],
+    "radical": "火",
+    "decomposition": "⿰火尧",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "fire",
+      "semantic": "火",
+      "phonetic": "尧"
+    }
+  },
+  "少": {
+    "pinyin": [
+      "shǎo"
+    ],
+    "radical": "小",
+    "decomposition": "⿱小丿",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Grains of sand; 小 provides the pronunciation and meaning",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "绍": {
+    "pinyin": [
+      "shào"
+    ],
+    "radical": "纟",
+    "decomposition": "⿰纟召",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "thread",
+      "semantic": "纟",
+      "phonetic": "召"
+    }
+  },
+  "谁": {
+    "pinyin": [
+      "shuí"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠隹",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "speech",
+      "semantic": "讠",
+      "phonetic": "隹"
+    }
+  },
+  "身": {
+    "pinyin": [
+      "shēn"
+    ],
+    "radical": "身",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A pregnant woman",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "什": {
+    "pinyin": [
+      "shén"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻十",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A file of ten 十 people 亻",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "生": {
+    "pinyin": [
+      "shēng"
+    ],
+    "radical": "生",
+    "decomposition": "⿻一土",
+    "etymology": {
+      "type": "ideographic",
+      "hint": " A shoot 屮 growing in the soil 土",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "声": {
+    "pinyin": [
+      "shēng"
+    ],
+    "radical": "士",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Simplified form of 聲; see that character for the etymology",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "师": {
+    "pinyin": [
+      "shī"
+    ],
+    "radical": "巾",
+    "decomposition": "⿰刂帀",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To skillfully wield 帀 a knife 刂",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "十": {
+    "pinyin": [
+      "shí"
+    ],
+    "radical": "十",
+    "decomposition": "⿻一丨",
+    "etymology": null
+  },
+  "时": {
+    "pinyin": [
+      "shí"
+    ],
+    "radical": "日",
+    "decomposition": "⿰日寸",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "day",
+      "semantic": "日",
+      "phonetic": null
+    }
+  },
+  "识": {
+    "pinyin": [
+      "shí"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠只",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "speech",
+      "semantic": "讠",
+      "phonetic": "只"
+    }
+  },
+  "实": {
+    "pinyin": [
+      "shí"
+    ],
+    "radical": "宀",
+    "decomposition": "⿱宀头",
+    "etymology": null
+  },
+  "史": {
+    "pinyin": [
+      "shǐ"
+    ],
+    "radical": "口",
+    "decomposition": "⿻口乂",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A hand 乂 using a pen to record a history",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "始": {
+    "pinyin": [
+      "shǐ"
+    ],
+    "radical": "女",
+    "decomposition": "⿰女台",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "woman",
+      "semantic": "女",
+      "phonetic": "台"
+    }
+  },
+  "世": {
+    "pinyin": [
+      "shì"
+    ],
+    "radical": "一",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Three leaves on a branch",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "市": {
+    "pinyin": [
+      "shì"
+    ],
+    "radical": "巾",
+    "decomposition": "⿱亠巾",
+    "etymology": null
+  },
+  "事": {
+    "pinyin": [
+      "shì"
+    ],
+    "radical": "亅",
+    "decomposition": "⿻⿳一口彐亅",
+    "etymology": null
+  },
+  "视": {
+    "pinyin": [
+      "shì"
+    ],
+    "radical": "见",
+    "decomposition": "⿰礻见",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "see",
+      "semantic": "见",
+      "phonetic": "礻"
+    }
+  },
+  "试": {
+    "pinyin": [
+      "shì"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠式",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "speech",
+      "semantic": "讠",
+      "phonetic": "式"
+    }
+  },
+  "室": {
+    "pinyin": [
+      "shì"
+    ],
+    "radical": "宀",
+    "decomposition": "⿱宀至",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "roof",
+      "semantic": "宀",
+      "phonetic": "至"
+    }
+  },
+  "是": {
+    "pinyin": [
+      "shì"
+    ],
+    "radical": "日",
+    "decomposition": "⿱日疋",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To speak 日 directly 疋",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "手": {
+    "pinyin": [
+      "shǒu"
+    ],
+    "radical": "手",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A hand with the fingers splayed",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "瘦": {
+    "pinyin": [
+      "shòu"
+    ],
+    "radical": "疒",
+    "decomposition": "⿸疒叟",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "sickness",
+      "semantic": "疒",
+      "phonetic": "叟"
+    }
+  },
+  "书": {
+    "pinyin": [
+      "shū"
+    ],
+    "radical": "丨",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A mark made by a pen ⺺",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "叔": {
+    "pinyin": [
+      "shū"
+    ],
+    "radical": "又",
+    "decomposition": "⿰⿱上小又",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "The smaller 小 brother",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "舒": {
+    "pinyin": [
+      "shū"
+    ],
+    "radical": "舌",
+    "decomposition": "⿰舍予",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "home",
+      "semantic": "舍",
+      "phonetic": "予"
+    }
+  },
+  "束": {
+    "pinyin": [
+      "shù"
+    ],
+    "radical": "木",
+    "decomposition": "⿻木口",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Lumber 木 bound by rope 口",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "树": {
+    "pinyin": [
+      "shù"
+    ],
+    "radical": "木",
+    "decomposition": "⿰木对",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "tree",
+      "semantic": "木",
+      "phonetic": "对"
+    }
+  },
+  "数": {
+    "pinyin": [
+      "shù"
+    ],
+    "radical": "攵",
+    "decomposition": "⿰娄攵",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "script",
+      "semantic": "攵",
+      "phonetic": "娄"
+    }
+  },
+  "刷": {
+    "pinyin": [
+      "shuā"
+    ],
+    "radical": "刂",
+    "decomposition": "⿰⿸尸巾刂",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person bent over 尸 with a towel 巾",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "双": {
+    "pinyin": [
+      "shuāng"
+    ],
+    "radical": "又",
+    "decomposition": "⿰又又",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Two hands 又 side-by-side",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "水": {
+    "pinyin": [
+      "shuǐ"
+    ],
+    "radical": "水",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A river running between two banks; compare 川",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "睡": {
+    "pinyin": [
+      "shuì"
+    ],
+    "radical": "目",
+    "decomposition": "⿰目垂",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "eye",
+      "semantic": "目",
+      "phonetic": "垂"
+    }
+  },
+  "说": {
+    "pinyin": [
+      "shuō"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠兑",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "speech",
+      "semantic": "讠",
+      "phonetic": "兑"
+    }
+  },
+  "司": {
+    "pinyin": [
+      "sī"
+    ],
+    "radical": "口",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person speaking orders 口 and raising their arm",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "思": {
+    "pinyin": [
+      "sī"
+    ],
+    "radical": "心",
+    "decomposition": "⿱田心",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Weighing something with your mind 囟 (altered) and heart 心",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "四": {
+    "pinyin": [
+      "sì"
+    ],
+    "radical": "囗",
+    "decomposition": "⿴囗儿",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A child 儿 in a room with four walls 囗",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "送": {
+    "pinyin": [
+      "sòng"
+    ],
+    "radical": "辶",
+    "decomposition": "⿺辶关",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person waving 关 to someone walking away 辶",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "诉": {
+    "pinyin": [
+      "sù"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠斥",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Words 讠 of blame 斥; 斥 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "算": {
+    "pinyin": [
+      "suàn"
+    ],
+    "radical": "⺮",
+    "decomposition": "⿱⺮具",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A bamboo ⺮ abacus 具",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "虽": {
+    "pinyin": [
+      "suī"
+    ],
+    "radical": "虫",
+    "decomposition": "⿱口虫",
+    "etymology": null
+  },
+  "岁": {
+    "pinyin": [
+      "suì"
+    ],
+    "radical": "山",
+    "decomposition": "⿱山夕",
+    "etymology": null
+  },
+  "所": {
+    "pinyin": [
+      "suǒ"
+    ],
+    "radical": "户",
+    "decomposition": "⿰户斤",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "An axe 斤 swung at a door 户",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "他": {
+    "pinyin": [
+      "tā"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻也",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "An additional, \"also\" 也  person 亻",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "它": {
+    "pinyin": [
+      "tā"
+    ],
+    "radical": "宀",
+    "decomposition": "⿱宀匕",
+    "etymology": null
+  },
+  "她": {
+    "pinyin": [
+      "tā"
+    ],
+    "radical": "女",
+    "decomposition": "⿰女也",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A woman 女 beside you 也",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "太": {
+    "pinyin": [
+      "tài"
+    ],
+    "radical": "大",
+    "decomposition": "⿵大丶",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A giant 大 with a normal-sized man 丶 for scale",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "特": {
+    "pinyin": [
+      "tè"
+    ],
+    "radical": "牛",
+    "decomposition": "⿰牛寺",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "ox",
+      "semantic": "牛",
+      "phonetic": "寺"
+    }
+  },
+  "疼": {
+    "pinyin": [
+      "téng"
+    ],
+    "radical": "疒",
+    "decomposition": "⿸疒冬",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "sickness",
+      "semantic": "疒",
+      "phonetic": "冬"
+    }
+  },
+  "梯": {
+    "pinyin": [
+      "tī"
+    ],
+    "radical": "木",
+    "decomposition": "⿰木弟",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "wood",
+      "semantic": "木",
+      "phonetic": "弟"
+    }
+  },
+  "踢": {
+    "pinyin": [
+      "tī"
+    ],
+    "radical": "足",
+    "decomposition": "⿰足易",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "foot",
+      "semantic": "足",
+      "phonetic": "易"
+    }
+  },
+  "提": {
+    "pinyin": [
+      "tí"
+    ],
+    "radical": "扌",
+    "decomposition": "⿰扌是",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "hand",
+      "semantic": "扌",
+      "phonetic": "是"
+    }
+  },
+  "题": {
+    "pinyin": [
+      "tí"
+    ],
+    "radical": "页",
+    "decomposition": "⿺是页",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "head",
+      "semantic": "页",
+      "phonetic": "是"
+    }
+  },
+  "体": {
+    "pinyin": [
+      "tǐ"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻本",
+    "etymology": null
+  },
+  "天": {
+    "pinyin": [
+      "tiān"
+    ],
+    "radical": "大",
+    "decomposition": "⿱一大",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "The heavens 一 above a man 大",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "甜": {
+    "pinyin": [
+      "tián"
+    ],
+    "radical": "甘",
+    "decomposition": "⿰舌甘",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Something tasty 甘 to the tongue 舌",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "条": {
+    "pinyin": [
+      "tiáo"
+    ],
+    "radical": "木",
+    "decomposition": "⿱夂木",
+    "etymology": null
+  },
+  "跳": {
+    "pinyin": [
+      "tiào"
+    ],
+    "radical": "足",
+    "decomposition": "⿰足兆",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "foot",
+      "semantic": "足",
+      "phonetic": "兆"
+    }
+  },
+  "铁": {
+    "pinyin": [
+      "tiě"
+    ],
+    "radical": "钅",
+    "decomposition": "⿰钅失",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "metal",
+      "semantic": "钅",
+      "phonetic": "失"
+    }
+  },
+  "听": {
+    "pinyin": [
+      "tīng"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口斤",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Words 口 reaching an ear 斤",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "同": {
+    "pinyin": [
+      "tóng"
+    ],
+    "radical": "口",
+    "decomposition": "⿵凡口",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Sharing a common 凡 tongue 口",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "头": {
+    "pinyin": [
+      "tóu"
+    ],
+    "radical": "大",
+    "decomposition": "⿻⺀大",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "high",
+      "semantic": "大",
+      "phonetic": null
+    }
+  },
+  "突": {
+    "pinyin": [
+      "tū"
+    ],
+    "radical": "穴",
+    "decomposition": "⿱穴犬",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A dog 犬 rushing out of a cave 穴",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "图": {
+    "pinyin": [
+      "tú"
+    ],
+    "radical": "囗",
+    "decomposition": "⿴囗冬",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Simplified form of 圖; a map of a district's 啚 borders 囗",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "腿": {
+    "pinyin": [
+      "tuǐ"
+    ],
+    "radical": "⺼",
+    "decomposition": "⿰⺼退",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Flesh ⺼ used to walk 退; 退 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "外": {
+    "pinyin": [
+      "wài"
+    ],
+    "radical": "夕",
+    "decomposition": "⿰夕卜",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Night-time 夕 divinations 卜; the supernatural, the foreign",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "完": {
+    "pinyin": [
+      "wán"
+    ],
+    "radical": "宀",
+    "decomposition": "⿱宀元",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "roof",
+      "semantic": "宀",
+      "phonetic": "元"
+    }
+  },
+  "玩": {
+    "pinyin": [
+      "wán"
+    ],
+    "radical": "王",
+    "decomposition": "⿰王元",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "jade",
+      "semantic": "王",
+      "phonetic": "元"
+    }
+  },
+  "晚": {
+    "pinyin": [
+      "wǎn"
+    ],
+    "radical": "日",
+    "decomposition": "⿰日免",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Avoiding 免 the sun 日; 免 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "碗": {
+    "pinyin": [
+      "wǎn"
+    ],
+    "radical": "石",
+    "decomposition": "⿰石宛",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "stone",
+      "semantic": "石",
+      "phonetic": "宛"
+    }
+  },
+  "万": {
+    "pinyin": [
+      "wàn"
+    ],
+    "radical": "一",
+    "decomposition": null,
+    "etymology": null
+  },
+  "网": {
+    "pinyin": [
+      "wǎng"
+    ],
+    "radical": "网",
+    "decomposition": "⿵冂⿰乂乂",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A net for catching fish",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "往": {
+    "pinyin": [
+      "wǎng"
+    ],
+    "radical": "彳",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "step",
+      "semantic": "彳",
+      "phonetic": "王"
+    }
+  },
+  "忘": {
+    "pinyin": [
+      "wàng"
+    ],
+    "radical": "心",
+    "decomposition": "⿱亡心",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "heart",
+      "semantic": "心",
+      "phonetic": "亡"
+    }
+  },
+  "望": {
+    "pinyin": [
+      "wàng"
+    ],
+    "radical": "月",
+    "decomposition": "⿱⿰亡月王",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A king 王 gazing at the moon 月; 亡 provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "伟": {
+    "pinyin": [
+      "wěi"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻韦",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "person",
+      "semantic": "亻",
+      "phonetic": "韦"
+    }
+  },
+  "为": {
+    "pinyin": [
+      "wèi"
+    ],
+    "radical": "丶",
+    "decomposition": "⿻丶⿴力丶",
+    "etymology": null
+  },
+  "位": {
+    "pinyin": [
+      "wèi"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻立",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "The place where a person 亻 stands 立",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "喂": {
+    "pinyin": [
+      "wèi"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口畏",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "畏"
+    }
+  },
+  "文": {
+    "pinyin": [
+      "wén"
+    ],
+    "radical": "文",
+    "decomposition": "⿱亠乂",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A tattooed chest, representing writing",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "闻": {
+    "pinyin": [
+      "wén"
+    ],
+    "radical": "门",
+    "decomposition": "⿵门耳",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "ear",
+      "semantic": "耳",
+      "phonetic": "门"
+    }
+  },
+  "问": {
+    "pinyin": [
+      "wèn"
+    ],
+    "radical": "门",
+    "decomposition": "⿵门口",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "门"
+    }
+  },
+  "我": {
+    "pinyin": [
+      "wǒ"
+    ],
+    "radical": "戈",
+    "decomposition": "⿰扌戈",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A hand 扌 holding a weapon 戈",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "五": {
+    "pinyin": [
+      "wǔ"
+    ],
+    "radical": "二",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Five elements (the cross with the extra stroke) between heaven 一 and earth 一 ",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "午": {
+    "pinyin": [
+      "wǔ"
+    ],
+    "radical": "十",
+    "decomposition": "⿻丿干",
+    "etymology": null
+  },
+  "舞": {
+    "pinyin": [
+      "wǔ"
+    ],
+    "radical": "舛",
+    "decomposition": "⿱無舛",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A hand 舛 holding a fan",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "务": {
+    "pinyin": [
+      "wù"
+    ],
+    "radical": "夂",
+    "decomposition": "⿱夂力",
+    "etymology": null
+  },
+  "物": {
+    "pinyin": [
+      "wù"
+    ],
+    "radical": "牛",
+    "decomposition": "⿰牛勿",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "ox",
+      "semantic": "牛",
+      "phonetic": "勿"
+    }
+  },
+  "西": {
+    "pinyin": [
+      "xī"
+    ],
+    "radical": "西",
+    "decomposition": "⿻兀囗",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A bird settling into its nest, representing sunset; compare 東",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "希": {
+    "pinyin": [
+      "xī"
+    ],
+    "radical": "巾",
+    "decomposition": "⿱乂布",
+    "etymology": null
+  },
+  "息": {
+    "pinyin": [
+      "xī"
+    ],
+    "radical": "心",
+    "decomposition": "⿱自心",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To breathe (life, 心) through one's nose 自; 心 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "习": {
+    "pinyin": [
+      "xí"
+    ],
+    "radical": "冫",
+    "decomposition": null,
+    "etymology": null
+  },
+  "洗": {
+    "pinyin": [
+      "xǐ"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵先",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "water",
+      "semantic": "氵",
+      "phonetic": "先"
+    }
+  },
+  "喜": {
+    "pinyin": [
+      "xǐ"
+    ],
+    "radical": "口",
+    "decomposition": "⿱壴口",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Singing 口 and beating drums 壴",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "戏": {
+    "pinyin": [
+      "xì"
+    ],
+    "radical": "戈",
+    "decomposition": "⿰又戈",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A hand 又 doing tricks with a spear 戈",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "系": {
+    "pinyin": [
+      "xì"
+    ],
+    "radical": "糸",
+    "decomposition": "⿱丿糸",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "thread",
+      "semantic": "糸",
+      "phonetic": null
+    }
+  },
+  "下": {
+    "pinyin": [
+      "xià"
+    ],
+    "radical": "一",
+    "decomposition": "⿱一卜",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "One stroke under another; compare 上 (above)",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "夏": {
+    "pinyin": [
+      "xià"
+    ],
+    "radical": "夊",
+    "decomposition": "⿳一自夂",
+    "etymology": null
+  },
+  "先": {
+    "pinyin": [
+      "xiān"
+    ],
+    "radical": "儿",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Someone stepping 止 in front of another person 儿",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "鲜": {
+    "pinyin": [
+      "xiān"
+    ],
+    "radical": "鱼",
+    "decomposition": "⿰鱼羊",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "fish",
+      "semantic": "鱼",
+      "phonetic": "羊"
+    }
+  },
+  "现": {
+    "pinyin": [
+      "xiàn"
+    ],
+    "radical": "王",
+    "decomposition": "⿰王见",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To see 见 jade 王; 见 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "相": {
+    "pinyin": [
+      "xiāng"
+    ],
+    "radical": "目",
+    "decomposition": "⿰木目",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To stare 目 at a tree 木, meaning to observe",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "香": {
+    "pinyin": [
+      "xiāng"
+    ],
+    "radical": "香",
+    "decomposition": "⿱禾日",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A herb 禾 with a sweet 甘 smell",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "箱": {
+    "pinyin": [
+      "xiāng"
+    ],
+    "radical": "⺮",
+    "decomposition": "⿱⺮相",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "bamboo",
+      "semantic": "⺮",
+      "phonetic": "相"
+    }
+  },
+  "响": {
+    "pinyin": [
+      "xiǎng"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口向",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "向"
+    }
+  },
+  "想": {
+    "pinyin": [
+      "xiǎng"
+    ],
+    "radical": "心",
+    "decomposition": "⿱相心",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mind",
+      "semantic": "心",
+      "phonetic": "相"
+    }
+  },
+  "向": {
+    "pinyin": [
+      "xiàng"
+    ],
+    "radical": "口",
+    "decomposition": null,
+    "etymology": null
+  },
+  "像": {
+    "pinyin": [
+      "xiàng"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻象",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "person",
+      "semantic": "亻",
+      "phonetic": "象"
+    }
+  },
+  "小": {
+    "pinyin": [
+      "xiǎo"
+    ],
+    "radical": "小",
+    "decomposition": "⿻亅八",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Dividing 八 by a line 亅",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "校": {
+    "pinyin": [
+      "xiào"
+    ],
+    "radical": "木",
+    "decomposition": "⿰木交",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "wood",
+      "semantic": "木",
+      "phonetic": "交"
+    }
+  },
+  "笑": {
+    "pinyin": [
+      "xiào"
+    ],
+    "radical": "⺮",
+    "decomposition": "⿱⺮夭",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person 夭 with a big grin ⺮",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "些": {
+    "pinyin": [
+      "xiē"
+    ],
+    "radical": "二",
+    "decomposition": "⿱此二",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "two",
+      "semantic": "二",
+      "phonetic": "此"
+    }
+  },
+  "鞋": {
+    "pinyin": [
+      "xié"
+    ],
+    "radical": "革",
+    "decomposition": "⿰革圭",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "leather",
+      "semantic": "革",
+      "phonetic": "圭"
+    }
+  },
+  "写": {
+    "pinyin": [
+      "xiě"
+    ],
+    "radical": "冖",
+    "decomposition": "⿱冖与",
+    "etymology": null
+  },
+  "谢": {
+    "pinyin": [
+      "xiè"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠射",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "speech",
+      "semantic": "讠",
+      "phonetic": "射"
+    }
+  },
+  "心": {
+    "pinyin": [
+      "xīn"
+    ],
+    "radical": "心",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A heart",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "新": {
+    "pinyin": [
+      "xīn"
+    ],
+    "radical": "斤",
+    "decomposition": "⿰亲斤",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A freshly chopped 斤 tree 亲",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "信": {
+    "pinyin": [
+      "xìn"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻言",
+    "etymology": null
+  },
+  "星": {
+    "pinyin": [
+      "xīng"
+    ],
+    "radical": "日",
+    "decomposition": "⿱日生",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "sun",
+      "semantic": "日",
+      "phonetic": "生"
+    }
+  },
+  "行": {
+    "pinyin": [
+      "xíng"
+    ],
+    "radical": "行",
+    "decomposition": "⿰彳亍",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To take small steps 亍 with one's feet 彳",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "兴": {
+    "pinyin": [
+      "xìng"
+    ],
+    "radical": "八",
+    "decomposition": "⿳⺍一八",
+    "etymology": null
+  },
+  "姓": {
+    "pinyin": [
+      "xìng"
+    ],
+    "radical": "女",
+    "decomposition": "⿰女生",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "woman",
+      "semantic": "女",
+      "phonetic": "生"
+    }
+  },
+  "熊": {
+    "pinyin": [
+      "xióng"
+    ],
+    "radical": "灬",
+    "decomposition": "⿱能灬",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A bear's 能 footprints 灬",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "休": {
+    "pinyin": [
+      "xiū"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻木",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person 亻 leaning against a tree 木",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "须": {
+    "pinyin": [
+      "xū"
+    ],
+    "radical": "彡",
+    "decomposition": "⿰彡页",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Hair 彡 growing on the face 页",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "需": {
+    "pinyin": [
+      "xū"
+    ],
+    "radical": "雨",
+    "decomposition": "⿱雨而",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Rain 雨 needed for crops to grow",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "选": {
+    "pinyin": [
+      "xuǎn"
+    ],
+    "radical": "辶",
+    "decomposition": "⿺辶先",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "walk",
+      "semantic": "辶",
+      "phonetic": "先"
+    }
+  },
+  "学": {
+    "pinyin": [
+      "xué"
+    ],
+    "radical": "子",
+    "decomposition": "⿱⿱⺍冖子",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A building 冖 where children 子 study; ⺍ provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "雪": {
+    "pinyin": [
+      "xuě"
+    ],
+    "radical": "雨",
+    "decomposition": "⿱雨彐",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "rain",
+      "semantic": "雨",
+      "phonetic": "彐"
+    }
+  },
+  "牙": {
+    "pinyin": [
+      "yá"
+    ],
+    "radical": "牙",
+    "decomposition": null,
+    "etymology": null
+  },
+  "呀": {
+    "pinyin": [
+      "ya"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口牙",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "牙"
+    }
+  },
+  "颜": {
+    "pinyin": [
+      "yán"
+    ],
+    "radical": "页",
+    "decomposition": "⿰彦页",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "head",
+      "semantic": "页",
+      "phonetic": "彦"
+    }
+  },
+  "眼": {
+    "pinyin": [
+      "yǎn"
+    ],
+    "radical": "目",
+    "decomposition": "⿰目艮",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "eye",
+      "semantic": "目",
+      "phonetic": "艮"
+    }
+  },
+  "羊": {
+    "pinyin": [
+      "yáng"
+    ],
+    "radical": "羊",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A sheep's head with horns",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "阳": {
+    "pinyin": [
+      "yáng"
+    ],
+    "radical": "阝",
+    "decomposition": "⿰阝日",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "The place 阝 of the sun 日; compare 阴",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "样": {
+    "pinyin": [
+      "yàng"
+    ],
+    "radical": "木",
+    "decomposition": "⿰木羊",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "tree",
+      "semantic": "木",
+      "phonetic": "羊"
+    }
+  },
+  "药": {
+    "pinyin": [
+      "yào"
+    ],
+    "radical": "艹",
+    "decomposition": "⿱艹约",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "plant",
+      "semantic": "艹",
+      "phonetic": "约"
+    }
+  },
+  "要": {
+    "pinyin": [
+      "yào"
+    ],
+    "radical": "覀",
+    "decomposition": "⿱覀女",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A woman 女 with hands on her waist 覀",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "爷": {
+    "pinyin": [
+      "yé"
+    ],
+    "radical": "父",
+    "decomposition": "⿱父卩",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "father",
+      "semantic": "父",
+      "phonetic": "耶"
+    }
+  },
+  "也": {
+    "pinyin": [
+      "yě"
+    ],
+    "radical": "乚",
+    "decomposition": null,
+    "etymology": null
+  },
+  "业": {
+    "pinyin": [
+      "yè"
+    ],
+    "radical": "一",
+    "decomposition": null,
+    "etymology": null
+  },
+  "一": {
+    "pinyin": [
+      "yī"
+    ],
+    "radical": "一",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Represents heaven (天), earth (旦), or the number 1",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "衣": {
+    "pinyin": [
+      "yī"
+    ],
+    "radical": "衣",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A woman's dress",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "医": {
+    "pinyin": [
+      "yī"
+    ],
+    "radical": "匸",
+    "decomposition": "⿷匸矢",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "arrow",
+      "semantic": "矢",
+      "phonetic": "匸"
+    }
+  },
+  "宜": {
+    "pinyin": [
+      "yí"
+    ],
+    "radical": "宀",
+    "decomposition": "⿱宀且",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A memorial service 且 held in a house 宀",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "姨": {
+    "pinyin": [
+      "yí"
+    ],
+    "radical": "女",
+    "decomposition": "⿰女夷",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "woman",
+      "semantic": "女",
+      "phonetic": "夷"
+    }
+  },
+  "已": {
+    "pinyin": [
+      "yǐ"
+    ],
+    "radical": "己",
+    "decomposition": null,
+    "etymology": null
+  },
+  "以": {
+    "pinyin": [
+      "yǐ"
+    ],
+    "radical": "人",
+    "decomposition": null,
+    "etymology": null
+  },
+  "椅": {
+    "pinyin": [
+      "yǐ"
+    ],
+    "radical": "木",
+    "decomposition": "⿰木奇",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "wood",
+      "semantic": "木",
+      "phonetic": "奇"
+    }
+  },
+  "议": {
+    "pinyin": [
+      "yì"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠义",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "speech",
+      "semantic": "讠",
+      "phonetic": "义"
+    }
+  },
+  "易": {
+    "pinyin": [
+      "yì"
+    ],
+    "radical": "日",
+    "decomposition": "⿱日勿",
+    "etymology": null
+  },
+  "意": {
+    "pinyin": [
+      "yì"
+    ],
+    "radical": "心",
+    "decomposition": "⿱音心",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "heart",
+      "semantic": "心",
+      "phonetic": "音"
+    }
+  },
+  "因": {
+    "pinyin": [
+      "yīn"
+    ],
+    "radical": "囗",
+    "decomposition": "⿴囗大",
+    "etymology": null
+  },
+  "阴": {
+    "pinyin": [
+      "yīn"
+    ],
+    "radical": "阝",
+    "decomposition": "⿰阝月",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "The place 阝 of the moon 月; compare 阳",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "音": {
+    "pinyin": [
+      "yīn"
+    ],
+    "radical": "音",
+    "decomposition": "⿱立日",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A tongue 立 forming a sound in the mouth 日",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "银": {
+    "pinyin": [
+      "yín"
+    ],
+    "radical": "钅",
+    "decomposition": "⿰钅艮",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "money",
+      "semantic": "钅",
+      "phonetic": "艮"
+    }
+  },
+  "饮": {
+    "pinyin": [
+      "yǐn"
+    ],
+    "radical": "饣",
+    "decomposition": "⿰饣欠",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "food",
+      "semantic": "饣",
+      "phonetic": "欠"
+    }
+  },
+  "应": {
+    "pinyin": [
+      "yīng"
+    ],
+    "radical": "广",
+    "decomposition": "⿸广⿱⺍一",
+    "etymology": null
+  },
+  "迎": {
+    "pinyin": [
+      "yíng"
+    ],
+    "radical": "辶",
+    "decomposition": "⿺辶卬",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "walk",
+      "semantic": "辶",
+      "phonetic": "卬"
+    }
+  },
+  "影": {
+    "pinyin": [
+      "yǐng"
+    ],
+    "radical": "彡",
+    "decomposition": "⿰景彡",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "sunlight",
+      "semantic": "彡",
+      "phonetic": "景"
+    }
+  },
+  "泳": {
+    "pinyin": [
+      "yǒng"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵永",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "water",
+      "semantic": "氵",
+      "phonetic": "永"
+    }
+  },
+  "用": {
+    "pinyin": [
+      "yòng"
+    ],
+    "radical": "用",
+    "decomposition": null,
+    "etymology": null
+  },
+  "邮": {
+    "pinyin": [
+      "yóu"
+    ],
+    "radical": "阝",
+    "decomposition": "⿰由阝",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "place",
+      "semantic": "阝",
+      "phonetic": "由"
+    }
+  },
+  "游": {
+    "pinyin": [
+      "yóu"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵斿",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To swim freely 斿 through the seas 氵",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "友": {
+    "pinyin": [
+      "yǒu"
+    ],
+    "radical": "又",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Two hands 又 joined, representing friendship; 又 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "有": {
+    "pinyin": [
+      "yǒu"
+    ],
+    "radical": "月",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": null,
+      "semantic": null,
+      "phonetic": "月"
+    }
+  },
+  "又": {
+    "pinyin": [
+      "yòu"
+    ],
+    "radical": "又",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A right hand, representing a pair; compare 左",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "右": {
+    "pinyin": [
+      "yòu"
+    ],
+    "radical": "口",
+    "decomposition": null,
+    "etymology": null
+  },
+  "于": {
+    "pinyin": [
+      "yú"
+    ],
+    "radical": "二",
+    "decomposition": "⿻二亅",
+    "etymology": null
+  },
+  "鱼": {
+    "pinyin": [
+      "yú"
+    ],
+    "radical": "鱼",
+    "decomposition": "⿱⿱⺈田一",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A fish swimming upwards",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "雨": {
+    "pinyin": [
+      "yǔ"
+    ],
+    "radical": "雨",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Rain drops falling from a cloud 帀",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "语": {
+    "pinyin": [
+      "yǔ"
+    ],
+    "radical": "讠",
+    "decomposition": "⿰讠吾",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "words",
+      "semantic": "讠",
+      "phonetic": "吾"
+    }
+  },
+  "育": {
+    "pinyin": [
+      "yù"
+    ],
+    "radical": "⺼",
+    "decomposition": "⿱⿱亠厶⺼",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A pregnant woman with a baby ⺼ in her womb",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "遇": {
+    "pinyin": [
+      "yù"
+    ],
+    "radical": "辶",
+    "decomposition": "⿺辶禺",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "walk",
+      "semantic": "辶",
+      "phonetic": "禺"
+    }
+  },
+  "元": {
+    "pinyin": [
+      "yuán"
+    ],
+    "radical": "儿",
+    "decomposition": "⿱二儿",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A man 儿 with two lines emphasizing their head 二",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "员": {
+    "pinyin": [
+      "yuán"
+    ],
+    "radical": "口",
+    "decomposition": "⿱口贝",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "money",
+      "semantic": "贝",
+      "phonetic": null
+    }
+  },
+  "园": {
+    "pinyin": [
+      "yuán"
+    ],
+    "radical": "囗",
+    "decomposition": "⿴囗元",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "enclosure",
+      "semantic": "囗",
+      "phonetic": "元"
+    }
+  },
+  "远": {
+    "pinyin": [
+      "yuǎn"
+    ],
+    "radical": "辶",
+    "decomposition": "⿺辶元",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "walk",
+      "semantic": "辶",
+      "phonetic": "元"
+    }
+  },
+  "院": {
+    "pinyin": [
+      "yuàn"
+    ],
+    "radical": "阝",
+    "decomposition": "⿰阝完",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "place",
+      "semantic": "阝",
+      "phonetic": "完"
+    }
+  },
+  "愿": {
+    "pinyin": [
+      "yuàn"
+    ],
+    "radical": "心",
+    "decomposition": "⿸原心",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "heart",
+      "semantic": "心",
+      "phonetic": "原"
+    }
+  },
+  "月": {
+    "pinyin": [
+      "yuè"
+    ],
+    "radical": "月",
+    "decomposition": "⿵冂二",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A crescent moon",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "越": {
+    "pinyin": [
+      "yuè"
+    ],
+    "radical": "走",
+    "decomposition": "⿺走戉",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "run",
+      "semantic": "走",
+      "phonetic": "戉"
+    }
+  },
+  "运": {
+    "pinyin": [
+      "yùn"
+    ],
+    "radical": "辶",
+    "decomposition": "⿺辶云",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "walk",
+      "semantic": "辶",
+      "phonetic": "云"
+    }
+  },
+  "再": {
+    "pinyin": [
+      "zài"
+    ],
+    "radical": "冂",
+    "decomposition": "⿱一冉",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "Two fish 冉 caught on a line 一",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "在": {
+    "pinyin": [
+      "zài"
+    ],
+    "radical": "土",
+    "decomposition": "⿸才土",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "earth",
+      "semantic": "土",
+      "phonetic": "才"
+    }
+  },
+  "早": {
+    "pinyin": [
+      "zǎo"
+    ],
+    "radical": "日",
+    "decomposition": "⿱日十",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "The first rays 十 of the sun 日",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "澡": {
+    "pinyin": [
+      "zǎo"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵喿",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "water",
+      "semantic": "氵",
+      "phonetic": "喿"
+    }
+  },
+  "择": {
+    "pinyin": [
+      "zé"
+    ],
+    "radical": "扌",
+    "decomposition": null,
+    "etymology": null
+  },
+  "怎": {
+    "pinyin": [
+      "zěn"
+    ],
+    "radical": "心",
+    "decomposition": "⿱乍心",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "heart",
+      "semantic": "心",
+      "phonetic": "乍"
+    }
+  },
+  "站": {
+    "pinyin": [
+      "zhàn"
+    ],
+    "radical": "立",
+    "decomposition": "⿰立占",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "stand",
+      "semantic": "立",
+      "phonetic": "占"
+    }
+  },
+  "张": {
+    "pinyin": [
+      "zhāng"
+    ],
+    "radical": "弓",
+    "decomposition": "⿰弓长",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "bow",
+      "semantic": "弓",
+      "phonetic": "长"
+    }
+  },
+  "长": {
+    "pinyin": [
+      "zhǎng"
+    ],
+    "radical": "长",
+    "decomposition": null,
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Simplified form of 長; an old man with long hair and a cane",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "丈": {
+    "pinyin": [
+      "zhàng"
+    ],
+    "radical": "一",
+    "decomposition": "⿻一又",
+    "etymology": null
+  },
+  "找": {
+    "pinyin": [
+      "zhǎo"
+    ],
+    "radical": "扌",
+    "decomposition": "⿰扌戈",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To go searching with a spear 戈 in hand 扌",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "照": {
+    "pinyin": [
+      "zhào"
+    ],
+    "radical": "灬",
+    "decomposition": "⿱昭灬",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "fire",
+      "semantic": "灬",
+      "phonetic": "昭"
+    }
+  },
+  "者": {
+    "pinyin": [
+      "zhě"
+    ],
+    "radical": "耂",
+    "decomposition": "⿸耂日",
+    "etymology": null
+  },
+  "这": {
+    "pinyin": [
+      "zhè"
+    ],
+    "radical": "辶",
+    "decomposition": "⿺辶文",
+    "etymology": null
+  },
+  "着": {
+    "pinyin": [
+      "zhe"
+    ],
+    "radical": "目",
+    "decomposition": "⿸羊目",
+    "etymology": null
+  },
+  "真": {
+    "pinyin": [
+      "zhēn"
+    ],
+    "radical": "目",
+    "decomposition": "⿱直几",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A straight 直 (that is, level) table 几",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "正": {
+    "pinyin": [
+      "zhèng"
+    ],
+    "radical": "止",
+    "decomposition": "⿱一止",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A foot 止 stopping in the right place 一",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "知": {
+    "pinyin": [
+      "zhī"
+    ],
+    "radical": "矢",
+    "decomposition": "⿰矢口",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "矢"
+    }
+  },
+  "直": {
+    "pinyin": [
+      "zhí"
+    ],
+    "radical": "目",
+    "decomposition": "⿳十目一",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To look someone in the eye 目",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "只": {
+    "pinyin": [
+      "zhī"
+    ],
+    "radical": "口",
+    "decomposition": "⿱口八",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Simple words 八 coming from the mouth 口",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "纸": {
+    "pinyin": [
+      "zhǐ"
+    ],
+    "radical": "纟",
+    "decomposition": "⿰纟氏",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "silk",
+      "semantic": "纟",
+      "phonetic": "氏"
+    }
+  },
+  "中": {
+    "pinyin": [
+      "zhōng"
+    ],
+    "radical": "丨",
+    "decomposition": "⿻口丨",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A line 丨 through the center of a box 口",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "终": {
+    "pinyin": [
+      "zhōng"
+    ],
+    "radical": "纟",
+    "decomposition": "⿰纟冬",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "thread",
+      "semantic": "纟",
+      "phonetic": "冬"
+    }
+  },
+  "钟": {
+    "pinyin": [
+      "zhōng"
+    ],
+    "radical": "钅",
+    "decomposition": "⿰钅中",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "metal",
+      "semantic": "钅",
+      "phonetic": "中"
+    }
+  },
+  "种": {
+    "pinyin": [
+      "zhǒng"
+    ],
+    "radical": "禾",
+    "decomposition": "⿰禾中",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "grain",
+      "semantic": "禾",
+      "phonetic": "中"
+    }
+  },
+  "重": {
+    "pinyin": [
+      "zhòng"
+    ],
+    "radical": "里",
+    "decomposition": "⿻千里",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A burden carried for a thousand 千 miles 里",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "周": {
+    "pinyin": [
+      "zhōu"
+    ],
+    "radical": "口",
+    "decomposition": "⿵冂⿱土口",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Border 冂 around land 土 with a well 口",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "主": {
+    "pinyin": [
+      "zhǔ"
+    ],
+    "radical": "丶",
+    "decomposition": "⿱丶王",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A lamp 王 with a flame 丶",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "住": {
+    "pinyin": [
+      "zhù"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻主",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person 亻 who hosts 主; 主 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "助": {
+    "pinyin": [
+      "zhù"
+    ],
+    "radical": "力",
+    "decomposition": "⿰且力",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "strength",
+      "semantic": "力",
+      "phonetic": "且"
+    }
+  },
+  "注": {
+    "pinyin": [
+      "zhù"
+    ],
+    "radical": "氵",
+    "decomposition": "⿰氵主",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "water",
+      "semantic": "氵",
+      "phonetic": "主"
+    }
+  },
+  "准": {
+    "pinyin": [
+      "zhǔn"
+    ],
+    "radical": "冫",
+    "decomposition": "⿰冫隹",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "water in a spirit level",
+      "semantic": "冫",
+      "phonetic": "隹"
+    }
+  },
+  "桌": {
+    "pinyin": [
+      "zhuō"
+    ],
+    "radical": "木",
+    "decomposition": "⿱卓木",
+    "etymology": null
+  },
+  "子": {
+    "pinyin": [
+      "zi"
+    ],
+    "radical": "子",
+    "decomposition": "⿻了一",
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A child in a wrap, with outstretched arms but bundled legs",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "字": {
+    "pinyin": [
+      "zì"
+    ],
+    "radical": "子",
+    "decomposition": "⿱宀子",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A child 子 in a house 宀; 子 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "自": {
+    "pinyin": [
+      "zì"
+    ],
+    "radical": "自",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A nose; in China, people refer to themselves by pointing to their noses",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "总": {
+    "pinyin": [
+      "zǒng"
+    ],
+    "radical": "心",
+    "decomposition": "⿳丷口心",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Many mouths 口 speaking with one mind 心",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "走": {
+    "pinyin": [
+      "zǒu"
+    ],
+    "radical": "走",
+    "decomposition": "⿱土止",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Someone 土 stepping with their foot 止",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "租": {
+    "pinyin": [
+      "zū"
+    ],
+    "radical": "禾",
+    "decomposition": "⿰禾且",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Regularly paid 且 tribute in grain 禾",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "足": {
+    "pinyin": [
+      "zú"
+    ],
+    "radical": "足",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "The leg 口 above the foot",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "嘴": {
+    "pinyin": [
+      "zuǐ"
+    ],
+    "radical": "口",
+    "decomposition": "⿰口觜",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "mouth",
+      "semantic": "口",
+      "phonetic": "觜"
+    }
+  },
+  "最": {
+    "pinyin": [
+      "zuì"
+    ],
+    "radical": "曰",
+    "decomposition": "⿱日取",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "To take place 取 under the sun 日 (that is, everywhere)",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "昨": {
+    "pinyin": [
+      "zuó"
+    ],
+    "radical": "日",
+    "decomposition": "⿰日乍",
+    "etymology": {
+      "type": "pictophonetic",
+      "hint": "day",
+      "semantic": "日",
+      "phonetic": "乍"
+    }
+  },
+  "左": {
+    "pinyin": [
+      "zuǒ"
+    ],
+    "radical": "工",
+    "decomposition": null,
+    "etymology": {
+      "type": "pictographic",
+      "hint": "A left hand; compare 又",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "作": {
+    "pinyin": [
+      "zuò"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻乍",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "A person 亻 making something for the first time 乍; 乍 also provides the pronunciation",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "坐": {
+    "pinyin": [
+      "zuò"
+    ],
+    "radical": "土",
+    "decomposition": "⿻从土",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Two people 从 sitting on the ground 土",
+      "semantic": null,
+      "phonetic": null
+    }
+  },
+  "做": {
+    "pinyin": [
+      "zuò"
+    ],
+    "radical": "亻",
+    "decomposition": "⿰亻故",
+    "etymology": {
+      "type": "ideographic",
+      "hint": "Someone 亻 who causes things to happen 故; 故 also provides the pronuncation",
+      "semantic": null,
+      "phonetic": null
+    }
+  }
+}

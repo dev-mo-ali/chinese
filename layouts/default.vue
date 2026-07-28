@@ -1,11 +1,13 @@
 <script setup>
 const route = useRoute()
+const baseURL = useRuntimeConfig().app.baseURL
 
 const tabs = [
   { to: '/',         han: '家', label: 'Home'     },
   { to: '/pinyin',   han: '拼', label: 'Pinyin'   },
   { to: '/strokes',  han: '笔', label: 'Strokes'  },
   { to: '/radicals', han: '部', label: 'Radicals' },
+  { to: '/hanzi',     han: '拆', label: 'Hanzi'    },
   { to: '/hsk1',     han: '一', label: 'HSK 1'    },
   { to: '/hsk2',     han: '二', label: 'HSK 2'    },
   { to: '/hsk3',     han: '三', label: 'HSK 3'    },
@@ -23,6 +25,7 @@ const isStrokes  = computed(() => route.path.startsWith('/strokes'))
 const isPinyin   = computed(() => route.path.startsWith('/pinyin'))
 const isRadicals = computed(() => route.path.startsWith('/radicals'))
 const isAllRadicals = computed(() => route.path.startsWith('/allradicals'))
+const isHanzi    = computed(() => route.path.startsWith('/hanzi'))
 const isWrite    = computed(() => route.path.startsWith('/write'))
 const isSentence = computed(() => route.path.startsWith('/sentence'))
 const isGame     = computed(() => route.path.startsWith('/game'))
@@ -55,6 +58,10 @@ const headerData = computed(() => {
     return { icon: '部首', eyebrow: 'Chinese Radicals', title: 'Top 40 · Top 100 · All 214',
              sourceHref: 'https://www.hackingchinese.com/the-100-most-common-radicals-in-chinese/' }
   }
+  if (isHanzi.value) {
+    return { icon: '拆字', eyebrow: 'Hanzi Explorer', title: 'Components · Origins · Writing',
+             sourceHref: 'https://github.com/skishore/makemeahanzi' }
+  }
   if (isWrite.value) {
     return { icon: '书写', eyebrow: 'Practice Writing', title: 'Stroke order · Animate · Quiz',
              sourceHref: 'https://hanziwriter.org/' }
@@ -79,7 +86,7 @@ const headerData = computed(() => {
            sourceHref: '' }
 })
 
-const bgClass = computed(() => (isStrokes.value || hskMatch.value) ? 'paper-bg-warm' : 'paper-bg')
+const bgClass = computed(() => (isStrokes.value || isHanzi.value || hskMatch.value) ? 'paper-bg-warm' : 'paper-bg')
 
 const showTop = ref(false)
 const scrollProgress = ref(0)
@@ -285,6 +292,13 @@ const formattedVisitors = computed(() =>
           </div>
           <div class="px-5 sm:px-8 py-3 border-t border-gold-deep/40 text-[10px] sm:text-xs text-gold-soft tracking-widest uppercase text-center flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
             <span>Kuala Lumpur, Malaysia</span>
+            <span aria-hidden="true" class="opacity-50">·</span>
+            <a
+              :href="`${baseURL}data/licenses/makemeahanzi/COPYING`"
+              class="hover:text-cream transition"
+            >
+              Character data: Make Me a Hanzi
+            </a>
             <span aria-hidden="true" class="opacity-50">·</span>
             <span>
               <span class="han mr-1" aria-hidden="true" lang="zh-CN">访</span>

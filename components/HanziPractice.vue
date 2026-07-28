@@ -1,5 +1,6 @@
 <script setup>
-import { ref, onBeforeUnmount, watch, nextTick } from 'vue'
+import { computed, ref, onBeforeUnmount, watch, nextTick } from 'vue'
+import hanziBreakdowns from '~/assets/data/hanzi-breakdowns.json'
 
 const props = defineProps({
   char: { type: String, required: true },
@@ -15,6 +16,90 @@ const mode = ref('idle') // idle | animating | quizzing
 const status = ref('') // mistake/complete feedback
 const ready = ref(false)
 const error = ref(false)
+const breakdown = computed(() => hanziBreakdowns[props.char] || null)
+
+const formationNames = {
+  pictographic: 'Pictograph',
+  ideographic: 'Meaning compound',
+  pictophonetic: 'Meaning + sound',
+}
+
+const structureNames = {
+  '⿰': 'left–right',
+  '⿱': 'top–bottom',
+  '⿲': 'left–middle–right',
+  '⿳': 'top–middle–bottom',
+  '⿴': 'enclosed',
+  '⿵': 'open at the bottom',
+  '⿶': 'open at the top',
+  '⿷': 'open on the right',
+  '⿸': 'upper-left surround',
+  '⿹': 'upper-right surround',
+  '⿺': 'lower-left surround',
+  '⿻': 'overlaid',
+}
+
+const formationName = computed(() =>
+  formationNames[breakdown.value?.etymology?.type] || null
+)
+const structureName = computed(() =>
+  structureNames[breakdown.value?.decomposition?.[0]] || null
+)
+const componentCharacters = computed(() => {
+  const decomposition = breakdown.value?.decomposition
+  if (!decomposition) return []
+
+  return [...new Set(
+    [...decomposition]
+      .filter(part => /\p{Script=Han}/u.test(part))
+      .filter(part => part !== props.char),
+  )]
+})
+const analysisSummary = computed(() => {
+  const data = breakdown.value
+  if (!data) return null
+
+  const semantic = data.etymology?.semantic
+  const phonetic = data.etymology?.phonetic
+  const hint = data.etymology?.hint
+
+  if (data.etymology?.type === 'pictophonetic' && semantic && phonetic) {
+    return `${props.char} is a meaning-sound compound. ${semantic} gives the meaning clue`
+      + `${hint ? ` (${hint})` : ''}, while ${phonetic} gives a clue to its pronunciation.`
+  }
+  if (data.etymology?.type === 'ideographic') {
+    return `${props.char} is a meaning compound: its parts are combined to express an idea.`
+  }
+  if (data.etymology?.type === 'pictographic') {
+    return `${props.char} developed from a stylized picture of the thing or idea it represents.`
+  }
+  if (structureName.value && componentCharacters.value.length) {
+    return `${props.char} uses a ${structureName.value} arrangement built from ${componentCharacters.value.join(' and ')}.`
+  }
+  return `This record identifies the written structure and dictionary radical of ${props.char}.`
+})
+const structureSummary = computed(() => {
+  if (!breakdown.value?.decomposition) return null
+
+  const arrangement = structureName.value
+    ? `a ${structureName.value} arrangement`
+    : 'the component arrangement shown'
+  const parts = componentCharacters.value.length
+    ? ` The visible components are ${componentCharacters.value.join(' and ')}.`
+    : ''
+
+  return `${props.char} is written using ${arrangement}.${parts}`
+})
+const hasBreakdownDetails = computed(() => {
+  const data = breakdown.value
+  return Boolean(
+    data?.radical
+    || data?.decomposition
+    || data?.etymology?.hint
+    || data?.etymology?.semantic
+    || data?.etymology?.phonetic
+  )
+})
 
 let HanziWriter = null
 
@@ -196,6 +281,81 @@ watch(() => props.char, () => { if (started.value) build() })
       {{ status }}
     </div>
     </template>
+
+    <details v-if="hasBreakdownDetails" class="breakdown-card" :style="{ borderColor: accent + '44' }">
+      <summary :style="{ color: accent }">
+        <span aria-hidden="true">拆</span>
+        Character breakdown
+      </summary>
+      <dl>
+        <div v-if="breakdown.pinyin?.length">
+          <dt>Reading</dt>
+          <dd>{{ breakdown.pinyin.join(' · ') }}</dd>
+        </div>
+        <div v-if="breakdown.radical">
+          <dt>Radical</dt>
+          <dd class="han">{{ breakdown.radical }}</dd>
+        </div>
+        <div v-if="breakdown.decomposition">
+          <dt>Structure</dt>
+          <dd>
+            <span class="han">{{ breakdown.decomposition }}</span>
+            <span v-if="structureName"> · {{ structureName }}</span>
+          </dd>
+        </div>
+        <div v-if="formationName">
+          <dt>Formation</dt>
+          <dd>{{ formationName }}</dd>
+        </div>
+        <div v-if="breakdown.etymology?.semantic">
+          <dt>Meaning</dt>
+          <dd>
+            <span class="han">{{ breakdown.etymology.semantic }}</span>
+            <span v-if="breakdown.etymology.hint"> · {{ breakdown.etymology.hint }}</span>
+          </dd>
+        </div>
+        <div v-if="breakdown.etymology?.phonetic">
+          <dt>Sound</dt>
+          <dd class="han">{{ breakdown.etymology.phonetic }}</dd>
+        </div>
+      </dl>
+      <div class="breakdown-explanation">
+        <section v-if="analysisSummary">
+          <h4>How the character works</h4>
+          <p>{{ analysisSummary }}</p>
+        </section>
+        <section v-if="structureSummary">
+          <h4>Written structure</h4>
+          <p>{{ structureSummary }}</p>
+        </section>
+        <section v-if="breakdown.etymology?.hint">
+          <h4>Origin clue</h4>
+          <p>{{ breakdown.etymology.hint }}</p>
+        </section>
+        <section v-if="breakdown.etymology?.phonetic">
+          <h4>Pronunciation note</h4>
+          <p>
+            <span class="han">{{ breakdown.etymology.phonetic }}</span>
+            acts as a sound clue. Sound components reflect historical pronunciation,
+            so the modern reading may not match exactly.
+          </p>
+        </section>
+        <section v-if="breakdown.radical">
+          <h4>Dictionary lookup</h4>
+          <p>
+            This character is indexed under the
+            <span class="han">{{ breakdown.radical }}</span> radical in traditional
+            character dictionaries.
+          </p>
+        </section>
+      </div>
+      <p
+        v-if="breakdown.etymology?.hint && !breakdown.etymology?.semantic && !analysisSummary"
+        class="breakdown-hint"
+      >
+        {{ breakdown.etymology.hint }}
+      </p>
+    </details>
   </div>
 </template>
 
@@ -241,4 +401,89 @@ watch(() => props.char, () => { if (started.value) build() })
   border-style: solid;
 }
 .start-btn .han { font-weight: 800; }
+.breakdown-card {
+  order: -1;
+  width: min(17rem, 100%);
+  border: 1px solid;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .88);
+  text-align: left;
+  overflow: hidden;
+}
+.breakdown-card summary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 9px;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  list-style: none;
+}
+.breakdown-card summary::-webkit-details-marker { display: none; }
+.breakdown-card summary::after {
+  content: '+';
+  margin-left: auto;
+  font-size: 14px;
+}
+.breakdown-card[open] summary::after { content: '−'; }
+.breakdown-card dl {
+  margin: 0;
+  padding: 0 9px 8px;
+}
+.breakdown-card dl > div {
+  display: grid;
+  grid-template-columns: 4.2rem minmax(0, 1fr);
+  gap: 7px;
+  padding: 4px 0;
+  border-top: 1px solid rgba(31, 29, 26, .08);
+  font-size: 11px;
+  line-height: 1.35;
+}
+.breakdown-card dt {
+  color: rgba(31, 29, 26, .55);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.breakdown-card dd {
+  margin: 0;
+  color: #1f1d1a;
+  overflow-wrap: anywhere;
+}
+.breakdown-explanation {
+  margin: 0 9px 9px;
+  border-top: 1px solid rgba(31, 29, 26, .08);
+}
+.breakdown-explanation section {
+  padding: 8px 0 1px;
+}
+.breakdown-explanation section + section {
+  border-top: 1px solid rgba(31, 29, 26, .06);
+}
+.breakdown-explanation h4 {
+  margin: 0 0 3px;
+  color: rgba(31, 29, 26, .58);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.breakdown-explanation p {
+  margin: 0 0 7px;
+  color: rgba(31, 29, 26, .82);
+  font-size: 11px;
+  line-height: 1.55;
+}
+.breakdown-hint {
+  margin: 0 9px 9px;
+  padding-top: 7px;
+  border-top: 1px solid rgba(31, 29, 26, .08);
+  color: rgba(31, 29, 26, .75);
+  font-size: 11px;
+  line-height: 1.45;
+}
 </style>
