@@ -183,7 +183,6 @@ const formattedVisitors = computed(() =>
             {{ headerData.title }}
           </div>
         </div>
-        <PwaInstallButton />
         <!-- Font-size control (A− / A / A+) -->
         <div
           class="shrink-0 flex items-center bg-ink/60 text-cream border border-gold-deep/60 rounded-full overflow-hidden"
@@ -300,6 +299,7 @@ const formattedVisitors = computed(() =>
             >
               Character data: Make Me a Hanzi
             </a>
+            <PwaInstallButton />
             <span aria-hidden="true" class="opacity-50">·</span>
             <span>
               <span class="han mr-1" aria-hidden="true" lang="zh-CN">访</span>
