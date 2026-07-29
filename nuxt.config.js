@@ -52,6 +52,9 @@ export default defineNuxtConfig({
     base: baseURL,
     scope: baseURL,
     registerType: "autoUpdate",
+    client: {
+      installPrompt: true,
+    },
     includeAssets: ["favicon.svg", "robots.txt"],
     manifest: {
       id: baseURL,

@@ -183,6 +183,7 @@ const formattedVisitors = computed(() =>
             {{ headerData.title }}
           </div>
         </div>
+        <PwaInstallButton />
         <!-- Font-size control (A− / A / A+) -->
         <div
           class="shrink-0 flex items-center bg-ink/60 text-cream border border-gold-deep/60 rounded-full overflow-hidden"
