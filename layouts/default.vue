@@ -183,39 +183,6 @@ const formattedVisitors = computed(() =>
             {{ headerData.title }}
           </div>
         </div>
-        <!-- Font-size control (A− / A / A+) -->
-        <div
-          class="shrink-0 flex items-center bg-ink/60 text-cream border border-gold-deep/60 rounded-full overflow-hidden"
-          role="group"
-          aria-label="Text size"
-        >
-          <button
-            type="button"
-            @click="decrease"
-            :disabled="!canDecrease()"
-            :aria-label="`Decrease text size (currently ${currentPx()}px)`"
-            class="shrink-0 w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-[14px] font-semibold tracking-tight transition hover:bg-gold-deep/30 hover:text-gold disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-cream"
-          >
-            A<span class="text-[10px] -ml-px" aria-hidden="true">−</span>
-          </button>
-          <button
-            type="button"
-            @click="reset"
-            :aria-label="`Reset text size (currently ${currentPx()}px)`"
-            class="shrink-0 w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-[15px] font-semibold transition hover:bg-gold-deep/30 hover:text-gold border-x border-gold-deep/40"
-          >
-            A
-          </button>
-          <button
-            type="button"
-            @click="increase"
-            :disabled="!canIncrease()"
-            :aria-label="`Increase text size (currently ${currentPx()}px)`"
-            class="shrink-0 w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-[15px] font-semibold tracking-tight transition hover:bg-gold-deep/30 hover:text-gold disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-cream"
-          >
-            A<span class="text-[11px] -ml-px" aria-hidden="true">+</span>
-          </button>
-        </div>
       </div>
       <div class="nav-fade max-w-6xl mx-auto px-4 mt-2 relative hidden sm:block">
         <nav class="flex gap-1 overflow-x-auto nice-scroll pb-1" aria-label="View">
@@ -291,6 +258,38 @@ const formattedVisitors = computed(() =>
             </div>
           </div>
           <div class="px-5 sm:px-8 py-3 border-t border-gold-deep/40 text-[10px] sm:text-xs text-gold-soft tracking-widest uppercase text-center flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+            <div
+              class="flex items-center bg-cream/10 text-cream border border-gold-deep/60 rounded-full overflow-hidden"
+              role="group"
+              aria-label="Text size"
+            >
+              <button
+                type="button"
+                @click="decrease"
+                :disabled="!canDecrease()"
+                :aria-label="`Decrease text size (currently ${currentPx()}px)`"
+                class="shrink-0 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-[13px] font-semibold tracking-tight transition hover:bg-gold-deep/30 hover:text-gold disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-cream"
+              >
+                A<span class="text-[10px] -ml-px" aria-hidden="true">−</span>
+              </button>
+              <button
+                type="button"
+                @click="reset"
+                :aria-label="`Reset text size (currently ${currentPx()}px)`"
+                class="shrink-0 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-[14px] font-semibold transition hover:bg-gold-deep/30 hover:text-gold border-x border-gold-deep/40"
+              >
+                A
+              </button>
+              <button
+                type="button"
+                @click="increase"
+                :disabled="!canIncrease()"
+                :aria-label="`Increase text size (currently ${currentPx()}px)`"
+                class="shrink-0 w-8 h-8 sm:w-9 sm:h-9 flex items-center justify-center text-[14px] font-semibold tracking-tight transition hover:bg-gold-deep/30 hover:text-gold disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-cream"
+              >
+                A<span class="text-[11px] -ml-px" aria-hidden="true">+</span>
+              </button>
+            </div>
             <span>Kuala Lumpur, Malaysia</span>
             <span aria-hidden="true" class="opacity-50">·</span>
             <a
