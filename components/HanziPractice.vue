@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref, onBeforeUnmount, watch, nextTick } from 'vue'
 import hanziBreakdowns from '~/assets/data/hanzi-breakdowns.json'
+import { allRadicals } from '~/composables/useRadicals.js'
 
 const props = defineProps({
   char: { type: String, required: true },
@@ -17,6 +18,36 @@ const status = ref('') // mistake/complete feedback
 const ready = ref(false)
 const error = ref(false)
 const breakdown = computed(() => hanziBreakdowns[props.char] || null)
+
+const radicalAliases = {
+  '丷': { pinyin: 'bā', meaning: 'eight' },
+  '⺌': { pinyin: 'xiǎo', meaning: 'small' },
+  '⺀': { pinyin: 'bīng', meaning: 'ice' },
+  '母': { pinyin: 'mǔ', meaning: 'mother' },
+  '氺': { pinyin: 'shuǐ', meaning: 'water' },
+  '西': { pinyin: 'xī', meaning: 'west' },
+}
+
+const radicalInfo = computed(() => {
+  const radical = breakdown.value?.radical
+  if (!radical) return null
+
+  if (radicalAliases[radical]) return radicalAliases[radical]
+
+  let match
+  if (radical === '阝') {
+    const isLeftSide = breakdown.value?.decomposition?.startsWith('⿰阝')
+    match = allRadicals.find(item => item.kangxi === (isLeftSide ? 170 : 163))
+  } else {
+    match = allRadicals.find(item =>
+      item.char === radical || item.form?.includes(radical)
+    )
+  }
+
+  return match
+    ? { pinyin: match.pinyin, meaning: match.meaning.toLocaleLowerCase('en') }
+    : null
+})
 
 const formationNames = {
   pictographic: 'Pictograph',
@@ -294,7 +325,12 @@ watch(() => props.char, () => { if (started.value) build() })
         </div>
         <div v-if="breakdown.radical">
           <dt>Radical</dt>
-          <dd class="han">{{ breakdown.radical }}</dd>
+          <dd>
+            <span class="han">{{ breakdown.radical }}</span>
+            <template v-if="radicalInfo">
+              · {{ radicalInfo.pinyin }} · {{ radicalInfo.meaning }}
+            </template>
+          </dd>
         </div>
         <div v-if="breakdown.decomposition">
           <dt>Structure</dt>
