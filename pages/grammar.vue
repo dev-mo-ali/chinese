@@ -69,11 +69,22 @@ const activeLevels = reactive({ 1: true, 2: true, 3: true })
 const toggleLevel = (id) => { activeLevels[id] = !activeLevels[id] }
 
 const search = ref('')
+const lessonFilter = ref('all')
+const sortBy = ref('course')
+
+const lessonOptions = computed(() => {
+  const lessons = new Set()
+  for (const entry of allEntries.value) {
+    if (activeLevels[entry.level.id]) lessons.add(entry.lesson.no)
+  }
+  return [...lessons].sort((a, b) => a - b)
+})
 
 const filtered = computed(() => {
   const q = search.value.trim().toLowerCase()
-  return allEntries.value.filter(e => {
+  const entries = allEntries.value.filter(e => {
     if (!activeLevels[e.level.id]) return false
+    if (lessonFilter.value !== 'all' && e.lesson.no !== Number(lessonFilter.value)) return false
     if (!q) return true
     const hay = [
       e.note.title,
@@ -83,6 +94,14 @@ const filtered = computed(() => {
     ].join(' ').toLowerCase()
     return hay.includes(q)
   })
+
+  if (sortBy.value === 'title') {
+    return [...entries].sort((a, b) => a.note.title.localeCompare(b.note.title, undefined, {
+      sensitivity: 'base',
+      numeric: true,
+    }))
+  }
+  return entries
 })
 
 // Group filtered entries by level → lessons
@@ -108,10 +127,32 @@ const counts = computed(() => {
 })
 const totalNotes = computed(() => allEntries.value.length)
 const visibleCount = computed(() => filtered.value.length)
+const hasActiveFilters = computed(() =>
+  search.value || lessonFilter.value !== 'all' || sortBy.value !== 'course'
+  || Object.values(activeLevels).some(isActive => !isActive)
+)
+
+const resetFilters = () => {
+  search.value = ''
+  lessonFilter.value = 'all'
+  sortBy.value = 'course'
+  for (const level of LEVELS) activeLevels[level.id] = true
+}
+
+watch(lessonOptions, options => {
+  if (lessonFilter.value !== 'all' && !options.includes(Number(lessonFilter.value))) {
+    lessonFilter.value = 'all'
+  }
+})
 
 // Per-level fold state
 const openLevels = reactive({ 1: true, 2: true, 3: true })
 const toggleOpen = (id) => { openLevels[id] = !openLevels[id] }
+const setAllLevelsOpen = (isOpen) => {
+  for (const level of LEVELS) openLevels[level.id] = isOpen
+}
+
+const entryId = (level, lesson, index) => `grammar-${level}-${lesson}-${index + 1}`
 </script>
 
 <template>
@@ -165,17 +206,53 @@ const toggleOpen = (id) => { openLevels[id] = !openLevels[id] }
     </article>
 
     <!-- CONTROLS -->
-    <article class="rounded-3xl shadow-card overflow-hidden border mb-6"
+    <article class="rounded-2xl shadow-card overflow-hidden border mb-6"
              style="background:#fff; border-color:rgba(124,90,30,.22);"
     >
-      <div class="px-5 sm:px-7 py-4 flex flex-wrap items-center gap-3"
+      <div class="px-4 sm:px-6 py-4"
            style="background: linear-gradient(135deg,#fdfaf2,#fff8e0);">
-        <div class="flex items-center gap-2">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-[minmax(16rem,2fr)_minmax(9rem,1fr)_minmax(9rem,1fr)] gap-3 items-end">
+          <label class="block">
+            <span class="control-label">Search grammar</span>
+            <span class="relative block">
+              <input
+                v-model="search"
+                type="search"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="Character, pinyin, or English..."
+                class="control-field w-full pr-9"
+              />
+              <button v-if="search" type="button" class="clear-search" title="Clear search"
+                      aria-label="Clear search" @click="search = ''">&times;</button>
+            </span>
+          </label>
+          <label class="block">
+            <span class="control-label">Lesson</span>
+            <select v-model="lessonFilter" class="control-field w-full">
+              <option value="all">All lessons</option>
+              <option v-for="lesson in lessonOptions" :key="lesson" :value="String(lesson)">
+                Lesson {{ lesson }}
+              </option>
+            </select>
+          </label>
+          <label class="block">
+            <span class="control-label">Sort by</span>
+            <select v-model="sortBy" class="control-field w-full">
+              <option value="course">Course order</option>
+              <option value="title">Grammar title</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="mt-4 flex flex-wrap items-center gap-2 border-t border-gold-deep/15 pt-3">
+          <span class="control-label !mb-0 mr-1">Levels</span>
           <button
             v-for="lvl in LEVELS" :key="lvl.id"
             type="button"
             @click="toggleLevel(lvl.id)"
             class="level-chip"
+            :aria-pressed="activeLevels[lvl.id]"
             :class="{ 'is-on': activeLevels[lvl.id] }"
             :style="activeLevels[lvl.id]
               ? { background: lvl.chipBg, borderColor: lvl.accent, color:'#fff' }
@@ -185,35 +262,30 @@ const toggleOpen = (id) => { openLevels[id] = !openLevels[id] }
             <span>{{ lvl.label }}</span>
             <span class="ml-1 text-[10px] opacity-80 font-mono">{{ counts[lvl.id] }}</span>
           </button>
-        </div>
-
-        <div class="ml-auto flex items-center gap-2 w-full sm:w-auto">
-          <label class="relative flex-1 sm:w-72">
-            <span class="sr-only">Search grammar</span>
-            <input
-              v-model="search"
-              type="search"
-              placeholder="Search · 比 · particle · complement…"
-              class="w-full pl-9 pr-3 py-2 text-sm rounded-full border border-gold-deep/30 bg-white/80
-                     focus:outline-none focus:ring-2 focus:ring-gold-deep/40"
-            />
-            <span class="absolute left-3 top-1/2 -translate-y-1/2 text-ink/40 text-sm" aria-hidden="true">🔍</span>
-          </label>
-          <span class="text-[11px] text-ink/60 font-mono whitespace-nowrap">
-            {{ visibleCount }} / {{ totalNotes }}
+          <span class="ml-auto text-xs font-semibold text-ink/70 whitespace-nowrap">
+            {{ visibleCount }} of {{ totalNotes }} notes
           </span>
+          <button v-if="hasActiveFilters" type="button" @click="resetFilters"
+                  class="text-xs font-semibold text-gold-deep hover:text-ink">
+            Reset filters
+          </button>
         </div>
       </div>
     </article>
+
+    <div v-if="grouped.length" class="mb-3 flex justify-end gap-3 text-xs font-semibold text-gold-deep">
+      <button type="button" @click="setAllLevelsOpen(true)" class="hover:text-ink">Expand all</button>
+      <button type="button" @click="setAllLevelsOpen(false)" class="hover:text-ink">Collapse all</button>
+    </div>
 
     <!-- LEVEL SECTIONS -->
     <article v-for="group in grouped" :key="group.level.id"
              class="rounded-3xl shadow-card overflow-hidden border mb-8"
              :style="{ background:'#fff', borderColor: group.level.accentBorder }"
     >
-      <header @click="toggleOpen(group.level.id)"
+      <button type="button" @click="toggleOpen(group.level.id)"
               :aria-expanded="openLevels[group.level.id]"
-              class="fold-head flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b cursor-pointer select-none"
+              class="fold-head w-full flex flex-wrap items-center gap-3 px-5 sm:px-7 py-4 border-b cursor-pointer select-none text-left"
               :style="{ background: group.level.accentBg, borderColor: group.level.accentBorder }"
       >
         <span class="flex items-center justify-center w-10 h-10 rounded-lg han text-xl font-bold text-white shadow-chip"
@@ -229,7 +301,7 @@ const toggleOpen = (id) => { openLevels[id] = !openLevels[id] }
         <span class="fold-caret text-xl leading-none ml-auto"
               :style="{ color: group.level.accent }"
               :class="{ 'is-open': openLevels[group.level.id] }">▸</span>
-      </header>
+      </button>
 
       <div v-show="openLevels[group.level.id]" class="p-4 sm:p-6 space-y-6"
            :style="{ background: group.level.panelBg }"
@@ -247,7 +319,7 @@ const toggleOpen = (id) => { openLevels[id] = !openLevels[id] }
               <div class="text-[11px] text-ink/60 italic truncate">{{ ls.lesson.pinyin }} · {{ ls.lesson.en }}</div>
             </div>
             <NuxtLink
-              :to="`/hsk${group.level.id}`"
+              :to="{ path: `/hsk${group.level.id}`, query: { lesson: ls.lesson.no }, hash: '#lesson-detail' }"
               class="ml-auto text-[10px] tracking-widest uppercase font-semibold px-2 py-1 rounded
                      hover:underline"
               :style="{ color: group.level.accent }"
@@ -257,7 +329,8 @@ const toggleOpen = (id) => { openLevels[id] = !openLevels[id] }
           <!-- Notes grid -->
           <div class="grid md:grid-cols-2 gap-4">
             <article v-for="(note, ni) in ls.notes" :key="ni"
-                     class="note-card rounded-2xl border p-4 sm:p-5"
+                     :id="entryId(group.level.id, ls.lesson.no, ni)"
+                     class="note-card scroll-mt-24 rounded-lg border p-4 sm:p-5"
                      :style="{ background:'#fff', borderColor: group.level.accentBorder }"
             >
               <div class="flex items-start gap-2 mb-2">
@@ -295,9 +368,14 @@ const toggleOpen = (id) => { openLevels[id] = !openLevels[id] }
       </div>
     </article>
 
-    <p v-if="!grouped.length" class="text-center py-10 text-sm text-ink/50 italic">
-      No grammar notes match your search.
-    </p>
+    <div v-if="!grouped.length" class="empty-state">
+      <div class="han text-4xl text-gold-deep mb-2" lang="zh-CN">无</div>
+      <p class="text-sm font-semibold text-ink">No grammar notes found</p>
+      <p class="mt-1 text-xs text-ink-soft">Try another search, lesson, or HSK level.</p>
+      <button type="button" @click="resetFilters" class="mt-4 text-xs font-bold text-gold-deep hover:text-ink">
+        Reset filters
+      </button>
+    </div>
 
     <p class="mt-6 text-center text-xs text-ink-soft/70 italic">
       Compiled from <span class="font-semibold">HSK 标准教程</span> Books 1 – 3 · Confucius Institute Headquarters
@@ -336,5 +414,47 @@ const toggleOpen = (id) => { openLevels[id] = !openLevels[id] }
 .note-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 24px -10px rgba(15, 23, 42, .25);
+}
+
+.control-label {
+  display: block;
+  margin-bottom: .3rem;
+  color: #7c5a1e;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.control-field {
+  min-height: 2.5rem;
+  border: 1px solid rgba(124, 90, 30, .28);
+  border-radius: .5rem;
+  background: #fff;
+  padding: .5rem .65rem;
+  color: #1a1209;
+  font-size: .875rem;
+}
+.control-field:focus {
+  border-color: #8b6914;
+  outline: 2px solid rgba(200, 168, 75, .3);
+  outline-offset: 1px;
+}
+.clear-search {
+  position: absolute;
+  right: .45rem;
+  top: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  transform: translateY(-50%);
+  color: rgba(26, 18, 9, .55);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.empty-state {
+  border: 1px dashed rgba(124, 90, 30, .35);
+  border-radius: .5rem;
+  background: rgba(255, 255, 255, .65);
+  padding: 2.5rem 1rem;
+  text-align: center;
 }
 </style>

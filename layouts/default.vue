@@ -13,7 +13,7 @@ const tabs = [
   { to: '/hsk3',     han: '三', label: 'HSK 3'    },
   { to: '/allwords', han: '词', label: 'All Words'},
   { to: '/allradicals', han: '部', label: 'All Radicals' },
-  { to: '/grammar',  han: '语', label: 'Grammar'  },
+  { to: '/grammar',  han: '语', label: 'All Grammar' },
   { to: '/topics',   han: '题', label: 'Topics'   },
   { to: '/write',    han: '写', label: 'Write'    },
   { to: '/sentence', han: '句', label: 'Sentence' },

@@ -6,10 +6,12 @@
 //   const page = useHskPage({ scrollTargetId: 'lesson-detail' })
 //   const { activeLesson, isRevealed, toggleLine, pickLesson, ... } = page
 
-import { ref, nextTick } from 'vue'
+import { ref, nextTick, onMounted } from 'vue'
 
 export function useHskPage ({ scrollTargetId = 'lesson-detail' } = {}) {
-  const activeLesson = ref(1)
+  const route = useRoute()
+  const requestedLesson = Number(route.query.lesson)
+  const activeLesson = ref(Number.isInteger(requestedLesson) && requestedLesson > 0 ? requestedLesson : 1)
   const showAllVocab = ref(false)
 
   // Texts: pinyin + English hidden until revealed.
@@ -53,6 +55,11 @@ export function useHskPage ({ scrollTargetId = 'lesson-detail' } = {}) {
       })
     }
   }
+
+  onMounted(() => {
+    if (!route.query.lesson || !route.hash) return
+    nextTick(() => document.getElementById(scrollTargetId)?.scrollIntoView({ block: 'start' }))
+  })
 
   return {
     activeLesson,
