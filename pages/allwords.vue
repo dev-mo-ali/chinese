@@ -149,7 +149,52 @@ const resetFilters = () => {
         </button>
       </div>
     </div>
-    <div class="overflow-x-auto rounded shadow">
+    <!-- Mobile cards keep every field readable without a sideways table scroll. -->
+    <div class="sm:hidden space-y-3" aria-label="Vocabulary results">
+      <article
+        v-for="(word, i) in filteredWords"
+        :key="`mobile-${rowKey(word)}`"
+        class="rounded-xl border border-indigo-100 bg-white p-4 shadow-chip"
+      >
+        <div class="flex items-start gap-3">
+          <div class="min-w-0 flex-1">
+            <div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+              <span class="han text-2xl font-bold text-ink">{{ word.c }}</span>
+              <span class="font-medium text-indigo-700">{{ word.p }}</span>
+            </div>
+            <p class="mt-1 text-sm leading-relaxed text-ink">{{ word.en }}</p>
+          </div>
+          <span :class="[
+            word.level === 1 ? 'text-green-700' : word.level === 2 ? 'text-yellow-700' : 'text-amber-800',
+            'shrink-0 rounded bg-amber-50 px-2 py-1 text-xs font-semibold'
+          ]">HSK {{ word.level }}</span>
+        </div>
+        <div class="mt-3 flex items-center justify-between gap-3 border-t border-indigo-100 pt-3">
+          <div class="text-xs text-ink-soft">
+            <span v-if="word.pos">{{ word.pos }} · </span>Lesson {{ word.lesson }} · #{{ i + 1 }}
+          </div>
+          <button
+            type="button"
+            @click="toggle(rowKey(word))"
+            :disabled="!charsOf(word.c).length"
+            class="min-h-11 shrink-0 rounded-lg border border-indigo-300 px-3 text-xs font-semibold text-indigo-700 transition hover:bg-indigo-50 disabled:cursor-not-allowed disabled:opacity-40"
+            :aria-expanded="expanded.has(rowKey(word))"
+          >{{ expanded.has(rowKey(word)) ? 'Close' : 'Practice' }}</button>
+        </div>
+        <div v-if="expanded.has(rowKey(word))" class="mt-4 flex flex-wrap justify-center gap-4 border-t border-indigo-100 pt-4">
+          <HanziPractice
+            v-for="(ch, ci) in charsOf(word.c)"
+            :key="ci"
+            :char="ch"
+            :size="160"
+            :accent="accentFor(word.level)"
+          />
+        </div>
+      </article>
+      <div v-if="!filteredWords.length" class="rounded-xl bg-white py-8 text-center text-ink-soft">No words found.</div>
+    </div>
+
+    <div class="hidden sm:block overflow-x-auto rounded shadow">
       <table class="min-w-full bg-white border">
         <thead class="bg-indigo-50">
           <tr>

@@ -168,7 +168,59 @@ const resetFilters = () => {
       </div>
     </div>
 
-    <div class="overflow-x-auto rounded-xl border bg-white shadow-card"
+    <!-- Mobile cards avoid a nine-column table on a narrow viewport. -->
+    <div class="sm:hidden space-y-3" aria-label="Radical results">
+      <article
+        v-for="(radical, i) in filteredRadicals"
+        :key="`mobile-${rowKey(radical)}`"
+        class="rounded-xl border border-indigo-100 bg-white p-4 shadow-chip"
+      >
+        <div class="flex items-start gap-3">
+          <div class="radical-glyph han flex h-14 w-14 shrink-0 items-center justify-center rounded-lg border-2 text-4xl font-bold"
+               :style="radicalTileStyle(radical.level)">{{ radical.r }}</div>
+          <div class="min-w-0 flex-1">
+            <div class="flex flex-wrap items-start justify-between gap-2">
+              <div>
+                <div class="font-semibold text-indigo-700">{{ radical.name }}</div>
+                <div v-if="radical.cn" class="han text-sm font-bold text-ink">{{ radical.cn }}</div>
+              </div>
+              <span class="shrink-0 rounded bg-amber-50 px-2 py-1 text-xs font-semibold"
+                    :class="radical.level === 1 ? 'text-green-700' : radical.level === 2 ? 'text-yellow-700' : 'text-amber-800'">
+                HSK {{ radical.level }}
+              </span>
+            </div>
+            <div class="mt-1 text-sm font-semibold text-indigo-950">{{ radical.en }}</div>
+          </div>
+        </div>
+        <p class="mt-3 text-sm leading-relaxed text-ink/70">{{ radical.desc }}</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <span v-for="(example, ei) in radical.examples" :key="`${example.c}-${ei}`"
+                class="inline-flex items-baseline gap-1 rounded-lg border border-indigo-100 bg-indigo-50/50 px-2 py-1.5">
+            <span class="han font-bold text-ink">{{ example.c }}</span>
+            <span class="text-xs font-medium text-indigo-700">{{ example.p }}</span>
+            <span class="text-xs text-ink-soft">· {{ example.en }}</span>
+          </span>
+        </div>
+        <div class="mt-3 flex items-center justify-between gap-3 border-t border-indigo-100 pt-3">
+          <span class="text-xs text-ink-soft">Lesson {{ radical.lesson }} · #{{ i + 1 }}</span>
+          <button
+            type="button"
+            @click="toggle(radical)"
+            class="min-h-11 shrink-0 rounded-lg border border-indigo-300 px-3 text-xs font-semibold text-indigo-700 transition hover:bg-indigo-50"
+            :aria-expanded="expanded.has(rowKey(radical))"
+          >{{ expanded.has(rowKey(radical)) ? 'Close' : 'Practice' }}</button>
+        </div>
+        <div v-if="expanded.has(rowKey(radical))" class="mt-4 flex flex-wrap justify-center gap-4 border-t border-indigo-100 pt-4">
+          <div v-for="example in radical.examples" :key="example.c" class="flex flex-col items-center gap-1">
+            <div class="text-xs text-ink-soft"><span class="han font-bold">{{ example.c }}</span> · {{ example.p }} · {{ example.en }}</div>
+            <HanziPractice :char="example.c" :size="160" :accent="accentFor(radical.level)" />
+          </div>
+        </div>
+      </article>
+      <div v-if="!filteredRadicals.length" class="rounded-xl bg-white py-8 text-center text-ink-soft">No radicals found.</div>
+    </div>
+
+    <div class="hidden sm:block overflow-x-auto rounded-xl border bg-white shadow-card"
          style="border-color:rgba(49,46,129,.18);">
       <table class="min-w-full bg-white">
         <thead>

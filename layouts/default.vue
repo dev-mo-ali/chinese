@@ -149,7 +149,7 @@ const formattedVisitors = computed(() =>
     </Transition>
 
     <!-- Header -->
-    <header class="sticky top-0 z-30 bg-ink text-cream border-b-2 border-gold-deep/70 shadow-lg">
+    <header class="site-header sticky top-0 z-30 bg-ink text-cream border-b-2 border-gold-deep/70 shadow-lg">
       <div class="max-w-6xl mx-auto px-4 pt-3 sm:pt-4 flex items-center gap-3">
         <!-- Mobile hamburger -->
         <button
@@ -215,12 +215,12 @@ const formattedVisitors = computed(() =>
           aria-label="Site"
           class="sm:hidden mt-2 px-2 pb-2 max-h-[calc(100vh-7rem)] overflow-y-auto nice-scroll"
         >
-          <ul class="grid grid-cols-2 gap-1.5">
+          <ul class="mobile-nav-grid grid grid-cols-2 gap-1.5">
             <li v-for="t in tabs" :key="t.to">
               <NuxtLink
                 :to="t.to"
                 @click="closeMenu"
-                class="flex items-center gap-2 px-3 py-3 rounded-lg border transition"
+                class="flex min-h-12 items-center gap-2 px-3 py-3 rounded-lg border transition"
                 :class="isActiveTab(t.to)
                   ? 'bg-gold/15 border-gold text-cream'
                   : 'bg-ink/40 border-gold-deep/40 text-gold-soft hover:bg-gold-deep/30 hover:text-cream'"
@@ -339,9 +339,13 @@ const formattedVisitors = computed(() =>
   bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
 }
 .fab-right { right: calc(1.25rem + env(safe-area-inset-right, 0px)); }
+.site-header { padding-top: env(safe-area-inset-top, 0px); }
 @media (min-width: 640px) {
   .fab-fixed { bottom: calc(2rem + env(safe-area-inset-bottom, 0px)); }
   .fab-right { right: calc(2rem + env(safe-area-inset-right, 0px)); }
+}
+@media (max-width: 359px) {
+  .mobile-nav-grid { grid-template-columns: 1fr; }
 }
 
 /* Edge-fade hint for the horizontally-scrollable nav (mobile) */

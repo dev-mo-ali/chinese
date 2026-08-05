@@ -125,12 +125,12 @@ const hanziChars = (text) => {
       <div class="text-[10px] font-semibold tracking-widest uppercase text-ink/60">
         {{ topic.pairs ? 'Pairs · 反义词' : 'Vocabulary · 词汇' }}
       </div>
-      <div class="flex items-center gap-2 flex-wrap">
+      <div class="topic-tools flex items-center gap-2 flex-wrap">
         <input
           v-model="search"
           type="search"
           :placeholder="`Search ${topic.en.toLowerCase()}…`"
-          class="px-3 py-1.5 rounded-md border border-gold-deep/40 bg-paper text-sm text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-gold/60 focus:border-gold w-44 sm:w-56"
+          class="topic-search px-3 py-2 rounded-md border border-gold-deep/40 bg-paper text-sm text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-gold/60 focus:border-gold w-44 sm:w-56"
         />
         <!-- View mode toggle (only for sectioned topics) -->
         <div v-if="!topic.pairs" class="inline-flex rounded-md border border-gold-deep/40 overflow-hidden" role="group" aria-label="View mode">
@@ -285,7 +285,7 @@ const hanziChars = (text) => {
         <ul v-else class="divide-y divide-gold-deep/10">
           <li
             v-for="(w, wi) in sec.words" :key="wi"
-            class="grid grid-cols-[44px_1fr_auto] sm:grid-cols-[44px_140px_1fr_1fr_auto] items-center gap-3 px-4 sm:px-5 py-3 hover:bg-gold/5 transition"
+            class="grid grid-cols-[44px_minmax(0,1fr)_auto] sm:grid-cols-[44px_140px_1fr_1fr_auto] items-center gap-3 px-4 sm:px-5 py-3 hover:bg-gold/5 transition"
           >
             <div class="visual-circle visual-circle--sm" aria-hidden="true">
               <img v-if="w.img" :src="w.img" alt="" class="w-full h-full object-cover" loading="lazy" />
@@ -295,12 +295,12 @@ const hanziChars = (text) => {
             <div class="han text-xl sm:text-2xl font-bold text-ink leading-none" lang="zh-CN">{{ w.c }}</div>
 
             <div
-              class="text-sm tracking-wide text-gold-deep order-4 sm:order-none col-span-3 sm:col-span-1"
+              class="text-sm tracking-wide text-gold-deep order-4 sm:order-none col-span-3 sm:col-span-1 min-w-0"
               :class="{ 'opacity-0': !isVocabRevealed(`${si}-${wi}`) && !vocabRevealAll }"
             >{{ w.p }}</div>
 
             <div
-              class="text-sm text-ink-soft order-5 sm:order-none col-span-3 sm:col-span-1"
+              class="text-sm text-ink-soft order-5 sm:order-none col-span-3 sm:col-span-1 min-w-0"
               :class="{ 'opacity-0': !isVocabRevealed(`${si}-${wi}`) && !vocabRevealAll }"
             >{{ w.en }}</div>
 
@@ -336,14 +336,14 @@ const hanziChars = (text) => {
         <h2 class="text-sm font-semibold text-ink">Search results · {{ filtered.length }}</h2>
       </header>
       <ul class="divide-y divide-gold-deep/10">
-        <li v-for="(w, i) in filtered" :key="i" class="px-4 sm:px-5 py-3 grid grid-cols-[36px_auto_1fr_1fr] gap-3 items-center">
+        <li v-for="(w, i) in filtered" :key="i" class="px-4 sm:px-5 py-3 grid grid-cols-[36px_minmax(0,1fr)] sm:grid-cols-[36px_auto_1fr_1fr] gap-x-3 gap-y-1 items-center">
           <div class="visual-circle visual-circle--sm" aria-hidden="true">
             <img v-if="w.img" :src="w.img" alt="" class="w-full h-full object-cover" loading="lazy" />
             <span v-else-if="w.e" class="text-lg leading-none">{{ w.e }}</span>
           </div>
           <div class="han text-lg font-bold text-ink" lang="zh-CN">{{ w.c }}</div>
-          <div class="text-sm text-gold-deep">{{ w.p }}</div>
-          <div class="text-sm text-ink-soft">{{ w.en }}</div>
+          <div class="text-sm text-gold-deep col-start-2 sm:col-start-auto">{{ w.p }}</div>
+          <div class="text-sm text-ink-soft col-start-2 sm:col-start-auto">{{ w.en }}</div>
         </li>
         <li v-if="!filtered.length" class="px-4 py-6 text-center text-sm text-ink/50">No matches.</li>
       </ul>
@@ -367,4 +367,11 @@ const hanziChars = (text) => {
 }
 .visual-circle--sm { width: 36px; height: 36px; }
 .visual-circle img { display: block; }
+@media (max-width: 639px) {
+  .topic-tools,
+  .topic-search { width: 100%; }
+  .topic-tools > [role="group"] { flex: 1 1 auto; }
+  .topic-tools > [role="group"] button { flex: 1 1 0; min-height: 2.75rem; }
+  .topic-tools > button { min-height: 2.75rem; }
+}
 </style>
