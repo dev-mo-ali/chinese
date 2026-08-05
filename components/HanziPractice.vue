@@ -109,18 +109,54 @@ const analysisSummary = computed(() => {
   }
   return `This record identifies the written structure and dictionary radical of ${props.char}.`
 })
-const structureSummary = computed(() => {
-  if (!breakdown.value?.decomposition) return null
+const memoryClue = computed(() => {
+  const data = breakdown.value
+  if (!data) return null
 
-  const arrangement = structureName.value
-    ? `a ${structureName.value} arrangement`
-    : 'the component arrangement shown'
-  const parts = componentCharacters.value.length
-    ? ` The visible components are ${componentCharacters.value.join(' and ')}.`
-    : ''
+  const semantic = data.etymology?.semantic
+  const phonetic = data.etymology?.phonetic
+  const hint = data.etymology?.hint
 
-  return `${props.char} is written using ${arrangement}.${parts}`
+  if (semantic && phonetic) {
+    return `Remember ${props.char}: ${semantic} suggests ${hint || 'the meaning'}, while ${phonetic} helps recall the sound.`
+  }
+  if (hint) {
+    return `Picture ${hint} when you see ${componentCharacters.value.join(' + ') || props.char}.`
+  }
+  if (componentCharacters.value.length) {
+    return `Build ${props.char} from ${componentCharacters.value.join(' + ')} in a ${structureName.value || 'combined'} arrangement.`
+  }
+  return `Connect the shape of ${props.char} with its meaning each time you write it.`
 })
+const breakdownPreview = computed(() => {
+  const data = breakdown.value
+  if (!data) return ''
+
+  return [
+    data.pinyin?.[0],
+    structureName.value,
+    formationName.value,
+  ].filter(Boolean).join(' / ')
+})
+const componentVisuals = computed(() => componentCharacters.value.map(character => {
+  const etymology = breakdown.value?.etymology
+  const partBreakdown = hanziBreakdowns[character]
+  const radical = allRadicals.find(item =>
+    item.char === character || item.form?.includes(character)
+  )
+  const label = character === etymology?.semantic
+    ? 'Meaning'
+    : character === etymology?.phonetic ? 'Sound' : 'Part'
+
+  return {
+    character,
+    label,
+    pinyin: partBreakdown?.pinyin?.[0] || radical?.pinyin || '',
+    meaning: radical?.meaning?.toLocaleLowerCase('en')
+      || partBreakdown?.etymology?.hint
+      || 'component',
+  }
+}))
 const hasBreakdownDetails = computed(() => {
   const data = breakdown.value
   return Boolean(
@@ -313,84 +349,62 @@ watch(() => props.char, () => { if (started.value) build() })
     </div>
     </template>
 
-    <details v-if="hasBreakdownDetails" class="breakdown-card" :style="{ borderColor: accent + '44' }">
-      <summary :style="{ color: accent }">
-        <span aria-hidden="true">拆</span>
-        Character breakdown
+    <details v-if="hasBreakdownDetails" class="breakdown-card" :style="{ '--breakdown-accent': accent, borderColor: accent + '44' }">
+      <summary>
+        <span class="breakdown-mark han" aria-hidden="true">拆</span>
+        <span class="breakdown-title">
+          <strong>Character breakdown</strong>
+          <small v-if="breakdownPreview">{{ breakdownPreview }}</small>
+        </span>
+        <span class="breakdown-chevron" aria-hidden="true"></span>
       </summary>
-      <dl>
-        <div v-if="breakdown.pinyin?.length">
-          <dt>Reading</dt>
-          <dd>{{ breakdown.pinyin.join(' · ') }}</dd>
-        </div>
-        <div v-if="breakdown.radical">
-          <dt>Radical</dt>
-          <dd>
-            <span class="han">{{ breakdown.radical }}</span>
-            <template v-if="radicalInfo">
-              · {{ radicalInfo.pinyin }} · {{ radicalInfo.meaning }}
+
+      <div class="breakdown-body">
+        <div v-if="componentVisuals.length" class="composition-flow">
+          <div class="composition-parts">
+            <template v-for="(part, index) in componentVisuals" :key="part.character">
+              <span v-if="index" class="composition-plus" aria-hidden="true">+</span>
+              <div class="composition-part">
+                <span>{{ part.label }}</span>
+                <strong class="han">{{ part.character }}</strong>
+                <em v-if="part.pinyin">{{ part.pinyin }}</em>
+                <small>{{ part.meaning }}</small>
+              </div>
             </template>
-          </dd>
+          </div>
+          <span class="composition-arrow" aria-hidden="true">&#8595;</span>
+          <div class="composition-result">
+            <strong class="han">{{ char }}</strong>
+            <span>{{ breakdown.pinyin?.join(' / ') }}</span>
+          </div>
         </div>
-        <div v-if="breakdown.decomposition">
-          <dt>Structure</dt>
-          <dd>
-            <span class="han">{{ breakdown.decomposition }}</span>
-            <span v-if="structureName"> · {{ structureName }}</span>
-          </dd>
+        <div v-else class="composition-single">
+          <strong class="han">{{ char }}</strong>
+          <span class="han">{{ breakdown.decomposition }}</span>
         </div>
-        <div v-if="formationName">
-          <dt>Formation</dt>
-          <dd>{{ formationName }}</dd>
+
+        <div class="breakdown-meta">
+          <div v-if="structureName">
+            <span>Structure</span>
+            <strong>{{ structureName }}</strong>
+          </div>
+          <div v-if="breakdown.radical">
+            <span>Radical</span>
+            <strong><b class="han">{{ breakdown.radical }}</b>{{ radicalInfo?.meaning || '' }}</strong>
+          </div>
+          <div v-if="formationName">
+            <span>Type</span>
+            <strong>{{ formationName }}</strong>
+          </div>
         </div>
-        <div v-if="breakdown.etymology?.semantic">
-          <dt>Meaning</dt>
-          <dd>
-            <span class="han">{{ breakdown.etymology.semantic }}</span>
-            <span v-if="breakdown.etymology.hint"> · {{ breakdown.etymology.hint }}</span>
-          </dd>
-        </div>
-        <div v-if="breakdown.etymology?.phonetic">
-          <dt>Sound</dt>
-          <dd class="han">{{ breakdown.etymology.phonetic }}</dd>
-        </div>
-      </dl>
-      <div class="breakdown-explanation">
-        <section v-if="analysisSummary">
-          <h4>How the character works</h4>
-          <p>{{ analysisSummary }}</p>
-        </section>
-        <section v-if="structureSummary">
-          <h4>Written structure</h4>
-          <p>{{ structureSummary }}</p>
-        </section>
-        <section v-if="breakdown.etymology?.hint">
-          <h4>Origin clue</h4>
-          <p>{{ breakdown.etymology.hint }}</p>
-        </section>
-        <section v-if="breakdown.etymology?.phonetic">
-          <h4>Pronunciation note</h4>
-          <p>
-            <span class="han">{{ breakdown.etymology.phonetic }}</span>
-            acts as a sound clue. Sound components reflect historical pronunciation,
-            so the modern reading may not match exactly.
-          </p>
-        </section>
-        <section v-if="breakdown.radical">
-          <h4>Dictionary lookup</h4>
-          <p>
-            This character is indexed under the
-            <span class="han">{{ breakdown.radical }}</span> radical in traditional
-            character dictionaries.
-          </p>
-        </section>
+
+        <aside v-if="memoryClue" class="memory-clue">
+          <span>Memory clue</span>
+          <p>{{ memoryClue }}</p>
+        </aside>
+
+        <p v-if="analysisSummary" class="breakdown-note">{{ analysisSummary }}</p>
       </div>
-      <p
-        v-if="breakdown.etymology?.hint && !breakdown.etymology?.semantic && !analysisSummary"
-        class="breakdown-hint"
-      >
-        {{ breakdown.etymology.hint }}
-      </p>
     </details>
   </div>
 </template>
@@ -441,85 +455,127 @@ watch(() => props.char, () => { if (started.value) build() })
   order: -1;
   width: min(17rem, 100%);
   border: 1px solid;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, .88);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .94);
   text-align: left;
   overflow: hidden;
+  box-shadow: 0 4px 14px -12px rgba(31, 29, 26, .5);
 }
 .breakdown-card summary {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1.75rem minmax(0, 1fr) 1rem;
   align-items: center;
-  gap: 6px;
-  padding: 7px 9px;
-  font-size: 10.5px;
-  font-weight: 800;
-  letter-spacing: .06em;
-  text-transform: uppercase;
+  gap: 8px;
+  min-height: 2.75rem;
+  padding: 7px 10px;
+  color: #1f1d1a;
   cursor: pointer;
   list-style: none;
+  transition: background .15s ease;
 }
+.breakdown-card summary:hover { background: color-mix(in srgb, var(--breakdown-accent) 5%, white); }
+.breakdown-card summary:focus-visible { outline: 2px solid var(--breakdown-accent); outline-offset: -2px; }
 .breakdown-card summary::-webkit-details-marker { display: none; }
-.breakdown-card summary::after {
-  content: '+';
-  margin-left: auto;
-  font-size: 14px;
-}
-.breakdown-card[open] summary::after { content: '−'; }
-.breakdown-card dl {
-  margin: 0;
-  padding: 0 9px 8px;
-}
-.breakdown-card dl > div {
+.breakdown-mark {
   display: grid;
-  grid-template-columns: 4.2rem minmax(0, 1fr);
-  gap: 7px;
-  padding: 4px 0;
-  border-top: 1px solid rgba(31, 29, 26, .08);
-  font-size: 11px;
-  line-height: 1.35;
+  width: 1.75rem;
+  height: 1.75rem;
+  place-items: center;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--breakdown-accent) 10%, white);
+  color: var(--breakdown-accent);
+  font-size: 17px;
+  font-weight: 800;
 }
-.breakdown-card dt {
-  color: rgba(31, 29, 26, .55);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: .07em;
+.breakdown-title {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 1px;
+}
+.breakdown-title strong {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  line-height: 1.25;
   text-transform: uppercase;
 }
-.breakdown-card dd {
-  margin: 0;
-  color: #1f1d1a;
-  overflow-wrap: anywhere;
-}
-.breakdown-explanation {
-  margin: 0 9px 9px;
-  border-top: 1px solid rgba(31, 29, 26, .08);
-}
-.breakdown-explanation section {
-  padding: 8px 0 1px;
-}
-.breakdown-explanation section + section {
-  border-top: 1px solid rgba(31, 29, 26, .06);
-}
-.breakdown-explanation h4 {
-  margin: 0 0 3px;
-  color: rgba(31, 29, 26, .58);
+.breakdown-title small {
+  overflow: hidden;
+  color: rgba(31, 29, 26, .55);
   font-size: 9px;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.breakdown-chevron {
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid var(--breakdown-accent);
+  border-bottom: 1.5px solid var(--breakdown-accent);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform .18s ease;
+}
+.breakdown-card[open] .breakdown-chevron { transform: rotate(225deg) translate(-1px, -1px); }
+.breakdown-card[open] summary { border-bottom: 1px solid rgba(31, 29, 26, .08); }
+.breakdown-body { padding: 12px 10px 10px; }
+.composition-flow { display: flex; flex-direction: column; align-items: center; }
+.composition-parts { display: flex; width: 100%; align-items: center; justify-content: center; gap: 6px; }
+.composition-part {
+  display: grid;
+  min-width: 0;
+  flex: 1 1 0;
+  grid-template-rows: 1rem 2.4rem 1rem auto;
+  justify-items: center;
+  padding: 7px 4px;
+  border-bottom: 2px solid color-mix(in srgb, var(--breakdown-accent) 35%, white);
+  background: color-mix(in srgb, var(--breakdown-accent) 4%, white);
+}
+.composition-part > span {
+  color: var(--breakdown-accent);
+  font-size: 8px;
   font-weight: 800;
   letter-spacing: .07em;
   text-transform: uppercase;
 }
-.breakdown-explanation p {
-  margin: 0 0 7px;
-  color: rgba(31, 29, 26, .82);
-  font-size: 11px;
-  line-height: 1.55;
+.composition-part strong { color: #1f1d1a; font-size: 28px; line-height: 1; }
+.composition-part em { color: #1f1d1a; font-size: 9px; font-style: normal; font-weight: 700; line-height: 1.2; }
+.composition-part small { color: rgba(31, 29, 26, .55); font-size: 8px; line-height: 1.25; text-align: center; }
+.composition-plus { flex: 0 0 auto; color: rgba(31, 29, 26, .3); font-size: 14px; }
+.composition-arrow { height: 18px; color: color-mix(in srgb, var(--breakdown-accent) 65%, white); font-size: 14px; line-height: 18px; }
+.composition-result { display: flex; align-items: baseline; gap: 7px; }
+.composition-result strong { color: var(--breakdown-accent); font-size: 34px; line-height: 1; }
+.composition-result span { color: #1f1d1a; font-size: 12px; font-weight: 700; }
+.composition-single { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 4px 0 10px; }
+.composition-single strong { color: var(--breakdown-accent); font-size: 34px; line-height: 1; }
+.composition-single span { color: rgba(31, 29, 26, .55); font-size: 15px; }
+.breakdown-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 11px;
+  border-top: 1px solid rgba(31, 29, 26, .09);
+  border-bottom: 1px solid rgba(31, 29, 26, .09);
 }
-.breakdown-hint {
-  margin: 0 9px 9px;
-  padding-top: 7px;
-  border-top: 1px solid rgba(31, 29, 26, .08);
-  color: rgba(31, 29, 26, .75);
-  font-size: 11px;
-  line-height: 1.45;
+.breakdown-meta > div { min-width: 0; padding: 7px 5px; }
+.breakdown-meta > div + div { border-left: 1px solid rgba(31, 29, 26, .08); }
+.breakdown-meta span { display: block; color: rgba(31, 29, 26, .48); font-size: 8px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.breakdown-meta strong { display: block; margin-top: 2px; color: #1f1d1a; font-size: 9px; font-weight: 700; line-height: 1.3; overflow-wrap: anywhere; }
+.breakdown-meta b { margin-right: 3px; color: var(--breakdown-accent); font-size: 13px; }
+.memory-clue {
+  margin-top: 9px;
+  padding: 8px 9px;
+  border-left: 3px solid var(--breakdown-accent);
+  background: color-mix(in srgb, var(--breakdown-accent) 6%, white);
 }
+.memory-clue span {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--breakdown-accent);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.memory-clue p { margin: 0; color: #1f1d1a; font-size: 10.5px; font-weight: 600; line-height: 1.45; }
+.breakdown-note { margin: 9px 2px 0; color: rgba(31, 29, 26, .72); font-size: 10px; line-height: 1.5; }
 </style>
