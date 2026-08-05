@@ -4,12 +4,14 @@ import HanziPractice from '~/components/HanziPractice.vue'
 
 useHead({ title: '拆字 · Hanzi Breakdown & Writing Practice' })
 
+const route = useRoute()
+const router = useRouter()
 const input = ref('妈')
 const query = ref('妈')
 const examples = ['妈', '你好', '老师', '学生', '汉语', '谢谢', '想喝']
 const characters = computed(() => [...query.value])
 
-const chooseCharacter = (value = input.value) => {
+const chooseCharacter = (value = input.value, updateRoute = true) => {
   const next = [...String(value)]
     .filter(char => /\p{Script=Han}/u.test(char))
     .slice(0, 8)
@@ -17,7 +19,18 @@ const chooseCharacter = (value = input.value) => {
   if (!next) return
   query.value = next
   input.value = next
+  if (updateRoute && route.query.character !== next) {
+    router.replace({ query: { ...route.query, character: next } })
+  }
 }
+
+watch(
+  () => route.query.character,
+  value => {
+    if (value) chooseCharacter(Array.isArray(value) ? value[0] : value, false)
+  },
+  { immediate: true },
+)
 </script>
 
 <template>

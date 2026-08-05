@@ -20,9 +20,21 @@ const ready = ref(false)
 const error = ref(false)
 const strokeCount = ref(null)
 const strokeCountLoading = ref(false)
+const showAllWords = ref(false)
+const wordSort = ref('level')
 const breakdown = computed(() => hanziBreakdowns[props.char] || null)
 const characterInfo = computed(() => hanziVocabulary[props.char] || null)
 const commonWords = computed(() => characterInfo.value?.words || [])
+const sortedCommonWords = computed(() => [...commonWords.value].sort((a, b) => {
+  if (wordSort.value === 'frequency') {
+    return b.frequency - a.frequency || a.level - b.level || a.c.length - b.c.length
+  }
+  return a.level - b.level || b.frequency - a.frequency || a.c.length - b.c.length
+}))
+const visibleCommonWords = computed(() =>
+  showAllWords.value ? sortedCommonWords.value : sortedCommonWords.value.slice(0, 5)
+)
+const hiddenWordCount = computed(() => Math.max(0, commonWords.value.length - visibleCommonWords.value.length))
 const definitionText = computed(() =>
   characterInfo.value?.definition || breakdown.value?.etymology?.hint || null
 )
@@ -87,6 +99,20 @@ const formationName = computed(() =>
 const structureName = computed(() =>
   structureNames[breakdown.value?.decomposition?.[0]] || null
 )
+const componentPositionNames = {
+  '⿰': ['left', 'right'],
+  '⿱': ['top', 'bottom'],
+  '⿲': ['left', 'middle', 'right'],
+  '⿳': ['top', 'middle', 'bottom'],
+  '⿴': ['outside', 'inside'],
+  '⿵': ['outside', 'inside'],
+  '⿶': ['outside', 'inside'],
+  '⿷': ['outside', 'inside'],
+  '⿸': ['outside', 'inside'],
+  '⿹': ['outside', 'inside'],
+  '⿺': ['outside', 'inside'],
+  '⿻': ['base', 'overlaid'],
+}
 const componentCharacters = computed(() => {
   const decomposition = breakdown.value?.decomposition
   if (!decomposition) return []
@@ -127,12 +153,15 @@ const memoryClue = computed(() => {
   const semantic = data.etymology?.semantic
   const phonetic = data.etymology?.phonetic
   const hint = data.etymology?.hint
+  const semanticPart = componentVisuals.value.find(part => part.character === semantic)
+  const phoneticPart = componentVisuals.value.find(part => part.character === phonetic)
 
   if (semantic && phonetic) {
-    return `Remember ${props.char}: ${semantic} suggests ${hint || 'the meaning'}, while ${phonetic} helps recall the sound.`
+    return `Picture ${semantic} (${semanticPart?.meaning || hint || 'the meaning'}) on the ${semanticPart?.position || 'meaning side'}, with ${phonetic} (${phoneticPart?.meaning || 'the sound clue'}) on the ${phoneticPart?.position || 'sound side'}. Together they form ${props.char}: meaning from ${semantic}, sound from ${phonetic}.`
   }
   if (hint) {
-    return `Picture ${hint} when you see ${componentCharacters.value.join(' + ') || props.char}.`
+    const parts = componentVisuals.value.map(part => `${part.character} on the ${part.position}`).join(' and ')
+    return `Picture ${hint}.${parts ? ` Use the layout: ${parts}.` : ''}`
   }
   if (componentCharacters.value.length) {
     return `Build ${props.char} from ${componentCharacters.value.join(' + ')} in a ${structureName.value || 'combined'} arrangement.`
@@ -158,16 +187,39 @@ const componentVisuals = computed(() => componentCharacters.value.map(character 
   const label = character === etymology?.semantic
     ? 'Meaning'
     : character === etymology?.phonetic ? 'Sound' : 'Part'
+  const index = componentCharacters.value.indexOf(character)
+  const position = componentPositionNames[breakdown.value?.decomposition?.[0]]?.[index] || `part ${index + 1}`
 
   return {
     character,
     label,
+    position,
     pinyin: partBreakdown?.pinyin?.[0] || radical?.pinyin || '',
     meaning: radical?.meaning?.toLocaleLowerCase('en')
       || partBreakdown?.etymology?.hint
       || 'component',
   }
 }))
+const readingEntries = computed(() => {
+  if (characterInfo.value?.readings?.length) return characterInfo.value.readings
+  return (breakdown.value?.pinyin || []).map(pinyin => ({ p: pinyin, en: definitionText.value }))
+})
+const phoneticFamily = computed(() => {
+  const phonetic = breakdown.value?.etymology?.phonetic
+  if (!phonetic) return []
+
+  return Object.entries(hanziBreakdowns)
+    .filter(([character, data]) => character !== props.char && data.etymology?.phonetic === phonetic)
+    .map(([character, data]) => ({
+      character,
+      pinyin: data.pinyin?.[0] || '',
+      meaning: hanziVocabulary[character]?.definition
+        || hanziVocabulary[character]?.readings?.[0]?.en
+        || data.etymology?.hint
+        || '',
+    }))
+    .slice(0, 12)
+})
 const hasBreakdownDetails = computed(() => {
   const data = breakdown.value
   return Boolean(
@@ -308,6 +360,8 @@ function stop () {
 onBeforeUnmount(() => { writer.value = null })
 watch(() => props.char, () => {
   strokeCount.value = null
+  showAllWords.value = false
+  wordSort.value = 'level'
   if (started.value) build()
 })
 </script>
@@ -396,9 +450,14 @@ watch(() => props.char, () => {
       <div class="breakdown-body">
         <header class="character-overview">
           <strong class="han">{{ char }}</strong>
-          <div>
-            <b>{{ breakdown.pinyin?.join(' / ') }}</b>
-            <p v-if="definitionText"><span>{{ definitionLabel }}:</span> {{ definitionText }}</p>
+          <div class="reading-list">
+            <div v-for="reading in readingEntries" :key="`${reading.p}-${reading.en}`">
+              <b>{{ reading.p }}</b>
+              <p v-if="reading.en">
+                <span>{{ characterInfo?.readings?.length ? 'Definition' : definitionLabel }}:</span>
+                {{ reading.en }}
+              </p>
+            </div>
           </div>
           <span class="stroke-count" aria-live="polite">
             {{ strokeCount ? `${strokeCount} strokes` : strokeCountLoading ? 'Counting...' : 'Strokes' }}
@@ -410,12 +469,16 @@ watch(() => props.char, () => {
           <div class="composition-parts">
             <template v-for="(part, index) in componentVisuals" :key="part.character">
               <span v-if="index" class="composition-plus" aria-hidden="true">+</span>
-              <div class="composition-part">
-                <span>{{ part.label }}</span>
+              <NuxtLink
+                class="composition-part"
+                :to="{ path: '/hanzi', query: { character: part.character } }"
+                :title="`Explore ${part.character}`"
+              >
+                <span>{{ part.label }} / {{ part.position }}</span>
                 <strong class="han">{{ part.character }}</strong>
                 <em v-if="part.pinyin">{{ part.pinyin }}</em>
                 <small>{{ part.meaning }}</small>
-              </div>
+              </NuxtLink>
             </template>
           </div>
           <span class="composition-arrow" aria-hidden="true">&#8595;</span>
@@ -454,15 +517,56 @@ watch(() => props.char, () => {
           <p>{{ memoryClue }}</p>
         </aside>
 
+        <section v-if="phoneticFamily.length" class="breakdown-section phonetic-family">
+          <h4>Sound family</h4>
+          <div>
+            <NuxtLink
+              v-for="member in phoneticFamily"
+              :key="member.character"
+              :to="{ path: '/hanzi', query: { character: member.character } }"
+              :title="`Explore ${member.character}`"
+            >
+              <strong class="han">{{ member.character }}</strong>
+              <span>{{ member.pinyin }}</span>
+              <small v-if="member.meaning">{{ member.meaning }}</small>
+            </NuxtLink>
+          </div>
+        </section>
+
         <section v-if="commonWords.length" class="breakdown-section common-words">
-          <h4>Common words <span>{{ commonWords.length }}</span></h4>
+          <div class="common-words-header">
+            <h4>Common words <span>{{ commonWords.length }}</span></h4>
+            <div class="word-sort" aria-label="Sort common words">
+              <button
+                type="button"
+                title="Sort by HSK level"
+                :class="{ active: wordSort === 'level' }"
+                :aria-pressed="wordSort === 'level'"
+                @click="wordSort = 'level'"
+              >HSK</button>
+              <button
+                type="button"
+                title="Sort by use in course texts"
+                :class="{ active: wordSort === 'frequency' }"
+                :aria-pressed="wordSort === 'frequency'"
+                @click="wordSort = 'frequency'"
+              >Use</button>
+            </div>
+          </div>
           <ul>
-            <li v-for="word in commonWords" :key="word.c">
-              <strong class="han">{{ word.c }}</strong>
+            <li v-for="word in visibleCommonWords" :key="`${word.c}-${word.p}`">
+              <strong class="han">{{ word.c }} <b>HSK {{ word.level }}</b></strong>
               <span>{{ word.p }}</span>
               <small>{{ word.en }}</small>
             </li>
           </ul>
+          <button
+            v-if="hiddenWordCount || showAllWords"
+            type="button"
+            class="words-toggle"
+            :aria-expanded="showAllWords"
+            @click="showAllWords = !showAllWords"
+          >{{ showAllWords ? 'Show fewer' : `Show ${hiddenWordCount} more` }}</button>
         </section>
       </div>
     </details>
@@ -589,6 +693,8 @@ watch(() => props.char, () => {
 }
 .character-overview > strong { color: var(--breakdown-accent); font-size: 36px; line-height: 1; }
 .character-overview > div { min-width: 0; }
+.reading-list { display: grid; gap: 5px; }
+.reading-list > div + div { padding-top: 4px; border-top: 1px dashed rgba(31, 29, 26, .1); }
 .character-overview b { display: block; color: #1f1d1a; font-size: 12px; line-height: 1.35; }
 .character-overview p { margin: 3px 0 0; color: rgba(31, 29, 26, .7); font-size: 9px; line-height: 1.4; }
 .character-overview p span { color: rgba(31, 29, 26, .5); font-weight: 800; text-transform: uppercase; }
@@ -618,17 +724,23 @@ watch(() => props.char, () => {
   display: grid;
   min-width: 0;
   flex: 1 1 0;
-  grid-template-rows: 1rem 2.4rem 1rem auto;
+  grid-template-rows: minmax(1.35rem, auto) 2.4rem 1rem auto;
   justify-items: center;
   padding: 7px 4px;
   border-bottom: 2px solid color-mix(in srgb, var(--breakdown-accent) 35%, white);
   background: color-mix(in srgb, var(--breakdown-accent) 4%, white);
+  text-decoration: none;
+  transition: border-color .15s ease, background .15s ease;
 }
+.composition-part:hover { border-color: var(--breakdown-accent); background: color-mix(in srgb, var(--breakdown-accent) 9%, white); }
+.composition-part:focus-visible { outline: 2px solid var(--breakdown-accent); outline-offset: 2px; }
 .composition-part > span {
   color: var(--breakdown-accent);
   font-size: 8px;
   font-weight: 800;
   letter-spacing: .07em;
+  line-height: 1.25;
+  text-align: center;
   text-transform: uppercase;
 }
 .composition-part strong { color: #1f1d1a; font-size: 28px; line-height: 1; }
@@ -672,6 +784,23 @@ watch(() => props.char, () => {
   text-transform: uppercase;
 }
 .memory-clue p { margin: 0; color: #1f1d1a; font-size: 10.5px; font-weight: 600; line-height: 1.45; }
+.phonetic-family > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
+.phonetic-family a {
+  display: grid;
+  min-width: 0;
+  justify-items: center;
+  padding: 5px 3px;
+  border-bottom: 2px solid color-mix(in srgb, var(--breakdown-accent) 25%, white);
+  color: #1f1d1a;
+  text-align: center;
+  text-decoration: none;
+}
+.phonetic-family a:hover { border-color: var(--breakdown-accent); background: color-mix(in srgb, var(--breakdown-accent) 5%, white); }
+.phonetic-family a:focus-visible { outline: 2px solid var(--breakdown-accent); outline-offset: 1px; }
+.phonetic-family strong { font-size: 20px; line-height: 1.1; }
+.phonetic-family span { color: var(--breakdown-accent); font-size: 8px; font-weight: 700; }
+.phonetic-family small { width: 100%; overflow: hidden; color: rgba(31, 29, 26, .55); font-size: 7.5px; line-height: 1.25; text-overflow: ellipsis; white-space: nowrap; }
+.common-words-header { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
 .common-words ul { display: grid; gap: 5px; margin: 0; padding: 0; list-style: none; }
 .common-words h4 span {
   display: inline-grid;
@@ -693,6 +822,45 @@ watch(() => props.char, () => {
   border-left: 2px solid color-mix(in srgb, var(--breakdown-accent) 28%, white);
 }
 .common-words strong { color: #1f1d1a; font-size: 12px; }
+.common-words strong b {
+  display: inline-block;
+  margin-left: 3px;
+  padding: 1px 3px;
+  border-radius: 3px;
+  background: color-mix(in srgb, var(--breakdown-accent) 9%, white);
+  color: var(--breakdown-accent);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 7px;
+  line-height: 1.3;
+  vertical-align: middle;
+}
 .common-words span { color: var(--breakdown-accent); font-size: 9px; font-weight: 700; }
 .common-words small { grid-column: 1 / -1; color: rgba(31, 29, 26, .6); font-size: 9px; line-height: 1.3; }
+.word-sort { display: inline-flex; flex: 0 0 auto; border: 1px solid rgba(31, 29, 26, .12); border-radius: 5px; overflow: hidden; }
+.word-sort button {
+  min-height: 1.4rem;
+  padding: 2px 5px;
+  border: 0;
+  background: white;
+  color: rgba(31, 29, 26, .55);
+  font-size: 7.5px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.word-sort button + button { border-left: 1px solid rgba(31, 29, 26, .12); }
+.word-sort button.active { background: var(--breakdown-accent); color: white; }
+.word-sort button:focus-visible { outline: 2px solid var(--breakdown-accent); outline-offset: -2px; }
+.words-toggle {
+  width: 100%;
+  margin-top: 7px;
+  padding: 5px;
+  border: 1px solid color-mix(in srgb, var(--breakdown-accent) 24%, white);
+  border-radius: 5px;
+  background: white;
+  color: var(--breakdown-accent);
+  font-size: 8px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.words-toggle:hover { background: color-mix(in srgb, var(--breakdown-accent) 5%, white); }
 </style>
