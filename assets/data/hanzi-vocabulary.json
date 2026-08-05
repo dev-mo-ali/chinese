@@ -1,0 +1,7129 @@
+{
+  "你": {
+    "definition": "you (singular)",
+    "words": [
+      {
+        "c": "你们",
+        "p": "nǐmen",
+        "en": "you (plural)"
+      }
+    ]
+  },
+  "好": {
+    "definition": "good · fine",
+    "words": [
+      {
+        "c": "好吃",
+        "p": "hǎochī",
+        "en": "delicious · tasty"
+      },
+      {
+        "c": "爱好",
+        "p": "àihào",
+        "en": "hobby; interest"
+      }
+    ]
+  },
+  "您": {
+    "definition": "you (polite)",
+    "words": []
+  },
+  "们": {
+    "definition": null,
+    "words": [
+      {
+        "c": "你们",
+        "p": "nǐmen",
+        "en": "you (plural)"
+      }
+    ]
+  },
+  "对": {
+    "definition": "to · for (toward)",
+    "words": [
+      {
+        "c": "对不起",
+        "p": "duìbuqǐ",
+        "en": "to be sorry"
+      }
+    ]
+  },
+  "不": {
+    "definition": "no · not",
+    "words": [
+      {
+        "c": "不少",
+        "p": "bù shǎo",
+        "en": "quite a few · many"
+      },
+      {
+        "c": "对不起",
+        "p": "duìbuqǐ",
+        "en": "to be sorry"
+      },
+      {
+        "c": "不客气",
+        "p": "bú kèqi",
+        "en": "you’re welcome"
+      },
+      {
+        "c": "不错",
+        "p": "búcuò",
+        "en": "pretty good"
+      },
+      {
+        "c": "不但……而且……",
+        "p": "bùdàn…érqiě…",
+        "en": "not only... but also..."
+      }
+    ]
+  },
+  "起": {
+    "definition": null,
+    "words": [
+      {
+        "c": "一起",
+        "p": "yìqǐ",
+        "en": "together"
+      },
+      {
+        "c": "对不起",
+        "p": "duìbuqǐ",
+        "en": "to be sorry"
+      },
+      {
+        "c": "起床",
+        "p": "qǐchuáng",
+        "en": "to get up · to get out of bed"
+      },
+      {
+        "c": "起飞",
+        "p": "qǐfēi",
+        "en": "to take off (aircraft)"
+      },
+      {
+        "c": "起来",
+        "p": "qǐlai",
+        "en": "indicating an upward movement; to rise"
+      }
+    ]
+  },
+  "没": {
+    "definition": null,
+    "words": [
+      {
+        "c": "没有",
+        "p": "méi yǒu",
+        "en": "do not have · there is not"
+      },
+      {
+        "c": "没关系",
+        "p": "méi guānxi",
+        "en": "that’s OK · it doesn’t matter"
+      }
+    ]
+  },
+  "关": {
+    "definition": "to turn off; to close",
+    "words": [
+      {
+        "c": "没关系",
+        "p": "méi guānxi",
+        "en": "that’s OK · it doesn’t matter"
+      },
+      {
+        "c": "关系",
+        "p": "guānxi",
+        "en": "relationship"
+      },
+      {
+        "c": "关于",
+        "p": "guānyú",
+        "en": "about; regarding"
+      },
+      {
+        "c": "关心",
+        "p": "guānxīn",
+        "en": "to care for; to be interested in"
+      }
+    ]
+  },
+  "系": {
+    "definition": null,
+    "words": [
+      {
+        "c": "没关系",
+        "p": "méi guānxi",
+        "en": "that’s OK · it doesn’t matter"
+      },
+      {
+        "c": "关系",
+        "p": "guānxi",
+        "en": "relationship"
+      }
+    ]
+  },
+  "谢": {
+    "definition": null,
+    "words": [
+      {
+        "c": "谢谢",
+        "p": "xièxie",
+        "en": "to thank · thanks"
+      }
+    ]
+  },
+  "客": {
+    "definition": null,
+    "words": [
+      {
+        "c": "不客气",
+        "p": "bú kèqi",
+        "en": "you’re welcome"
+      },
+      {
+        "c": "客人",
+        "p": "kèrén",
+        "en": "customer, guest"
+      }
+    ]
+  },
+  "气": {
+    "definition": null,
+    "words": [
+      {
+        "c": "天气",
+        "p": "tiānqì",
+        "en": "weather"
+      },
+      {
+        "c": "不客气",
+        "p": "bú kèqi",
+        "en": "you’re welcome"
+      },
+      {
+        "c": "生气",
+        "p": "shēng qì",
+        "en": "to be angry"
+      }
+    ]
+  },
+  "再": {
+    "definition": "again · once more",
+    "words": [
+      {
+        "c": "再见",
+        "p": "zàijiàn",
+        "en": "goodbye"
+      }
+    ]
+  },
+  "见": {
+    "definition": null,
+    "words": [
+      {
+        "c": "再见",
+        "p": "zàijiàn",
+        "en": "goodbye"
+      },
+      {
+        "c": "看见",
+        "p": "kànjiàn",
+        "en": "to see"
+      },
+      {
+        "c": "见面",
+        "p": "jiàn miàn",
+        "en": "to meet"
+      }
+    ]
+  },
+  "叫": {
+    "definition": "to call · be called",
+    "words": []
+  },
+  "什": {
+    "definition": null,
+    "words": [
+      {
+        "c": "什么",
+        "p": "shénme",
+        "en": "what"
+      },
+      {
+        "c": "为什么",
+        "p": "wèishénme",
+        "en": "why"
+      }
+    ]
+  },
+  "么": {
+    "definition": null,
+    "words": [
+      {
+        "c": "什么",
+        "p": "shénme",
+        "en": "what"
+      },
+      {
+        "c": "怎么",
+        "p": "zěnme",
+        "en": "how"
+      },
+      {
+        "c": "怎么样",
+        "p": "zěnmeyàng",
+        "en": "how · how about"
+      },
+      {
+        "c": "为什么",
+        "p": "wèishénme",
+        "en": "why"
+      },
+      {
+        "c": "多么",
+        "p": "duōme",
+        "en": "very; to a great extent"
+      }
+    ]
+  },
+  "名": {
+    "definition": null,
+    "words": [
+      {
+        "c": "名字",
+        "p": "míngzi",
+        "en": "name"
+      },
+      {
+        "c": "有名",
+        "p": "yǒumíng",
+        "en": "famous"
+      }
+    ]
+  },
+  "字": {
+    "definition": "character · word",
+    "words": [
+      {
+        "c": "名字",
+        "p": "míngzi",
+        "en": "name"
+      },
+      {
+        "c": "汉字",
+        "p": "Hànzì",
+        "en": "Chinese character"
+      }
+    ]
+  },
+  "我": {
+    "definition": "I · me",
+    "words": []
+  },
+  "是": {
+    "definition": "to be",
+    "words": [
+      {
+        "c": "但是",
+        "p": "dànshì",
+        "en": "but · still · yet"
+      },
+      {
+        "c": "还是",
+        "p": "háishi",
+        "en": "or"
+      },
+      {
+        "c": "总是",
+        "p": "zǒngshì",
+        "en": "always"
+      }
+    ]
+  },
+  "老": {
+    "definition": "old",
+    "words": [
+      {
+        "c": "老师",
+        "p": "lǎoshī",
+        "en": "teacher"
+      }
+    ]
+  },
+  "师": {
+    "definition": null,
+    "words": [
+      {
+        "c": "老师",
+        "p": "lǎoshī",
+        "en": "teacher"
+      }
+    ]
+  },
+  "吗": {
+    "definition": "(yes/no question particle)",
+    "words": []
+  },
+  "学": {
+    "definition": null,
+    "words": [
+      {
+        "c": "学生",
+        "p": "xuésheng",
+        "en": "student"
+      },
+      {
+        "c": "同学",
+        "p": "tóngxué",
+        "en": "classmate"
+      },
+      {
+        "c": "学校",
+        "p": "xuéxiào",
+        "en": "school"
+      },
+      {
+        "c": "学习",
+        "p": "xuéxí",
+        "en": "to study · to learn"
+      },
+      {
+        "c": "大学",
+        "p": "dàxué",
+        "en": "college · university"
+      },
+      {
+        "c": "数学",
+        "p": "shùxué",
+        "en": "maths"
+      },
+      {
+        "c": "留学",
+        "p": "liú xué",
+        "en": "to study abroad"
+      }
+    ]
+  },
+  "生": {
+    "definition": null,
+    "words": [
+      {
+        "c": "学生",
+        "p": "xuésheng",
+        "en": "student"
+      },
+      {
+        "c": "医生",
+        "p": "yīshēng",
+        "en": "doctor"
+      },
+      {
+        "c": "先生",
+        "p": "xiānsheng",
+        "en": "Mr · sir"
+      },
+      {
+        "c": "生病",
+        "p": "shēng bìng",
+        "en": "to fall ill · to be sick"
+      },
+      {
+        "c": "生日",
+        "p": "shēngrì",
+        "en": "birthday"
+      },
+      {
+        "c": "生气",
+        "p": "shēng qì",
+        "en": "to be angry"
+      },
+      {
+        "c": "生活",
+        "p": "shēnghuó",
+        "en": "life"
+      }
+    ]
+  },
+  "人": {
+    "definition": "human · person",
+    "words": [
+      {
+        "c": "客人",
+        "p": "kèrén",
+        "en": "customer, guest"
+      },
+      {
+        "c": "别人",
+        "p": "biérén",
+        "en": "other people"
+      }
+    ]
+  },
+  "中": {
+    "definition": null,
+    "words": [
+      {
+        "c": "中国",
+        "p": "Zhōngguó",
+        "en": "China"
+      },
+      {
+        "c": "中午",
+        "p": "zhōngwǔ",
+        "en": "noon"
+      },
+      {
+        "c": "中国菜",
+        "p": "Zhōngguó cài",
+        "en": "Chinese food"
+      },
+      {
+        "c": "中间",
+        "p": "zhōngjiān",
+        "en": "middle · between"
+      },
+      {
+        "c": "中文",
+        "p": "Zhōngwén",
+        "en": "Chinese language"
+      },
+      {
+        "c": "中介",
+        "p": "zhōngjiè",
+        "en": "intermediary, agent"
+      }
+    ]
+  },
+  "国": {
+    "definition": "country",
+    "words": [
+      {
+        "c": "中国",
+        "p": "Zhōngguó",
+        "en": "China"
+      },
+      {
+        "c": "美国",
+        "p": "Měiguó",
+        "en": "the United States"
+      },
+      {
+        "c": "中国菜",
+        "p": "Zhōngguó cài",
+        "en": "Chinese food"
+      },
+      {
+        "c": "国家",
+        "p": "guójiā",
+        "en": "country; nation"
+      }
+    ]
+  },
+  "美": {
+    "definition": null,
+    "words": [
+      {
+        "c": "美国",
+        "p": "Měiguó",
+        "en": "the United States"
+      }
+    ]
+  },
+  "她": {
+    "definition": "she · her",
+    "words": []
+  },
+  "他": {
+    "definition": "he · him",
+    "words": [
+      {
+        "c": "其他",
+        "p": "qítā",
+        "en": "the rest"
+      }
+    ]
+  },
+  "谁": {
+    "definition": "who · whom",
+    "words": []
+  },
+  "的": {
+    "definition": "(possessive · attributive)",
+    "words": [
+      {
+        "c": "……的时候",
+        "p": "... de shíhou",
+        "en": "when · during"
+      }
+    ]
+  },
+  "汉": {
+    "definition": null,
+    "words": [
+      {
+        "c": "汉语",
+        "p": "Hànyǔ",
+        "en": "Chinese (language)"
+      },
+      {
+        "c": "汉字",
+        "p": "Hànzì",
+        "en": "Chinese character"
+      }
+    ]
+  },
+  "语": {
+    "definition": null,
+    "words": [
+      {
+        "c": "汉语",
+        "p": "Hànyǔ",
+        "en": "Chinese (language)"
+      },
+      {
+        "c": "词语",
+        "p": "cíyǔ",
+        "en": "word; expression"
+      }
+    ]
+  },
+  "哪": {
+    "definition": "which",
+    "words": [
+      {
+        "c": "哪儿",
+        "p": "nǎr",
+        "en": "where"
+      }
+    ]
+  },
+  "呢": {
+    "definition": "(question particle)",
+    "words": []
+  },
+  "同": {
+    "definition": null,
+    "words": [
+      {
+        "c": "同学",
+        "p": "tóngxué",
+        "en": "classmate"
+      },
+      {
+        "c": "同事",
+        "p": "tóngshi",
+        "en": "colleague"
+      },
+      {
+        "c": "同意",
+        "p": "tóngyì",
+        "en": "to agree"
+      }
+    ]
+  },
+  "朋": {
+    "definition": null,
+    "words": [
+      {
+        "c": "朋友",
+        "p": "péngyou",
+        "en": "friend"
+      }
+    ]
+  },
+  "友": {
+    "definition": null,
+    "words": [
+      {
+        "c": "朋友",
+        "p": "péngyou",
+        "en": "friend"
+      }
+    ]
+  },
+  "家": {
+    "definition": "family · home",
+    "words": [
+      {
+        "c": "大家",
+        "p": "dàjiā",
+        "en": "all · everybody"
+      },
+      {
+        "c": "国家",
+        "p": "guójiā",
+        "en": "country; nation"
+      }
+    ]
+  },
+  "有": {
+    "definition": "to have · there is",
+    "words": [
+      {
+        "c": "没有",
+        "p": "méi yǒu",
+        "en": "do not have · there is not"
+      },
+      {
+        "c": "有意思",
+        "p": "yǒu yìsi",
+        "en": "interesting · fun"
+      },
+      {
+        "c": "有名",
+        "p": "yǒumíng",
+        "en": "famous"
+      },
+      {
+        "c": "只有……才……",
+        "p": "zhǐyǒu…cái…",
+        "en": "only... (that/can...)"
+      }
+    ]
+  },
+  "几": {
+    "definition": "how many",
+    "words": [
+      {
+        "c": "几乎",
+        "p": "jīhū",
+        "en": "almost"
+      }
+    ]
+  },
+  "口": {
+    "definition": "(measure for family members)",
+    "words": [
+      {
+        "c": "路口",
+        "p": "lùkǒu",
+        "en": "crossing · crossroads"
+      }
+    ]
+  },
+  "女": {
+    "definition": "woman · female",
+    "words": [
+      {
+        "c": "女儿",
+        "p": "nǚ’ér",
+        "en": "daughter"
+      }
+    ]
+  },
+  "儿": {
+    "definition": null,
+    "words": [
+      {
+        "c": "女儿",
+        "p": "nǚ’ér",
+        "en": "daughter"
+      },
+      {
+        "c": "哪儿",
+        "p": "nǎr",
+        "en": "where"
+      },
+      {
+        "c": "儿子",
+        "p": "érzi",
+        "en": "son"
+      },
+      {
+        "c": "这儿",
+        "p": "zhèr",
+        "en": "here"
+      },
+      {
+        "c": "一点儿",
+        "p": "yìdiǎnr",
+        "en": "a few · a little"
+      },
+      {
+        "c": "玩儿",
+        "p": "wánr",
+        "en": "to play · to have fun"
+      },
+      {
+        "c": "一会儿",
+        "p": "yíhuìr",
+        "en": "a moment"
+      },
+      {
+        "c": "聊天（儿）",
+        "p": "liáo tiān (r)",
+        "en": "to chat"
+      }
+    ]
+  },
+  "岁": {
+    "definition": "year (of age)",
+    "words": []
+  },
+  "了": {
+    "definition": "(particle of change)",
+    "words": [
+      {
+        "c": "了解",
+        "p": "liǎojiě",
+        "en": "to know"
+      },
+      {
+        "c": "除了",
+        "p": "chúle",
+        "en": "other than; besides"
+      },
+      {
+        "c": "为了",
+        "p": "wèile",
+        "en": "for the sake of"
+      },
+      {
+        "c": "极（了）",
+        "p": "jí (le)",
+        "en": "extremely"
+      }
+    ]
+  },
+  "今": {
+    "definition": null,
+    "words": [
+      {
+        "c": "今年",
+        "p": "jīnnián",
+        "en": "this year"
+      },
+      {
+        "c": "今天",
+        "p": "jīntiān",
+        "en": "today"
+      }
+    ]
+  },
+  "年": {
+    "definition": "year",
+    "words": [
+      {
+        "c": "今年",
+        "p": "jīnnián",
+        "en": "this year"
+      },
+      {
+        "c": "去年",
+        "p": "qùnián",
+        "en": "last year"
+      },
+      {
+        "c": "新年",
+        "p": "xīnnián",
+        "en": "New Year"
+      },
+      {
+        "c": "年级",
+        "p": "niánjí",
+        "en": "grade"
+      },
+      {
+        "c": "年轻",
+        "p": "niánqīng",
+        "en": "young"
+      }
+    ]
+  },
+  "多": {
+    "definition": "how (in degree questions)",
+    "words": [
+      {
+        "c": "多少",
+        "p": "duōshao",
+        "en": "how many · how much"
+      },
+      {
+        "c": "多么",
+        "p": "duōme",
+        "en": "very; to a great extent"
+      }
+    ]
+  },
+  "大": {
+    "definition": "big · old (in age)",
+    "words": [
+      {
+        "c": "大伟",
+        "p": "Dàwěi",
+        "en": "David (name)"
+      },
+      {
+        "c": "大学",
+        "p": "dàxué",
+        "en": "college · university"
+      },
+      {
+        "c": "大家",
+        "p": "dàjiā",
+        "en": "all · everybody"
+      }
+    ]
+  },
+  "一": {
+    "definition": "one",
+    "words": [
+      {
+        "c": "一起",
+        "p": "yìqǐ",
+        "en": "together"
+      },
+      {
+        "c": "一点儿",
+        "p": "yìdiǎnr",
+        "en": "a few · a little"
+      },
+      {
+        "c": "一下",
+        "p": "yí xià",
+        "en": "used after a verb to indicate a brief action"
+      },
+      {
+        "c": "第一",
+        "p": "dì-yī",
+        "en": "first"
+      },
+      {
+        "c": "一直",
+        "p": "yìzhí",
+        "en": "straight · all along"
+      },
+      {
+        "c": "一样",
+        "p": "yíyàng",
+        "en": "same, as…as…"
+      },
+      {
+        "c": "一定",
+        "p": "yídìng",
+        "en": "definitely, certainly"
+      },
+      {
+        "c": "一边",
+        "p": "yìbiān",
+        "en": "indicating two actions happening at the same time"
+      },
+      {
+        "c": "一般",
+        "p": "yìbān",
+        "en": "general; usual"
+      },
+      {
+        "c": "一共",
+        "p": "yígòng",
+        "en": "in total"
+      },
+      {
+        "c": "一会儿",
+        "p": "yíhuìr",
+        "en": "a moment"
+      }
+    ]
+  },
+  "二": {
+    "definition": "two",
+    "words": []
+  },
+  "三": {
+    "definition": "three",
+    "words": []
+  },
+  "四": {
+    "definition": "four",
+    "words": []
+  },
+  "五": {
+    "definition": "five",
+    "words": []
+  },
+  "六": {
+    "definition": "six",
+    "words": []
+  },
+  "七": {
+    "definition": "seven",
+    "words": []
+  },
+  "八": {
+    "definition": "eight",
+    "words": []
+  },
+  "九": {
+    "definition": "nine",
+    "words": []
+  },
+  "十": {
+    "definition": "ten",
+    "words": []
+  },
+  "会": {
+    "definition": "can · be able to",
+    "words": [
+      {
+        "c": "会议",
+        "p": "huìyì",
+        "en": "meeting; conference"
+      },
+      {
+        "c": "机会",
+        "p": "jīhuì",
+        "en": "opportunity"
+      },
+      {
+        "c": "一会儿",
+        "p": "yíhuìr",
+        "en": "a moment"
+      }
+    ]
+  },
+  "说": {
+    "definition": "to speak · say",
+    "words": [
+      {
+        "c": "说话",
+        "p": "shuō huà",
+        "en": "to speak · to say · to talk"
+      }
+    ]
+  },
+  "妈": {
+    "definition": null,
+    "words": [
+      {
+        "c": "妈妈",
+        "p": "māma",
+        "en": "mother"
+      }
+    ]
+  },
+  "菜": {
+    "definition": "dish · cuisine",
+    "words": [
+      {
+        "c": "中国菜",
+        "p": "Zhōngguó cài",
+        "en": "Chinese food"
+      },
+      {
+        "c": "菜单",
+        "p": "càidān",
+        "en": "menu"
+      }
+    ]
+  },
+  "吃": {
+    "definition": "to eat",
+    "words": [
+      {
+        "c": "好吃",
+        "p": "hǎochī",
+        "en": "delicious · tasty"
+      },
+      {
+        "c": "吃饭",
+        "p": "chī fàn",
+        "en": "to have a meal"
+      }
+    ]
+  },
+  "很": {
+    "definition": "very · quite",
+    "words": []
+  },
+  "做": {
+    "definition": "to make · do",
+    "words": []
+  },
+  "写": {
+    "definition": "to write",
+    "words": []
+  },
+  "怎": {
+    "definition": null,
+    "words": [
+      {
+        "c": "怎么",
+        "p": "zěnme",
+        "en": "how"
+      },
+      {
+        "c": "怎么样",
+        "p": "zěnmeyàng",
+        "en": "how · how about"
+      }
+    ]
+  },
+  "读": {
+    "definition": "to read",
+    "words": []
+  },
+  "这": {
+    "definition": "this",
+    "words": [
+      {
+        "c": "这儿",
+        "p": "zhèr",
+        "en": "here"
+      },
+      {
+        "c": "这些",
+        "p": "zhèxiē",
+        "en": "these"
+      }
+    ]
+  },
+  "个": {
+    "definition": "(general measure word)",
+    "words": [
+      {
+        "c": "个子",
+        "p": "gèzi",
+        "en": "height, stature"
+      }
+    ]
+  },
+  "请": {
+    "definition": "please · invite",
+    "words": [
+      {
+        "c": "请问",
+        "p": "qǐngwèn",
+        "en": "excuse me · may I ask"
+      },
+      {
+        "c": "请假",
+        "p": "qǐng jià",
+        "en": "to ask for leave"
+      }
+    ]
+  },
+  "问": {
+    "definition": "to ask",
+    "words": [
+      {
+        "c": "请问",
+        "p": "qǐngwèn",
+        "en": "excuse me · may I ask"
+      },
+      {
+        "c": "问题",
+        "p": "wèntí",
+        "en": "question · problem"
+      }
+    ]
+  },
+  "天": {
+    "definition": null,
+    "words": [
+      {
+        "c": "今天",
+        "p": "jīntiān",
+        "en": "today"
+      },
+      {
+        "c": "昨天",
+        "p": "zuótiān",
+        "en": "yesterday"
+      },
+      {
+        "c": "明天",
+        "p": "míngtiān",
+        "en": "tomorrow"
+      },
+      {
+        "c": "天气",
+        "p": "tiānqì",
+        "en": "weather"
+      },
+      {
+        "c": "春（天）",
+        "p": "chūn (tiān)",
+        "en": "spring"
+      },
+      {
+        "c": "夏（天）",
+        "p": "xià (tiān)",
+        "en": "summer"
+      },
+      {
+        "c": "冬（天）",
+        "p": "dōng (tiān)",
+        "en": "winter"
+      },
+      {
+        "c": "秋（天）",
+        "p": "qiū (tiān)",
+        "en": "autumn; fall"
+      },
+      {
+        "c": "聊天（儿）",
+        "p": "liáo tiān (r)",
+        "en": "to chat"
+      }
+    ]
+  },
+  "号": {
+    "definition": "date of the month · number",
+    "words": []
+  },
+  "月": {
+    "definition": "month",
+    "words": [
+      {
+        "c": "月亮",
+        "p": "yuèliang",
+        "en": "moon"
+      }
+    ]
+  },
+  "星": {
+    "definition": null,
+    "words": [
+      {
+        "c": "星期",
+        "p": "xīngqī",
+        "en": "week"
+      }
+    ]
+  },
+  "期": {
+    "definition": null,
+    "words": [
+      {
+        "c": "星期",
+        "p": "xīngqī",
+        "en": "week"
+      }
+    ]
+  },
+  "昨": {
+    "definition": null,
+    "words": [
+      {
+        "c": "昨天",
+        "p": "zuótiān",
+        "en": "yesterday"
+      }
+    ]
+  },
+  "明": {
+    "definition": null,
+    "words": [
+      {
+        "c": "明天",
+        "p": "míngtiān",
+        "en": "tomorrow"
+      },
+      {
+        "c": "聪明",
+        "p": "cōngming",
+        "en": "clever, smart"
+      },
+      {
+        "c": "明白",
+        "p": "míngbai",
+        "en": "clear"
+      }
+    ]
+  },
+  "去": {
+    "definition": "to go",
+    "words": [
+      {
+        "c": "去年",
+        "p": "qùnián",
+        "en": "last year"
+      },
+      {
+        "c": "过去",
+        "p": "guòqu",
+        "en": "past"
+      }
+    ]
+  },
+  "校": {
+    "definition": null,
+    "words": [
+      {
+        "c": "学校",
+        "p": "xuéxiào",
+        "en": "school"
+      },
+      {
+        "c": "校长",
+        "p": "xiàozhǎng",
+        "en": "headmaster"
+      }
+    ]
+  },
+  "看": {
+    "definition": "to look · watch · read",
+    "words": [
+      {
+        "c": "看见",
+        "p": "kànjiàn",
+        "en": "to see"
+      }
+    ]
+  },
+  "书": {
+    "definition": "book",
+    "words": [
+      {
+        "c": "秘书",
+        "p": "mìshū",
+        "en": "secretary"
+      },
+      {
+        "c": "图书馆",
+        "p": "túshūguǎn",
+        "en": "library"
+      }
+    ]
+  },
+  "想": {
+    "definition": "to want · would like",
+    "words": []
+  },
+  "喝": {
+    "definition": "to drink",
+    "words": []
+  },
+  "茶": {
+    "definition": "tea",
+    "words": []
+  },
+  "米": {
+    "definition": "meter",
+    "words": [
+      {
+        "c": "米饭",
+        "p": "mǐfàn",
+        "en": "cooked rice"
+      }
+    ]
+  },
+  "饭": {
+    "definition": null,
+    "words": [
+      {
+        "c": "米饭",
+        "p": "mǐfàn",
+        "en": "cooked rice"
+      },
+      {
+        "c": "吃饭",
+        "p": "chī fàn",
+        "en": "to have a meal"
+      },
+      {
+        "c": "饭店",
+        "p": "fàndiàn",
+        "en": "hotel · restaurant"
+      }
+    ]
+  },
+  "下": {
+    "definition": null,
+    "words": [
+      {
+        "c": "下午",
+        "p": "xiàwǔ",
+        "en": "afternoon"
+      },
+      {
+        "c": "下面",
+        "p": "xiàmiàn",
+        "en": "under · below"
+      },
+      {
+        "c": "下雨",
+        "p": "xià yǔ",
+        "en": "to rain"
+      },
+      {
+        "c": "一下",
+        "p": "yí xià",
+        "en": "used after a verb to indicate a brief action"
+      }
+    ]
+  },
+  "午": {
+    "definition": null,
+    "words": [
+      {
+        "c": "下午",
+        "p": "xiàwǔ",
+        "en": "afternoon"
+      },
+      {
+        "c": "中午",
+        "p": "zhōngwǔ",
+        "en": "noon"
+      },
+      {
+        "c": "上午",
+        "p": "shàngwǔ",
+        "en": "morning (before noon)"
+      }
+    ]
+  },
+  "商": {
+    "definition": null,
+    "words": [
+      {
+        "c": "商店",
+        "p": "shāngdiàn",
+        "en": "shop · store"
+      }
+    ]
+  },
+  "店": {
+    "definition": null,
+    "words": [
+      {
+        "c": "商店",
+        "p": "shāngdiàn",
+        "en": "shop · store"
+      },
+      {
+        "c": "饭店",
+        "p": "fàndiàn",
+        "en": "hotel · restaurant"
+      }
+    ]
+  },
+  "买": {
+    "definition": "to buy",
+    "words": []
+  },
+  "杯": {
+    "definition": null,
+    "words": [
+      {
+        "c": "杯子",
+        "p": "bēizi",
+        "en": "cup · glass"
+      }
+    ]
+  },
+  "子": {
+    "definition": null,
+    "words": [
+      {
+        "c": "杯子",
+        "p": "bēizi",
+        "en": "cup · glass"
+      },
+      {
+        "c": "椅子",
+        "p": "yǐzi",
+        "en": "chair"
+      },
+      {
+        "c": "儿子",
+        "p": "érzi",
+        "en": "son"
+      },
+      {
+        "c": "桌子",
+        "p": "zhuōzi",
+        "en": "desk · table"
+      },
+      {
+        "c": "孩子",
+        "p": "háizi",
+        "en": "child · kid"
+      },
+      {
+        "c": "妻子",
+        "p": "qīzi",
+        "en": "wife"
+      },
+      {
+        "c": "裤子",
+        "p": "kùzi",
+        "en": "pants"
+      },
+      {
+        "c": "裙子",
+        "p": "qúnzi",
+        "en": "dress, skirt"
+      },
+      {
+        "c": "个子",
+        "p": "gèzi",
+        "en": "height, stature"
+      },
+      {
+        "c": "筷子",
+        "p": "kuàizi",
+        "en": "chopsticks"
+      },
+      {
+        "c": "瓶子",
+        "p": "píngzi",
+        "en": "bottle"
+      },
+      {
+        "c": "盘子",
+        "p": "pánzi",
+        "en": "plate"
+      },
+      {
+        "c": "句子",
+        "p": "jùzi",
+        "en": "sentence"
+      },
+      {
+        "c": "帽子",
+        "p": "màozi",
+        "en": "hat; cap"
+      },
+      {
+        "c": "鼻子",
+        "p": "bízi",
+        "en": "nose"
+      },
+      {
+        "c": "电子邮件",
+        "p": "diànzǐ yóujiàn",
+        "en": "email"
+      }
+    ]
+  },
+  "少": {
+    "definition": "few · little",
+    "words": [
+      {
+        "c": "多少",
+        "p": "duōshao",
+        "en": "how many · how much"
+      },
+      {
+        "c": "不少",
+        "p": "bù shǎo",
+        "en": "quite a few · many"
+      }
+    ]
+  },
+  "钱": {
+    "definition": "money",
+    "words": []
+  },
+  "块": {
+    "definition": "yuan (currency unit)",
+    "words": []
+  },
+  "那": {
+    "definition": "that",
+    "words": []
+  },
+  "小": {
+    "definition": "small · little",
+    "words": [
+      {
+        "c": "小姐",
+        "p": "xiǎojiě",
+        "en": "Miss · young lady"
+      },
+      {
+        "c": "小时",
+        "p": "xiǎoshí",
+        "en": "hour"
+      },
+      {
+        "c": "小心",
+        "p": "xiǎoxīn",
+        "en": "careful"
+      }
+    ]
+  },
+  "猫": {
+    "definition": "cat",
+    "words": [
+      {
+        "c": "熊猫",
+        "p": "xióngmāo",
+        "en": "panda"
+      }
+    ]
+  },
+  "在": {
+    "definition": "to be in/on/at; in/on/at",
+    "words": [
+      {
+        "c": "现在",
+        "p": "xiànzài",
+        "en": "now"
+      },
+      {
+        "c": "正在",
+        "p": "zhèngzài",
+        "en": "in the process of"
+      }
+    ]
+  },
+  "狗": {
+    "definition": "dog",
+    "words": []
+  },
+  "椅": {
+    "definition": null,
+    "words": [
+      {
+        "c": "椅子",
+        "p": "yǐzi",
+        "en": "chair"
+      }
+    ]
+  },
+  "面": {
+    "definition": null,
+    "words": [
+      {
+        "c": "下面",
+        "p": "xiàmiàn",
+        "en": "under · below"
+      },
+      {
+        "c": "前面",
+        "p": "qiánmiàn",
+        "en": "front"
+      },
+      {
+        "c": "后面",
+        "p": "hòumiàn",
+        "en": "back · behind"
+      },
+      {
+        "c": "外面",
+        "p": "wàimiàn",
+        "en": "outside"
+      },
+      {
+        "c": "面条",
+        "p": "miàntiáo",
+        "en": "noodles"
+      },
+      {
+        "c": "面包",
+        "p": "miànbāo",
+        "en": "bread"
+      },
+      {
+        "c": "见面",
+        "p": "jiàn miàn",
+        "en": "to meet"
+      }
+    ]
+  },
+  "工": {
+    "definition": null,
+    "words": [
+      {
+        "c": "工作",
+        "p": "gōngzuò",
+        "en": "to work; job"
+      }
+    ]
+  },
+  "作": {
+    "definition": null,
+    "words": [
+      {
+        "c": "工作",
+        "p": "gōngzuò",
+        "en": "to work; job"
+      },
+      {
+        "c": "作业",
+        "p": "zuòyè",
+        "en": "homework"
+      }
+    ]
+  },
+  "医": {
+    "definition": null,
+    "words": [
+      {
+        "c": "医院",
+        "p": "yīyuàn",
+        "en": "hospital"
+      },
+      {
+        "c": "医生",
+        "p": "yīshēng",
+        "en": "doctor"
+      }
+    ]
+  },
+  "院": {
+    "definition": null,
+    "words": [
+      {
+        "c": "医院",
+        "p": "yīyuàn",
+        "en": "hospital"
+      },
+      {
+        "c": "出院",
+        "p": "chū yuàn",
+        "en": "to leave hospital"
+      }
+    ]
+  },
+  "爸": {
+    "definition": null,
+    "words": [
+      {
+        "c": "爸爸",
+        "p": "bàba",
+        "en": "father"
+      }
+    ]
+  },
+  "桌": {
+    "definition": null,
+    "words": [
+      {
+        "c": "桌子",
+        "p": "zhuōzi",
+        "en": "desk · table"
+      }
+    ]
+  },
+  "上": {
+    "definition": "above · on",
+    "words": [
+      {
+        "c": "上午",
+        "p": "shàngwǔ",
+        "en": "morning (before noon)"
+      },
+      {
+        "c": "早上",
+        "p": "zǎoshang",
+        "en": "morning"
+      },
+      {
+        "c": "晚上",
+        "p": "wǎnshang",
+        "en": "evening · night"
+      },
+      {
+        "c": "上班",
+        "p": "shàng bān",
+        "en": "to work · to do a job"
+      },
+      {
+        "c": "马上",
+        "p": "mǎshàng",
+        "en": "immediately, at once"
+      },
+      {
+        "c": "上网",
+        "p": "shàng wǎng",
+        "en": "to surf the Internet"
+      }
+    ]
+  },
+  "电": {
+    "definition": null,
+    "words": [
+      {
+        "c": "电脑",
+        "p": "diànnǎo",
+        "en": "computer"
+      },
+      {
+        "c": "电影",
+        "p": "diànyǐng",
+        "en": "film · movie"
+      },
+      {
+        "c": "电视",
+        "p": "diànshì",
+        "en": "television"
+      },
+      {
+        "c": "打电话",
+        "p": "dǎ diànhuà",
+        "en": "to make a phone call"
+      },
+      {
+        "c": "电梯",
+        "p": "diàntī",
+        "en": "elevator"
+      },
+      {
+        "c": "电子邮件",
+        "p": "diànzǐ yóujiàn",
+        "en": "email"
+      },
+      {
+        "c": "笔记本（电脑）",
+        "p": "bǐjìběn (diànnǎo)",
+        "en": "notebook; laptop"
+      }
+    ]
+  },
+  "脑": {
+    "definition": null,
+    "words": [
+      {
+        "c": "电脑",
+        "p": "diànnǎo",
+        "en": "computer"
+      },
+      {
+        "c": "笔记本（电脑）",
+        "p": "bǐjìběn (diànnǎo)",
+        "en": "notebook; laptop"
+      }
+    ]
+  },
+  "和": {
+    "definition": "and",
+    "words": []
+  },
+  "本": {
+    "definition": "(measure word for books)",
+    "words": [
+      {
+        "c": "笔记本（电脑）",
+        "p": "bǐjìběn (diànnǎo)",
+        "en": "notebook; laptop"
+      }
+    ]
+  },
+  "里": {
+    "definition": "inside · interior",
+    "words": []
+  },
+  "前": {
+    "definition": "before · earlier than",
+    "words": [
+      {
+        "c": "前面",
+        "p": "qiánmiàn",
+        "en": "front"
+      },
+      {
+        "c": "前边",
+        "p": "qiánbian",
+        "en": "front · in front"
+      },
+      {
+        "c": "以前",
+        "p": "yǐqián",
+        "en": "before, ago"
+      }
+    ]
+  },
+  "后": {
+    "definition": "after · later",
+    "words": [
+      {
+        "c": "后面",
+        "p": "hòumiàn",
+        "en": "back · behind"
+      },
+      {
+        "c": "后边",
+        "p": "hòubian",
+        "en": "back · behind"
+      },
+      {
+        "c": "以后",
+        "p": "yǐhòu",
+        "en": "after · afterwards · later"
+      },
+      {
+        "c": "最后",
+        "p": "zuìhòu",
+        "en": "the last one"
+      },
+      {
+        "c": "然后",
+        "p": "ránhòu",
+        "en": "then; after that"
+      },
+      {
+        "c": "后来",
+        "p": "hòulái",
+        "en": "later; afterwards"
+      }
+    ]
+  },
+  "能": {
+    "definition": "can · may",
+    "words": [
+      {
+        "c": "可能",
+        "p": "kěnéng",
+        "en": "maybe · perhaps · probably"
+      }
+    ]
+  },
+  "坐": {
+    "definition": "to sit",
+    "words": []
+  },
+  "现": {
+    "definition": null,
+    "words": [
+      {
+        "c": "现在",
+        "p": "xiànzài",
+        "en": "now"
+      },
+      {
+        "c": "发现",
+        "p": "fāxiàn",
+        "en": "to discover"
+      }
+    ]
+  },
+  "点": {
+    "definition": "o’clock",
+    "words": [
+      {
+        "c": "一点儿",
+        "p": "yìdiǎnr",
+        "en": "a few · a little"
+      },
+      {
+        "c": "特点",
+        "p": "tèdiǎn",
+        "en": "feature"
+      }
+    ]
+  },
+  "分": {
+    "definition": "minute",
+    "words": [
+      {
+        "c": "分钟",
+        "p": "fēnzhōng",
+        "en": "minute"
+      }
+    ]
+  },
+  "时": {
+    "definition": null,
+    "words": [
+      {
+        "c": "时候",
+        "p": "shíhou",
+        "en": "time · moment"
+      },
+      {
+        "c": "时间",
+        "p": "shíjiān",
+        "en": "time"
+      },
+      {
+        "c": "小时",
+        "p": "xiǎoshí",
+        "en": "hour"
+      },
+      {
+        "c": "……的时候",
+        "p": "... de shíhou",
+        "en": "when · during"
+      }
+    ]
+  },
+  "候": {
+    "definition": null,
+    "words": [
+      {
+        "c": "时候",
+        "p": "shíhou",
+        "en": "time · moment"
+      },
+      {
+        "c": "……的时候",
+        "p": "... de shíhou",
+        "en": "when · during"
+      }
+    ]
+  },
+  "回": {
+    "definition": "to come/go back · return",
+    "words": [
+      {
+        "c": "回来",
+        "p": "huílái",
+        "en": "to come back"
+      },
+      {
+        "c": "回答",
+        "p": "huídá",
+        "en": "to answer"
+      }
+    ]
+  },
+  "影": {
+    "definition": null,
+    "words": [
+      {
+        "c": "电影",
+        "p": "diànyǐng",
+        "en": "film · movie"
+      },
+      {
+        "c": "影响",
+        "p": "yǐngxiǎng",
+        "en": "influence"
+      }
+    ]
+  },
+  "住": {
+    "definition": "to live · to stay",
+    "words": []
+  },
+  "北": {
+    "definition": null,
+    "words": [
+      {
+        "c": "北京",
+        "p": "Běijīng",
+        "en": "Beijing"
+      },
+      {
+        "c": "北方",
+        "p": "běifāng",
+        "en": "north, northern part"
+      }
+    ]
+  },
+  "京": {
+    "definition": null,
+    "words": [
+      {
+        "c": "北京",
+        "p": "Běijīng",
+        "en": "Beijing"
+      }
+    ]
+  },
+  "样": {
+    "definition": null,
+    "words": [
+      {
+        "c": "怎么样",
+        "p": "zěnmeyàng",
+        "en": "how · how about"
+      },
+      {
+        "c": "一样",
+        "p": "yíyàng",
+        "en": "same, as…as…"
+      }
+    ]
+  },
+  "太": {
+    "definition": "too · excessively",
+    "words": [
+      {
+        "c": "太太",
+        "p": "tàitai",
+        "en": "Mrs., madam"
+      },
+      {
+        "c": "太阳",
+        "p": "tàiyáng",
+        "en": "sun"
+      }
+    ]
+  },
+  "热": {
+    "definition": "hot",
+    "words": [
+      {
+        "c": "热情",
+        "p": "rèqíng",
+        "en": "warm, enthusiastic"
+      }
+    ]
+  },
+  "冷": {
+    "definition": "cold",
+    "words": []
+  },
+  "雨": {
+    "definition": null,
+    "words": [
+      {
+        "c": "下雨",
+        "p": "xià yǔ",
+        "en": "to rain"
+      }
+    ]
+  },
+  "姐": {
+    "definition": null,
+    "words": [
+      {
+        "c": "小姐",
+        "p": "xiǎojiě",
+        "en": "Miss · young lady"
+      },
+      {
+        "c": "姐姐",
+        "p": "jiějie",
+        "en": "elder sister"
+      }
+    ]
+  },
+  "来": {
+    "definition": "to come",
+    "words": [
+      {
+        "c": "回来",
+        "p": "huílái",
+        "en": "to come back"
+      },
+      {
+        "c": "起来",
+        "p": "qǐlai",
+        "en": "indicating an upward movement; to rise"
+      },
+      {
+        "c": "后来",
+        "p": "hòulái",
+        "en": "later; afterwards"
+      }
+    ]
+  },
+  "身": {
+    "definition": null,
+    "words": [
+      {
+        "c": "身体",
+        "p": "shēntǐ",
+        "en": "body · health"
+      }
+    ]
+  },
+  "体": {
+    "definition": null,
+    "words": [
+      {
+        "c": "身体",
+        "p": "shēntǐ",
+        "en": "body · health"
+      },
+      {
+        "c": "体育",
+        "p": "tǐyù",
+        "en": "P.E., sports"
+      }
+    ]
+  },
+  "爱": {
+    "definition": "to like · to love",
+    "words": [
+      {
+        "c": "可爱",
+        "p": "kě’ài",
+        "en": "lovely; adorable"
+      },
+      {
+        "c": "爱好",
+        "p": "àihào",
+        "en": "hobby; interest"
+      }
+    ]
+  },
+  "些": {
+    "definition": "some · a few",
+    "words": [
+      {
+        "c": "这些",
+        "p": "zhèxiē",
+        "en": "these"
+      }
+    ]
+  },
+  "水": {
+    "definition": "water",
+    "words": [
+      {
+        "c": "水果",
+        "p": "shuǐguǒ",
+        "en": "fruit"
+      },
+      {
+        "c": "水平",
+        "p": "shuǐpíng",
+        "en": "level; standard"
+      }
+    ]
+  },
+  "果": {
+    "definition": null,
+    "words": [
+      {
+        "c": "水果",
+        "p": "shuǐguǒ",
+        "en": "fruit"
+      },
+      {
+        "c": "苹果",
+        "p": "píngguǒ",
+        "en": "apple"
+      },
+      {
+        "c": "如果",
+        "p": "rúguǒ",
+        "en": "if; in case"
+      }
+    ]
+  },
+  "喂": {
+    "definition": "hello · hey",
+    "words": []
+  },
+  "也": {
+    "definition": "also · too",
+    "words": []
+  },
+  "习": {
+    "definition": null,
+    "words": [
+      {
+        "c": "学习",
+        "p": "xuéxí",
+        "en": "to study · to learn"
+      },
+      {
+        "c": "复习",
+        "p": "fùxí",
+        "en": "to review"
+      },
+      {
+        "c": "习惯",
+        "p": "xíguàn",
+        "en": "to be used to; habit"
+      },
+      {
+        "c": "练习",
+        "p": "liànxí",
+        "en": "exercise"
+      }
+    ]
+  },
+  "睡": {
+    "definition": null,
+    "words": [
+      {
+        "c": "睡觉",
+        "p": "shuìjiào",
+        "en": "to sleep"
+      },
+      {
+        "c": "睡着",
+        "p": "shuì zháo",
+        "en": "to fall asleep"
+      }
+    ]
+  },
+  "觉": {
+    "definition": null,
+    "words": [
+      {
+        "c": "睡觉",
+        "p": "shuìjiào",
+        "en": "to sleep"
+      },
+      {
+        "c": "觉得",
+        "p": "juéde",
+        "en": "to think · to feel"
+      }
+    ]
+  },
+  "视": {
+    "definition": null,
+    "words": [
+      {
+        "c": "电视",
+        "p": "diànshì",
+        "en": "television"
+      }
+    ]
+  },
+  "喜": {
+    "definition": null,
+    "words": [
+      {
+        "c": "喜欢",
+        "p": "xǐhuan",
+        "en": "to like · be fond of"
+      }
+    ]
+  },
+  "欢": {
+    "definition": null,
+    "words": [
+      {
+        "c": "喜欢",
+        "p": "xǐhuan",
+        "en": "to like · be fond of"
+      },
+      {
+        "c": "欢迎",
+        "p": "huānyíng",
+        "en": "to welcome"
+      }
+    ]
+  },
+  "给": {
+    "definition": "to · for",
+    "words": []
+  },
+  "打": {
+    "definition": null,
+    "words": [
+      {
+        "c": "打电话",
+        "p": "dǎ diànhuà",
+        "en": "to make a phone call"
+      },
+      {
+        "c": "打篮球",
+        "p": "dǎ lánqiú",
+        "en": "to play basketball"
+      },
+      {
+        "c": "打算",
+        "p": "dǎsuàn",
+        "en": "plan; to intend"
+      },
+      {
+        "c": "打扫",
+        "p": "dǎsǎo",
+        "en": "to clean; to sweep"
+      }
+    ]
+  },
+  "话": {
+    "definition": null,
+    "words": [
+      {
+        "c": "打电话",
+        "p": "dǎ diànhuà",
+        "en": "to make a phone call"
+      },
+      {
+        "c": "说话",
+        "p": "shuō huà",
+        "en": "to speak · to say · to talk"
+      }
+    ]
+  },
+  "吧": {
+    "definition": "(suggestion particle)",
+    "words": []
+  },
+  "伟": {
+    "definition": null,
+    "words": [
+      {
+        "c": "大伟",
+        "p": "Dàwěi",
+        "en": "David (name)"
+      }
+    ]
+  },
+  "东": {
+    "definition": "east",
+    "words": [
+      {
+        "c": "东西",
+        "p": "dōngxi",
+        "en": "thing · stuff"
+      }
+    ]
+  },
+  "西": {
+    "definition": "west",
+    "words": [
+      {
+        "c": "东西",
+        "p": "dōngxi",
+        "en": "thing · stuff"
+      },
+      {
+        "c": "西瓜",
+        "p": "xīguā",
+        "en": "watermelon"
+      }
+    ]
+  },
+  "苹": {
+    "definition": null,
+    "words": [
+      {
+        "c": "苹果",
+        "p": "píngguǒ",
+        "en": "apple"
+      }
+    ]
+  },
+  "先": {
+    "definition": "first, in advance",
+    "words": [
+      {
+        "c": "先生",
+        "p": "xiānsheng",
+        "en": "Mr · sir"
+      }
+    ]
+  },
+  "开": {
+    "definition": "to drive",
+    "words": [
+      {
+        "c": "开始",
+        "p": "kāishǐ",
+        "en": "to begin · to start"
+      },
+      {
+        "c": "离开",
+        "p": "lí kāi",
+        "en": "to leave, to part with"
+      }
+    ]
+  },
+  "车": {
+    "definition": "car · vehicle",
+    "words": [
+      {
+        "c": "出租车",
+        "p": "chūzūchē",
+        "en": "taxi · cab"
+      },
+      {
+        "c": "自行车",
+        "p": "zìxíngchē",
+        "en": "bike · bicycle"
+      },
+      {
+        "c": "火车站",
+        "p": "huǒchēzhàn",
+        "en": "railway station"
+      },
+      {
+        "c": "公共汽车",
+        "p": "gōnggòng qìchē",
+        "en": "bus"
+      }
+    ]
+  },
+  "钟": {
+    "definition": null,
+    "words": [
+      {
+        "c": "分钟",
+        "p": "fēnzhōng",
+        "en": "minute"
+      }
+    ]
+  },
+  "衣": {
+    "definition": null,
+    "words": [
+      {
+        "c": "衣服",
+        "p": "yīfu",
+        "en": "clothes"
+      }
+    ]
+  },
+  "服": {
+    "definition": null,
+    "words": [
+      {
+        "c": "衣服",
+        "p": "yīfu",
+        "en": "clothes"
+      },
+      {
+        "c": "服务员",
+        "p": "fúwùyuán",
+        "en": "attendant · waiter / waitress"
+      },
+      {
+        "c": "舒服",
+        "p": "shūfu",
+        "en": "comfortable"
+      }
+    ]
+  },
+  "漂": {
+    "definition": null,
+    "words": [
+      {
+        "c": "漂亮",
+        "p": "piàoliang",
+        "en": "beautiful · pretty"
+      }
+    ]
+  },
+  "亮": {
+    "definition": null,
+    "words": [
+      {
+        "c": "漂亮",
+        "p": "piàoliang",
+        "en": "beautiful · pretty"
+      },
+      {
+        "c": "月亮",
+        "p": "yuèliang",
+        "en": "moon"
+      }
+    ]
+  },
+  "啊": {
+    "definition": "(modal particle)",
+    "words": []
+  },
+  "呀": {
+    "definition": "(modal particle)",
+    "words": []
+  },
+  "都": {
+    "definition": "both · all",
+    "words": []
+  },
+  "张": {
+    "definition": "Zhang (surname)",
+    "words": []
+  },
+  "认": {
+    "definition": null,
+    "words": [
+      {
+        "c": "认识",
+        "p": "rènshi",
+        "en": "to meet · to know"
+      },
+      {
+        "c": "认真",
+        "p": "rènzhēn",
+        "en": "serious, earnest"
+      },
+      {
+        "c": "认为",
+        "p": "rènwéi",
+        "en": "to think; to believe"
+      }
+    ]
+  },
+  "识": {
+    "definition": null,
+    "words": [
+      {
+        "c": "认识",
+        "p": "rènshi",
+        "en": "to meet · to know"
+      }
+    ]
+  },
+  "出": {
+    "definition": "to come/go out",
+    "words": [
+      {
+        "c": "出租车",
+        "p": "chūzūchē",
+        "en": "taxi · cab"
+      },
+      {
+        "c": "出院",
+        "p": "chū yuàn",
+        "en": "to leave hospital"
+      }
+    ]
+  },
+  "租": {
+    "definition": null,
+    "words": [
+      {
+        "c": "出租车",
+        "p": "chūzūchē",
+        "en": "taxi · cab"
+      }
+    ]
+  },
+  "高": {
+    "definition": "tall · high",
+    "words": [
+      {
+        "c": "高兴",
+        "p": "gāoxìng",
+        "en": "glad · happy"
+      },
+      {
+        "c": "提高",
+        "p": "tí gāo",
+        "en": "to improve"
+      }
+    ]
+  },
+  "兴": {
+    "definition": null,
+    "words": [
+      {
+        "c": "高兴",
+        "p": "gāoxìng",
+        "en": "glad · happy"
+      },
+      {
+        "c": "感兴趣",
+        "p": "gǎn xìngqù",
+        "en": "to be interested in"
+      }
+    ]
+  },
+  "听": {
+    "definition": "to listen",
+    "words": []
+  },
+  "飞": {
+    "definition": null,
+    "words": [
+      {
+        "c": "飞机",
+        "p": "fēijī",
+        "en": "airplane"
+      },
+      {
+        "c": "起飞",
+        "p": "qǐfēi",
+        "en": "to take off (aircraft)"
+      }
+    ]
+  },
+  "机": {
+    "definition": null,
+    "words": [
+      {
+        "c": "飞机",
+        "p": "fēijī",
+        "en": "airplane"
+      },
+      {
+        "c": "机场",
+        "p": "jīchǎng",
+        "en": "airport"
+      },
+      {
+        "c": "手机",
+        "p": "shǒujī",
+        "en": "cell phone"
+      },
+      {
+        "c": "司机",
+        "p": "sījī",
+        "en": "driver"
+      },
+      {
+        "c": "机会",
+        "p": "jīhuì",
+        "en": "opportunity"
+      },
+      {
+        "c": "照相机",
+        "p": "zhàoxiàngjī",
+        "en": "camera"
+      }
+    ]
+  },
+  "旅": {
+    "definition": null,
+    "words": [
+      {
+        "c": "旅游",
+        "p": "lǚyóu",
+        "en": "to travel · to take a trip"
+      }
+    ]
+  },
+  "游": {
+    "definition": null,
+    "words": [
+      {
+        "c": "旅游",
+        "p": "lǚyóu",
+        "en": "to travel · to take a trip"
+      },
+      {
+        "c": "游泳",
+        "p": "yóu yǒng",
+        "en": "to swim"
+      },
+      {
+        "c": "游戏",
+        "p": "yóuxì",
+        "en": "game"
+      }
+    ]
+  },
+  "得": {
+    "definition": "particle introducing a complement of result / degree",
+    "words": [
+      {
+        "c": "觉得",
+        "p": "juéde",
+        "en": "to think · to feel"
+      },
+      {
+        "c": "记得",
+        "p": "jìde",
+        "en": "to remember"
+      }
+    ]
+  },
+  "最": {
+    "definition": "most · to the greatest extent",
+    "words": [
+      {
+        "c": "最近",
+        "p": "zuìjìn",
+        "en": "lately, recently"
+      },
+      {
+        "c": "最后",
+        "p": "zuìhòu",
+        "en": "the last one"
+      }
+    ]
+  },
+  "为": {
+    "definition": "for",
+    "words": [
+      {
+        "c": "因为",
+        "p": "yīnwèi",
+        "en": "because · since"
+      },
+      {
+        "c": "为什么",
+        "p": "wèishénme",
+        "en": "why"
+      },
+      {
+        "c": "因为……，所以……",
+        "p": "yīnwèi..., suǒyǐ...",
+        "en": "because... therefore..."
+      },
+      {
+        "c": "认为",
+        "p": "rènwéi",
+        "en": "to think; to believe"
+      },
+      {
+        "c": "为了",
+        "p": "wèile",
+        "en": "for the sake of"
+      }
+    ]
+  },
+  "运": {
+    "definition": null,
+    "words": [
+      {
+        "c": "运动",
+        "p": "yùndòng",
+        "en": "sport · to exercise"
+      }
+    ]
+  },
+  "动": {
+    "definition": null,
+    "words": [
+      {
+        "c": "运动",
+        "p": "yùndòng",
+        "en": "sport · to exercise"
+      },
+      {
+        "c": "动物",
+        "p": "dòngwù",
+        "en": "animal"
+      }
+    ]
+  },
+  "踢": {
+    "definition": null,
+    "words": [
+      {
+        "c": "踢足球",
+        "p": "tī zúqiú",
+        "en": "to play football"
+      }
+    ]
+  },
+  "足": {
+    "definition": null,
+    "words": [
+      {
+        "c": "踢足球",
+        "p": "tī zúqiú",
+        "en": "to play football"
+      }
+    ]
+  },
+  "球": {
+    "definition": null,
+    "words": [
+      {
+        "c": "踢足球",
+        "p": "tī zúqiú",
+        "en": "to play football"
+      },
+      {
+        "c": "打篮球",
+        "p": "dǎ lánqiú",
+        "en": "to play basketball"
+      }
+    ]
+  },
+  "要": {
+    "definition": "to want to · would like to",
+    "words": [
+      {
+        "c": "重要",
+        "p": "zhòngyào",
+        "en": "important"
+      },
+      {
+        "c": "主要",
+        "p": "zhǔyào",
+        "en": "main"
+      },
+      {
+        "c": "需要",
+        "p": "xūyào",
+        "en": "to need"
+      },
+      {
+        "c": "要求",
+        "p": "yāoqiú",
+        "en": "requirement"
+      }
+    ]
+  },
+  "新": {
+    "definition": "new",
+    "words": [
+      {
+        "c": "新年",
+        "p": "xīnnián",
+        "en": "New Year"
+      },
+      {
+        "c": "新鲜",
+        "p": "xīnxiān",
+        "en": "fresh"
+      },
+      {
+        "c": "新闻",
+        "p": "xīnwén",
+        "en": "news"
+      }
+    ]
+  },
+  "它": {
+    "definition": "it",
+    "words": []
+  },
+  "眼": {
+    "definition": null,
+    "words": [
+      {
+        "c": "眼睛",
+        "p": "yǎnjing",
+        "en": "eye"
+      },
+      {
+        "c": "眼镜",
+        "p": "yǎnjing",
+        "en": "glasses, spectacles"
+      }
+    ]
+  },
+  "睛": {
+    "definition": null,
+    "words": [
+      {
+        "c": "眼睛",
+        "p": "yǎnjing",
+        "en": "eye"
+      }
+    ]
+  },
+  "花": {
+    "definition": "flower",
+    "words": [
+      {
+        "c": "花花",
+        "p": "Huāhua",
+        "en": "Huahua (proper noun)"
+      }
+    ]
+  },
+  "病": {
+    "definition": null,
+    "words": [
+      {
+        "c": "生病",
+        "p": "shēng bìng",
+        "en": "to fall ill · to be sick"
+      }
+    ]
+  },
+  "每": {
+    "definition": "every · each",
+    "words": []
+  },
+  "早": {
+    "definition": null,
+    "words": [
+      {
+        "c": "早上",
+        "p": "zǎoshang",
+        "en": "morning"
+      }
+    ]
+  },
+  "跑": {
+    "definition": null,
+    "words": [
+      {
+        "c": "跑步",
+        "p": "pǎo bù",
+        "en": "to run · to jog"
+      }
+    ]
+  },
+  "步": {
+    "definition": null,
+    "words": [
+      {
+        "c": "跑步",
+        "p": "pǎo bù",
+        "en": "to run · to jog"
+      }
+    ]
+  },
+  "床": {
+    "definition": null,
+    "words": [
+      {
+        "c": "起床",
+        "p": "qǐchuáng",
+        "en": "to get up · to get out of bed"
+      }
+    ]
+  },
+  "药": {
+    "definition": "medicine · drug",
+    "words": []
+  },
+  "知": {
+    "definition": null,
+    "words": [
+      {
+        "c": "知道",
+        "p": "zhīdào",
+        "en": "to know"
+      }
+    ]
+  },
+  "道": {
+    "definition": null,
+    "words": [
+      {
+        "c": "知道",
+        "p": "zhīdào",
+        "en": "to know"
+      },
+      {
+        "c": "街道",
+        "p": "jiēdào",
+        "en": "street"
+      }
+    ]
+  },
+  "休": {
+    "definition": null,
+    "words": [
+      {
+        "c": "休息",
+        "p": "xiūxi",
+        "en": "to have / take a rest"
+      }
+    ]
+  },
+  "息": {
+    "definition": null,
+    "words": [
+      {
+        "c": "休息",
+        "p": "xiūxi",
+        "en": "to have / take a rest"
+      }
+    ]
+  },
+  "忙": {
+    "definition": "busy",
+    "words": [
+      {
+        "c": "帮忙",
+        "p": "bāng máng",
+        "en": "to help"
+      }
+    ]
+  },
+  "间": {
+    "definition": null,
+    "words": [
+      {
+        "c": "时间",
+        "p": "shíjiān",
+        "en": "time"
+      },
+      {
+        "c": "中间",
+        "p": "zhōngjiān",
+        "en": "middle · between"
+      },
+      {
+        "c": "房间",
+        "p": "fángjiān",
+        "en": "room"
+      },
+      {
+        "c": "洗手间",
+        "p": "xǐshǒujiān",
+        "en": "bathroom, restroom"
+      }
+    ]
+  },
+  "边": {
+    "definition": null,
+    "words": [
+      {
+        "c": "前边",
+        "p": "qiánbian",
+        "en": "front · in front"
+      },
+      {
+        "c": "后边",
+        "p": "hòubian",
+        "en": "back · behind"
+      },
+      {
+        "c": "左边",
+        "p": "zuǒbian",
+        "en": "left side"
+      },
+      {
+        "c": "右边",
+        "p": "yòubian",
+        "en": "right side"
+      },
+      {
+        "c": "旁边",
+        "p": "pángbiān",
+        "en": "beside · next to"
+      },
+      {
+        "c": "一边",
+        "p": "yìbiān",
+        "en": "indicating two actions happening at the same time"
+      }
+    ]
+  },
+  "左": {
+    "definition": null,
+    "words": [
+      {
+        "c": "左边",
+        "p": "zuǒbian",
+        "en": "left side"
+      }
+    ]
+  },
+  "右": {
+    "definition": null,
+    "words": [
+      {
+        "c": "右边",
+        "p": "yòubian",
+        "en": "right side"
+      }
+    ]
+  },
+  "旁": {
+    "definition": null,
+    "words": [
+      {
+        "c": "旁边",
+        "p": "pángbiān",
+        "en": "beside · next to"
+      }
+    ]
+  },
+  "手": {
+    "definition": "hand",
+    "words": [
+      {
+        "c": "手表",
+        "p": "shǒubiǎo",
+        "en": "watch"
+      },
+      {
+        "c": "手机",
+        "p": "shǒujī",
+        "en": "cell phone"
+      },
+      {
+        "c": "洗手间",
+        "p": "xǐshǒujiān",
+        "en": "bathroom, restroom"
+      }
+    ]
+  },
+  "表": {
+    "definition": null,
+    "words": [
+      {
+        "c": "手表",
+        "p": "shǒubiǎo",
+        "en": "watch"
+      }
+    ]
+  },
+  "千": {
+    "definition": "thousand",
+    "words": []
+  },
+  "报": {
+    "definition": null,
+    "words": [
+      {
+        "c": "报纸",
+        "p": "bàozhǐ",
+        "en": "newspaper"
+      }
+    ]
+  },
+  "纸": {
+    "definition": null,
+    "words": [
+      {
+        "c": "报纸",
+        "p": "bàozhǐ",
+        "en": "newspaper"
+      }
+    ]
+  },
+  "送": {
+    "definition": "to send · to deliver",
+    "words": []
+  },
+  "牛": {
+    "definition": null,
+    "words": [
+      {
+        "c": "牛奶",
+        "p": "niúnǎi",
+        "en": "milk"
+      }
+    ]
+  },
+  "奶": {
+    "definition": null,
+    "words": [
+      {
+        "c": "牛奶",
+        "p": "niúnǎi",
+        "en": "milk"
+      },
+      {
+        "c": "奶奶",
+        "p": "nǎinai",
+        "en": "grandmother"
+      }
+    ]
+  },
+  "房": {
+    "definition": null,
+    "words": [
+      {
+        "c": "房间",
+        "p": "fángjiān",
+        "en": "room"
+      }
+    ]
+  },
+  "丈": {
+    "definition": null,
+    "words": [
+      {
+        "c": "丈夫",
+        "p": "zhàngfu",
+        "en": "husband"
+      }
+    ]
+  },
+  "夫": {
+    "definition": null,
+    "words": [
+      {
+        "c": "丈夫",
+        "p": "zhàngfu",
+        "en": "husband"
+      }
+    ]
+  },
+  "真": {
+    "definition": "really · indeed",
+    "words": [
+      {
+        "c": "认真",
+        "p": "rènzhēn",
+        "en": "serious, earnest"
+      },
+      {
+        "c": "真正",
+        "p": "zhēnzhèng",
+        "en": "really; truly"
+      }
+    ]
+  },
+  "粉": {
+    "definition": null,
+    "words": [
+      {
+        "c": "粉色",
+        "p": "fěnsè",
+        "en": "pink"
+      }
+    ]
+  },
+  "色": {
+    "definition": null,
+    "words": [
+      {
+        "c": "粉色",
+        "p": "fěnsè",
+        "en": "pink"
+      },
+      {
+        "c": "颜色",
+        "p": "yánsè",
+        "en": "color"
+      },
+      {
+        "c": "红色",
+        "p": "hóngsè",
+        "en": "red"
+      }
+    ]
+  },
+  "颜": {
+    "definition": null,
+    "words": [
+      {
+        "c": "颜色",
+        "p": "yánsè",
+        "en": "color"
+      }
+    ]
+  },
+  "红": {
+    "definition": null,
+    "words": [
+      {
+        "c": "红色",
+        "p": "hóngsè",
+        "en": "red"
+      }
+    ]
+  },
+  "日": {
+    "definition": "day · date",
+    "words": [
+      {
+        "c": "生日",
+        "p": "shēngrì",
+        "en": "birthday"
+      },
+      {
+        "c": "节日",
+        "p": "jiérì",
+        "en": "festival"
+      }
+    ]
+  },
+  "快": {
+    "definition": "quick · fast",
+    "words": [
+      {
+        "c": "快乐",
+        "p": "kuàilè",
+        "en": "happy · glad"
+      }
+    ]
+  },
+  "乐": {
+    "definition": null,
+    "words": [
+      {
+        "c": "快乐",
+        "p": "kuàilè",
+        "en": "happy · glad"
+      },
+      {
+        "c": "音乐",
+        "p": "yīnyuè",
+        "en": "music"
+      },
+      {
+        "c": "可乐",
+        "p": "kělè",
+        "en": "cola, Coke"
+      }
+    ]
+  },
+  "接": {
+    "definition": "to receive · to take · to answer",
+    "words": []
+  },
+  "晚": {
+    "definition": null,
+    "words": [
+      {
+        "c": "晚上",
+        "p": "wǎnshang",
+        "en": "evening · night"
+      }
+    ]
+  },
+  "非": {
+    "definition": null,
+    "words": [
+      {
+        "c": "非常",
+        "p": "fēicháng",
+        "en": "very · extremely"
+      }
+    ]
+  },
+  "常": {
+    "definition": null,
+    "words": [
+      {
+        "c": "非常",
+        "p": "fēicháng",
+        "en": "very · extremely"
+      },
+      {
+        "c": "经常",
+        "p": "jīngcháng",
+        "en": "often · frequently"
+      }
+    ]
+  },
+  "始": {
+    "definition": null,
+    "words": [
+      {
+        "c": "开始",
+        "p": "kāishǐ",
+        "en": "to begin · to start"
+      }
+    ]
+  },
+  "已": {
+    "definition": null,
+    "words": [
+      {
+        "c": "已经",
+        "p": "yǐjīng",
+        "en": "already"
+      }
+    ]
+  },
+  "经": {
+    "definition": null,
+    "words": [
+      {
+        "c": "已经",
+        "p": "yǐjīng",
+        "en": "already"
+      },
+      {
+        "c": "经常",
+        "p": "jīngcháng",
+        "en": "often · frequently"
+      },
+      {
+        "c": "经理",
+        "p": "jīnglǐ",
+        "en": "manager"
+      },
+      {
+        "c": "经过",
+        "p": "jīngguò",
+        "en": "to pass by"
+      }
+    ]
+  },
+  "长": {
+    "definition": "long",
+    "words": [
+      {
+        "c": "校长",
+        "p": "xiàozhǎng",
+        "en": "headmaster"
+      }
+    ]
+  },
+  "两": {
+    "definition": "two",
+    "words": []
+  },
+  "帮": {
+    "definition": "to help · to assist",
+    "words": [
+      {
+        "c": "帮助",
+        "p": "bāngzhù",
+        "en": "to help · to assist · to aid"
+      },
+      {
+        "c": "帮忙",
+        "p": "bāng máng",
+        "en": "to help"
+      }
+    ]
+  },
+  "介": {
+    "definition": null,
+    "words": [
+      {
+        "c": "介绍",
+        "p": "jièshào",
+        "en": "to introduce · to recommend"
+      },
+      {
+        "c": "中介",
+        "p": "zhōngjiè",
+        "en": "intermediary, agent"
+      }
+    ]
+  },
+  "绍": {
+    "definition": null,
+    "words": [
+      {
+        "c": "介绍",
+        "p": "jièshào",
+        "en": "to introduce · to recommend"
+      }
+    ]
+  },
+  "外": {
+    "definition": "outer · outside",
+    "words": [
+      {
+        "c": "外面",
+        "p": "wàimiàn",
+        "en": "outside"
+      }
+    ]
+  },
+  "准": {
+    "definition": null,
+    "words": [
+      {
+        "c": "准备",
+        "p": "zhǔnbèi",
+        "en": "to intend · to plan · to prepare"
+      }
+    ]
+  },
+  "备": {
+    "definition": null,
+    "words": [
+      {
+        "c": "准备",
+        "p": "zhǔnbèi",
+        "en": "to intend · to plan · to prepare"
+      }
+    ]
+  },
+  "就": {
+    "definition": "used to indicate a conclusion or resolution",
+    "words": []
+  },
+  "鱼": {
+    "definition": "fish",
+    "words": []
+  },
+  "件": {
+    "definition": "measure word for clothes etc.",
+    "words": [
+      {
+        "c": "电子邮件",
+        "p": "diànzǐ yóujiàn",
+        "en": "email"
+      }
+    ]
+  },
+  "还": {
+    "definition": "passably · fairly",
+    "words": [
+      {
+        "c": "还是",
+        "p": "háishi",
+        "en": "or"
+      }
+    ]
+  },
+  "可": {
+    "definition": null,
+    "words": [
+      {
+        "c": "可以",
+        "p": "kěyǐ",
+        "en": "not bad · OK"
+      },
+      {
+        "c": "可能",
+        "p": "kěnéng",
+        "en": "maybe · perhaps · probably"
+      },
+      {
+        "c": "可乐",
+        "p": "kělè",
+        "en": "cola, Coke"
+      },
+      {
+        "c": "可爱",
+        "p": "kě’ài",
+        "en": "lovely; adorable"
+      }
+    ]
+  },
+  "以": {
+    "definition": null,
+    "words": [
+      {
+        "c": "可以",
+        "p": "kěyǐ",
+        "en": "not bad · OK"
+      },
+      {
+        "c": "以后",
+        "p": "yǐhòu",
+        "en": "after · afterwards · later"
+      },
+      {
+        "c": "所以",
+        "p": "suǒyǐ",
+        "en": "so · therefore"
+      },
+      {
+        "c": "因为……，所以……",
+        "p": "yīnwèi..., suǒyǐ...",
+        "en": "because... therefore..."
+      },
+      {
+        "c": "以前",
+        "p": "yǐqián",
+        "en": "before, ago"
+      }
+    ]
+  },
+  "错": {
+    "definition": "wrong · incorrect",
+    "words": [
+      {
+        "c": "不错",
+        "p": "búcuò",
+        "en": "pretty good"
+      }
+    ]
+  },
+  "考": {
+    "definition": null,
+    "words": [
+      {
+        "c": "考试",
+        "p": "kǎoshì",
+        "en": "test · exam"
+      }
+    ]
+  },
+  "试": {
+    "definition": "to try",
+    "words": [
+      {
+        "c": "考试",
+        "p": "kǎoshì",
+        "en": "test · exam"
+      }
+    ]
+  },
+  "意": {
+    "definition": null,
+    "words": [
+      {
+        "c": "意思",
+        "p": "yìsi",
+        "en": "meaning"
+      },
+      {
+        "c": "有意思",
+        "p": "yǒu yìsi",
+        "en": "interesting · fun"
+      },
+      {
+        "c": "满意",
+        "p": "mǎnyì",
+        "en": "to be satisfied"
+      },
+      {
+        "c": "愿意",
+        "p": "yuànyì",
+        "en": "would like to"
+      },
+      {
+        "c": "注意",
+        "p": "zhù yì",
+        "en": "to pay attention to"
+      },
+      {
+        "c": "同意",
+        "p": "tóngyì",
+        "en": "to agree"
+      }
+    ]
+  },
+  "思": {
+    "definition": null,
+    "words": [
+      {
+        "c": "意思",
+        "p": "yìsi",
+        "en": "meaning"
+      },
+      {
+        "c": "有意思",
+        "p": "yǒu yìsi",
+        "en": "interesting · fun"
+      }
+    ]
+  },
+  "咖": {
+    "definition": null,
+    "words": [
+      {
+        "c": "咖啡",
+        "p": "kāfēi",
+        "en": "coffee"
+      }
+    ]
+  },
+  "啡": {
+    "definition": null,
+    "words": [
+      {
+        "c": "咖啡",
+        "p": "kāfēi",
+        "en": "coffee"
+      }
+    ]
+  },
+  "因": {
+    "definition": null,
+    "words": [
+      {
+        "c": "因为",
+        "p": "yīnwèi",
+        "en": "because · since"
+      },
+      {
+        "c": "因为……，所以……",
+        "p": "yīnwèi..., suǒyǐ...",
+        "en": "because... therefore..."
+      }
+    ]
+  },
+  "所": {
+    "definition": null,
+    "words": [
+      {
+        "c": "所以",
+        "p": "suǒyǐ",
+        "en": "so · therefore"
+      },
+      {
+        "c": "因为……，所以……",
+        "p": "yīnwèi..., suǒyǐ...",
+        "en": "because... therefore..."
+      }
+    ]
+  },
+  "门": {
+    "definition": "door · gate",
+    "words": []
+  },
+  "自": {
+    "definition": null,
+    "words": [
+      {
+        "c": "自行车",
+        "p": "zìxíngchē",
+        "en": "bike · bicycle"
+      },
+      {
+        "c": "自己",
+        "p": "zìjǐ",
+        "en": "self"
+      }
+    ]
+  },
+  "行": {
+    "definition": null,
+    "words": [
+      {
+        "c": "自行车",
+        "p": "zìxíngchē",
+        "en": "bike · bicycle"
+      },
+      {
+        "c": "银行",
+        "p": "yínháng",
+        "en": "bank"
+      },
+      {
+        "c": "举行",
+        "p": "jǔxíng",
+        "en": "to hold an event"
+      },
+      {
+        "c": "行李箱",
+        "p": "xínglixiāng",
+        "en": "luggage; suitcase"
+      }
+    ]
+  },
+  "羊": {
+    "definition": null,
+    "words": [
+      {
+        "c": "羊肉",
+        "p": "yángròu",
+        "en": "mutton · lamb"
+      }
+    ]
+  },
+  "肉": {
+    "definition": null,
+    "words": [
+      {
+        "c": "羊肉",
+        "p": "yángròu",
+        "en": "mutton · lamb"
+      }
+    ]
+  },
+  "条": {
+    "definition": "used for pants, dresses, etc.",
+    "words": [
+      {
+        "c": "面条",
+        "p": "miàntiáo",
+        "en": "noodles"
+      }
+    ]
+  },
+  "篮": {
+    "definition": null,
+    "words": [
+      {
+        "c": "打篮球",
+        "p": "dǎ lánqiú",
+        "en": "to play basketball"
+      }
+    ]
+  },
+  "泳": {
+    "definition": null,
+    "words": [
+      {
+        "c": "游泳",
+        "p": "yóu yǒng",
+        "en": "to swim"
+      }
+    ]
+  },
+  "公": {
+    "definition": null,
+    "words": [
+      {
+        "c": "公斤",
+        "p": "gōngjīn",
+        "en": "kilogram"
+      },
+      {
+        "c": "公司",
+        "p": "gōngsī",
+        "en": "company · firm"
+      },
+      {
+        "c": "公共汽车",
+        "p": "gōnggòng qìchē",
+        "en": "bus"
+      },
+      {
+        "c": "公园",
+        "p": "gōngyuán",
+        "en": "park"
+      },
+      {
+        "c": "办公室",
+        "p": "bàngōngshì",
+        "en": "office"
+      }
+    ]
+  },
+  "斤": {
+    "definition": null,
+    "words": [
+      {
+        "c": "公斤",
+        "p": "gōngjīn",
+        "en": "kilogram"
+      }
+    ]
+  },
+  "教": {
+    "definition": "to teach",
+    "words": [
+      {
+        "c": "教室",
+        "p": "jiàoshì",
+        "en": "classroom"
+      }
+    ]
+  },
+  "室": {
+    "definition": null,
+    "words": [
+      {
+        "c": "教室",
+        "p": "jiàoshì",
+        "en": "classroom"
+      },
+      {
+        "c": "办公室",
+        "p": "bàngōngshì",
+        "en": "office"
+      }
+    ]
+  },
+  "场": {
+    "definition": null,
+    "words": [
+      {
+        "c": "机场",
+        "p": "jīchǎng",
+        "en": "airport"
+      }
+    ]
+  },
+  "路": {
+    "definition": "road · path · way",
+    "words": [
+      {
+        "c": "路口",
+        "p": "lùkǒu",
+        "en": "crossing · crossroads"
+      }
+    ]
+  },
+  "离": {
+    "definition": "to be away from",
+    "words": [
+      {
+        "c": "离开",
+        "p": "lí kāi",
+        "en": "to leave, to part with"
+      }
+    ]
+  },
+  "司": {
+    "definition": null,
+    "words": [
+      {
+        "c": "公司",
+        "p": "gōngsī",
+        "en": "company · firm"
+      },
+      {
+        "c": "司机",
+        "p": "sījī",
+        "en": "driver"
+      }
+    ]
+  },
+  "远": {
+    "definition": "far · distant",
+    "words": []
+  },
+  "共": {
+    "definition": null,
+    "words": [
+      {
+        "c": "公共汽车",
+        "p": "gōnggòng qìchē",
+        "en": "bus"
+      },
+      {
+        "c": "一共",
+        "p": "yígòng",
+        "en": "in total"
+      }
+    ]
+  },
+  "汽": {
+    "definition": null,
+    "words": [
+      {
+        "c": "公共汽车",
+        "p": "gōnggòng qìchē",
+        "en": "bus"
+      }
+    ]
+  },
+  "慢": {
+    "definition": "slow",
+    "words": []
+  },
+  "过": {
+    "definition": "to pass / spend (time)",
+    "words": [
+      {
+        "c": "过去",
+        "p": "guòqu",
+        "en": "past"
+      },
+      {
+        "c": "经过",
+        "p": "jīngguò",
+        "en": "to pass by"
+      },
+      {
+        "c": "难过",
+        "p": "nánguò",
+        "en": "sad"
+      }
+    ]
+  },
+  "走": {
+    "definition": "to walk",
+    "words": []
+  },
+  "到": {
+    "definition": "to arrive · to reach",
+    "words": [
+      {
+        "c": "迟到",
+        "p": "chídào",
+        "en": "to be late"
+      },
+      {
+        "c": "遇到",
+        "p": "yùdào",
+        "en": "to come across; to run into"
+      }
+    ]
+  },
+  "让": {
+    "definition": "to let · to allow",
+    "words": []
+  },
+  "告": {
+    "definition": null,
+    "words": [
+      {
+        "c": "告诉",
+        "p": "gàosu",
+        "en": "to tell"
+      }
+    ]
+  },
+  "诉": {
+    "definition": null,
+    "words": [
+      {
+        "c": "告诉",
+        "p": "gàosu",
+        "en": "to tell"
+      }
+    ]
+  },
+  "等": {
+    "definition": "to wait · to await",
+    "words": []
+  },
+  "找": {
+    "definition": "to look for · to seek",
+    "words": []
+  },
+  "事": {
+    "definition": null,
+    "words": [
+      {
+        "c": "事情",
+        "p": "shìqing",
+        "en": "thing · matter · affair"
+      },
+      {
+        "c": "同事",
+        "p": "tóngshi",
+        "en": "colleague"
+      },
+      {
+        "c": "故事",
+        "p": "gùshi",
+        "en": "story"
+      }
+    ]
+  },
+  "情": {
+    "definition": null,
+    "words": [
+      {
+        "c": "事情",
+        "p": "shìqing",
+        "en": "thing · matter · affair"
+      },
+      {
+        "c": "热情",
+        "p": "rèqíng",
+        "en": "warm, enthusiastic"
+      },
+      {
+        "c": "情况",
+        "p": "qíngkuàng",
+        "en": "condition; situation"
+      }
+    ]
+  },
+  "务": {
+    "definition": null,
+    "words": [
+      {
+        "c": "服务员",
+        "p": "fúwùyuán",
+        "en": "attendant · waiter / waitress"
+      }
+    ]
+  },
+  "员": {
+    "definition": null,
+    "words": [
+      {
+        "c": "服务员",
+        "p": "fúwùyuán",
+        "en": "attendant · waiter / waitress"
+      }
+    ]
+  },
+  "白": {
+    "definition": "white",
+    "words": [
+      {
+        "c": "明白",
+        "p": "míngbai",
+        "en": "clear"
+      }
+    ]
+  },
+  "黑": {
+    "definition": "black",
+    "words": [
+      {
+        "c": "黑板",
+        "p": "hēibǎn",
+        "en": "blackboard"
+      }
+    ]
+  },
+  "贵": {
+    "definition": "expensive",
+    "words": []
+  },
+  "从": {
+    "definition": "from",
+    "words": []
+  },
+  "跳": {
+    "definition": null,
+    "words": [
+      {
+        "c": "跳舞",
+        "p": "tiào wǔ",
+        "en": "to dance"
+      }
+    ]
+  },
+  "舞": {
+    "definition": null,
+    "words": [
+      {
+        "c": "跳舞",
+        "p": "tiào wǔ",
+        "en": "to dance"
+      }
+    ]
+  },
+  "第": {
+    "definition": null,
+    "words": [
+      {
+        "c": "第一",
+        "p": "dì-yī",
+        "en": "first"
+      }
+    ]
+  },
+  "希": {
+    "definition": null,
+    "words": [
+      {
+        "c": "希望",
+        "p": "xīwàng",
+        "en": "to hope · to wish"
+      }
+    ]
+  },
+  "望": {
+    "definition": null,
+    "words": [
+      {
+        "c": "希望",
+        "p": "xīwàng",
+        "en": "to hope · to wish"
+      }
+    ]
+  },
+  "题": {
+    "definition": "question · problem (on a test)",
+    "words": [
+      {
+        "c": "问题",
+        "p": "wèntí",
+        "en": "question · problem"
+      }
+    ]
+  },
+  "迎": {
+    "definition": null,
+    "words": [
+      {
+        "c": "欢迎",
+        "p": "huānyíng",
+        "en": "to welcome"
+      }
+    ]
+  },
+  "班": {
+    "definition": "class · grade · team",
+    "words": [
+      {
+        "c": "上班",
+        "p": "shàng bān",
+        "en": "to work · to do a job"
+      }
+    ]
+  },
+  "懂": {
+    "definition": "to understand · to know",
+    "words": []
+  },
+  "完": {
+    "definition": "to finish · to end",
+    "words": [
+      {
+        "c": "完成",
+        "p": "wán chéng",
+        "en": "to complete"
+      }
+    ]
+  },
+  "课": {
+    "definition": "class · lesson",
+    "words": []
+  },
+  "助": {
+    "definition": null,
+    "words": [
+      {
+        "c": "帮助",
+        "p": "bāngzhù",
+        "en": "to help · to assist · to aid"
+      }
+    ]
+  },
+  "别": {
+    "definition": "don't",
+    "words": [
+      {
+        "c": "特别",
+        "p": "tèbié",
+        "en": "extraordinarily"
+      },
+      {
+        "c": "别人",
+        "p": "biérén",
+        "en": "other people"
+      }
+    ]
+  },
+  "哥": {
+    "definition": null,
+    "words": [
+      {
+        "c": "哥哥",
+        "p": "gēge",
+        "en": "elder brother"
+      }
+    ]
+  },
+  "鸡": {
+    "definition": null,
+    "words": [
+      {
+        "c": "鸡蛋",
+        "p": "jīdàn",
+        "en": "(hen’s) egg"
+      }
+    ]
+  },
+  "蛋": {
+    "definition": null,
+    "words": [
+      {
+        "c": "鸡蛋",
+        "p": "jīdàn",
+        "en": "(hen’s) egg"
+      },
+      {
+        "c": "蛋糕",
+        "p": "dàngāo",
+        "en": "cake"
+      }
+    ]
+  },
+  "瓜": {
+    "definition": null,
+    "words": [
+      {
+        "c": "西瓜",
+        "p": "xīguā",
+        "en": "watermelon"
+      }
+    ]
+  },
+  "正": {
+    "definition": null,
+    "words": [
+      {
+        "c": "正在",
+        "p": "zhèngzài",
+        "en": "in the process of"
+      },
+      {
+        "c": "真正",
+        "p": "zhēnzhèng",
+        "en": "really; truly"
+      }
+    ]
+  },
+  "洗": {
+    "definition": "to wash · to bathe",
+    "words": [
+      {
+        "c": "洗澡",
+        "p": "xǐ zǎo",
+        "en": "to take a bath or shower"
+      },
+      {
+        "c": "洗手间",
+        "p": "xǐshǒujiān",
+        "en": "bathroom, restroom"
+      }
+    ]
+  },
+  "唱": {
+    "definition": null,
+    "words": [
+      {
+        "c": "唱歌",
+        "p": "chàng gē",
+        "en": "to sing"
+      }
+    ]
+  },
+  "歌": {
+    "definition": null,
+    "words": [
+      {
+        "c": "唱歌",
+        "p": "chàng gē",
+        "en": "to sing"
+      }
+    ]
+  },
+  "男": {
+    "definition": "man · male",
+    "words": []
+  },
+  "孩": {
+    "definition": null,
+    "words": [
+      {
+        "c": "孩子",
+        "p": "háizi",
+        "en": "child · kid"
+      }
+    ]
+  },
+  "比": {
+    "definition": "than · (compared) to",
+    "words": [
+      {
+        "c": "比赛",
+        "p": "bǐsài",
+        "en": "match, competition"
+      },
+      {
+        "c": "比较",
+        "p": "bǐjiào",
+        "en": "fairly, rather"
+      }
+    ]
+  },
+  "便": {
+    "definition": null,
+    "words": [
+      {
+        "c": "便宜",
+        "p": "piányi",
+        "en": "cheap · inexpensive"
+      },
+      {
+        "c": "方便",
+        "p": "fāngbiàn",
+        "en": "convenient"
+      }
+    ]
+  },
+  "宜": {
+    "definition": null,
+    "words": [
+      {
+        "c": "便宜",
+        "p": "piányi",
+        "en": "cheap · inexpensive"
+      }
+    ]
+  },
+  "姓": {
+    "definition": "family name · surname",
+    "words": []
+  },
+  "妻": {
+    "definition": null,
+    "words": [
+      {
+        "c": "妻子",
+        "p": "qīzi",
+        "en": "wife"
+      }
+    ]
+  },
+  "雪": {
+    "definition": "snow",
+    "words": []
+  },
+  "零": {
+    "definition": "zero",
+    "words": []
+  },
+  "度": {
+    "definition": "degree",
+    "words": []
+  },
+  "穿": {
+    "definition": "to wear · to put on",
+    "words": []
+  },
+  "进": {
+    "definition": "to enter · to come / go in",
+    "words": []
+  },
+  "弟": {
+    "definition": null,
+    "words": [
+      {
+        "c": "弟弟",
+        "p": "dìdi",
+        "en": "younger brother"
+      }
+    ]
+  },
+  "近": {
+    "definition": "near · close",
+    "words": [
+      {
+        "c": "最近",
+        "p": "zuìjìn",
+        "en": "lately, recently"
+      },
+      {
+        "c": "附近",
+        "p": "fùjìn",
+        "en": "nearby, vicinity"
+      }
+    ]
+  },
+  "着": {
+    "definition": "particle indicating a state",
+    "words": [
+      {
+        "c": "着急",
+        "p": "zháojí",
+        "en": "worried, anxious"
+      },
+      {
+        "c": "睡着",
+        "p": "shuì zháo",
+        "en": "to fall asleep"
+      }
+    ]
+  },
+  "拿": {
+    "definition": "to hold · to take · to bring",
+    "words": []
+  },
+  "铅": {
+    "definition": null,
+    "words": [
+      {
+        "c": "铅笔",
+        "p": "qiānbǐ",
+        "en": "pencil"
+      }
+    ]
+  },
+  "笔": {
+    "definition": null,
+    "words": [
+      {
+        "c": "铅笔",
+        "p": "qiānbǐ",
+        "en": "pencil"
+      },
+      {
+        "c": "笔记本（电脑）",
+        "p": "bǐjìběn (diànnǎo)",
+        "en": "notebook; laptop"
+      }
+    ]
+  },
+  "笑": {
+    "definition": "to smile · to laugh",
+    "words": []
+  },
+  "宾": {
+    "definition": null,
+    "words": [
+      {
+        "c": "宾馆",
+        "p": "bīnguǎn",
+        "en": "hotel"
+      }
+    ]
+  },
+  "馆": {
+    "definition": null,
+    "words": [
+      {
+        "c": "宾馆",
+        "p": "bīnguǎn",
+        "en": "hotel"
+      },
+      {
+        "c": "图书馆",
+        "p": "túshūguǎn",
+        "en": "library"
+      }
+    ]
+  },
+  "直": {
+    "definition": null,
+    "words": [
+      {
+        "c": "一直",
+        "p": "yìzhí",
+        "en": "straight · all along"
+      }
+    ]
+  },
+  "往": {
+    "definition": "to · towards",
+    "words": []
+  },
+  "但": {
+    "definition": null,
+    "words": [
+      {
+        "c": "但是",
+        "p": "dànshì",
+        "en": "but · still · yet"
+      },
+      {
+        "c": "不但……而且……",
+        "p": "bùdàn…érqiě…",
+        "en": "not only... but also..."
+      }
+    ]
+  },
+  "虽": {
+    "definition": null,
+    "words": [
+      {
+        "c": "虽然",
+        "p": "suīrán",
+        "en": "although · though"
+      }
+    ]
+  },
+  "然": {
+    "definition": null,
+    "words": [
+      {
+        "c": "虽然",
+        "p": "suīrán",
+        "en": "although · though"
+      },
+      {
+        "c": "当然",
+        "p": "dāngrán",
+        "en": "of course"
+      },
+      {
+        "c": "突然",
+        "p": "tūrán",
+        "en": "suddenly"
+      },
+      {
+        "c": "然后",
+        "p": "ránhòu",
+        "en": "then; after that"
+      }
+    ]
+  },
+  "次": {
+    "definition": "time (occurrence)",
+    "words": []
+  },
+  "玩": {
+    "definition": null,
+    "words": [
+      {
+        "c": "玩儿",
+        "p": "wánr",
+        "en": "to play · to have fun"
+      }
+    ]
+  },
+  "晴": {
+    "definition": "sunny · fine · clear",
+    "words": []
+  },
+  "百": {
+    "definition": "hundred",
+    "words": []
+  },
+  "票": {
+    "definition": "ticket",
+    "words": []
+  },
+  "火": {
+    "definition": null,
+    "words": [
+      {
+        "c": "火车站",
+        "p": "huǒchēzhàn",
+        "en": "railway station"
+      }
+    ]
+  },
+  "站": {
+    "definition": "to stand",
+    "words": [
+      {
+        "c": "火车站",
+        "p": "huǒchēzhàn",
+        "en": "railway station"
+      }
+    ]
+  },
+  "更": {
+    "definition": "more · to a greater extent",
+    "words": []
+  },
+  "妹": {
+    "definition": null,
+    "words": [
+      {
+        "c": "妹妹",
+        "p": "mèimei",
+        "en": "younger sister"
+      }
+    ]
+  },
+  "阴": {
+    "definition": "overcast · cloudy",
+    "words": []
+  },
+  "周": {
+    "definition": null,
+    "words": [
+      {
+        "c": "周末",
+        "p": "zhōumò",
+        "en": "weekend"
+      }
+    ]
+  },
+  "末": {
+    "definition": null,
+    "words": [
+      {
+        "c": "周末",
+        "p": "zhōumò",
+        "en": "weekend"
+      }
+    ]
+  },
+  "算": {
+    "definition": null,
+    "words": [
+      {
+        "c": "打算",
+        "p": "dǎsuàn",
+        "en": "plan; to intend"
+      }
+    ]
+  },
+  "跟": {
+    "definition": "with",
+    "words": []
+  },
+  "戏": {
+    "definition": null,
+    "words": [
+      {
+        "c": "游戏",
+        "p": "yóuxì",
+        "en": "game"
+      }
+    ]
+  },
+  "业": {
+    "definition": null,
+    "words": [
+      {
+        "c": "作业",
+        "p": "zuòyè",
+        "en": "homework"
+      }
+    ]
+  },
+  "急": {
+    "definition": null,
+    "words": [
+      {
+        "c": "着急",
+        "p": "zháojí",
+        "en": "worried, anxious"
+      }
+    ]
+  },
+  "复": {
+    "definition": null,
+    "words": [
+      {
+        "c": "复习",
+        "p": "fùxí",
+        "en": "to review"
+      }
+    ]
+  },
+  "南": {
+    "definition": null,
+    "words": [
+      {
+        "c": "南（方）",
+        "p": "nán (fāng)",
+        "en": "south, southern part"
+      }
+    ]
+  },
+  "方": {
+    "definition": null,
+    "words": [
+      {
+        "c": "北方",
+        "p": "běifāng",
+        "en": "north, northern part"
+      },
+      {
+        "c": "方便",
+        "p": "fāngbiàn",
+        "en": "convenient"
+      },
+      {
+        "c": "地方",
+        "p": "dìfang",
+        "en": "place"
+      },
+      {
+        "c": "南（方）",
+        "p": "nán (fāng)",
+        "en": "south, southern part"
+      }
+    ]
+  },
+  "包": {
+    "definition": "bag; sack",
+    "words": [
+      {
+        "c": "面包",
+        "p": "miànbāo",
+        "en": "bread"
+      }
+    ]
+  },
+  "带": {
+    "definition": "to take along, to bring",
+    "words": []
+  },
+  "地": {
+    "definition": "used to connect an adverbial modifier and the verb it modifies",
+    "words": [
+      {
+        "c": "地图",
+        "p": "dìtú",
+        "en": "map"
+      },
+      {
+        "c": "地方",
+        "p": "dìfang",
+        "en": "place"
+      },
+      {
+        "c": "地铁",
+        "p": "dìtiě",
+        "en": "subway"
+      }
+    ]
+  },
+  "图": {
+    "definition": null,
+    "words": [
+      {
+        "c": "地图",
+        "p": "dìtú",
+        "en": "map"
+      },
+      {
+        "c": "图书馆",
+        "p": "túshūguǎn",
+        "en": "library"
+      }
+    ]
+  },
+  "搬": {
+    "definition": "to move, to carry",
+    "words": []
+  },
+  "腿": {
+    "definition": "leg",
+    "words": []
+  },
+  "疼": {
+    "definition": "hurt, painful",
+    "words": []
+  },
+  "脚": {
+    "definition": "foot",
+    "words": []
+  },
+  "树": {
+    "definition": "tree",
+    "words": []
+  },
+  "容": {
+    "definition": null,
+    "words": [
+      {
+        "c": "容易",
+        "p": "róngyì",
+        "en": "easy"
+      }
+    ]
+  },
+  "易": {
+    "definition": null,
+    "words": [
+      {
+        "c": "容易",
+        "p": "róngyì",
+        "en": "easy"
+      }
+    ]
+  },
+  "难": {
+    "definition": "difficult",
+    "words": [
+      {
+        "c": "难过",
+        "p": "nánguò",
+        "en": "sad"
+      }
+    ]
+  },
+  "秘": {
+    "definition": null,
+    "words": [
+      {
+        "c": "秘书",
+        "p": "mìshū",
+        "en": "secretary"
+      }
+    ]
+  },
+  "理": {
+    "definition": null,
+    "words": [
+      {
+        "c": "经理",
+        "p": "jīnglǐ",
+        "en": "manager"
+      }
+    ]
+  },
+  "办": {
+    "definition": null,
+    "words": [
+      {
+        "c": "办法",
+        "p": "bànfǎ",
+        "en": "way; approach"
+      },
+      {
+        "c": "办公室",
+        "p": "bàngōngshì",
+        "en": "office"
+      }
+    ]
+  },
+  "辆": {
+    "definition": "used for vehicles",
+    "words": []
+  },
+  "楼": {
+    "definition": "building",
+    "words": []
+  },
+  "把": {
+    "definition": "used for things with a handle",
+    "words": []
+  },
+  "伞": {
+    "definition": "umbrella",
+    "words": []
+  },
+  "胖": {
+    "definition": "fat",
+    "words": []
+  },
+  "其": {
+    "definition": null,
+    "words": [
+      {
+        "c": "其实",
+        "p": "qíshí",
+        "en": "actually"
+      },
+      {
+        "c": "其他",
+        "p": "qítā",
+        "en": "the rest"
+      }
+    ]
+  },
+  "实": {
+    "definition": null,
+    "words": [
+      {
+        "c": "其实",
+        "p": "qíshí",
+        "en": "actually"
+      }
+    ]
+  },
+  "瘦": {
+    "definition": "thin",
+    "words": []
+  },
+  "爬": {
+    "definition": null,
+    "words": [
+      {
+        "c": "爬山",
+        "p": "pá shān",
+        "en": "to climb a mountain"
+      }
+    ]
+  },
+  "山": {
+    "definition": null,
+    "words": [
+      {
+        "c": "爬山",
+        "p": "pá shān",
+        "en": "to climb a mountain"
+      }
+    ]
+  },
+  "心": {
+    "definition": null,
+    "words": [
+      {
+        "c": "小心",
+        "p": "xiǎoxīn",
+        "en": "careful"
+      },
+      {
+        "c": "放心",
+        "p": "fàng xīn",
+        "en": "to ease one's mind, to rest assured"
+      },
+      {
+        "c": "担心",
+        "p": "dān xīn",
+        "en": "to worry"
+      },
+      {
+        "c": "关心",
+        "p": "guānxīn",
+        "en": "to care for; to be interested in"
+      }
+    ]
+  },
+  "裤": {
+    "definition": null,
+    "words": [
+      {
+        "c": "裤子",
+        "p": "kùzi",
+        "en": "pants"
+      }
+    ]
+  },
+  "记": {
+    "definition": null,
+    "words": [
+      {
+        "c": "记得",
+        "p": "jìde",
+        "en": "to remember"
+      },
+      {
+        "c": "忘记",
+        "p": "wàngjì",
+        "en": "to forget"
+      },
+      {
+        "c": "笔记本（电脑）",
+        "p": "bǐjìběn (diànnǎo)",
+        "en": "notebook; laptop"
+      }
+    ]
+  },
+  "衬": {
+    "definition": null,
+    "words": [
+      {
+        "c": "衬衫",
+        "p": "chènshān",
+        "en": "shirt"
+      }
+    ]
+  },
+  "衫": {
+    "definition": null,
+    "words": [
+      {
+        "c": "衬衫",
+        "p": "chènshān",
+        "en": "shirt"
+      }
+    ]
+  },
+  "元": {
+    "definition": "unit of money",
+    "words": []
+  },
+  "鲜": {
+    "definition": null,
+    "words": [
+      {
+        "c": "新鲜",
+        "p": "xīnxiān",
+        "en": "fresh"
+      }
+    ]
+  },
+  "甜": {
+    "definition": "sweet",
+    "words": []
+  },
+  "只": {
+    "definition": "only, solely",
+    "words": [
+      {
+        "c": "只有……才……",
+        "p": "zhǐyǒu…cái…",
+        "en": "only... (that/can...)"
+      }
+    ]
+  },
+  "放": {
+    "definition": "to put, to place",
+    "words": [
+      {
+        "c": "放心",
+        "p": "fàng xīn",
+        "en": "to ease one's mind, to rest assured"
+      }
+    ]
+  },
+  "饮": {
+    "definition": null,
+    "words": [
+      {
+        "c": "饮料",
+        "p": "yǐnliào",
+        "en": "drink, beverage"
+      }
+    ]
+  },
+  "料": {
+    "definition": null,
+    "words": [
+      {
+        "c": "饮料",
+        "p": "yǐnliào",
+        "en": "drink, beverage"
+      }
+    ]
+  },
+  "或": {
+    "definition": null,
+    "words": [
+      {
+        "c": "或者",
+        "p": "huòzhě",
+        "en": "or"
+      }
+    ]
+  },
+  "者": {
+    "definition": null,
+    "words": [
+      {
+        "c": "或者",
+        "p": "huòzhě",
+        "en": "or"
+      }
+    ]
+  },
+  "舒": {
+    "definition": null,
+    "words": [
+      {
+        "c": "舒服",
+        "p": "shūfu",
+        "en": "comfortable"
+      }
+    ]
+  },
+  "绿": {
+    "definition": "green",
+    "words": []
+  },
+  "赛": {
+    "definition": null,
+    "words": [
+      {
+        "c": "比赛",
+        "p": "bǐsài",
+        "en": "match, competition"
+      }
+    ]
+  },
+  "照": {
+    "definition": null,
+    "words": [
+      {
+        "c": "照片",
+        "p": "zhàopiàn",
+        "en": "photo"
+      },
+      {
+        "c": "照顾",
+        "p": "zhàogù",
+        "en": "to take care of"
+      },
+      {
+        "c": "护照",
+        "p": "hùzhào",
+        "en": "passport"
+      },
+      {
+        "c": "照相机",
+        "p": "zhàoxiàngjī",
+        "en": "camera"
+      }
+    ]
+  },
+  "片": {
+    "definition": null,
+    "words": [
+      {
+        "c": "照片",
+        "p": "zhàopiàn",
+        "en": "photo"
+      }
+    ]
+  },
+  "级": {
+    "definition": null,
+    "words": [
+      {
+        "c": "年级",
+        "p": "niánjí",
+        "en": "grade"
+      }
+    ]
+  },
+  "又": {
+    "definition": "and",
+    "words": []
+  },
+  "聪": {
+    "definition": null,
+    "words": [
+      {
+        "c": "聪明",
+        "p": "cōngming",
+        "en": "clever, smart"
+      }
+    ]
+  },
+  "努": {
+    "definition": null,
+    "words": [
+      {
+        "c": "努力",
+        "p": "nǔlì",
+        "en": "hard-working"
+      }
+    ]
+  },
+  "力": {
+    "definition": null,
+    "words": [
+      {
+        "c": "努力",
+        "p": "nǔlì",
+        "en": "hard-working"
+      }
+    ]
+  },
+  "总": {
+    "definition": null,
+    "words": [
+      {
+        "c": "总是",
+        "p": "zǒngshì",
+        "en": "always"
+      }
+    ]
+  },
+  "答": {
+    "definition": null,
+    "words": [
+      {
+        "c": "回答",
+        "p": "huídá",
+        "en": "to answer"
+      }
+    ]
+  },
+  "饿": {
+    "definition": "hungry",
+    "words": []
+  },
+  "超": {
+    "definition": null,
+    "words": [
+      {
+        "c": "超市",
+        "p": "chāoshì",
+        "en": "supermarket"
+      }
+    ]
+  },
+  "市": {
+    "definition": null,
+    "words": [
+      {
+        "c": "超市",
+        "p": "chāoshì",
+        "en": "supermarket"
+      },
+      {
+        "c": "城市",
+        "p": "chéngshì",
+        "en": "city"
+      }
+    ]
+  },
+  "糕": {
+    "definition": null,
+    "words": [
+      {
+        "c": "蛋糕",
+        "p": "dàngāo",
+        "en": "cake"
+      }
+    ]
+  },
+  "轻": {
+    "definition": null,
+    "words": [
+      {
+        "c": "年轻",
+        "p": "niánqīng",
+        "en": "young"
+      }
+    ]
+  },
+  "发": {
+    "definition": "to send",
+    "words": [
+      {
+        "c": "发烧",
+        "p": "fā shāo",
+        "en": "to have a fever"
+      },
+      {
+        "c": "发现",
+        "p": "fāxiàn",
+        "en": "to discover"
+      },
+      {
+        "c": "头发",
+        "p": "tóufa",
+        "en": "hair"
+      }
+    ]
+  },
+  "烧": {
+    "definition": null,
+    "words": [
+      {
+        "c": "发烧",
+        "p": "fā shāo",
+        "en": "to have a fever"
+      }
+    ]
+  },
+  "顾": {
+    "definition": null,
+    "words": [
+      {
+        "c": "照顾",
+        "p": "zhàogù",
+        "en": "to take care of"
+      }
+    ]
+  },
+  "用": {
+    "definition": "to need",
+    "words": [
+      {
+        "c": "信用卡",
+        "p": "xìnyòngkǎ",
+        "en": "credit card"
+      }
+    ]
+  },
+  "感": {
+    "definition": null,
+    "words": [
+      {
+        "c": "感冒",
+        "p": "gǎnmào",
+        "en": "to catch a cold"
+      },
+      {
+        "c": "感兴趣",
+        "p": "gǎn xìngqù",
+        "en": "to be interested in"
+      }
+    ]
+  },
+  "冒": {
+    "definition": null,
+    "words": [
+      {
+        "c": "感冒",
+        "p": "gǎnmào",
+        "en": "to catch a cold"
+      }
+    ]
+  },
+  "季": {
+    "definition": null,
+    "words": [
+      {
+        "c": "季节",
+        "p": "jìjié",
+        "en": "season"
+      }
+    ]
+  },
+  "节": {
+    "definition": null,
+    "words": [
+      {
+        "c": "季节",
+        "p": "jìjié",
+        "en": "season"
+      },
+      {
+        "c": "节目",
+        "p": "jiémù",
+        "en": "programme"
+      },
+      {
+        "c": "节日",
+        "p": "jiérì",
+        "en": "festival"
+      }
+    ]
+  },
+  "当": {
+    "definition": null,
+    "words": [
+      {
+        "c": "当然",
+        "p": "dāngrán",
+        "en": "of course"
+      }
+    ]
+  },
+  "春": {
+    "definition": null,
+    "words": [
+      {
+        "c": "春（天）",
+        "p": "chūn (tiān)",
+        "en": "spring"
+      }
+    ]
+  },
+  "草": {
+    "definition": "grass",
+    "words": []
+  },
+  "夏": {
+    "definition": null,
+    "words": [
+      {
+        "c": "夏（天）",
+        "p": "xià (tiān)",
+        "en": "summer"
+      }
+    ]
+  },
+  "裙": {
+    "definition": null,
+    "words": [
+      {
+        "c": "裙子",
+        "p": "qúnzi",
+        "en": "dress, skirt"
+      }
+    ]
+  },
+  "越": {
+    "definition": "more, to a greater degree",
+    "words": []
+  },
+  "镜": {
+    "definition": null,
+    "words": [
+      {
+        "c": "眼镜",
+        "p": "yǎnjing",
+        "en": "glasses, spectacles"
+      }
+    ]
+  },
+  "突": {
+    "definition": null,
+    "words": [
+      {
+        "c": "突然",
+        "p": "tūrán",
+        "en": "suddenly"
+      }
+    ]
+  },
+  "清": {
+    "definition": null,
+    "words": [
+      {
+        "c": "清楚",
+        "p": "qīngchu",
+        "en": "clear, distinct"
+      }
+    ]
+  },
+  "楚": {
+    "definition": null,
+    "words": [
+      {
+        "c": "清楚",
+        "p": "qīngchu",
+        "en": "clear, distinct"
+      }
+    ]
+  },
+  "刚": {
+    "definition": null,
+    "words": [
+      {
+        "c": "刚才",
+        "p": "gāngcái",
+        "en": "just now"
+      }
+    ]
+  },
+  "才": {
+    "definition": null,
+    "words": [
+      {
+        "c": "刚才",
+        "p": "gāngcái",
+        "en": "just now"
+      },
+      {
+        "c": "只有……才……",
+        "p": "zhǐyǒu…cái…",
+        "en": "only... (that/can...)"
+      }
+    ]
+  },
+  "特": {
+    "definition": null,
+    "words": [
+      {
+        "c": "特别",
+        "p": "tèbié",
+        "en": "extraordinarily"
+      },
+      {
+        "c": "特点",
+        "p": "tèdiǎn",
+        "en": "feature"
+      }
+    ]
+  },
+  "讲": {
+    "definition": "to explain",
+    "words": []
+  },
+  "锻": {
+    "definition": null,
+    "words": [
+      {
+        "c": "锻炼",
+        "p": "duànliàn",
+        "en": "to do physical exercise"
+      }
+    ]
+  },
+  "炼": {
+    "definition": null,
+    "words": [
+      {
+        "c": "锻炼",
+        "p": "duànliàn",
+        "en": "to do physical exercise"
+      }
+    ]
+  },
+  "音": {
+    "definition": null,
+    "words": [
+      {
+        "c": "音乐",
+        "p": "yīnyuè",
+        "en": "music"
+      },
+      {
+        "c": "声音",
+        "p": "shēngyīn",
+        "en": "sound; voice"
+      }
+    ]
+  },
+  "园": {
+    "definition": null,
+    "words": [
+      {
+        "c": "公园",
+        "p": "gōngyuán",
+        "en": "park"
+      }
+    ]
+  },
+  "聊": {
+    "definition": null,
+    "words": [
+      {
+        "c": "聊天（儿）",
+        "p": "liáo tiān (r)",
+        "en": "to chat"
+      }
+    ]
+  },
+  "银": {
+    "definition": null,
+    "words": [
+      {
+        "c": "银行",
+        "p": "yínháng",
+        "en": "bank"
+      }
+    ]
+  },
+  "久": {
+    "definition": "for a long time, long",
+    "words": []
+  },
+  "趣": {
+    "definition": null,
+    "words": [
+      {
+        "c": "感兴趣",
+        "p": "gǎn xìngqù",
+        "en": "to be interested in"
+      }
+    ]
+  },
+  "结": {
+    "definition": null,
+    "words": [
+      {
+        "c": "结婚",
+        "p": "jié hūn",
+        "en": "to marry, to get married"
+      },
+      {
+        "c": "结束",
+        "p": "jiéshù",
+        "en": "to end; to finish"
+      }
+    ]
+  },
+  "婚": {
+    "definition": null,
+    "words": [
+      {
+        "c": "结婚",
+        "p": "jié hūn",
+        "en": "to marry, to get married"
+      }
+    ]
+  },
+  "迟": {
+    "definition": null,
+    "words": [
+      {
+        "c": "迟到",
+        "p": "chídào",
+        "en": "to be late"
+      }
+    ]
+  },
+  "半": {
+    "definition": "half",
+    "words": []
+  },
+  "刻": {
+    "definition": "quarter",
+    "words": []
+  },
+  "差": {
+    "definition": "to fall short of",
+    "words": []
+  },
+  "满": {
+    "definition": null,
+    "words": [
+      {
+        "c": "满意",
+        "p": "mǎnyì",
+        "en": "to be satisfied"
+      }
+    ]
+  },
+  "梯": {
+    "definition": null,
+    "words": [
+      {
+        "c": "电梯",
+        "p": "diàntī",
+        "en": "elevator"
+      }
+    ]
+  },
+  "层": {
+    "definition": "used for floors",
+    "words": []
+  },
+  "害": {
+    "definition": null,
+    "words": [
+      {
+        "c": "害怕",
+        "p": "hàipà",
+        "en": "to be afraid, to be scared"
+      }
+    ]
+  },
+  "怕": {
+    "definition": null,
+    "words": [
+      {
+        "c": "害怕",
+        "p": "hàipà",
+        "en": "to be afraid, to be scared"
+      }
+    ]
+  },
+  "熊": {
+    "definition": null,
+    "words": [
+      {
+        "c": "熊猫",
+        "p": "xióngmāo",
+        "en": "panda"
+      }
+    ]
+  },
+  "安": {
+    "definition": null,
+    "words": [
+      {
+        "c": "安静",
+        "p": "ānjìng",
+        "en": "quiet"
+      }
+    ]
+  },
+  "静": {
+    "definition": null,
+    "words": [
+      {
+        "c": "安静",
+        "p": "ānjìng",
+        "en": "quiet"
+      }
+    ]
+  },
+  "马": {
+    "definition": "horse",
+    "words": [
+      {
+        "c": "马上",
+        "p": "mǎshàng",
+        "en": "immediately, at once"
+      }
+    ]
+  },
+  "乎": {
+    "definition": null,
+    "words": [
+      {
+        "c": "几乎",
+        "p": "jīhū",
+        "en": "almost"
+      }
+    ]
+  },
+  "变": {
+    "definition": null,
+    "words": [
+      {
+        "c": "变化",
+        "p": "biànhuà",
+        "en": "to change"
+      }
+    ]
+  },
+  "化": {
+    "definition": null,
+    "words": [
+      {
+        "c": "变化",
+        "p": "biànhuà",
+        "en": "to change"
+      },
+      {
+        "c": "文化",
+        "p": "wénhuà",
+        "en": "culture"
+      }
+    ]
+  },
+  "健": {
+    "definition": null,
+    "words": [
+      {
+        "c": "健康",
+        "p": "jiànkāng",
+        "en": "healthy"
+      }
+    ]
+  },
+  "康": {
+    "definition": null,
+    "words": [
+      {
+        "c": "健康",
+        "p": "jiànkāng",
+        "en": "healthy"
+      }
+    ]
+  },
+  "重": {
+    "definition": null,
+    "words": [
+      {
+        "c": "重要",
+        "p": "zhòngyào",
+        "en": "important"
+      }
+    ]
+  },
+  "文": {
+    "definition": null,
+    "words": [
+      {
+        "c": "中文",
+        "p": "Zhōngwén",
+        "en": "Chinese language"
+      },
+      {
+        "c": "文化",
+        "p": "wénhuà",
+        "en": "culture"
+      }
+    ]
+  },
+  "定": {
+    "definition": null,
+    "words": [
+      {
+        "c": "一定",
+        "p": "yídìng",
+        "en": "definitely, certainly"
+      },
+      {
+        "c": "决定",
+        "p": "juédìng",
+        "en": "to decide"
+      }
+    ]
+  },
+  "担": {
+    "definition": null,
+    "words": [
+      {
+        "c": "担心",
+        "p": "dān xīn",
+        "en": "to worry"
+      }
+    ]
+  },
+  "较": {
+    "definition": null,
+    "words": [
+      {
+        "c": "比较",
+        "p": "bǐjiào",
+        "en": "fairly, rather"
+      }
+    ]
+  },
+  "解": {
+    "definition": null,
+    "words": [
+      {
+        "c": "了解",
+        "p": "liǎojiě",
+        "en": "to know"
+      },
+      {
+        "c": "解决",
+        "p": "jiějué",
+        "en": "to solve"
+      }
+    ]
+  },
+  "参": {
+    "definition": null,
+    "words": [
+      {
+        "c": "参加",
+        "p": "cānjiā",
+        "en": "to participate"
+      }
+    ]
+  },
+  "加": {
+    "definition": null,
+    "words": [
+      {
+        "c": "参加",
+        "p": "cānjiā",
+        "en": "to participate"
+      }
+    ]
+  },
+  "响": {
+    "definition": null,
+    "words": [
+      {
+        "c": "影响",
+        "p": "yǐngxiǎng",
+        "en": "influence"
+      }
+    ]
+  },
+  "矮": {
+    "definition": "short",
+    "words": []
+  },
+  "历": {
+    "definition": null,
+    "words": [
+      {
+        "c": "历史",
+        "p": "lìshǐ",
+        "en": "history"
+      }
+    ]
+  },
+  "史": {
+    "definition": null,
+    "words": [
+      {
+        "c": "历史",
+        "p": "lìshǐ",
+        "en": "history"
+      }
+    ]
+  },
+  "育": {
+    "definition": null,
+    "words": [
+      {
+        "c": "体育",
+        "p": "tǐyù",
+        "en": "P.E., sports"
+      }
+    ]
+  },
+  "数": {
+    "definition": null,
+    "words": [
+      {
+        "c": "数学",
+        "p": "shùxué",
+        "en": "maths"
+      }
+    ]
+  },
+  "骑": {
+    "definition": "to ride",
+    "words": []
+  },
+  "旧": {
+    "definition": "old, used, worn",
+    "words": []
+  },
+  "换": {
+    "definition": "to change, to substitute",
+    "words": []
+  },
+  "主": {
+    "definition": null,
+    "words": [
+      {
+        "c": "主要",
+        "p": "zhǔyào",
+        "en": "main"
+      }
+    ]
+  },
+  "环": {
+    "definition": null,
+    "words": [
+      {
+        "c": "环境",
+        "p": "huánjìng",
+        "en": "environment"
+      }
+    ]
+  },
+  "境": {
+    "definition": null,
+    "words": [
+      {
+        "c": "环境",
+        "p": "huánjìng",
+        "en": "environment"
+      }
+    ]
+  },
+  "附": {
+    "definition": null,
+    "words": [
+      {
+        "c": "附近",
+        "p": "fùjìn",
+        "en": "nearby, vicinity"
+      }
+    ]
+  },
+  "借": {
+    "definition": "to borrow; to lend",
+    "words": []
+  },
+  "词": {
+    "definition": null,
+    "words": [
+      {
+        "c": "词典",
+        "p": "cídiǎn",
+        "en": "dictionary"
+      },
+      {
+        "c": "词语",
+        "p": "cíyǔ",
+        "en": "word; expression"
+      }
+    ]
+  },
+  "典": {
+    "definition": null,
+    "words": [
+      {
+        "c": "词典",
+        "p": "cídiǎn",
+        "en": "dictionary"
+      }
+    ]
+  },
+  "灯": {
+    "definition": "light; lamp",
+    "words": []
+  },
+  "议": {
+    "definition": null,
+    "words": [
+      {
+        "c": "会议",
+        "p": "huìyì",
+        "en": "meeting; conference"
+      }
+    ]
+  },
+  "束": {
+    "definition": null,
+    "words": [
+      {
+        "c": "结束",
+        "p": "jiéshù",
+        "en": "to end; to finish"
+      }
+    ]
+  },
+  "忘": {
+    "definition": null,
+    "words": [
+      {
+        "c": "忘记",
+        "p": "wàngjì",
+        "en": "to forget"
+      }
+    ]
+  },
+  "空": {
+    "definition": null,
+    "words": [
+      {
+        "c": "空调",
+        "p": "kōngtiáo",
+        "en": "air conditioner"
+      }
+    ]
+  },
+  "调": {
+    "definition": null,
+    "words": [
+      {
+        "c": "空调",
+        "p": "kōngtiáo",
+        "en": "air conditioner"
+      }
+    ]
+  },
+  "铁": {
+    "definition": null,
+    "words": [
+      {
+        "c": "地铁",
+        "p": "dìtiě",
+        "en": "subway"
+      }
+    ]
+  },
+  "双": {
+    "definition": "pair",
+    "words": []
+  },
+  "筷": {
+    "definition": null,
+    "words": [
+      {
+        "c": "筷子",
+        "p": "kuàizi",
+        "en": "chopsticks"
+      }
+    ]
+  },
+  "啤": {
+    "definition": null,
+    "words": [
+      {
+        "c": "啤酒",
+        "p": "píjiǔ",
+        "en": "beer"
+      }
+    ]
+  },
+  "酒": {
+    "definition": null,
+    "words": [
+      {
+        "c": "啤酒",
+        "p": "píjiǔ",
+        "en": "beer"
+      }
+    ]
+  },
+  "瓶": {
+    "definition": null,
+    "words": [
+      {
+        "c": "瓶子",
+        "p": "píngzi",
+        "en": "bottle"
+      }
+    ]
+  },
+  "邮": {
+    "definition": null,
+    "words": [
+      {
+        "c": "电子邮件",
+        "p": "diànzǐ yóujiàn",
+        "en": "email"
+      }
+    ]
+  },
+  "惯": {
+    "definition": null,
+    "words": [
+      {
+        "c": "习惯",
+        "p": "xíguàn",
+        "en": "to be used to; habit"
+      }
+    ]
+  },
+  "阳": {
+    "definition": null,
+    "words": [
+      {
+        "c": "太阳",
+        "p": "tàiyáng",
+        "en": "sun"
+      }
+    ]
+  },
+  "李": {
+    "definition": null,
+    "words": [
+      {
+        "c": "行李箱",
+        "p": "xínglixiāng",
+        "en": "luggage; suitcase"
+      }
+    ]
+  },
+  "箱": {
+    "definition": null,
+    "words": [
+      {
+        "c": "冰箱",
+        "p": "bīngxiāng",
+        "en": "refrigerator"
+      },
+      {
+        "c": "行李箱",
+        "p": "xínglixiāng",
+        "en": "luggage; suitcase"
+      }
+    ]
+  },
+  "己": {
+    "definition": null,
+    "words": [
+      {
+        "c": "自己",
+        "p": "zìjǐ",
+        "en": "self"
+      }
+    ]
+  },
+  "护": {
+    "definition": null,
+    "words": [
+      {
+        "c": "护照",
+        "p": "hùzhào",
+        "en": "passport"
+      }
+    ]
+  },
+  "画": {
+    "definition": "to draw; to paint; drawing; painting",
+    "words": []
+  },
+  "需": {
+    "definition": null,
+    "words": [
+      {
+        "c": "需要",
+        "p": "xūyào",
+        "en": "to need"
+      }
+    ]
+  },
+  "板": {
+    "definition": null,
+    "words": [
+      {
+        "c": "黑板",
+        "p": "hēibǎn",
+        "en": "blackboard"
+      }
+    ]
+  },
+  "终": {
+    "definition": null,
+    "words": [
+      {
+        "c": "终于",
+        "p": "zhōngyú",
+        "en": "finally"
+      }
+    ]
+  },
+  "于": {
+    "definition": null,
+    "words": [
+      {
+        "c": "终于",
+        "p": "zhōngyú",
+        "en": "finally"
+      },
+      {
+        "c": "关于",
+        "p": "guānyú",
+        "en": "about; regarding"
+      }
+    ]
+  },
+  "爷": {
+    "definition": null,
+    "words": [
+      {
+        "c": "爷爷",
+        "p": "yéye",
+        "en": "grandfather"
+      }
+    ]
+  },
+  "礼": {
+    "definition": null,
+    "words": [
+      {
+        "c": "礼物",
+        "p": "lǐwù",
+        "en": "gift; present"
+      }
+    ]
+  },
+  "物": {
+    "definition": null,
+    "words": [
+      {
+        "c": "礼物",
+        "p": "lǐwù",
+        "en": "gift; present"
+      },
+      {
+        "c": "动物",
+        "p": "dòngwù",
+        "en": "animal"
+      }
+    ]
+  },
+  "遇": {
+    "definition": null,
+    "words": [
+      {
+        "c": "遇到",
+        "p": "yùdào",
+        "en": "to come across; to run into"
+      }
+    ]
+  },
+  "般": {
+    "definition": null,
+    "words": [
+      {
+        "c": "一般",
+        "p": "yìbān",
+        "en": "general; usual"
+      }
+    ]
+  },
+  "愿": {
+    "definition": null,
+    "words": [
+      {
+        "c": "愿意",
+        "p": "yuànyì",
+        "en": "would like to"
+      }
+    ]
+  },
+  "应": {
+    "definition": null,
+    "words": [
+      {
+        "c": "应该",
+        "p": "yīnggāi",
+        "en": "should"
+      }
+    ]
+  },
+  "该": {
+    "definition": null,
+    "words": [
+      {
+        "c": "应该",
+        "p": "yīnggāi",
+        "en": "should"
+      }
+    ]
+  },
+  "活": {
+    "definition": null,
+    "words": [
+      {
+        "c": "生活",
+        "p": "shēnghuó",
+        "en": "life"
+      }
+    ]
+  },
+  "坏": {
+    "definition": "broken; ruined",
+    "words": []
+  },
+  "扫": {
+    "definition": null,
+    "words": [
+      {
+        "c": "打扫",
+        "p": "dǎsǎo",
+        "en": "to clean; to sweep"
+      }
+    ]
+  },
+  "干": {
+    "definition": null,
+    "words": [
+      {
+        "c": "干净",
+        "p": "gānjìng",
+        "en": "clean"
+      }
+    ]
+  },
+  "净": {
+    "definition": null,
+    "words": [
+      {
+        "c": "干净",
+        "p": "gānjìng",
+        "en": "clean"
+      }
+    ]
+  },
+  "冰": {
+    "definition": null,
+    "words": [
+      {
+        "c": "冰箱",
+        "p": "bīngxiāng",
+        "en": "refrigerator"
+      }
+    ]
+  },
+  "澡": {
+    "definition": null,
+    "words": [
+      {
+        "c": "洗澡",
+        "p": "xǐ zǎo",
+        "en": "to take a bath or shower"
+      }
+    ]
+  },
+  "目": {
+    "definition": null,
+    "words": [
+      {
+        "c": "节目",
+        "p": "jiémù",
+        "en": "programme"
+      }
+    ]
+  },
+  "像": {
+    "definition": "to be like",
+    "words": []
+  },
+  "盘": {
+    "definition": null,
+    "words": [
+      {
+        "c": "盘子",
+        "p": "pánzi",
+        "en": "plate"
+      }
+    ]
+  },
+  "刮": {
+    "definition": null,
+    "words": [
+      {
+        "c": "刮风",
+        "p": "guā fēng",
+        "en": "to be windy"
+      }
+    ]
+  },
+  "风": {
+    "definition": null,
+    "words": [
+      {
+        "c": "刮风",
+        "p": "guā fēng",
+        "en": "to be windy"
+      }
+    ]
+  },
+  "叔": {
+    "definition": null,
+    "words": [
+      {
+        "c": "叔叔",
+        "p": "shūshu",
+        "en": "uncle"
+      }
+    ]
+  },
+  "阿": {
+    "definition": null,
+    "words": [
+      {
+        "c": "阿姨",
+        "p": "āyí",
+        "en": "aunt"
+      }
+    ]
+  },
+  "姨": {
+    "definition": null,
+    "words": [
+      {
+        "c": "阿姨",
+        "p": "āyí",
+        "en": "aunt"
+      }
+    ]
+  },
+  "故": {
+    "definition": null,
+    "words": [
+      {
+        "c": "故事",
+        "p": "gùshi",
+        "en": "story"
+      }
+    ]
+  },
+  "声": {
+    "definition": null,
+    "words": [
+      {
+        "c": "声音",
+        "p": "shēngyīn",
+        "en": "sound; voice"
+      }
+    ]
+  },
+  "单": {
+    "definition": null,
+    "words": [
+      {
+        "c": "菜单",
+        "p": "càidān",
+        "en": "menu"
+      },
+      {
+        "c": "简单",
+        "p": "jiǎndān",
+        "en": "simple"
+      }
+    ]
+  },
+  "简": {
+    "definition": null,
+    "words": [
+      {
+        "c": "简单",
+        "p": "jiǎndān",
+        "en": "simple"
+      }
+    ]
+  },
+  "香": {
+    "definition": null,
+    "words": [
+      {
+        "c": "香蕉",
+        "p": "xiāngjiāo",
+        "en": "banana"
+      }
+    ]
+  },
+  "蕉": {
+    "definition": null,
+    "words": [
+      {
+        "c": "香蕉",
+        "p": "xiāngjiāo",
+        "en": "banana"
+      }
+    ]
+  },
+  "留": {
+    "definition": null,
+    "words": [
+      {
+        "c": "留学",
+        "p": "liú xué",
+        "en": "to study abroad"
+      }
+    ]
+  },
+  "平": {
+    "definition": null,
+    "words": [
+      {
+        "c": "水平",
+        "p": "shuǐpíng",
+        "en": "level; standard"
+      }
+    ]
+  },
+  "提": {
+    "definition": null,
+    "words": [
+      {
+        "c": "提高",
+        "p": "tí gāo",
+        "en": "to improve"
+      }
+    ]
+  },
+  "练": {
+    "definition": null,
+    "words": [
+      {
+        "c": "练习",
+        "p": "liànxí",
+        "en": "exercise"
+      }
+    ]
+  },
+  "成": {
+    "definition": null,
+    "words": [
+      {
+        "c": "完成",
+        "p": "wán chéng",
+        "en": "to complete"
+      },
+      {
+        "c": "成绩",
+        "p": "chéngjì",
+        "en": "grade; performance; achievement"
+      }
+    ]
+  },
+  "句": {
+    "definition": null,
+    "words": [
+      {
+        "c": "句子",
+        "p": "jùzi",
+        "en": "sentence"
+      }
+    ]
+  },
+  "求": {
+    "definition": null,
+    "words": [
+      {
+        "c": "要求",
+        "p": "yāoqiú",
+        "en": "requirement"
+      }
+    ]
+  },
+  "注": {
+    "definition": null,
+    "words": [
+      {
+        "c": "注意",
+        "p": "zhù yì",
+        "en": "to pay attention to"
+      }
+    ]
+  },
+  "网": {
+    "definition": null,
+    "words": [
+      {
+        "c": "上网",
+        "p": "shàng wǎng",
+        "en": "to surf the Internet"
+      }
+    ]
+  },
+  "除": {
+    "definition": null,
+    "words": [
+      {
+        "c": "除了",
+        "p": "chúle",
+        "en": "other than; besides"
+      }
+    ]
+  },
+  "闻": {
+    "definition": null,
+    "words": [
+      {
+        "c": "新闻",
+        "p": "xīnwén",
+        "en": "news"
+      }
+    ]
+  },
+  "极": {
+    "definition": null,
+    "words": [
+      {
+        "c": "极（了）",
+        "p": "jí (le)",
+        "en": "extremely"
+      }
+    ]
+  },
+  "举": {
+    "definition": null,
+    "words": [
+      {
+        "c": "举行",
+        "p": "jǔxíng",
+        "en": "to hold an event"
+      }
+    ]
+  },
+  "世": {
+    "definition": null,
+    "words": [
+      {
+        "c": "世界",
+        "p": "shìjiè",
+        "en": "world"
+      }
+    ]
+  },
+  "界": {
+    "definition": null,
+    "words": [
+      {
+        "c": "世界",
+        "p": "shìjiè",
+        "en": "world"
+      }
+    ]
+  },
+  "街": {
+    "definition": null,
+    "words": [
+      {
+        "c": "街道",
+        "p": "jiēdào",
+        "en": "street"
+      }
+    ]
+  },
+  "各": {
+    "definition": "each",
+    "words": []
+  },
+  "城": {
+    "definition": null,
+    "words": [
+      {
+        "c": "城市",
+        "p": "chéngshì",
+        "en": "city"
+      }
+    ]
+  },
+  "如": {
+    "definition": null,
+    "words": [
+      {
+        "c": "如果",
+        "p": "rúguǒ",
+        "en": "if; in case"
+      }
+    ]
+  },
+  "皮": {
+    "definition": null,
+    "words": [
+      {
+        "c": "皮鞋",
+        "p": "píxié",
+        "en": "leather shoes"
+      }
+    ]
+  },
+  "鞋": {
+    "definition": null,
+    "words": [
+      {
+        "c": "皮鞋",
+        "p": "píxié",
+        "en": "leather shoes"
+      }
+    ]
+  },
+  "帽": {
+    "definition": null,
+    "words": [
+      {
+        "c": "帽子",
+        "p": "màozi",
+        "en": "hat; cap"
+      }
+    ]
+  },
+  "鼻": {
+    "definition": null,
+    "words": [
+      {
+        "c": "鼻子",
+        "p": "bízi",
+        "en": "nose"
+      }
+    ]
+  },
+  "头": {
+    "definition": null,
+    "words": [
+      {
+        "c": "头发",
+        "p": "tóufa",
+        "en": "hair"
+      }
+    ]
+  },
+  "检": {
+    "definition": null,
+    "words": [
+      {
+        "c": "检查",
+        "p": "jiǎnchá",
+        "en": "to check; to examine"
+      }
+    ]
+  },
+  "查": {
+    "definition": null,
+    "words": [
+      {
+        "c": "检查",
+        "p": "jiǎnchá",
+        "en": "to check; to examine"
+      }
+    ]
+  },
+  "刷": {
+    "definition": null,
+    "words": [
+      {
+        "c": "刷牙",
+        "p": "shuā yá",
+        "en": "to brush the teeth"
+      }
+    ]
+  },
+  "牙": {
+    "definition": null,
+    "words": [
+      {
+        "c": "刷牙",
+        "p": "shuā yá",
+        "en": "to brush the teeth"
+      }
+    ]
+  },
+  "假": {
+    "definition": null,
+    "words": [
+      {
+        "c": "请假",
+        "p": "qǐng jià",
+        "en": "to ask for leave"
+      }
+    ]
+  },
+  "邻": {
+    "definition": null,
+    "words": [
+      {
+        "c": "邻居",
+        "p": "línjū",
+        "en": "neighbour"
+      }
+    ]
+  },
+  "居": {
+    "definition": null,
+    "words": [
+      {
+        "c": "邻居",
+        "p": "línjū",
+        "en": "neighbour"
+      }
+    ]
+  },
+  "法": {
+    "definition": null,
+    "words": [
+      {
+        "c": "办法",
+        "p": "bànfǎ",
+        "en": "way; approach"
+      }
+    ]
+  },
+  "饱": {
+    "definition": "full; having eaten one's fill",
+    "words": []
+  },
+  "决": {
+    "definition": null,
+    "words": [
+      {
+        "c": "决定",
+        "p": "juédìng",
+        "en": "to decide"
+      },
+      {
+        "c": "解决",
+        "p": "jiějué",
+        "en": "to solve"
+      }
+    ]
+  },
+  "选": {
+    "definition": null,
+    "words": [
+      {
+        "c": "选择",
+        "p": "xuǎnzé",
+        "en": "to choose"
+      }
+    ]
+  },
+  "择": {
+    "definition": null,
+    "words": [
+      {
+        "c": "选择",
+        "p": "xuǎnzé",
+        "en": "to choose"
+      }
+    ]
+  },
+  "冬": {
+    "definition": null,
+    "words": [
+      {
+        "c": "冬（天）",
+        "p": "dōng (tiān)",
+        "en": "winter"
+      }
+    ]
+  },
+  "必": {
+    "definition": null,
+    "words": [
+      {
+        "c": "必须",
+        "p": "bìxū",
+        "en": "must"
+      }
+    ]
+  },
+  "须": {
+    "definition": null,
+    "words": [
+      {
+        "c": "必须",
+        "p": "bìxū",
+        "en": "must"
+      }
+    ]
+  },
+  "根": {
+    "definition": null,
+    "words": [
+      {
+        "c": "根据",
+        "p": "gēnjù",
+        "en": "according to; based on"
+      }
+    ]
+  },
+  "据": {
+    "definition": null,
+    "words": [
+      {
+        "c": "根据",
+        "p": "gēnjù",
+        "en": "according to; based on"
+      }
+    ]
+  },
+  "况": {
+    "definition": null,
+    "words": [
+      {
+        "c": "情况",
+        "p": "qíngkuàng",
+        "en": "condition; situation"
+      }
+    ]
+  },
+  "渴": {
+    "definition": "thirsty",
+    "words": []
+  },
+  "向": {
+    "definition": "towards",
+    "words": []
+  },
+  "万": {
+    "definition": "ten thousand",
+    "words": []
+  },
+  "嘴": {
+    "definition": "mouth",
+    "words": []
+  },
+  "段": {
+    "definition": "measure word for sections or periods",
+    "words": []
+  },
+  "而": {
+    "definition": null,
+    "words": [
+      {
+        "c": "不但……而且……",
+        "p": "bùdàn…érqiě…",
+        "en": "not only... but also..."
+      }
+    ]
+  },
+  "且": {
+    "definition": null,
+    "words": [
+      {
+        "c": "不但……而且……",
+        "p": "bùdàn…érqiě…",
+        "en": "not only... but also..."
+      }
+    ]
+  },
+  "相": {
+    "definition": null,
+    "words": [
+      {
+        "c": "相信",
+        "p": "xiāngxìn",
+        "en": "to believe"
+      },
+      {
+        "c": "照相机",
+        "p": "zhàoxiàngjī",
+        "en": "camera"
+      }
+    ]
+  },
+  "信": {
+    "definition": null,
+    "words": [
+      {
+        "c": "相信",
+        "p": "xiāngxìn",
+        "en": "to believe"
+      },
+      {
+        "c": "信用卡",
+        "p": "xìnyòngkǎ",
+        "en": "credit card"
+      }
+    ]
+  },
+  "种": {
+    "definition": "kind; type",
+    "words": []
+  },
+  "奇": {
+    "definition": null,
+    "words": [
+      {
+        "c": "奇怪",
+        "p": "qíguài",
+        "en": "strange; odd"
+      }
+    ]
+  },
+  "怪": {
+    "definition": null,
+    "words": [
+      {
+        "c": "奇怪",
+        "p": "qíguài",
+        "en": "strange; odd"
+      }
+    ]
+  },
+  "耳": {
+    "definition": null,
+    "words": [
+      {
+        "c": "耳朵",
+        "p": "ěrduo",
+        "en": "ear"
+      }
+    ]
+  },
+  "朵": {
+    "definition": null,
+    "words": [
+      {
+        "c": "耳朵",
+        "p": "ěrduo",
+        "en": "ear"
+      }
+    ]
+  },
+  "脸": {
+    "definition": "face",
+    "words": []
+  },
+  "短": {
+    "definition": "short",
+    "words": []
+  },
+  "位": {
+    "definition": "polite measure word for people",
+    "words": []
+  },
+  "蓝": {
+    "definition": "blue",
+    "words": []
+  },
+  "秋": {
+    "definition": null,
+    "words": [
+      {
+        "c": "秋（天）",
+        "p": "qiū (tiān)",
+        "en": "autumn; fall"
+      }
+    ]
+  },
+  "鸟": {
+    "definition": "bird",
+    "words": []
+  },
+  "哭": {
+    "definition": "to cry",
+    "words": []
+  },
+  "黄": {
+    "definition": null,
+    "words": [
+      {
+        "c": "黄河",
+        "p": "Huáng Hé",
+        "en": "Yellow River; the second-longest river in China"
+      }
+    ]
+  },
+  "河": {
+    "definition": null,
+    "words": [
+      {
+        "c": "黄河",
+        "p": "Huáng Hé",
+        "en": "Yellow River; the second-longest river in China"
+      }
+    ]
+  },
+  "船": {
+    "definition": "boat; ship",
+    "words": []
+  },
+  "被": {
+    "definition": "used to indicate the passive voice",
+    "words": []
+  },
+  "卡": {
+    "definition": null,
+    "words": [
+      {
+        "c": "信用卡",
+        "p": "xìnyòngkǎ",
+        "en": "credit card"
+      }
+    ]
+  },
+  "绩": {
+    "definition": null,
+    "words": [
+      {
+        "c": "成绩",
+        "p": "chéngjì",
+        "en": "grade; performance; achievement"
+      }
+    ]
+  },
+  "碗": {
+    "definition": "bowl",
+    "words": []
+  }
+}

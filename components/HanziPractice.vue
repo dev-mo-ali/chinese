@@ -1,6 +1,7 @@
 <script setup>
 import { computed, ref, onBeforeUnmount, watch, nextTick } from 'vue'
 import hanziBreakdowns from '~/assets/data/hanzi-breakdowns.json'
+import hanziVocabulary from '~/assets/data/hanzi-vocabulary.json'
 import { allRadicals } from '~/composables/useRadicals.js'
 
 const props = defineProps({
@@ -17,7 +18,17 @@ const mode = ref('idle') // idle | animating | quizzing
 const status = ref('') // mistake/complete feedback
 const ready = ref(false)
 const error = ref(false)
+const strokeCount = ref(null)
+const strokeCountLoading = ref(false)
 const breakdown = computed(() => hanziBreakdowns[props.char] || null)
+const characterInfo = computed(() => hanziVocabulary[props.char] || null)
+const commonWords = computed(() => characterInfo.value?.words || [])
+const definitionText = computed(() =>
+  characterInfo.value?.definition || breakdown.value?.etymology?.hint || null
+)
+const definitionLabel = computed(() =>
+  characterInfo.value?.definition ? 'Definition' : 'Origin clue'
+)
 
 const radicalAliases = {
   '丷': { pinyin: 'bā', meaning: 'eight' },
@@ -263,6 +274,21 @@ function reset () {
   build()
 }
 
+async function loadStrokeCount (event) {
+  if (!event.currentTarget.open || strokeCount.value || strokeCountLoading.value) return
+  strokeCountLoading.value = true
+  try {
+    const response = await fetch(`https://cdn.jsdelivr.net/npm/hanzi-writer-data@2.0.1/${props.char}.json`)
+    if (!response.ok) return
+    const data = await response.json()
+    strokeCount.value = data.strokes?.length || null
+  } catch {
+    strokeCount.value = null
+  } finally {
+    strokeCountLoading.value = false
+  }
+}
+
 const started = ref(false)
 async function start () {
   started.value = true
@@ -280,7 +306,10 @@ function stop () {
 }
 
 onBeforeUnmount(() => { writer.value = null })
-watch(() => props.char, () => { if (started.value) build() })
+watch(() => props.char, () => {
+  strokeCount.value = null
+  if (started.value) build()
+})
 </script>
 
 <template>
@@ -349,7 +378,12 @@ watch(() => props.char, () => { if (started.value) build() })
     </div>
     </template>
 
-    <details v-if="hasBreakdownDetails" class="breakdown-card" :style="{ '--breakdown-accent': accent, borderColor: accent + '44' }">
+    <details
+      v-if="hasBreakdownDetails"
+      class="breakdown-card"
+      :style="{ '--breakdown-accent': accent, borderColor: accent + '44' }"
+      @toggle="loadStrokeCount"
+    >
       <summary>
         <span class="breakdown-mark han" aria-hidden="true">拆</span>
         <span class="breakdown-title">
@@ -360,6 +394,18 @@ watch(() => props.char, () => { if (started.value) build() })
       </summary>
 
       <div class="breakdown-body">
+        <header class="character-overview">
+          <strong class="han">{{ char }}</strong>
+          <div>
+            <b>{{ breakdown.pinyin?.join(' / ') }}</b>
+            <p v-if="definitionText"><span>{{ definitionLabel }}:</span> {{ definitionText }}</p>
+          </div>
+          <span class="stroke-count" aria-live="polite">
+            {{ strokeCount ? `${strokeCount} strokes` : strokeCountLoading ? 'Counting...' : 'Strokes' }}
+          </span>
+        </header>
+
+        <h4 v-if="componentVisuals.length" class="breakdown-heading">Components</h4>
         <div v-if="componentVisuals.length" class="composition-flow">
           <div class="composition-parts">
             <template v-for="(part, index) in componentVisuals" :key="part.character">
@@ -398,12 +444,26 @@ watch(() => props.char, () => { if (started.value) build() })
           </div>
         </div>
 
+        <section v-if="analysisSummary" class="breakdown-section">
+          <h4>How it works</h4>
+          <p>{{ analysisSummary }}</p>
+        </section>
+
         <aside v-if="memoryClue" class="memory-clue">
           <span>Memory clue</span>
           <p>{{ memoryClue }}</p>
         </aside>
 
-        <p v-if="analysisSummary" class="breakdown-note">{{ analysisSummary }}</p>
+        <section v-if="commonWords.length" class="breakdown-section common-words">
+          <h4>Common words <span>{{ commonWords.length }}</span></h4>
+          <ul>
+            <li v-for="word in commonWords" :key="word.c">
+              <strong class="han">{{ word.c }}</strong>
+              <span>{{ word.p }}</span>
+              <small>{{ word.en }}</small>
+            </li>
+          </ul>
+        </section>
       </div>
     </details>
   </div>
@@ -519,6 +579,39 @@ watch(() => props.char, () => { if (started.value) build() })
 .breakdown-card[open] .breakdown-chevron { transform: rotate(225deg) translate(-1px, -1px); }
 .breakdown-card[open] summary { border-bottom: 1px solid rgba(31, 29, 26, .08); }
 .breakdown-body { padding: 12px 10px 10px; }
+.character-overview {
+  display: grid;
+  grid-template-columns: 2.8rem minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 8px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid rgba(31, 29, 26, .09);
+}
+.character-overview > strong { color: var(--breakdown-accent); font-size: 36px; line-height: 1; }
+.character-overview > div { min-width: 0; }
+.character-overview b { display: block; color: #1f1d1a; font-size: 12px; line-height: 1.35; }
+.character-overview p { margin: 3px 0 0; color: rgba(31, 29, 26, .7); font-size: 9px; line-height: 1.4; }
+.character-overview p span { color: rgba(31, 29, 26, .5); font-weight: 800; text-transform: uppercase; }
+.stroke-count {
+  padding: 3px 5px;
+  border: 1px solid color-mix(in srgb, var(--breakdown-accent) 25%, white);
+  border-radius: 4px;
+  color: var(--breakdown-accent);
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.breakdown-heading,
+.breakdown-section h4 {
+  margin: 10px 0 6px;
+  color: rgba(31, 29, 26, .5);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
 .composition-flow { display: flex; flex-direction: column; align-items: center; }
 .composition-parts { display: flex; width: 100%; align-items: center; justify-content: center; gap: 6px; }
 .composition-part {
@@ -561,6 +654,8 @@ watch(() => props.char, () => { if (started.value) build() })
 .breakdown-meta span { display: block; color: rgba(31, 29, 26, .48); font-size: 8px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 .breakdown-meta strong { display: block; margin-top: 2px; color: #1f1d1a; font-size: 9px; font-weight: 700; line-height: 1.3; overflow-wrap: anywhere; }
 .breakdown-meta b { margin-right: 3px; color: var(--breakdown-accent); font-size: 13px; }
+.breakdown-section { margin-top: 10px; border-top: 1px solid rgba(31, 29, 26, .09); }
+.breakdown-section > p { margin: 0; color: rgba(31, 29, 26, .74); font-size: 10px; line-height: 1.5; }
 .memory-clue {
   margin-top: 9px;
   padding: 8px 9px;
@@ -577,5 +672,27 @@ watch(() => props.char, () => { if (started.value) build() })
   text-transform: uppercase;
 }
 .memory-clue p { margin: 0; color: #1f1d1a; font-size: 10.5px; font-weight: 600; line-height: 1.45; }
-.breakdown-note { margin: 9px 2px 0; color: rgba(31, 29, 26, .72); font-size: 10px; line-height: 1.5; }
+.common-words ul { display: grid; gap: 5px; margin: 0; padding: 0; list-style: none; }
+.common-words h4 span {
+  display: inline-grid;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  margin-left: 3px;
+  place-items: center;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--breakdown-accent) 10%, white);
+  color: var(--breakdown-accent);
+  font-size: 8px;
+}
+.common-words li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 6px;
+  align-items: baseline;
+  padding-left: 8px;
+  border-left: 2px solid color-mix(in srgb, var(--breakdown-accent) 28%, white);
+}
+.common-words strong { color: #1f1d1a; font-size: 12px; }
+.common-words span { color: var(--breakdown-accent); font-size: 9px; font-weight: 700; }
+.common-words small { grid-column: 1 / -1; color: rgba(31, 29, 26, .6); font-size: 9px; line-height: 1.3; }
 </style>

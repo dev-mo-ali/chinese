@@ -5,6 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "data:hanzi": "node scripts/build-hanzi-data.mjs",
+    "data:hanzi-vocabulary": "node scripts/build-hanzi-vocabulary.mjs",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
