@@ -11,6 +11,7 @@ const tabs = [
   { to: '/hsk1',     han: '一', label: 'HSK 1'    },
   { to: '/hsk2',     han: '二', label: 'HSK 2'    },
   { to: '/hsk3',     han: '三', label: 'HSK 3'    },
+  { to: '/hsk3-writing', han: '考', label: 'HSK 3 Writing' },
   { to: '/allwords', han: '词', label: 'All Words'},
   { to: '/allradicals', han: '部', label: 'All Radicals' },
   { to: '/grammar',  han: '语', label: 'All Grammar' },
@@ -27,6 +28,7 @@ const isRadicals = computed(() => route.path.startsWith('/radicals'))
 const isAllRadicals = computed(() => route.path.startsWith('/allradicals'))
 const isHanzi    = computed(() => route.path.startsWith('/hanzi'))
 const isWrite    = computed(() => route.path.startsWith('/write'))
+const isHsk3Writing = computed(() => route.path.startsWith('/hsk3-writing'))
 const isSentence = computed(() => route.path.startsWith('/sentence'))
 const isGame     = computed(() => route.path.startsWith('/game'))
 const isGrammar  = computed(() => route.path.startsWith('/grammar'))
@@ -37,6 +39,10 @@ const isActiveTab = (to) => to === '/'
   : route.path === to || route.path.startsWith(`${to}/`)
 
 const headerData = computed(() => {
+  if (isHsk3Writing.value) {
+    return { icon: '书写', eyebrow: 'HSK Level 3', title: 'Writing Exam · Practice Lab',
+             sourceHref: 'https://www.chinesetest.cn/HSK/3' }
+  }
   if (hskMatch.value) {
     const lvl = hskMatch.value[1]
     return {
