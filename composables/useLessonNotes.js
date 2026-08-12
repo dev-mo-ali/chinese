@@ -459,6 +459,151 @@ export const LESSON_NOTES = [
       },
     ],
   },
+  {
+    slug: 'haoxiang-bu-de-kong-informal-availability',
+    title: '好像不得空: Talking About Availability Naturally',
+    subtitle: 'An everyday sentence with Malaysian and Singaporean context, HSK 3 grammar, and character insights',
+    summary: 'Learn what “他早上好像不得空” means, how to adapt it for casual and formal settings, and how 象, 得, and 空 are structured.',
+    hero: '空',
+    pinyin: 'hǎoxiàng bù dé kòng',
+    keywords: ['好像', '不得空', '没空', '没有空', '不太方便', 'availability', 'Malaysia', 'Singapore', 'HSK 3', '象', '得', '空'],
+    sections: [
+      {
+        title: 'Meaning & Everyday Context',
+        intro: 'This sentence is common in informal daily communication, especially in the Mandarin spoken in Malaysia and Singapore.',
+        blocks: [
+          {
+            type: 'facts',
+            items: [
+              { label: 'Original', value: '他早上好像不得空。' },
+              { label: 'Pinyin', value: 'Tā zǎoshang hǎoxiàng bù dé kòng.' },
+              { label: 'Meaning', value: 'He seems to be busy or not free this morning.' },
+            ],
+          },
+          {
+            type: 'heading',
+            text: 'Asking about availability',
+          },
+          {
+            type: 'examples',
+            items: [
+              { c: '他什么时候有空？', p: 'Tā shénme shíhou yǒu kòng?', en: 'When is he free?' },
+              { c: '他什么时候有空，我们就什么时候开会。', p: 'Tā shénme shíhou yǒu kòng, wǒmen jiù shénme shíhou kāihuì.', en: 'Whenever he has free time, we will hold the meeting then.' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Refined & Natural Versions',
+        intro: 'Choose a version according to the relationship and setting:',
+        blocks: [
+          {
+            type: 'table',
+            characterColumn: 1,
+            headers: ['Style', 'Sentence', 'Pinyin', 'Translation'],
+            rows: [
+              ['Spoken / casual', '他早上好像不得空。', 'Tā zǎoshang hǎoxiàng bù dé kòng.', 'He seems to be unavailable this morning.'],
+              ['Standard / polite', '张先生早上好像没有空。', 'Zhāng xiānsheng zǎoshang hǎoxiàng méiyǒu kòng.', 'Mr. Zhang seems not to have free time this morning.'],
+              ['Formal / business', '张经理早上好像不太方便。', 'Zhāng jīnglǐ zǎoshang hǎoxiàng bú tài fāngbiàn.', 'Manager Zhang seems to be unavailable this morning.'],
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Key Grammar Points',
+        blocks: [
+          {
+            type: 'heading',
+            text: '好像 (hǎoxiàng) — “it seems / appears to be”',
+          },
+          {
+            type: 'paragraph',
+            text: 'This HSK 3 expression softens an observation by adding uncertainty. Use the structure: Subject + 好像 + Verb / Adjective.',
+          },
+          {
+            type: 'examples',
+            items: [
+              { c: '他好像很高兴。', p: 'Tā hǎoxiàng hěn gāoxìng.', en: 'He seems very happy.' },
+            ],
+          },
+          {
+            type: 'heading',
+            text: '不得空 (bù dé kòng) versus 没空 (méi kòng)',
+          },
+          {
+            type: 'bullet-list',
+            items: [
+              { lead: '不得空', text: 'Widely used in spoken Mandarin in southern China, Malaysia, and Singapore to mean “busy” or “not free.”' },
+              { lead: '没空 / 没有时间', text: 'The more broadly standard HSK phrasing for “not free” or “not having time.”' },
+              { lead: '空 (kòng)', text: 'The fourth-tone reading means “free time / leisure.” Do not confuse it with kōng, the first-tone reading meaning “empty” or “sky.”' },
+            ],
+          },
+        ],
+      },
+      {
+        title: 'Character Deep Dive',
+        intro: 'The key characters are 象 from 好像, 得 from 不得空, and 空 from 有空 / 没空.',
+        blocks: [
+          {
+            type: 'heading',
+            text: '象 (xiàng) — appearance, shape, or elephant',
+          },
+          {
+            type: 'facts',
+            items: [
+              { label: 'Pinyin', value: 'xiàng' },
+              { label: 'Radical', value: '豕', detail: '豕部 (shǐ bù)—Pig / Boar Radical, 7 strokes' },
+              { label: 'Origin', value: 'An elephant pictograph', detail: 'Its meanings later expanded to image, appearance, and resemblance.' },
+            ],
+          },
+          {
+            type: 'paragraph',
+            text: '象 also supplies the sound in 像 (xiàng—to resemble / image) and 橡 (xiàng—oak / rubber). Examples include 好像 (hǎoxiàng—seem like), 画像 (huàxiàng—portrait), and 橡皮 (xiàngpí—eraser, HSK 3).',
+          },
+          {
+            type: 'heading',
+            text: '得 (dé / de / děi) — obtain, structural particle, or must',
+          },
+          {
+            type: 'facts',
+            items: [
+              { label: 'Reading here', value: 'dé', detail: 'In 不得空, it carries the sense of obtaining or getting free time.' },
+              { label: 'Radical', value: '彳', detail: '彳部 (chì bù)—Two Steps / Walking Radical, 3 strokes' },
+              { label: 'Components', value: '彳 + 旦 + 寸', detail: 'Step / movement on the left, with 旦 above 寸 on the right.' },
+            ],
+          },
+          {
+            type: 'callout',
+            label: 'Radical tip',
+            text: '彳 often suggests walking, steps, or movement. It also appears in characters such as 往 (wǎng—to go toward) and 待 (dāi—to stay).',
+          },
+          {
+            type: 'heading',
+            text: '空 (kòng / kōng) — free time or empty',
+          },
+          {
+            type: 'facts',
+            items: [
+              { label: 'Readings', value: 'kòng / kōng', detail: 'kòng means free time; kōng means empty or sky.' },
+              { label: 'Radical', value: '穴', detail: '穴部 (xué bù)—Cave / Hole Radical, 5 strokes' },
+              { label: 'Components', value: '穴 + 工', detail: '穴 supplies the idea of an opening or emptiness; 工 gives an -ong sound clue.' },
+            ],
+          },
+          {
+            type: 'table',
+            characterColumn: 0,
+            caption: 'More characters using 工 (gōng) as a sound component',
+            headers: ['Character', 'Pinyin', 'Components', 'Meaning / example'],
+            rows: [
+              ['红', 'hóng', '纟 + 工', 'Red'],
+              ['功', 'gōng', '工 + 力', 'Merit / result; 成功 (chénggōng—success, HSK 3)'],
+              ['攻', 'gōng', '工 + 攵', 'To attack'],
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ]
 
 const flattenBlock = (block) => {

@@ -248,6 +248,27 @@ export const TOPICS = [
     ],
   },
 
+  // ───────────────────────────── Clothing ─────────────────────────────
+  {
+    slug: 'clothing',
+    han: '衣服',
+    pinyin: 'yīfu',
+    en: 'Clothing',
+    icon: '衣',
+    accent: '#0f766e',
+    intro: 'Essential Mandarin words for common items of clothing.',
+    sections: [
+      {
+        title: 'Clothes · 衣服',
+        words: [
+          { c: '衬衫', p: 'chènshān', en: 'shirt', e: '👕' },
+          { c: '裤子', p: 'kùzi', en: 'pants', e: '👖' },
+          { c: '裙子', p: 'qúnzi', en: 'skirt', e: '👗' },
+        ],
+      },
+    ],
+  },
+
   // ──────────────────────────── Body parts ────────────────────────────
   {
     slug: 'body',
