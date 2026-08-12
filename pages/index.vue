@@ -11,6 +11,7 @@ const sections = [
   { to: '/write',    han: '书写',   label: 'Write',  desc: 'Practice stroke order and writing characters.' },
   { to: '/sentence', han: '造句',   label: 'Sentence', desc: 'Order shuffled words to build a correct sentence.' },
   { to: '/game',     han: '游戏',   label: 'Game',   desc: 'Memory & quiz games to remember characters.' },
+  { to: '/lesson-notes', han: '笔记', label: 'Lesson Notes', desc: 'Focused notes about Chinese characters, language, and culture.' },
 ]
 </script>
 

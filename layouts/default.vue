@@ -15,6 +15,7 @@ const tabs = [
   { to: '/allwords', han: '词', label: 'All Words'},
   { to: '/allradicals', han: '部', label: 'All Radicals' },
   { to: '/grammar',  han: '语', label: 'All Grammar' },
+  { to: '/lesson-notes', han: '记', label: 'Lesson Notes' },
   { to: '/topics',   han: '题', label: 'Topics'   },
   { to: '/write',    han: '写', label: 'Write'    },
   { to: '/sentence', han: '句', label: 'Sentence' },
@@ -32,6 +33,7 @@ const isHsk3Writing = computed(() => route.path.startsWith('/hsk3-writing'))
 const isSentence = computed(() => route.path.startsWith('/sentence'))
 const isGame     = computed(() => route.path.startsWith('/game'))
 const isGrammar  = computed(() => route.path.startsWith('/grammar'))
+const isLessonNotes = computed(() => route.path.startsWith('/lesson-notes'))
 const isTopics   = computed(() => route.path.startsWith('/topics'))
 const hskMatch   = computed(() => route.path.match(/^\/hsk([123])/))
 const isActiveTab = (to) => to === '/'
@@ -82,6 +84,10 @@ const headerData = computed(() => {
   }
   if (isGrammar.value) {
     return { icon: '语法', eyebrow: 'Grammar · 语法', title: 'All grammar notes · HSK 1 · 2 · 3',
+             sourceHref: '' }
+  }
+  if (isLessonNotes.value) {
+    return { icon: '笔记', eyebrow: 'Lesson Notes · 学习笔记', title: 'Characters · Language · Culture',
              sourceHref: '' }
   }
   if (isTopics.value) {
