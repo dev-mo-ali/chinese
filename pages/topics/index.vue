@@ -1,7 +1,13 @@
 <script setup>
+import { ref } from 'vue'
 import { TOPICS } from '~/composables/useTopics.js'
 
 useHead({ title: 'Topics · Thematic vocabulary' })
+
+const selectedTopic = ref('')
+const openTopic = () => {
+  if (selectedTopic.value) navigateTo(`/topics/${selectedTopic.value}`)
+}
 
 // Pull a few representative emojis per topic for the card preview row.
 const previewEmojis = (t) => {
@@ -50,6 +56,32 @@ const previewEmojis = (t) => {
         <span class="han" lang="zh-CN">题</span>
       </div>
     </article>
+
+    <div class="mb-6 flex justify-center">
+      <label class="w-full max-w-md">
+        <span class="mb-1.5 block text-[10px] font-semibold uppercase tracking-[0.18em] text-ink-soft">Select a topic</span>
+        <span class="group relative block">
+          <select
+            v-model="selectedTopic"
+            class="min-h-11 w-full appearance-none rounded-xl border border-gold-deep/30 bg-paper py-2 pl-3 pr-14 text-sm text-ink shadow-chip outline-none transition hover:border-gold-deep/50 focus:border-gold-deep focus:ring-2 focus:ring-gold/20"
+            @change="openTopic"
+          >
+            <option value="" disabled>Choose a topic…</option>
+            <option v-for="topic in TOPICS" :key="topic.slug" :value="topic.slug">
+              {{ topic.han }} · {{ topic.en }}
+            </option>
+          </select>
+          <span
+            class="pointer-events-none absolute right-2 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full border border-gold-deep/20 bg-gold/10 text-gold-deep shadow-sm transition duration-200 group-hover:border-gold-deep/35 group-hover:bg-gold/20 group-focus-within:border-gold-deep/40 group-focus-within:bg-gold/20"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 20 20" fill="none" class="h-4 w-4 transition-transform duration-300 ease-out group-focus-within:rotate-180">
+              <path d="m5 7.5 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </span>
+      </label>
+    </div>
 
     <!-- Topic grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">

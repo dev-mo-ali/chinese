@@ -25,6 +25,7 @@ const filterLesson = ref('all')
 const filterPos = ref('all')
 const sortBy = ref('course')
 const sortDirection = ref('asc')
+const filtersOpen = ref(true)
 
 const lessonOptions = computed(() => {
   const rows = filterLevel.value === 'all'
@@ -91,8 +92,40 @@ const resetFilters = () => {
   <section class="max-w-5xl mx-auto px-3 sm:px-6 pt-6 pb-10">
     <h1 class="text-3xl font-bold mb-2 text-center">All HSK Words</h1>
     <p class="text-center text-ink-soft mb-6">Browse and search all vocabulary from HSK 1, 2, and 3. Each entry shows the character, pinyin, English meaning, part of speech, and level.</p>
-    <div class="mb-6 border-y border-indigo-100 bg-indigo-50/40 px-3 py-4">
-      <div class="grid sm:grid-cols-2 lg:grid-cols-[minmax(15rem,2fr)_repeat(5,minmax(7rem,1fr))] gap-3 items-end">
+    <div class="mb-6 border-y border-indigo-100 bg-indigo-50/40 px-3 py-3">
+      <button
+        type="button"
+        class="group flex min-h-11 w-full items-center justify-between gap-3 text-left"
+        :aria-expanded="filtersOpen"
+        aria-controls="all-words-filters"
+        @click="filtersOpen = !filtersOpen"
+      >
+        <span class="flex items-center gap-2">
+          <span class="text-sm font-bold text-indigo-950">Filters</span>
+          <span v-if="hasActiveFilters" class="rounded-full bg-indigo-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-white">
+            Active
+          </span>
+        </span>
+        <span class="flex items-center gap-2 text-xs font-semibold text-indigo-700">
+          {{ filteredWords.length }} of {{ allWords.length }} words
+          <span
+            class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-indigo-200 bg-white text-indigo-600 shadow-sm transition duration-200 group-hover:border-indigo-300 group-hover:bg-indigo-50"
+            aria-hidden="true"
+          >
+            <svg
+              viewBox="0 0 20 20"
+              fill="none"
+              class="h-4 w-4 transition-transform duration-300 ease-out"
+              :class="filtersOpen ? 'rotate-180' : ''"
+            >
+              <path d="m5 7.5 5 5 5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </span>
+      </button>
+
+      <div v-show="filtersOpen" id="all-words-filters" class="border-t border-indigo-100 pt-3">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-[minmax(15rem,2fr)_repeat(5,minmax(7rem,1fr))] gap-3 items-end">
         <label class="block">
           <span class="control-label">Search</span>
           <input v-model="search" type="search" placeholder="Character, pinyin, or English..."
@@ -138,15 +171,13 @@ const resetFilters = () => {
             <option value="desc">Descending</option>
           </select>
         </label>
-      </div>
-      <div class="mt-3 flex items-center justify-between gap-3">
-        <span class="text-xs font-semibold text-indigo-950">
-          {{ filteredWords.length }} of {{ allWords.length }} words
-        </span>
-        <button v-if="hasActiveFilters" type="button" @click="resetFilters"
-                class="text-xs font-semibold text-indigo-700 hover:text-indigo-950">
-          Reset filters
-        </button>
+        </div>
+        <div v-if="hasActiveFilters" class="mt-3 flex justify-end">
+          <button type="button" @click="resetFilters"
+                  class="min-h-11 px-2 text-xs font-semibold text-indigo-700 hover:text-indigo-950">
+            Reset filters
+          </button>
+        </div>
       </div>
     </div>
     <!-- Mobile cards keep every field readable without a sideways table scroll. -->
