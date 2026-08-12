@@ -146,28 +146,6 @@ const analysisSummary = computed(() => {
   }
   return `This record identifies the written structure and dictionary radical of ${props.char}.`
 })
-const memoryClue = computed(() => {
-  const data = breakdown.value
-  if (!data) return null
-
-  const semantic = data.etymology?.semantic
-  const phonetic = data.etymology?.phonetic
-  const hint = data.etymology?.hint
-  const semanticPart = componentVisuals.value.find(part => part.character === semantic)
-  const phoneticPart = componentVisuals.value.find(part => part.character === phonetic)
-
-  if (semantic && phonetic) {
-    return `Picture ${semantic} (${semanticPart?.meaning || hint || 'the meaning'}) on the ${semanticPart?.position || 'meaning side'}, with ${phonetic} (${phoneticPart?.meaning || 'the sound clue'}) on the ${phoneticPart?.position || 'sound side'}. Together they form ${props.char}: meaning from ${semantic}, sound from ${phonetic}.`
-  }
-  if (hint) {
-    const parts = componentVisuals.value.map(part => `${part.character} on the ${part.position}`).join(' and ')
-    return `Picture ${hint}.${parts ? ` Use the layout: ${parts}.` : ''}`
-  }
-  if (componentCharacters.value.length) {
-    return `Build ${props.char} from ${componentCharacters.value.join(' + ')} in a ${structureName.value || 'combined'} arrangement.`
-  }
-  return `Connect the shape of ${props.char} with its meaning each time you write it.`
-})
 const breakdownPreview = computed(() => {
   const data = breakdown.value
   if (!data) return ''
@@ -512,11 +490,6 @@ watch(() => props.char, () => {
           <p>{{ analysisSummary }}</p>
         </section>
 
-        <aside v-if="memoryClue" class="memory-clue">
-          <span>Memory clue</span>
-          <p>{{ memoryClue }}</p>
-        </aside>
-
         <section v-if="phoneticFamily.length" class="breakdown-section phonetic-family">
           <h4>Sound family</h4>
           <div>
@@ -768,22 +741,6 @@ watch(() => props.char, () => {
 .breakdown-meta b { margin-right: 3px; color: var(--breakdown-accent); font-size: 13px; }
 .breakdown-section { margin-top: 10px; border-top: 1px solid rgba(31, 29, 26, .09); }
 .breakdown-section > p { margin: 0; color: rgba(31, 29, 26, .74); font-size: 10px; line-height: 1.5; }
-.memory-clue {
-  margin-top: 9px;
-  padding: 8px 9px;
-  border-left: 3px solid var(--breakdown-accent);
-  background: color-mix(in srgb, var(--breakdown-accent) 6%, white);
-}
-.memory-clue span {
-  display: block;
-  margin-bottom: 2px;
-  color: var(--breakdown-accent);
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: .07em;
-  text-transform: uppercase;
-}
-.memory-clue p { margin: 0; color: #1f1d1a; font-size: 10.5px; font-weight: 600; line-height: 1.45; }
 .phonetic-family > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
 .phonetic-family a {
   display: grid;
