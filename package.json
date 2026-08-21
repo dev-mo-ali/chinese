@@ -9,6 +9,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "seed:admin": "node scripts/seed-admin.mjs",
     "validate:hsk3": "node scripts/validate-hsk3.mjs",
     "postinstall": "nuxt prepare"
   },

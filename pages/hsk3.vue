@@ -87,6 +87,39 @@ const filteredVocab = computed(() => {
       </div>
     </article>
 
+    <!-- FULL BOOK AUDIO -->
+    <article
+      class="rounded-3xl border border-gold-deep/25 bg-paper shadow-card overflow-hidden mb-6"
+    >
+      <div class="px-5 sm:px-7 py-4 border-b border-gold-deep/15"
+           style="background: linear-gradient(135deg,#fdfaf2,#fff8e0);"
+      >
+        <div class="text-[10px] tracking-widest uppercase font-semibold text-gold-deep">Listening practice · 听力</div>
+        <h2 class="mt-1 text-base sm:text-lg font-bold text-ink">HSK 3 Full Book Audio</h2>
+        <p class="mt-1 text-xs sm:text-sm text-ink-soft">HSK 3 Standard Course Textbook</p>
+      </div>
+
+      <div class="p-3 sm:p-5">
+        <div class="relative aspect-video w-full overflow-hidden rounded-2xl bg-ink/5">
+          <iframe
+            class="absolute inset-0 h-full w-full"
+            src="https://www.youtube.com/embed/LprYHlO4urs?si=SlribO82dXlCUicW"
+            title="HSK 3 full book audio · HSK 3 Standard Course Textbook"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <a
+          href="https://www.youtube.com/watch?v=LprYHlO4urs"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-3 inline-block text-xs font-semibold text-gold-deep hover:text-ink transition"
+        >Open audio on YouTube ↗</a>
+      </div>
+    </article>
+
     <!-- LESSON GRID · foldable -->
     <article class="rounded-3xl shadow-card overflow-hidden border mb-6"
              style="background:#fff; border-color:rgba(124,90,30,.22);"
