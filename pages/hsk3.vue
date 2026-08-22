@@ -413,28 +413,28 @@ const filteredVocab = computed(() => {
 
         <div v-show="open.lessonNotes" class="grid md:grid-cols-2 gap-4">
           <article v-for="(note, ni) in current.notes" :key="ni"
-                   class="relative rounded-xl bg-white shadow-chip overflow-hidden border"
+                   class="relative min-w-0 rounded-xl bg-white shadow-chip overflow-hidden border"
                    style="border-color:rgba(155,34,38,.2);"
           >
             <div class="absolute left-0 top-0 bottom-0 w-1.5"
                  style="background: linear-gradient(180deg,#9b2226,#dc2626);"></div>
-            <div class="pl-5 pr-4 py-4">
+            <div class="min-w-0 pl-5 pr-4 py-4">
               <div class="flex items-baseline gap-2 mb-2">
                 <span class="font-mono text-[10px] font-bold tracking-widest text-white px-1.5 py-0.5 rounded"
                       style="background:#9b2226">№ {{ String(ni + 1).padStart(2, '0') }}</span>
-                <h4 class="text-sm font-bold leading-snug" style="color:#7f1d1d">{{ note.title }}</h4>
+                <h4 class="min-w-0 text-sm font-bold leading-snug" style="color:#7f1d1d">{{ note.title }}</h4>
               </div>
               <p class="text-[12.5px] text-ink-soft leading-relaxed mb-3">{{ note.summary }}</p>
               <div v-if="note.examples && note.examples.length">
                 <div class="text-[9px] font-mono uppercase tracking-widest mb-1.5" style="color:#dc2626">↳ examples</div>
                 <ul class="space-y-2">
                   <li v-for="(ex, ei) in note.examples" :key="ei"
-                      class="border-l-2 pl-3 py-1"
+                      class="min-w-0 border-l-2 pl-3 py-1"
                       style="border-color:#dc2626;"
                   >
-                    <span class="han block text-base font-semibold text-ink leading-snug">{{ ex.c }}</span>
-                    <span class="block text-[11px] tracking-wide" style="color:#9b2226">{{ ex.p }}</span>
-                    <span class="block text-[11px] text-ink-soft italic">{{ ex.en }}</span>
+                    <div class="han text-base font-semibold text-ink leading-snug break-words">{{ ex.c }}</div>
+                    <div class="text-[11px] tracking-wide break-words" style="color:#9b2226">{{ ex.p }}</div>
+                    <div class="text-[11px] text-ink-soft italic break-words">{{ ex.en }}</div>
                   </li>
                 </ul>
               </div>
