@@ -397,13 +397,12 @@ const filteredVocab = computed(() => {
                 <div class="text-[9px] font-mono uppercase tracking-widest mb-1.5" style="color:#dc2626">↳ examples</div>
                 <ul class="space-y-2">
                   <li v-for="(ex, ei) in note.examples" :key="ei"
-                      class="grid grid-cols-[auto_1fr] gap-x-3 items-baseline border-l-2 pl-3 py-1"
+                      class="border-l-2 pl-3 py-1"
                       style="border-color:#dc2626;"
                   >
-                    <span class="han text-base font-semibold text-ink leading-snug">{{ ex.c }}</span>
-                    <span class="text-[11px] tracking-wide" style="color:#9b2226">{{ ex.p }}</span>
-                    <span></span>
-                    <span class="text-[11px] text-ink-soft italic">{{ ex.en }}</span>
+                    <span class="han block text-base font-semibold text-ink leading-snug">{{ ex.c }}</span>
+                    <span class="block text-[11px] tracking-wide" style="color:#9b2226">{{ ex.p }}</span>
+                    <span class="block text-[11px] text-ink-soft italic">{{ ex.en }}</span>
                   </li>
                 </ul>
               </div>

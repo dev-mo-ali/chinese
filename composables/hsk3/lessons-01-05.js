@@ -95,7 +95,7 @@ export const HSK3_LESSONS_01_05 = [
         summary: 'At the beginning of a sentence, 那 introduces a result or response drawn from what was just said.',
         examples: [
           { c: 'A：我不想去看电影。B：那我也不去了。', p: 'A: Wǒ bù xiǎng qù kàn diànyǐng. B: Nà wǒ yě bú qù le.', en: "A: I don't want to see the movie. B: Then I won't go either." },
-          { c: 'A：（明天的考试）我早就复习好了。B：那也不能一直玩儿啊。', p: 'A: (Míngtiān de kǎoshì) wǒ zǎo jiù fùxí hǎo le. B: Nà yě bù néng yìzhí wánr a.', en: "A: I finished reviewing for tomorrow's exam long ago. B: Even so, you can't keep playing all the time." },
+          { c: 'A：明天的考试我早就复习好了。B：那也不能一直玩儿啊。', p: 'A: Míngtiān de kǎoshì wǒ zǎo jiù fùxí hǎo le. B: Nà yě bù néng yìzhí wánr a.', en: "A: I finished reviewing for tomorrow's exam long ago. B: Even so, you can't keep playing all the time." },
         ],
       },
     ],
