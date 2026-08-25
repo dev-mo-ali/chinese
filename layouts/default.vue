@@ -335,9 +335,9 @@ const formattedVisitors = computed(() =>
         @click="scrollTop"
         type="button"
         aria-label="Back to top"
-        class="fab-fixed fab-right z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-ink text-cream border-2 border-gold-deep/70 shadow-lg hover:bg-gold-deep/30 hover:text-gold transition flex items-center justify-center"
+        class="fab-fixed fab-right z-40 rounded-full bg-ink text-cream border-2 border-gold-deep/70 shadow-lg hover:bg-gold-deep/30 hover:text-gold transition flex items-center justify-center"
       >
-        <span class="han text-lg leading-none" aria-hidden="true">↑</span>
+        <span class="han fab-arrow leading-none" aria-hidden="true">↑</span>
       </button>
     </Transition>
   </div>
@@ -348,13 +348,25 @@ const formattedVisitors = computed(() =>
    doesn't overlap the button. */
 .fab-fixed {
   position: fixed;
+  width: 2.5rem;
+  height: 2.5rem;
   bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
 }
+.fab-arrow { font-size: 1.125rem; }
 .fab-right { right: calc(1.25rem + env(safe-area-inset-right, 0px)); }
 .site-header { padding-top: env(safe-area-inset-top, 0px); }
 @media (min-width: 640px) {
-  .fab-fixed { bottom: calc(2rem + env(safe-area-inset-bottom, 0px)); }
+  .fab-fixed {
+    width: 2.75rem;
+    height: 2.75rem;
+    bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
+  }
+  .fab-arrow { font-size: 1.25rem; }
   .fab-right { right: calc(2rem + env(safe-area-inset-right, 0px)); }
+}
+@media (min-width: 1024px) {
+  .fab-fixed { width: 3rem; height: 3rem; }
+  .fab-arrow { font-size: 1.375rem; }
 }
 @media (max-width: 359px) {
   .mobile-nav-grid { grid-template-columns: 1fr; }
