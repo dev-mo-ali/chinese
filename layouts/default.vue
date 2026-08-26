@@ -2,24 +2,52 @@
 const route = useRoute()
 const baseURL = useRuntimeConfig().app.baseURL
 
-const tabs = [
-  { to: '/',         han: '家', label: 'Home'     },
-  { to: '/pinyin',   han: '拼', label: 'Pinyin'   },
-  { to: '/strokes',  han: '笔', label: 'Strokes'  },
-  { to: '/radicals', han: '部', label: 'Radicals' },
-  { to: '/hanzi',     han: '拆', label: 'Hanzi'    },
-  { to: '/hsk1',     han: '一', label: 'HSK 1'    },
-  { to: '/hsk2',     han: '二', label: 'HSK 2'    },
-  { to: '/hsk3',     han: '三', label: 'HSK 3'    },
-  { to: '/hsk3-writing', han: '考', label: 'HSK 3 Writing' },
-  { to: '/allwords', han: '词', label: 'All Words'},
-  { to: '/allradicals', han: '部', label: 'All Radicals' },
-  { to: '/grammar',  han: '语', label: 'All Grammar' },
-  { to: '/lesson-notes', han: '记', label: 'Lesson Notes' },
-  { to: '/topics',   han: '题', label: 'Topics'   },
-  { to: '/write',    han: '写', label: 'Write'    },
-  { to: '/sentence', han: '句', label: 'Sentence' },
-  { to: '/game',     han: '游', label: 'Game'     },
+const navGroups = [
+  {
+    key: 'core',
+    han: '基',
+    label: 'Core',
+    items: [
+      { to: '/',         han: '家', label: 'Home'     },
+      { to: '/pinyin',   han: '拼', label: 'Pinyin'   },
+      { to: '/strokes',  han: '笔', label: 'Strokes'  },
+      { to: '/radicals', han: '部', label: 'Radicals' },
+      { to: '/hanzi',    han: '拆', label: 'Hanzi'    },
+    ],
+  },
+  {
+    key: 'hsk',
+    han: '考',
+    label: 'HSK',
+    items: [
+      { to: '/hsk1',         han: '一', label: 'HSK 1'         },
+      { to: '/hsk2',         han: '二', label: 'HSK 2'         },
+      { to: '/hsk3',         han: '三', label: 'HSK 3'         },
+      { to: '/hsk3-writing', han: '考', label: 'HSK 3 Writing' },
+    ],
+  },
+  {
+    key: 'libraries',
+    han: '库',
+    label: 'Libraries',
+    items: [
+      { to: '/allwords',     han: '词', label: 'All Words'    },
+      { to: '/allradicals',  han: '部', label: 'All Radicals' },
+      { to: '/grammar',      han: '语', label: 'All Grammar'  },
+      { to: '/lesson-notes', han: '记', label: 'Lesson Notes' },
+      { to: '/topics',       han: '题', label: 'Topics'       },
+    ],
+  },
+  {
+    key: 'practice',
+    han: '练',
+    label: 'Practice',
+    items: [
+      { to: '/write',    han: '写', label: 'Write'    },
+      { to: '/sentence', han: '句', label: 'Sentence' },
+      { to: '/game',     han: '游', label: 'Game'     },
+    ],
+  },
 ]
 
 const isHome     = computed(() => route.path === '/')
@@ -117,26 +145,55 @@ const { stepIndex, steps, increase, decrease, reset, canIncrease, canDecrease, c
 
 // Mobile menu (hamburger → slide-down panel).
 const menuOpen = ref(false)
+const openDesktopGroup = ref(null)
 const toggleMenu = () => { menuOpen.value = !menuOpen.value }
 const closeMenu  = () => { menuOpen.value = false }
-watch(() => route.path, closeMenu)
-const onKeydown = (e) => { if (e.key === 'Escape') closeMenu() }
+const closeDesktopMenu = () => { openDesktopGroup.value = null }
+const openDesktopNavGroup = (key) => {
+  openDesktopGroup.value = key
+}
+const focusDesktopGroup = (key) => {
+  openDesktopGroup.value = key
+}
+const closeDesktopGroupOnBlur = (event) => {
+  if (!event.currentTarget.contains(event.relatedTarget)) closeDesktopMenu()
+}
+const isActiveGroup = (group) => group.items.some((item) => isActiveTab(item.to))
+watch(() => route.path, () => {
+  closeMenu()
+  closeDesktopMenu()
+})
+const onKeydown = (e) => {
+  if (e.key === 'Escape') {
+    closeMenu()
+    closeDesktopMenu()
+  }
+}
 onMounted(() => window.addEventListener('keydown', onKeydown))
 onBeforeUnmount(() => window.removeEventListener('keydown', onKeydown))
 
-// Visitors counter (counterapi.dev) — increments once per browser session.
+// Visitors counter — increments once per browser session.
+const visitorCounterKey = 'dev-mo-ali-chinese-learn-visitors'
+const visitorCounterBase = 'https://countapi.mileshilliard.com/api/v1'
 const visitors = ref(null)
 onMounted(async () => {
+  const cacheKey = 'chinese-visitor-count-cache'
   try {
     const sessionKey = 'chinese-visit-counted'
     const counted = sessionStorage.getItem(sessionKey)
-    const endpoint = counted
-      ? 'https://api.counterapi.dev/v1/dev-mo-ali/chinese-learn/'
-      : 'https://api.counterapi.dev/v1/dev-mo-ali/chinese-learn/up'
+    const cached = localStorage.getItem(cacheKey)
+    if (cached) visitors.value = Number.parseInt(cached, 10)
+
+    const action = counted ? 'get' : 'hit'
+    const endpoint = `${visitorCounterBase}/${action}/${visitorCounterKey}`
     const res = await fetch(endpoint)
     if (res.ok) {
       const data = await res.json()
-      visitors.value = data.count
+      const nextCount = Number.parseInt(data.value, 10)
+      if (Number.isFinite(nextCount)) {
+        visitors.value = nextCount
+        localStorage.setItem(cacheKey, String(nextCount))
+      }
       if (!counted) sessionStorage.setItem(sessionKey, '1')
     }
   } catch {
@@ -196,19 +253,64 @@ const formattedVisitors = computed(() =>
           </div>
         </div>
       </div>
-      <div class="nav-fade max-w-6xl mx-auto px-4 mt-2 relative hidden sm:block">
-        <nav class="flex gap-1 overflow-x-auto nice-scroll pb-1" aria-label="View">
-          <NuxtLink
-            v-for="t in tabs" :key="t.to" :to="t.to"
-            class="relative px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold tracking-wide uppercase transition whitespace-nowrap"
-            :class="isActiveTab(t.to) ? 'text-cream' : 'text-gold-soft hover:text-cream'"
+      <div class="max-w-6xl mx-auto px-4 mt-2 relative hidden sm:block">
+        <nav class="desktop-nav-menu flex flex-wrap items-center gap-1.5 pb-2" aria-label="View">
+          <div
+            v-for="group in navGroups"
+            :key="group.key"
+            class="relative"
+            @focusin="focusDesktopGroup(group.key)"
+            @focusout="closeDesktopGroupOnBlur"
           >
-            <span class="flex items-center gap-1.5">
-              <span class="han text-base" aria-hidden="true" lang="zh-CN">{{ t.han }}</span> {{ t.label }}
-            </span>
-            <span v-if="isActiveTab(t.to)"
-              class="absolute left-2 right-2 bottom-0 h-[3px] rounded-t bg-gold"></span>
-          </NuxtLink>
+            <button
+              type="button"
+              class="group-nav-button relative inline-flex min-h-10 items-center gap-2 rounded-lg border px-3.5 py-2 text-xs font-semibold uppercase tracking-wide transition"
+              :class="isActiveGroup(group)
+                ? 'border-gold bg-gold/15 text-cream'
+                : 'border-gold-deep/40 bg-cream/5 text-gold-soft hover:border-gold-deep/70 hover:bg-gold-deep/20 hover:text-cream'"
+              :aria-expanded="openDesktopGroup === group.key"
+              :aria-controls="`desktop-nav-panel-${group.key}`"
+              @click="openDesktopNavGroup(group.key)"
+            >
+              <span class="han text-base leading-none" aria-hidden="true" lang="zh-CN">{{ group.han }}</span>
+              <span>{{ group.label }}</span>
+              <span
+                class="text-[10px] leading-none transition"
+                :class="openDesktopGroup === group.key ? 'rotate-180' : ''"
+                aria-hidden="true"
+              >▾</span>
+            </button>
+
+            <Transition
+              enter-active-class="transition duration-150 ease-out"
+              enter-from-class="opacity-0 -translate-y-1"
+              enter-to-class="opacity-100 translate-y-0"
+              leave-active-class="transition duration-100 ease-in"
+              leave-from-class="opacity-100 translate-y-0"
+              leave-to-class="opacity-0 -translate-y-1"
+            >
+              <div
+                v-if="openDesktopGroup === group.key"
+                :id="`desktop-nav-panel-${group.key}`"
+                class="desktop-nav-panel absolute left-0 top-full z-40 mt-1.5 min-w-56 overflow-hidden rounded-xl border border-gold-deep/50 bg-ink shadow-ink"
+              >
+                <NuxtLink
+                  v-for="t in group.items"
+                  :key="t.to"
+                  :to="t.to"
+                  class="relative flex min-h-11 items-center gap-2 px-3.5 py-2.5 text-sm font-semibold uppercase tracking-wide transition"
+                  :class="isActiveTab(t.to)
+                    ? 'bg-gold/15 text-cream'
+                    : 'text-gold-soft hover:bg-gold-deep/25 hover:text-cream'"
+                  @click="closeDesktopMenu"
+                >
+                  <span class="han text-lg leading-none" aria-hidden="true" lang="zh-CN">{{ t.han }}</span>
+                  <span class="min-w-0 flex-1 truncate">{{ t.label }}</span>
+                  <span v-if="isActiveTab(t.to)" class="h-2 w-2 rounded-full bg-gold" aria-hidden="true"></span>
+                </NuxtLink>
+              </div>
+            </Transition>
+          </div>
         </nav>
       </div>
 
@@ -227,21 +329,33 @@ const formattedVisitors = computed(() =>
           aria-label="Site"
           class="sm:hidden mt-2 px-2 pb-2 max-h-[calc(100vh-7rem)] overflow-y-auto nice-scroll"
         >
-          <ul class="mobile-nav-grid grid grid-cols-2 gap-1.5">
-            <li v-for="t in tabs" :key="t.to">
-              <NuxtLink
-                :to="t.to"
-                @click="closeMenu"
-                class="flex min-h-12 items-center gap-2 px-3 py-3 rounded-lg border transition"
-                :class="isActiveTab(t.to)
-                  ? 'bg-gold/15 border-gold text-cream'
-                  : 'bg-ink/40 border-gold-deep/40 text-gold-soft hover:bg-gold-deep/30 hover:text-cream'"
-              >
-                <span class="han text-xl shrink-0" aria-hidden="true" lang="zh-CN">{{ t.han }}</span>
-                <span class="text-sm font-semibold tracking-wide uppercase">{{ t.label }}</span>
-              </NuxtLink>
-            </li>
-          </ul>
+          <div class="space-y-3">
+            <section
+              v-for="group in navGroups"
+              :key="group.key"
+              class="rounded-xl border border-gold-deep/35 bg-ink/35 p-2"
+            >
+              <div class="mb-2 flex items-center gap-2 px-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-gold">
+                <span class="han text-base tracking-normal" aria-hidden="true" lang="zh-CN">{{ group.han }}</span>
+                <span>{{ group.label }}</span>
+              </div>
+              <ul class="mobile-nav-grid grid grid-cols-2 gap-1.5">
+                <li v-for="t in group.items" :key="t.to">
+                  <NuxtLink
+                    :to="t.to"
+                    @click="closeMenu"
+                    class="flex min-h-12 items-center gap-2 rounded-lg border px-3 py-3 transition"
+                    :class="isActiveTab(t.to)
+                      ? 'bg-gold/15 border-gold text-cream'
+                      : 'bg-ink/40 border-gold-deep/40 text-gold-soft hover:bg-gold-deep/30 hover:text-cream'"
+                  >
+                    <span class="han text-xl shrink-0" aria-hidden="true" lang="zh-CN">{{ t.han }}</span>
+                    <span class="min-w-0 text-sm font-semibold tracking-wide uppercase leading-tight">{{ t.label }}</span>
+                  </NuxtLink>
+                </li>
+              </ul>
+            </section>
+          </div>
         </nav>
       </Transition>
       <div class="h-1 bg-cream/10 overflow-hidden" aria-hidden="true">
@@ -372,24 +486,8 @@ const formattedVisitors = computed(() =>
   .mobile-nav-grid { grid-template-columns: 1fr; }
 }
 
-/* Edge-fade hint for the horizontally-scrollable nav (mobile) */
-.nav-fade::before,
-.nav-fade::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 22px;
-  pointer-events: none;
-  z-index: 1;
-}
-.nav-fade::before {
-  left: 0;
-  background: linear-gradient(to right, rgba(26, 18, 9, 0.9), rgba(26, 18, 9, 0));
-}
-.nav-fade::after {
-  right: 0;
-  background: linear-gradient(to left, rgba(26, 18, 9, 0.9), rgba(26, 18, 9, 0));
+.desktop-nav-panel {
+  max-width: calc(100vw - 2rem);
 }
 
 .progress-bar {
