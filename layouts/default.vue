@@ -10,6 +10,7 @@ const navGroups = [
     items: [
       { to: '/',         han: '家', label: 'Home'     },
       { to: '/pinyin',   han: '拼', label: 'Pinyin'   },
+      { to: '/pinyin-converter', han: '转', label: 'Converter' },
       { to: '/strokes',  han: '笔', label: 'Strokes'  },
       { to: '/radicals', han: '部', label: 'Radicals' },
       { to: '/hanzi',    han: '拆', label: 'Hanzi'    },
@@ -53,6 +54,7 @@ const navGroups = [
 const isHome     = computed(() => route.path === '/')
 const isStrokes  = computed(() => route.path.startsWith('/strokes'))
 const isPinyin   = computed(() => route.path.startsWith('/pinyin'))
+const isPinyinConverter = computed(() => route.path.startsWith('/pinyin-converter'))
 const isRadicals = computed(() => route.path.startsWith('/radicals'))
 const isAllRadicals = computed(() => route.path.startsWith('/allradicals'))
 const isHanzi    = computed(() => route.path.startsWith('/hanzi'))
@@ -87,6 +89,10 @@ const headerData = computed(() => {
              sourceHref: 'https://www.digmandarin.com/' }
   }
   if (isPinyin.value) {
+    if (isPinyinConverter.value) {
+      return { icon: '拼音', eyebrow: 'Pinyin Converter · 拼音转换', title: 'Chinese sentence · Pinyin output',
+               sourceHref: 'https://github.com/zh-lx/pinyin-pro' }
+    }
     return { icon: '拼音', eyebrow: 'Hanyu Pinyin', title: 'Initials · Finals · Tones · Audio',
              sourceHref: 'https://www.digmandarin.com/chinese-pinyin-chart' }
   }
