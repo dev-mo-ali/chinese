@@ -1,12 +1,16 @@
 <script setup>
 import { UNIQUE_HSK_WORDS } from '~/composables/useHskVocabulary.js'
 import { useFavoritesStore } from '~/stores/favorites.js'
+import { useReminderStore } from '~/stores/reminders.js'
+import { sendFavoriteReminderTest } from '~/composables/useFavoriteReminderScheduler.js'
 
 useHead({ title: 'Favorite HSK Words' })
 
 const favorites = useFavoritesStore()
+const reminders = useReminderStore()
 const search = ref('')
 const filterLevel = ref('all')
+const testStatus = ref('')
 
 const favoriteWords = computed(() =>
   UNIQUE_HSK_WORDS.filter(word => favorites.isFavorite(word)),
@@ -34,6 +38,33 @@ const resetFilters = () => {
 const clearFavorites = () => {
   if (window.confirm(`Remove all ${favorites.count} favorite words?`)) favorites.clear()
 }
+
+const reminderWindowValid = computed(() => reminders.hasValidWindow)
+const reminderStatus = computed(() => {
+  if (!favoriteWords.value.length) return 'Add a favorite word to enable reminders.'
+  if (!reminders.notificationsSupported) return 'Notifications are not available in this browser.'
+  if (reminders.permission === 'denied') return 'Notifications are blocked by this browser.'
+  if (!reminderWindowValid.value) return 'Choose an end time after the start time.'
+  if (reminders.settings.enabled && reminders.backgroundSupported) return 'Background delivery is best effort on this device.'
+  if (reminders.settings.enabled) return 'Reminders run while the PWA is open.'
+  return 'Reminders are off.'
+})
+
+const toggleReminders = async () => {
+  if (reminders.settings.enabled) {
+    reminders.disable()
+    return
+  }
+
+  if (!favoriteWords.value.length || !reminderWindowValid.value) return
+  await reminders.enable()
+}
+
+const sendTest = async () => {
+  if (reminders.permission !== 'granted') return
+  const sent = await sendFavoriteReminderTest()
+  testStatus.value = sent ? 'Test notification sent.' : 'Could not send a test notification. Check browser notification permissions.'
+}
 </script>
 
 <template>
@@ -55,6 +86,62 @@ const clearFavorites = () => {
         Clear all
       </button>
     </div>
+
+    <section class="mt-5 border-y border-amber-200 bg-amber-50/40 px-3 py-4" aria-labelledby="review-reminders-title">
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <div class="text-[10px] font-semibold uppercase tracking-widest text-amber-700">Study rhythm</div>
+          <h2 id="review-reminders-title" class="mt-1 text-lg font-bold text-ink">Review reminders</h2>
+        </div>
+        <button
+          type="button"
+          class="min-h-11 rounded-lg border px-3 text-xs font-semibold transition disabled:cursor-not-allowed disabled:opacity-45"
+          :class="reminders.settings.enabled ? 'border-red-200 text-red-700 hover:bg-red-50' : 'border-amber-700 bg-amber-700 text-white hover:bg-amber-800'"
+          :disabled="!favoriteWords.length || (!reminderWindowValid && !reminders.settings.enabled) || (!reminders.notificationsSupported && !reminders.settings.enabled)"
+          @click="toggleReminders"
+        >
+          {{ reminders.settings.enabled ? 'Disable reminders' : 'Enable reminders' }}
+        </button>
+      </div>
+
+      <div class="mt-4 grid gap-3 sm:grid-cols-3">
+        <label>
+          <span class="control-label">Daily reminders</span>
+          <input
+            :value="reminders.settings.perDay"
+            type="number"
+            min="1"
+            max="5"
+            step="1"
+            class="control-field w-full"
+            @change="reminders.setDailyCount($event.target.value)"
+          />
+        </label>
+        <label>
+          <span class="control-label">Start time</span>
+          <input :value="reminders.settings.startTime" type="time" class="control-field w-full" @change="reminders.setTime('startTime', $event.target.value)" />
+        </label>
+        <label>
+          <span class="control-label">End time</span>
+          <input :value="reminders.settings.endTime" type="time" class="control-field w-full" @change="reminders.setTime('endTime', $event.target.value)" />
+        </label>
+      </div>
+
+      <div class="mt-3 flex flex-wrap items-center justify-between gap-2">
+        <p class="text-xs text-ink-soft" aria-live="polite">
+          {{ reminderStatus }}
+          <span v-if="testStatus" class="mt-1 block">{{ testStatus }}</span>
+        </p>
+        <button
+          type="button"
+          class="min-h-11 rounded-lg border border-amber-300 bg-white px-3 text-xs font-semibold text-amber-800 transition hover:bg-amber-50 disabled:cursor-not-allowed disabled:opacity-45"
+          :disabled="!favoriteWords.length || reminders.permission !== 'granted'"
+          @click="sendTest"
+        >
+          Send test
+        </button>
+      </div>
+    </section>
 
     <div v-if="favoriteWords.length" class="my-5 grid gap-3 rounded-lg border border-amber-200 bg-amber-50/40 p-3 sm:grid-cols-[minmax(15rem,2fr)_minmax(9rem,1fr)_auto] sm:items-end">
       <label>

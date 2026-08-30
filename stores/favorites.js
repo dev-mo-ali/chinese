@@ -4,6 +4,10 @@ import { favoriteWordKey, UNIQUE_HSK_WORDS } from '~/composables/useHskVocabular
 const STORAGE_KEY = 'chinese:favorite-words:v1'
 const VALID_KEYS = new Set(UNIQUE_HSK_WORDS.map(favoriteWordKey))
 
+const notifyReminderSync = () => {
+  if (import.meta.client) window.dispatchEvent(new Event('chinese:favorites-changed'))
+}
+
 export const useFavoritesStore = defineStore('favorites', {
   state: () => ({
     keys: [],
@@ -39,6 +43,7 @@ export const useFavoritesStore = defineStore('favorites', {
       } catch {
         // Favorites remain usable for this session when storage is unavailable.
       }
+      notifyReminderSync()
     },
 
     toggle(word) {

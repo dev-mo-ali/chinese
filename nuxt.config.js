@@ -51,6 +51,9 @@ export default defineNuxtConfig({
   pwa: {
     base: baseURL,
     scope: baseURL,
+    strategies: 'injectManifest',
+    srcDir: 'service-worker',
+    filename: 'sw.js',
     registerType: "autoUpdate",
     client: {
       installPrompt: true,
@@ -88,12 +91,8 @@ export default defineNuxtConfig({
         },
       ],
     },
-    workbox: {
+    injectManifest: {
       globPatterns: ["**/*.{js,css,html,json,ico,png,svg,webmanifest,txt}"],
-      navigateFallback: `${baseURL}200.html`,
-      cleanupOutdatedCaches: true,
-      clientsClaim: true,
-      skipWaiting: true,
     },
   },
 

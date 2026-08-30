@@ -11,6 +11,7 @@
     "preview": "nuxt preview",
     "seed:admin": "node scripts/seed-admin.mjs",
     "validate:hsk3": "node scripts/validate-hsk3.mjs",
+    "validate:reminders": "node scripts/validate-reminders.mjs",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
