@@ -1,28 +1,17 @@
 <script setup>
-import { HSK1_LESSONS } from '~/composables/useHSK1.js'
-import { HSK2_LESSONS } from '~/composables/useHSK2.js'
-import { HSK3_LESSONS } from '~/composables/useHSK3.js'
+import { HSK_WORDS } from '~/composables/useHskVocabulary.js'
+import { useFavoritesStore } from '~/stores/favorites.js'
 import { ref, computed } from 'vue'
 import HanziPractice from '~/components/HanziPractice.vue'
 
-const allWords = computed(() => {
-  const addLevel = (vocab, level, lesson) => vocab.map((v, sourceIndex) => ({
-    ...v,
-    level,
-    lesson,
-    sourceIndex,
-  }))
-  return [
-    ...HSK1_LESSONS.flatMap(l => addLevel(l.vocab, 1, l.no)),
-    ...HSK2_LESSONS.flatMap(l => addLevel(l.vocab, 2, l.no)),
-    ...HSK3_LESSONS.flatMap(l => addLevel(l.vocab, 3, l.no)),
-  ]
-})
+const allWords = computed(() => HSK_WORDS)
+const favorites = useFavoritesStore()
 
 const search = ref('')
 const filterLevel = ref('all')
 const filterLesson = ref('all')
 const filterPos = ref('all')
+const wordSet = ref('all')
 const sortBy = ref('course')
 const sortDirection = ref('asc')
 const filtersOpen = ref(true)
@@ -49,7 +38,8 @@ const filteredWords = computed(() => {
     const matchesLevel = filterLevel.value === 'all' || word.level === Number(filterLevel.value)
     const matchesLesson = filterLesson.value === 'all' || word.lesson === Number(filterLesson.value)
     const matchesPos = filterPos.value === 'all' || word.pos === filterPos.value
-    return matchesSearch && matchesLevel && matchesLesson && matchesPos
+    const matchesSet = wordSet.value === 'all' || favorites.isFavorite(word)
+    return matchesSearch && matchesLevel && matchesLesson && matchesPos && matchesSet
   })
 
   const collator = new Intl.Collator(undefined, { sensitivity: 'base', numeric: true })
@@ -76,13 +66,14 @@ const toggle = (key) => {
 const charsOf = (str) => [...String(str || '')].filter(ch => HAN_RE.test(ch))
 const accentFor = (level) => level === 1 ? '#15803d' : level === 2 ? '#a16207' : '#92400e'
 const hasActiveFilters = computed(() =>
-  search.value || filterLevel.value !== 'all' || filterLesson.value !== 'all' || filterPos.value !== 'all'
+  search.value || filterLevel.value !== 'all' || filterLesson.value !== 'all' || filterPos.value !== 'all' || wordSet.value !== 'all'
 )
 const resetFilters = () => {
   search.value = ''
   filterLevel.value = 'all'
   filterLesson.value = 'all'
   filterPos.value = 'all'
+  wordSet.value = 'all'
   sortBy.value = 'course'
   sortDirection.value = 'asc'
 }
@@ -125,6 +116,19 @@ const resetFilters = () => {
       </button>
 
       <div v-show="filtersOpen" id="all-words-filters" class="border-t border-indigo-100 pt-3">
+        <div class="mb-3 inline-flex rounded-lg border border-indigo-200 bg-white p-1" aria-label="Vocabulary set">
+          <button
+            v-for="option in [{ value: 'all', label: 'All words' }, { value: 'favorites', label: `Favorites (${favorites.count})` }]"
+            :key="option.value"
+            type="button"
+            class="min-h-10 rounded-md px-3 text-xs font-semibold transition"
+            :class="wordSet === option.value ? 'bg-indigo-600 text-white' : 'text-indigo-700 hover:bg-indigo-50'"
+            :aria-pressed="wordSet === option.value"
+            @click="wordSet = option.value"
+          >
+            {{ option.label }}
+          </button>
+        </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-[minmax(15rem,2fr)_repeat(5,minmax(7rem,1fr))] gap-3 items-end">
         <label class="block">
           <span class="control-label">Search</span>
@@ -195,10 +199,13 @@ const resetFilters = () => {
             </div>
             <p class="mt-1 text-sm leading-relaxed text-ink">{{ word.en }}</p>
           </div>
-          <span :class="[
-            word.level === 1 ? 'text-green-700' : word.level === 2 ? 'text-yellow-700' : 'text-amber-800',
-            'shrink-0 rounded bg-amber-50 px-2 py-1 text-xs font-semibold'
-          ]">HSK {{ word.level }}</span>
+          <div class="flex shrink-0 flex-col items-end gap-2">
+            <FavoriteWordButton :word="word" />
+            <span :class="[
+              word.level === 1 ? 'text-green-700' : word.level === 2 ? 'text-yellow-700' : 'text-amber-800',
+              'rounded bg-amber-50 px-2 py-1 text-xs font-semibold'
+            ]">HSK {{ word.level }}</span>
+          </div>
         </div>
         <div class="mt-3 flex items-center justify-between gap-3 border-t border-indigo-100 pt-3">
           <div class="text-xs text-ink-soft">
@@ -236,6 +243,7 @@ const resetFilters = () => {
             <th class="px-3 py-2 border-b text-left">Part of Speech</th>
             <th class="px-3 py-2 border-b text-left">Lesson</th>
             <th class="px-3 py-2 border-b text-left">Level</th>
+            <th class="px-3 py-2 border-b text-center">Favorite</th>
             <th class="px-3 py-2 border-b text-left">Write</th>
           </tr>
         </thead>
@@ -256,6 +264,9 @@ const resetFilters = () => {
                 HSK {{ word.level }}
               </span>
             </td>
+            <td class="px-3 py-2 border-b text-center">
+              <FavoriteWordButton :word="word" class="mx-auto" />
+            </td>
             <td class="px-3 py-2 border-b">
               <button
                 type="button"
@@ -268,7 +279,7 @@ const resetFilters = () => {
             </td>
           </tr>
           <tr v-if="expanded.has(rowKey(word))" :class="i % 2 ? 'bg-indigo-50/30' : ''">
-            <td colspan="8" class="px-3 py-4 border-b">
+            <td colspan="9" class="px-3 py-4 border-b">
               <div class="flex flex-wrap gap-4 justify-center">
                 <div v-for="(ch, ci) in charsOf(word.c)" :key="ci" class="flex flex-col items-center gap-1">
                   <HanziPractice :char="ch" :size="160" :accent="accentFor(word.level)" />

@@ -302,11 +302,12 @@ const filteredVocab = computed(() => {
             Read the Chinese first — tap a word to reveal pinyin &amp; English.
           </p>
           <ul v-show="open.lessonVocab" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-            <li v-for="(v, i) in current.vocab" :key="i" class="flex flex-col gap-1.5">
+            <li v-for="(v, i) in current.vocab" :key="i" class="relative flex flex-col gap-1.5">
+              <FavoriteWordButton :word="v" class="absolute right-2 top-2 z-10" />
               <button
                 type="button"
                 @click="toggleVocab(i)"
-                class="vocab-card group w-full text-left flex items-center gap-3 px-3.5 py-3 rounded-xl bg-white border-2 transition cursor-pointer min-h-[4.75rem]"
+                class="vocab-card group w-full text-left flex items-center gap-3 py-3 pl-3.5 pr-14 rounded-xl bg-white border-2 transition cursor-pointer min-h-[4.75rem]"
                 :class="isVocabRevealed(i)
                   ? 'vocab-revealed'
                   : 'vocab-hidden border-dashed border-ink/15 hover:border-gold-deep/45 hover:-translate-y-0.5'"

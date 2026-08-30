@@ -33,6 +33,7 @@ const navGroups = [
     label: 'Libraries',
     items: [
       { to: '/allwords',     han: '词', label: 'All Words'    },
+      { to: '/favorites',    han: '星', label: 'Favorites'    },
       { to: '/allradicals',  han: '部', label: 'All Radicals' },
       { to: '/grammar',      han: '语', label: 'All Grammar'  },
       { to: '/lesson-notes', han: '记', label: 'Lesson Notes' },
