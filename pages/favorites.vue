@@ -92,6 +92,9 @@ const sendTest = async () => {
         <div>
           <div class="text-[10px] font-semibold uppercase tracking-widest text-amber-700">Study rhythm</div>
           <h2 id="review-reminders-title" class="mt-1 text-lg font-bold text-ink">Review reminders</h2>
+          <p class="mt-2 max-w-2xl text-xs leading-5 text-ink-soft">
+            Pick how many favorite words to review each day and the time window to receive them. Notifications are saved on this browser and sent on a best-effort basis when the app or PWA can run.
+          </p>
         </div>
         <button
           type="button"
