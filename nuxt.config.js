@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { readFileSync } from 'node:fs';
+
 const baseURL = "/chinese/";
+const packageJson = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8'));
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-04-26",
@@ -8,6 +11,12 @@ export default defineNuxtConfig({
   modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@vite-pwa/nuxt"],
 
   css: ["~/assets/css/main.css"],
+
+  runtimeConfig: {
+    public: {
+      appVersion: packageJson.version,
+    },
+  },
 
   app: {
     baseURL: "/chinese/", // ← GitHub Pages repo name

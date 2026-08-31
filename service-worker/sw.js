@@ -1,5 +1,5 @@
 import { clientsClaim } from 'workbox-core'
-import { cleanupOutdatedCaches, createHandlerBoundToURL, precacheAndRoute } from 'workbox-precaching'
+import { cleanupOutdatedCaches, createHandlerBoundToURL, getCacheKeyForURL, precacheAndRoute } from 'workbox-precaching'
 import { NavigationRoute, registerRoute } from 'workbox-routing'
 import { deliverDueFavoriteReminder } from '../utils/favoriteReminder.js'
 
@@ -7,7 +7,10 @@ self.skipWaiting()
 clientsClaim()
 cleanupOutdatedCaches()
 precacheAndRoute(self.__WB_MANIFEST)
-registerRoute(new NavigationRoute(createHandlerBoundToURL('/chinese/200.html')))
+const navigationFallbackUrl = new URL('200.html', self.registration.scope).href
+if (getCacheKeyForURL(navigationFallbackUrl)) {
+  registerRoute(new NavigationRoute(createHandlerBoundToURL(navigationFallbackUrl)))
+}
 
 self.addEventListener('periodicsync', event => {
   if (event.tag === 'chinese-favorite-reminder') {

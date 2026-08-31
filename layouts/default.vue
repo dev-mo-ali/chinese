@@ -1,6 +1,8 @@
 <script setup>
 const route = useRoute()
-const baseURL = useRuntimeConfig().app.baseURL
+const runtimeConfig = useRuntimeConfig()
+const baseURL = runtimeConfig.app.baseURL
+const appVersion = runtimeConfig.public.appVersion
 
 const navGroups = [
   {
@@ -432,6 +434,8 @@ const formattedVisitors = computed(() =>
               Character data: Make Me a Hanzi
             </a>
             <PwaInstallButton />
+            <span aria-hidden="true" class="opacity-50">·</span>
+            <span>v{{ appVersion }}</span>
             <span aria-hidden="true" class="opacity-50">·</span>
             <span>
               <span class="han mr-1" aria-hidden="true" lang="zh-CN">访</span>
