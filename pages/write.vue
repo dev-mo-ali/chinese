@@ -2,6 +2,8 @@
 import { HSK1_LESSONS } from '~/composables/useHSK1.js'
 import { HSK2_LESSONS } from '~/composables/useHSK2.js'
 import { HSK3_LESSONS } from '~/composables/useHSK3.js'
+import { UNIQUE_HSK_WORDS, favoriteWordKey } from '~/composables/useHskVocabulary.js'
+import { useFavoritesStore } from '~/stores/favorites.js'
 import { allRadicals, CAT_COLORS } from '~/composables/useRadicals.js'
 import { STROKE_GROUPS } from '~/composables/useStrokes.js'
 
@@ -55,8 +57,33 @@ const POOL = {
   3: dedupeChars(LESSONS[3].flatMap(l => l.chars)),
 }
 
+const favorites = useFavoritesStore()
+const buildFavoriteChars = words => {
+  const seen = new Set()
+  const chars = []
+  for (const word of words) {
+    if (!word?.c) continue
+    for (const ch of [...word.c]) {
+      if (!HAN_RE.test(ch) || seen.has(ch)) continue
+      seen.add(ch)
+      chars.push({
+        c: ch,
+        word: word.c,
+        p: word.p || '',
+        en: String(word.en || '').split(/[·;,/]/)[0].trim(),
+        level: word.level,
+        lesson: word.lesson,
+      })
+    }
+  }
+  return chars
+}
+const favoriteChars = computed(() => buildFavoriteChars(
+  UNIQUE_HSK_WORDS.filter(word => favorites.keys.includes(favoriteWordKey(word)))
+))
+
 // ─── State ────────────────────────────────────────────────────────────────
-const level   = ref(1)         // 1 | 2 | 3
+const level   = ref(1)         // 1 | 2 | 3 | 'favorites'
 const lesson  = ref('all')     // 'all' | <lesson no>
 const idx     = ref(0)
 const showOutline   = ref(true)
@@ -65,9 +92,10 @@ const hideClues = ref(false)    // keeps only pinyin visible for recall practice
 const quizFeedback  = ref(null)   // { ok, msg }
 const quizStats     = reactive({ mistakes: 0, hint: 0, done: false })
 
-const availableLessons = computed(() => LESSONS[level.value] || [])
+const availableLessons = computed(() => level.value === 'favorites' ? [] : (LESSONS[level.value] || []))
 
 const chars = computed(() => {
+  if (level.value === 'favorites') return favoriteChars.value
   const pool = POOL[level.value] || []
   if (lesson.value === 'all') return pool
   const found = (LESSONS[level.value] || []).find(l => l.no === lesson.value)
@@ -211,6 +239,7 @@ const random = () => { if (chars.value.length) idx.value = Math.floor(Math.rando
 
 // ─── Reactivity ───────────────────────────────────────────────────────────
 watch(level, () => { lesson.value = 'all'; idx.value = 0 })
+watch(chars, () => { if (idx.value >= chars.value.length) idx.value = 0 })
 watch(lesson, () => { idx.value = 0 })
 watch([current, showOutline, showCharacter], () => buildWriter(), { flush: 'post' })
 
@@ -238,17 +267,18 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKey))
     <div class="mb-5 flex flex-wrap items-center gap-2 sm:gap-3">
       <span class="text-[10px] tracking-[0.3em] uppercase text-ink/50 mr-1">Level</span>
       <div class="flex gap-1.5">
-        <button v-for="lv in [1,2,3]" :key="lv" @click="level = lv"
+        <button v-for="lv in [1,2,3,'favorites']" :key="lv" @click="level = lv"
                 class="px-3 py-1.5 rounded-full text-xs font-semibold border transition"
                 :class="level === lv
                         ? 'bg-gold-deep text-cream border-gold-deep shadow-chip'
                         : 'bg-white text-ink/70 border-ink/15 hover:border-gold'">
-          HSK {{ lv }}
+          {{ lv === 'favorites' ? `Favorites (${favorites.count})` : `HSK ${lv}` }}
         </button>
       </div>
 
-      <span class="text-[10px] tracking-[0.3em] uppercase text-ink/50 ml-1">Lesson</span>
-      <div class="flex items-center gap-1.5 flex-wrap">
+      <template v-if="level !== 'favorites'">
+        <span class="text-[10px] tracking-[0.3em] uppercase text-ink/50 ml-1">Lesson</span>
+        <div class="flex items-center gap-1.5 flex-wrap">
         <button @click="lesson = 'all'"
                 class="px-3 py-1.5 rounded-full text-xs font-semibold border transition"
                 :class="lesson === 'all'
@@ -265,6 +295,7 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKey))
           </option>
         </select>
       </div>
+      </template>
 
       <span class="ml-auto text-[11px] font-mono text-ink/50">
         {{ chars.length ? `${idx + 1} / ${chars.length}` : '—' }}

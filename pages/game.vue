@@ -2,6 +2,8 @@
 import { HSK1_LESSONS } from '~/composables/useHSK1.js'
 import { HSK2_LESSONS } from '~/composables/useHSK2.js'
 import { HSK3_LESSONS } from '~/composables/useHSK3.js'
+import { UNIQUE_HSK_WORDS, favoriteWordKey } from '~/composables/useHskVocabulary.js'
+import { useFavoritesStore } from '~/stores/favorites.js'
 
 useHead({ title: '游戏 · Character Memory Game' })
 
@@ -47,18 +49,33 @@ const POOL = {
   3: dedupe(LESSONS[3].flatMap(l => l.vocab)),
 }
 
+const toGameEntry = word => ({
+  c: word.c,
+  p: word.p,
+  en: String(word.en || '').split(/[·;,/]/)[0].trim(),
+  level: word.level,
+  lesson: word.lesson,
+})
+
+const favorites = useFavoritesStore()
+const favoritePool = computed(() => UNIQUE_HSK_WORDS
+  .filter(word => favorites.keys.includes(favoriteWordKey(word)))
+  .map(toGameEntry)
+  .filter(word => word.c && word.p && word.en)
+)
 // ─── Settings ──────────────────────────────────────────────────────────────
 const mode      = ref('quiz')   // 'quiz' | 'match'
-const level     = ref(1)        // 1 | 2 | 3 | 'all'
+const level     = ref(1)        // 1 | 2 | 3 | 'all' | 'favorites'
 const lesson    = ref('all')    // 'all' | <lesson no>
 const matchSize = ref(8)        // pairs in the memory game
 
 const availableLessons = computed(() => {
-  if (level.value === 'all') return []
+  if (level.value === 'all' || level.value === 'favorites') return []
   return LESSONS[level.value] || []
 })
 
 const activePool = computed(() => {
+  if (level.value === 'favorites') return favoritePool.value
   if (level.value === 'all') return [...POOL[1], ...POOL[2], ...POOL[3]]
   if (lesson.value === 'all') return POOL[level.value] || []
   const found = (LESSONS[level.value] || []).find(l => l.no === lesson.value)
@@ -153,6 +170,7 @@ const match = reactive({
   startedAt: 0,
   elapsed: 0,
   best: null,
+  target: 0,
 })
 
 const MATCH_BEST_KEY = 'chinese-game-match-best'
@@ -179,6 +197,17 @@ const newMatchGame = () => {
   const pool = activePool.value
   const n = Math.min(matchSize.value, Math.floor(pool.length))
   const picks = pickN(pool, n)
+  match.target = picks.length
+  if (!picks.length) {
+    match.cards = []
+    match.first = null
+    match.second = null
+    match.lock = false
+    match.moves = 0
+    match.matched = 0
+    match.elapsed = 0
+    return
+  }
   const cards = []
   picks.forEach((v, idx) => {
     cards.push({ id: idx * 2,     pairId: idx, kind: 'han', text: v.c, sub: '',     flipped: false, done: false, level: v.level })
@@ -212,7 +241,7 @@ const flipCard = (i) => {
     match.matched++
     match.first = null
     match.second = null
-    if (match.matched >= matchSize.value) {
+    if (match.matched >= match.target) {
       stopTimer()
       const score = { moves: match.moves, time: match.elapsed }
       if (import.meta.client) {
@@ -252,7 +281,11 @@ watch([mode, level, lesson, matchSize], () => {
   if (mode.value === 'quiz') resetQuiz()
   else { newMatchGame(); loadMatchBest() }
 })
-
+watch(favoritePool, () => {
+  if (level.value !== 'favorites') return
+  if (mode.value === 'quiz') resetQuiz()
+  else { newMatchGame(); loadMatchBest() }
+})
 onMounted(() => {
   const saved = Number(localStorage.getItem(QUIZ_BEST_KEY) || 0)
   if (Number.isFinite(saved)) quiz.bestStreak = saved
@@ -295,16 +328,16 @@ const accuracy = computed(() => quiz.asked === 0 ? 0 : Math.round((quiz.score / 
 
       <span class="text-[10px] tracking-[0.3em] uppercase text-ink/50 ml-1">Level</span>
       <div class="flex gap-1.5">
-        <button v-for="lv in [1,2,3,'all']" :key="lv" @click="level = lv"
+        <button v-for="lv in [1,2,3,'all','favorites']" :key="lv" @click="level = lv"
                 class="px-3 py-1.5 rounded-full text-xs font-semibold border transition"
                 :class="level === lv
                         ? 'bg-gold-deep text-cream border-gold-deep shadow-chip'
                         : 'bg-white text-ink/70 border-ink/15 hover:border-gold'">
-          {{ lv === 'all' ? 'All' : `HSK ${lv}` }}
+          {{ lv === 'all' ? 'All' : lv === 'favorites' ? `Favorites (${favorites.count})` : `HSK ${lv}` }}
         </button>
       </div>
 
-      <template v-if="level !== 'all' && availableLessons.length">
+      <template v-if="level !== 'all' && level !== 'favorites' && availableLessons.length">
         <span class="text-[10px] tracking-[0.3em] uppercase text-ink/50 ml-1">Lesson</span>
         <div class="flex items-center gap-1.5 flex-wrap">
           <button @click="lesson = 'all'"
@@ -423,6 +456,11 @@ const accuracy = computed(() => quiz.asked === 0 ? 0 : Math.round((quiz.score / 
         </div>
       </div>
 
+      <div v-else class="rounded-3xl bg-white border border-ink/10 p-8 text-center text-ink/55 shadow-card">
+        <div class="han text-4xl text-gold-deep">藏</div>
+        <p class="mt-2 text-sm">Choose at least 4 favorite words to play from favorites.</p>
+      </div>
+
       <p class="mt-3 text-center text-[11px] text-ink/40">
         Tip: press <kbd class="px-1.5 py-0.5 rounded bg-ink/10 font-mono">1-4</kbd> to answer ·
         <kbd class="px-1.5 py-0.5 rounded bg-ink/10 font-mono">Enter</kbd> for next
@@ -484,7 +522,7 @@ const accuracy = computed(() => quiz.asked === 0 ? 0 : Math.round((quiz.score / 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-4">
         <div class="rounded-2xl bg-white border border-ink/10 p-3 text-center shadow-sm" title="Pairs you have already matched">
           <div class="text-[10px] tracking-widest uppercase text-ink/50">Matched</div>
-          <div class="text-2xl font-bold text-ink">{{ match.matched }} / {{ matchSize }}</div>
+          <div class="text-2xl font-bold text-ink">{{ match.matched }} / {{ match.target || Math.min(matchSize, activePool.length) }}</div>
           <div class="text-[10px] text-ink/45 mt-0.5 leading-tight">Pairs found</div>
         </div>
         <div class="rounded-2xl bg-white border border-ink/10 p-3 text-center shadow-sm" title="A move = flipping two cards. Fewer moves is better.">
@@ -511,7 +549,7 @@ const accuracy = computed(() => quiz.asked === 0 ? 0 : Math.round((quiz.score / 
       </div>
 
       <!-- Win banner -->
-      <div v-if="match.matched >= matchSize"
+      <div v-if="match.target && match.matched >= match.target"
            class="mb-4 rounded-2xl bg-gradient-to-r from-emerald-50 to-gold/20 border-2 border-emerald-400 px-5 py-4 flex items-center gap-4 shadow-card animate-fadeUp">
         <div class="han text-3xl text-emerald-700 font-bold">胜</div>
         <div class="flex-1 min-w-0">
@@ -524,8 +562,13 @@ const accuracy = computed(() => quiz.asked === 0 ? 0 : Math.round((quiz.score / 
         </button>
       </div>
 
+      <div v-if="!match.cards.length" class="rounded-3xl bg-white border border-ink/10 p-8 text-center text-ink/55 shadow-card">
+        <div class="han text-4xl text-gold-deep">藏</div>
+        <p class="mt-2 text-sm">Choose favorite words or a larger word set to start matching.</p>
+      </div>
+
       <!-- Board -->
-      <div class="rounded-3xl bg-white/80 backdrop-blur border border-ink/10 shadow-card p-3 sm:p-5">
+      <div v-else class="rounded-3xl bg-white/80 backdrop-blur border border-ink/10 shadow-card p-3 sm:p-5">
         <div class="grid gap-2.5 sm:gap-3"
              :style="{ gridTemplateColumns: `repeat(${matchSize <= 6 ? 4 : 4}, minmax(0,1fr))` }">
           <button v-for="(card, i) in match.cards" :key="card.id"
