@@ -61,6 +61,7 @@ const lesson  = ref('all')     // 'all' | <lesson no>
 const idx     = ref(0)
 const showOutline   = ref(true)
 const showCharacter = ref(false)  // hides the gray reference glyph
+const hideClues = ref(false)    // keeps only pinyin visible for recall practice
 const quizFeedback  = ref(null)   // { ok, msg }
 const quizStats     = reactive({ mistakes: 0, hint: 0, done: false })
 
@@ -326,6 +327,11 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKey))
                   class="px-3.5 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white text-ink border border-ink/15 hover:border-ink/30 transition">
             Hide
           </button>
+          <button @click="hideClues = !hideClues"
+                  class="px-3.5 py-2 rounded-full text-xs sm:text-sm font-semibold border transition"
+                  :class="hideClues ? 'bg-emerald-700 text-white border-emerald-700 shadow-chip' : 'bg-white text-ink border-ink/15 hover:border-ink/30'">
+            {{ hideClues ? 'Show clues' : 'Pinyin only' }}
+          </button>
         </div>
 
         <!-- Toggles -->
@@ -345,12 +351,13 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKey))
       <div class="rounded-3xl bg-white border border-ink/10 shadow-card p-5 sm:p-7 flex flex-col">
         <div class="text-[10px] tracking-[0.3em] uppercase text-ink/50 mb-1">Character</div>
         <div class="flex items-baseline gap-3 flex-wrap">
-          <div class="han text-6xl sm:text-7xl font-bold text-ink leading-none">{{ current.c }}</div>
+          <div v-if="!hideClues" class="han text-6xl sm:text-7xl font-bold text-ink leading-none">{{ current.c }}</div>
+          <div v-else class="han text-5xl sm:text-6xl font-bold text-ink/25 leading-none" aria-label="Character hidden">?</div>
           <div class="text-2xl sm:text-3xl font-semibold text-gold-deep">{{ current.p }}</div>
         </div>
-        <div class="mt-2 text-base sm:text-lg text-ink/80">{{ current.en }}</div>
+        <div v-if="!hideClues" class="mt-2 text-base sm:text-lg text-ink/80">{{ current.en }}</div>
 
-        <div v-if="current.word !== current.c" class="mt-4 text-sm text-ink/60">
+        <div v-if="!hideClues && current.word !== current.c" class="mt-4 text-sm text-ink/60">
           <span class="text-[10px] tracking-widest uppercase text-ink/40 mr-1">In word:</span>
           <span class="han text-xl text-ink font-semibold">{{ current.word }}</span>
         </div>
