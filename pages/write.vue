@@ -1,4 +1,5 @@
 <script setup>
+import { pinyin } from 'pinyin-pro'
 import { HSK1_LESSONS } from '~/composables/useHSK1.js'
 import { HSK2_LESSONS } from '~/composables/useHSK2.js'
 import { HSK3_LESSONS } from '~/composables/useHSK3.js'
@@ -16,22 +17,26 @@ useHead({
 
 // ─── Build per-lesson character pool ──────────────────────────────────────
 // Hanzi Writer ships data for individual characters, so we split multi-char
-// vocab entries into their constituent characters.
+// vocab entries into their constituent characters while keeping pinyin clues aligned.
 const HAN_RE = /[\u4e00-\u9fff]/
+
+const charPinyinAt = (word, index) => (
+  pinyin(word || '', { type: 'array', toneType: 'symbol' })[index] || ''
+)
 
 const buildLessons = (lessons, level) => (lessons || []).map(l => {
   const seen = new Set()
   const chars = []
   for (const v of (l.vocab || [])) {
     if (!v?.c) continue
-    for (const ch of [...v.c]) {
+    for (const [charIndex, ch] of [...v.c].entries()) {
       if (!HAN_RE.test(ch)) continue
       if (seen.has(ch)) continue
       seen.add(ch)
       chars.push({
         c: ch,
         word: v.c,
-        p: v.p || '',
+        p: charPinyinAt(v.c, charIndex) || v.p || '',
         en: String(v.en || '').split(/[·;,/]/)[0].trim(),
       })
     }
@@ -63,13 +68,13 @@ const buildFavoriteChars = words => {
   const chars = []
   for (const word of words) {
     if (!word?.c) continue
-    for (const ch of [...word.c]) {
+    for (const [charIndex, ch] of [...word.c].entries()) {
       if (!HAN_RE.test(ch) || seen.has(ch)) continue
       seen.add(ch)
       chars.push({
         c: ch,
         word: word.c,
-        p: word.p || '',
+        p: charPinyinAt(word.c, charIndex) || word.p || '',
         en: String(word.en || '').split(/[·;,/]/)[0].trim(),
         level: word.level,
         lesson: word.lesson,
