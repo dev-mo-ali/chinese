@@ -3,6 +3,7 @@ import { UNIQUE_HSK_WORDS } from '~/composables/useHskVocabulary.js'
 import { useFavoritesStore } from '~/stores/favorites.js'
 import { useReminderStore } from '~/stores/reminders.js'
 import { sendFavoriteReminderTest } from '~/composables/useFavoriteReminderScheduler.js'
+import HanziPractice from '~/components/HanziPractice.vue'
 
 useHead({ title: 'Favorite HSK Words' })
 
@@ -34,6 +35,18 @@ const resetFilters = () => {
   search.value = ''
   filterLevel.value = 'all'
 }
+
+const HAN_RE = /[\u4e00-\u9fff]/
+const expanded = ref(new Set())
+const rowKey = word => `${word.level}-${word.lesson}-${word.sourceIndex}-${word.c}`
+const togglePractice = (key) => {
+  const next = new Set(expanded.value)
+  if (next.has(key)) next.delete(key)
+  else next.add(key)
+  expanded.value = next
+}
+const charsOf = value => [...String(value || '')].filter(char => HAN_RE.test(char))
+const accentFor = level => level === 1 ? '#15803d' : level === 2 ? '#a16207' : '#92400e'
 
 const clearFavorites = () => {
   if (window.confirm(`Remove all ${favorites.count} favorite words?`)) favorites.clear()
@@ -174,7 +187,7 @@ const sendTest = async () => {
     </div>
 
     <div v-if="filteredWords.length" class="space-y-3 sm:hidden" aria-label="Favorite vocabulary">
-      <article v-for="word in filteredWords" :key="`${word.level}-${word.lesson}-${word.sourceIndex}`" class="rounded-lg border border-amber-200 bg-white p-4 shadow-chip">
+      <article v-for="word in filteredWords" :key="rowKey(word)" class="rounded-lg border border-amber-200 bg-white p-4 shadow-chip">
         <div class="flex items-start gap-3">
           <div class="min-w-0 flex-1">
             <div class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
@@ -187,7 +200,27 @@ const sendTest = async () => {
         </div>
         <div class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-amber-100 pt-3 text-xs text-ink-soft">
           <span><span v-if="word.pos">{{ word.pos }} · </span>Lesson {{ word.lesson }}</span>
-          <span class="rounded bg-amber-50 px-2 py-1 font-semibold text-amber-800">HSK {{ word.level }}</span>
+          <div class="flex flex-wrap items-center justify-end gap-2">
+            <span class="rounded bg-amber-50 px-2 py-1 font-semibold text-amber-800">HSK {{ word.level }}</span>
+            <button
+              type="button"
+              class="min-h-10 rounded-lg border border-amber-300 px-3 text-xs font-semibold text-amber-800 transition hover:bg-amber-50 disabled:cursor-not-allowed disabled:opacity-40"
+              :disabled="!charsOf(word.c).length"
+              :aria-expanded="expanded.has(rowKey(word))"
+              @click="togglePractice(rowKey(word))"
+            >
+              {{ expanded.has(rowKey(word)) ? 'Close' : 'Practice' }}
+            </button>
+          </div>
+        </div>
+        <div v-if="expanded.has(rowKey(word))" class="mt-4 flex flex-wrap justify-center gap-4 border-t border-amber-100 pt-4">
+          <HanziPractice
+            v-for="(char, charIndex) in charsOf(word.c)"
+            :key="charIndex"
+            :char="char"
+            :size="160"
+            :accent="accentFor(word.level)"
+          />
         </div>
       </article>
     </div>
@@ -202,19 +235,46 @@ const sendTest = async () => {
             <th class="px-3 py-3">Part of Speech</th>
             <th class="px-3 py-3">Lesson</th>
             <th class="px-3 py-3">Level</th>
+            <th class="px-3 py-3 text-center">Practice</th>
             <th class="px-3 py-3 text-center">Remove</th>
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(word, index) in filteredWords" :key="`${word.level}-${word.lesson}-${word.sourceIndex}`" :class="index % 2 ? 'bg-amber-50/30' : ''">
+          <template v-for="(word, index) in filteredWords" :key="rowKey(word)">
+          <tr :class="index % 2 ? 'bg-amber-50/30' : ''">
             <td class="border-t border-amber-100 px-3 py-2 text-lg font-bold text-ink">{{ word.c }}</td>
             <td class="border-t border-amber-100 px-3 py-2 text-amber-800">{{ word.p }}</td>
             <td class="border-t border-amber-100 px-3 py-2 text-sm">{{ word.en }}</td>
             <td class="border-t border-amber-100 px-3 py-2 text-xs text-ink-soft">{{ word.pos }}</td>
             <td class="whitespace-nowrap border-t border-amber-100 px-3 py-2 text-sm">Lesson {{ word.lesson }}</td>
             <td class="border-t border-amber-100 px-3 py-2 text-xs font-semibold text-amber-800">HSK {{ word.level }}</td>
+            <td class="border-t border-amber-100 px-3 py-2 text-center">
+              <button
+                type="button"
+                class="min-h-10 rounded-lg border border-amber-300 px-3 text-xs font-semibold text-amber-800 transition hover:bg-amber-50 disabled:cursor-not-allowed disabled:opacity-40"
+                :disabled="!charsOf(word.c).length"
+                :aria-expanded="expanded.has(rowKey(word))"
+                @click="togglePractice(rowKey(word))"
+              >
+                {{ expanded.has(rowKey(word)) ? 'Close' : 'Practice' }}
+              </button>
+            </td>
             <td class="border-t border-amber-100 px-3 py-2"><FavoriteWordButton :word="word" class="mx-auto" /></td>
           </tr>
+          <tr v-if="expanded.has(rowKey(word))" :class="index % 2 ? 'bg-amber-50/30' : ''">
+            <td colspan="8" class="border-t border-amber-100 px-3 py-4">
+              <div class="flex flex-wrap justify-center gap-4">
+                <HanziPractice
+                  v-for="(char, charIndex) in charsOf(word.c)"
+                  :key="charIndex"
+                  :char="char"
+                  :size="160"
+                  :accent="accentFor(word.level)"
+                />
+              </div>
+            </td>
+          </tr>
+          </template>
         </tbody>
       </table>
     </div>
