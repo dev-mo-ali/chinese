@@ -127,7 +127,7 @@ const sendTest = async () => {
             :value="reminders.settings.perDay"
             type="number"
             min="1"
-            max="5"
+            max="500"
             step="1"
             class="control-field w-full"
             @change="reminders.setDailyCount($event.target.value)"
