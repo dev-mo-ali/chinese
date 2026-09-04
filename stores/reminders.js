@@ -50,8 +50,20 @@ export const useReminderStore = defineStore('reminders', {
       notifyChange()
     },
 
+    setMode(value) {
+      this.settings.mode = value === 'interval' ? 'interval' : 'daily'
+      this.persist()
+    },
+
     setDailyCount(value) {
-      this.settings.perDay = Math.min(5, Math.max(1, Number(value) || 1))
+      const count = Number(value)
+      this.settings.perDay = Math.max(1, Math.floor(Number.isFinite(count) && count > 0 ? count : 1))
+      this.persist()
+    },
+
+    setIntervalMinutes(value) {
+      const minutes = Number(value)
+      this.settings.intervalMinutes = Math.max(1, Math.floor(Number.isFinite(minutes) && minutes > 0 ? minutes : REMINDER_DEFAULTS.intervalMinutes))
       this.persist()
     },
 

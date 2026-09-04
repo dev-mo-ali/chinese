@@ -2,7 +2,9 @@ import { readReminderState, writeReminderState } from './reminderStorage.js'
 
 export const REMINDER_DEFAULTS = Object.freeze({
   enabled: false,
+  mode: 'daily',
   perDay: 2,
+  intervalMinutes: 60,
   startTime: '09:00',
   endTime: '21:00',
 })
@@ -31,13 +33,19 @@ export const isValidReminderWindow = (startTime, endTime) => {
 }
 
 export const normalizeReminderSettings = (settings = {}) => {
-  const perDay = Math.min(5, Math.max(1, Number(settings.perDay) || REMINDER_DEFAULTS.perDay))
-  const startTime = settings.startTime || REMINDER_DEFAULTS.startTime
-  const endTime = settings.endTime || REMINDER_DEFAULTS.endTime
+  const mode = settings.mode === 'interval' ? 'interval' : REMINDER_DEFAULTS.mode
+  const perDayValue = Number(settings.perDay)
+  const intervalValue = Number(settings.intervalMinutes)
+  const perDay = Math.max(1, Math.floor(Number.isFinite(perDayValue) && perDayValue > 0 ? perDayValue : REMINDER_DEFAULTS.perDay))
+  const intervalMinutes = Math.max(1, Math.floor(Number.isFinite(intervalValue) && intervalValue > 0 ? intervalValue : REMINDER_DEFAULTS.intervalMinutes))
+  const startTime = typeof settings.startTime === 'string' && settings.startTime ? settings.startTime : REMINDER_DEFAULTS.startTime
+  const endTime = typeof settings.endTime === 'string' && settings.endTime ? settings.endTime : REMINDER_DEFAULTS.endTime
 
   return {
     enabled: Boolean(settings.enabled),
+    mode,
     perDay,
+    intervalMinutes,
     startTime,
     endTime,
   }
@@ -57,6 +65,28 @@ export const getDailySlots = (date, settings) => {
   })
 }
 
+export const getIntervalSlots = (date, settings) => {
+  const normalized = normalizeReminderSettings(settings)
+  if (!isValidReminderWindow(normalized.startTime, normalized.endTime)) return []
+
+  const start = timeToMinutes(normalized.startTime)
+  const end = timeToMinutes(normalized.endTime)
+  const slots = []
+
+  for (let minute = start; minute <= end; minute += normalized.intervalMinutes) {
+    slots.push(new Date(date.getFullYear(), date.getMonth(), date.getDate(), Math.floor(minute / 60), minute % 60, 0, 0))
+  }
+
+  return slots
+}
+
+export const getReminderSlots = (date, settings) => {
+  const normalized = normalizeReminderSettings(settings)
+  return normalized.mode === 'interval'
+    ? getIntervalSlots(date, normalized)
+    : getDailySlots(date, normalized)
+}
+
 export const createReminderState = ({ settings, favorites, previous = null }) => ({
   settings: normalizeReminderSettings(settings),
   favorites: Array.isArray(favorites) ? favorites : [],
@@ -73,20 +103,20 @@ const currentDelivery = (state, now) => {
 
 export const nextDueSlot = (state, now = new Date()) => {
   const delivery = currentDelivery(state, now)
-  const slots = getDailySlots(now, state.settings)
+  const slots = getReminderSlots(now, state.settings)
   const delivered = new Set(delivery.slots || [])
   const index = slots.findIndex((slot, slotIndex) => slot <= now && !delivered.has(slotIndex))
   return index === -1 ? null : { index, slot: slots[index], delivery }
 }
 
 export const nextScheduledSlot = (state, now = new Date()) => {
-  const slots = getDailySlots(now, state.settings)
+  const slots = getReminderSlots(now, state.settings)
   const upcoming = slots.find(slot => slot > now)
   if (upcoming) return upcoming
 
   const tomorrow = new Date(now)
   tomorrow.setDate(tomorrow.getDate() + 1)
-  return getDailySlots(tomorrow, state.settings)[0] || null
+  return getReminderSlots(tomorrow, state.settings)[0] || null
 }
 
 const notificationOptions = (word, slotIndex, date) => ({
