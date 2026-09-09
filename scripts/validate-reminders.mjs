@@ -48,4 +48,16 @@ assert.equal(due.index, 1)
 const intervalDue = nextDueSlot({ settings: hourlySettings, delivery: { date: '2026-08-30', slots: [0, 1] } }, new Date(2026, 7, 30, 11, 30, 0))
 assert.equal(intervalDue.index, 2)
 
+const { selectReminderWords } = await import('../utils/reminderWords.js')
+const words = [
+  { c: '你', p: 'ni', en: 'you', level: 1, lesson: 1 },
+  { c: '你', p: 'ni', en: 'you', level: 2, lesson: 2 },
+  { c: '好', p: 'hao', en: 'good', level: 2, lesson: 1 },
+]
+assert.equal(normalizeReminderSettings({}).source, 'favorites')
+assert.deepEqual(normalizeReminderSettings({ units: ['1:1', '1:1', null, '4:1'] }).units, ['1:1'])
+assert.deepEqual(selectReminderWords(words, { source: 'units', units: ['2:2'] }, () => false), [words[1]])
+assert.equal(selectReminderWords(words, { source: 'units', units: ['1:1', '2:2'] }, () => false).length, 1)
+assert.deepEqual(selectReminderWords(words, { source: 'units', units: [] }, () => true), [])
+assert.deepEqual(selectReminderWords(words, { source: 'favorites', units: ['1:1'] }, word => word.c === '好'), [words[2]])
 console.log('Reminder validation passed.')

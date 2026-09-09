@@ -21,7 +21,7 @@ self.addEventListener('periodicsync', event => {
 self.addEventListener('notificationclick', event => {
   event.notification.close()
   event.waitUntil((async () => {
-    const target = new URL('favorites', self.registration.scope).href
+    const target = new URL('reminders', self.registration.scope).href
     const clients = await self.clients.matchAll({ type: 'window', includeUncontrolled: true })
     const existing = clients.find(client => client.url.startsWith(self.registration.scope))
 

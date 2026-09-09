@@ -1,8 +1,10 @@
-import { UNIQUE_HSK_WORDS, favoriteWordKey } from '~/composables/useHskVocabulary.js'
+import { HSK_WORDS, favoriteWordKey } from '~/composables/useHskVocabulary.js'
 import { useFavoritesStore } from '~/stores/favorites'
 import { useReminderStore } from '~/stores/reminders'
 import { createReminderState, deliverDueFavoriteReminder, nextScheduledSlot, showFavoriteReminderTest } from '~/utils/favoriteReminder.js'
 import { readReminderState, writeReminderState } from '~/utils/reminderStorage.js'
+
+import { selectReminderWords } from '~/utils/reminderWords.js'
 
 let timerId
 
@@ -11,8 +13,7 @@ const clearSchedule = () => {
   timerId = undefined
 }
 
-const reminderWords = favorites => UNIQUE_HSK_WORDS
-  .filter(word => favorites.isFavorite(word))
+const reminderWords = (favorites, settings) => selectReminderWords(HSK_WORDS, settings, word => favorites.isFavorite(word))
   .map(word => ({ key: favoriteWordKey(word), c: word.c, p: word.p, en: word.en }))
 
 const serviceWorkerRegistration = async () => {
@@ -34,7 +35,7 @@ export async function syncFavoriteReminderData() {
   const previous = await readReminderState()
   await writeReminderState(createReminderState({
     settings: reminders.settings,
-    favorites: reminderWords(favorites),
+    favorites: reminderWords(favorites, reminders.settings),
     previous,
   }))
 }

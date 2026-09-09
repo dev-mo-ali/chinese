@@ -21,6 +21,15 @@ export const useReminderStore = defineStore('reminders', {
   },
 
   actions: {
+    setSource(value) {
+      this.settings.source = value === 'units' ? 'units' : 'favorites'
+      this.persist()
+    },
+    setUnits(units) {
+      this.settings.units = normalizeReminderSettings({ units }).units
+      this.persist()
+    },
+
     load() {
       if (!import.meta.client || this.loaded) return
 

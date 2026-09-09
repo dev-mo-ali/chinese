@@ -2,6 +2,7 @@
 useHead({ title: '欢迎 · Welcome to Chinese' })
 
 const sections = [
+  { to: '/reminders', han: '钟', label: 'Reminders', desc: 'Review words from selected HSK units or your favorites.' },
   { to: '/pinyin',   han: '拼音', label: 'Pinyin',   desc: 'Initials, finals, and tones with audio.' },
   { to: '/pinyin-converter', han: '转换', label: 'Pinyin Converter', desc: 'Convert Chinese sentences into tone-mark pinyin.' },
   { to: '/strokes',  han: '笔画', label: 'Strokes',  desc: 'The 5 stroke groups and their 36 variations.' },

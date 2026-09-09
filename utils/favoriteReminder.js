@@ -2,6 +2,8 @@ import { readReminderState, writeReminderState } from './reminderStorage.js'
 
 export const REMINDER_DEFAULTS = Object.freeze({
   enabled: false,
+  source: 'favorites',
+  units: Object.freeze([]),
   mode: 'daily',
   perDay: 2,
   intervalMinutes: 60,
@@ -43,6 +45,8 @@ export const normalizeReminderSettings = (settings = {}) => {
 
   return {
     enabled: Boolean(settings.enabled),
+    source: settings.source === 'units' ? 'units' : 'favorites',
+    units: Array.isArray(settings.units) ? [...new Set(settings.units.filter(unit => typeof unit === 'string' && /^[123]:[1-9]\d*$/.test(unit)))] : [],
     mode,
     perDay,
     intervalMinutes,
@@ -123,7 +127,7 @@ const notificationOptions = (word, slotIndex, date) => ({
   body: `${word.c} · ${word.p} — ${word.en}`,
   tag: `chinese-favorite-${date}-${slotIndex}`,
   renotify: false,
-  data: { path: 'favorites' },
+  data: { path: 'reminders' },
 })
 
 export async function deliverDueFavoriteReminder(registration, now = new Date()) {
