@@ -124,7 +124,7 @@ export const nextScheduledSlot = (state, now = new Date()) => {
 }
 
 const notificationOptions = (word, slotIndex, date) => ({
-  body: `${word.c} · ${word.p} — ${word.en}`,
+  body: `${word.p}\n${word.en}`,
   tag: `chinese-favorite-${date}-${slotIndex}`,
   renotify: false,
   data: { path: 'reminders' },
@@ -148,7 +148,7 @@ export async function deliverDueFavoriteReminder(registration, now = new Date())
   }
 
   await writeReminderState(nextState)
-  await registration.showNotification('Chinese review', notificationOptions(word, due.index, due.delivery.date))
+  await registration.showNotification(word.c, notificationOptions(word, due.index, due.delivery.date))
   return true
 }
 
@@ -157,7 +157,7 @@ export async function showFavoriteReminderTest(registration) {
   if (!state?.favorites?.length || typeof registration?.showNotification !== 'function') return false
 
   const word = state.favorites[state.rotationIndex % state.favorites.length]
-  await registration.showNotification('Chinese review', {
+  await registration.showNotification(word.c, {
     ...notificationOptions(word, 'test', 'test'),
     tag: 'chinese-favorite-test',
   })

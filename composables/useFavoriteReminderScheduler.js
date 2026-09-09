@@ -88,8 +88,8 @@ export async function sendFavoriteReminderTest() {
   if (registration) return showFavoriteReminderTest(registration)
 
   if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return false
-  new Notification('Chinese review', {
-    body: `${word.c} · ${word.p} — ${word.en}`,
+  new Notification(word.c, {
+    body: `${word.p}\n${word.en}`,
     tag: 'chinese-favorite-test',
   })
   return true
