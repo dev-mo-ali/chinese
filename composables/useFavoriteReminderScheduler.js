@@ -1,7 +1,7 @@
 import { HSK_WORDS, favoriteWordKey } from '~/composables/useHskVocabulary.js'
 import { useFavoritesStore } from '~/stores/favorites'
 import { useReminderStore } from '~/stores/reminders'
-import { createReminderState, deliverDueFavoriteReminder, nextScheduledSlot, showFavoriteReminderTest } from '~/utils/favoriteReminder.js'
+import { createReminderState, deliverDueFavoriteReminder, nextScheduledSlot, showFavoriteReminderTest, reminderNotificationTitle, notificationOptions } from '~/utils/favoriteReminder.js'
 import { readReminderState, writeReminderState } from '~/utils/reminderStorage.js'
 
 import { selectReminderWords } from '~/utils/reminderWords.js'
@@ -79,6 +79,7 @@ export async function scheduleFavoriteReminders() {
 }
 
 export async function sendFavoriteReminderTest() {
+  const baseURL = new URL(useRuntimeConfig().app.baseURL, window.location.origin).href
   await syncFavoriteReminderData()
   const state = await readReminderState()
   const word = state?.favorites?.[state.rotationIndex % state.favorites.length]
@@ -88,8 +89,8 @@ export async function sendFavoriteReminderTest() {
   if (registration) return showFavoriteReminderTest(registration)
 
   if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return false
-  new Notification(word.c, {
-    body: `${word.p}\n${word.en}`,
+  new Notification(reminderNotificationTitle(word), {
+    ...notificationOptions(word, 'test', 'test', baseURL),
     tag: 'chinese-favorite-test',
   })
   return true

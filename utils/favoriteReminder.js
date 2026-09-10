@@ -123,8 +123,11 @@ export const nextScheduledSlot = (state, now = new Date()) => {
   return getReminderSlots(tomorrow, state.settings)[0] || null
 }
 
-const notificationOptions = (word, slotIndex, date) => ({
-  body: `${word.p}\n${word.en}`,
+export const reminderNotificationTitle = word => [word.c, word.p].filter(Boolean).join(' · ')
+
+export const notificationOptions = (word, slotIndex, date, baseURL) => ({
+  body: word.en || '',
+  icon: new URL('pwa-192x192.png', baseURL).href,
   tag: `chinese-favorite-${date}-${slotIndex}`,
   renotify: false,
   data: { path: 'reminders' },
@@ -148,7 +151,7 @@ export async function deliverDueFavoriteReminder(registration, now = new Date())
   }
 
   await writeReminderState(nextState)
-  await registration.showNotification(word.c, notificationOptions(word, due.index, due.delivery.date))
+  await registration.showNotification(reminderNotificationTitle(word), notificationOptions(word, due.index, due.delivery.date, registration.scope))
   return true
 }
 
@@ -157,8 +160,8 @@ export async function showFavoriteReminderTest(registration) {
   if (!state?.favorites?.length || typeof registration?.showNotification !== 'function') return false
 
   const word = state.favorites[state.rotationIndex % state.favorites.length]
-  await registration.showNotification(word.c, {
-    ...notificationOptions(word, 'test', 'test'),
+  await registration.showNotification(reminderNotificationTitle(word), {
+    ...notificationOptions(word, 'test', 'test', registration.scope),
     tag: 'chinese-favorite-test',
   })
   return true
