@@ -21,7 +21,9 @@ self.addEventListener('periodicsync', event => {
 self.addEventListener('notificationclick', event => {
   event.notification.close()
   event.waitUntil((async () => {
-    const target = new URL('reminders', self.registration.scope).href
+    const url = new URL('reminders', self.registration.scope)
+    if (typeof event.notification.data?.word === 'string') url.searchParams.set('word', event.notification.data.word)
+    const target = url.href
     const clients = await self.clients.matchAll({ type: 'window', includeUncontrolled: true })
     const existing = clients.find(client => client.url.startsWith(self.registration.scope))
 

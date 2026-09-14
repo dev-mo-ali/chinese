@@ -61,3 +61,44 @@ assert.equal(selectReminderWords(words, { source: 'units', units: ['1:1', '2:2']
 assert.deepEqual(selectReminderWords(words, { source: 'units', units: [] }, () => true), [])
 assert.deepEqual(selectReminderWords(words, { source: 'favorites', units: ['1:1'] }, word => word.c === '好'), [words[2]])
 console.log('Reminder validation passed.')
+
+const { notificationOptions } = await import('../utils/favoriteReminder.js')
+const { readFileSync } = await import('node:fs')
+const { runInNewContext } = await import('node:vm')
+const wordKey = JSON.stringify(['学习', 'xué xí', 'to study'])
+const payload = notificationOptions({ key: wordKey, c: '学习', p: 'xué xí', en: 'to study' }, 0, 'today', 'https://example.com/chinese/')
+assert.equal(payload.data.word, wordKey)
+const worker = readFileSync(new URL('../service-worker/sw.js', import.meta.url), 'utf8')
+const handlerCode = worker.slice(worker.indexOf("self.addEventListener('notificationclick'"))
+for (const alreadyOpen of [true, false]) {
+  for (const key of [wordKey, undefined]) {
+    let handler
+    let pending
+    const calls = []
+    const existing = {
+      url: 'https://example.com/chinese/favorites',
+      navigate: async url => calls.push(['navigate', url]),
+      focus: async () => calls.push(['focus']),
+    }
+    runInNewContext(handlerCode, { URL, self: {
+      registration: { scope: 'https://example.com/chinese/' },
+      addEventListener: (_, callback) => { handler = callback },
+      clients: {
+        matchAll: async () => alreadyOpen ? [existing] : [],
+        openWindow: async url => calls.push(['open', url]),
+      },
+    } })
+    handler({
+      notification: { data: key ? { word: key } : {}, close: () => calls.push(['close']) },
+      waitUntil: promise => { pending = promise },
+    })
+    await pending
+    assert.equal(calls[0][0], 'close')
+    assert.equal(calls[1][0], alreadyOpen ? 'navigate' : 'open')
+    const target = new URL(calls[1][1])
+    assert.equal(target.pathname, '/chinese/reminders')
+    assert.equal(target.searchParams.get('word'), key || null)
+    if (alreadyOpen) assert.equal(calls[2][0], 'focus')
+  }
+}
+console.log('Notification click validation passed.')

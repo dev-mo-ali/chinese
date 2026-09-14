@@ -130,7 +130,7 @@ export const notificationOptions = (word, slotIndex, date, baseURL) => ({
   icon: new URL('pwa-192x192.png', baseURL).href,
   tag: `chinese-favorite-${date}-${slotIndex}`,
   renotify: false,
-  data: { path: 'reminders' },
+  data: { path: 'reminders', word: word.key || JSON.stringify([word.c, word.p, word.en]) },
 })
 
 export async function deliverDueFavoriteReminder(registration, now = new Date()) {

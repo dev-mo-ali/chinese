@@ -89,10 +89,17 @@ export async function sendFavoriteReminderTest() {
   if (registration) return showFavoriteReminderTest(registration)
 
   if (typeof Notification === 'undefined' || Notification.permission !== 'granted') return false
-  new Notification(reminderNotificationTitle(word), {
+  const notification = new Notification(reminderNotificationTitle(word), {
     ...notificationOptions(word, 'test', 'test', baseURL),
     tag: 'chinese-favorite-test',
   })
+  notification.onclick = () => {
+    notification.close()
+    window.focus()
+    const target = new URL('reminders', baseURL)
+    target.searchParams.set('word', word.key)
+    window.location.assign(target.href)
+  }
   return true
 }
 
