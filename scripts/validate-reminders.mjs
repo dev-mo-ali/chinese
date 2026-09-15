@@ -102,3 +102,34 @@ for (const alreadyOpen of [true, false]) {
   }
 }
 console.log('Notification click validation passed.')
+
+// A notification click mounts the app again; only refresh the schedule.
+const plugin = readFileSync(new URL('../plugins/reminders.client.js', import.meta.url), 'utf8')
+const pluginCode = plugin.replace(/^import .*$/gm, '').replace('export default ', '')
+for (const path of ['/chinese/', '/chinese/reminders', `/chinese/reminders?word=${encodeURIComponent(wordKey)}`]) {
+  let mounted
+  let refreshes = 0
+  let deliveries = 0
+  const windowListeners = {}
+  const documentListeners = {}
+  runInNewContext(pluginCode, {
+    defineNuxtPlugin: setup => setup({ hook: (name, callback) => { mounted = callback } }),
+    useFavoritesStore: () => ({ load() {} }),
+    useReminderStore: () => ({ load() {} }),
+    refreshFavoriteReminderSystem: async () => { refreshes++ },
+    deliverDueFavoriteReminder: async () => { deliveries++ },
+    navigator: { serviceWorker: { ready: Promise.resolve({}) } },
+    window: { location: new URL(path, 'https://example.com'), addEventListener: (name, callback) => { windowListeners[name] = callback } },
+    document: { visibilityState: 'visible', addEventListener: (name, callback) => { documentListeners[name] = callback } },
+  })
+  mounted()
+  await new Promise(resolve => setImmediate(resolve))
+  assert.equal(refreshes, 1)
+  assert.equal(deliveries, 0, `Mounting ${path} must not send a reminder`)
+  windowListeners.focus()
+  documentListeners.visibilitychange()
+  await new Promise(resolve => setImmediate(resolve))
+  assert.equal(refreshes, 3)
+  assert.equal(deliveries, 0, 'Returning to review must not send a reminder')
+}
+console.log('Reminder app-open regression validation passed.')

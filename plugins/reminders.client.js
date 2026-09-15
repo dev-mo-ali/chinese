@@ -1,7 +1,6 @@
 import { useFavoritesStore } from '~/stores/favorites'
 import { useReminderStore } from '~/stores/reminders'
 import { refreshFavoriteReminderSystem } from '~/composables/useFavoriteReminderScheduler'
-import { deliverDueFavoriteReminder } from '~/utils/favoriteReminder'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const favorites = useFavoritesStore()
@@ -20,8 +19,5 @@ export default defineNuxtPlugin((nuxtApp) => {
     })
 
     refresh()
-    navigator.serviceWorker?.ready.then(registration => {
-      deliverDueFavoriteReminder(registration)
-    }).catch(() => {})
   })
 })
