@@ -133,3 +133,18 @@ for (const path of ['/chinese/', '/chinese/reminders', `/chinese/reminders?word=
   assert.equal(deliveries, 0, 'Returning to review must not send a reminder')
 }
 console.log('Reminder app-open regression validation passed.')
+// Both notification images must resolve inside the deployment scope.
+for (const base of ['https://example.com/', 'https://example.com/chinese/']) {
+  const options = notificationOptions({ key: wordKey, c: '中' }, 0, 'today', base)
+  for (const [field, filename, size] of [
+    ['icon', 'pwa-192x192.png', 192],
+    ['badge', 'pwa-64x64.png', 64],
+  ]) {
+    assert.equal(options[field], new URL(filename, base).href)
+    const png = readFileSync(new URL(`../public/${filename}`, import.meta.url))
+    assert.equal(png.subarray(1, 4).toString(), 'PNG')
+    assert.equal(png.readUInt32BE(16), size)
+    assert.equal(png.readUInt32BE(20), size)
+  }
+}
+console.log('Notification icon and badge validation passed.')

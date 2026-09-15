@@ -128,6 +128,7 @@ export const reminderNotificationTitle = word => [word.c, word.p].filter(Boolean
 export const notificationOptions = (word, slotIndex, date, baseURL) => ({
   body: word.en || '',
   icon: new URL('pwa-192x192.png', baseURL).href,
+  badge: new URL('pwa-64x64.png', baseURL).href,
   tag: `chinese-favorite-${date}-${slotIndex}`,
   renotify: false,
   data: { path: 'reminders', word: word.key || JSON.stringify([word.c, word.p, word.en]) },
