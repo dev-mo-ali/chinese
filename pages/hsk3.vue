@@ -2,6 +2,9 @@
 import { HSK3_META, HSK3_LESSONS } from '~/composables/useHSK3.js'
 import { useHskPage } from '~/composables/useHskPage.js'
 import { posColor } from '~/composables/useHSK.js'
+import { useUnitCompletionStore } from '~/stores/unitCompletion'
+
+const completion = useUnitCompletionStore()
 
 useHead({ title: 'HSK 3 · Standard Course · 20 Lessons' })
 
@@ -162,6 +165,7 @@ const filteredVocab = computed(() => {
               <div class="han text-lg sm:text-xl font-bold leading-tight text-ink line-clamp-2">{{ l.han }}</div>
               <div class="text-[10px] sm:text-[11px] tracking-wide text-gold-deep mt-0.5 truncate">{{ l.pinyin }}</div>
               <div class="text-xs text-ink-soft mt-1.5 line-clamp-2">{{ l.en }}</div>
+              <span v-if="completion.isStudied(3, l.no)" class="mt-2 inline-flex rounded-full bg-emerald-50 px-2 py-0.5 text-[11px] font-semibold text-emerald-800">✓ Studied</span>
             </div>
             <div class="h-0.5 w-full transition"
                  :class="activeLesson === l.no ? 'bg-ink' : 'bg-transparent group-hover:bg-gold/60'"></div>
@@ -461,6 +465,7 @@ const filteredVocab = computed(() => {
           @click="pickLesson(current.no + 1)"
         >Next →</button>
       </footer>
+      <UnitCompletion :level="3" :lesson="current.no" />
     </article>
 
     <!-- ALL VOCAB · indigo dictionary -->
