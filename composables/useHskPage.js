@@ -6,10 +6,11 @@
 //   const page = useHskPage({ scrollTargetId: 'lesson-detail' })
 //   const { activeLesson, isRevealed, toggleLine, pickLesson, ... } = page
 
-import { ref, nextTick, onMounted } from 'vue'
+import { ref, nextTick, onMounted, watch } from 'vue'
 
 export function useHskPage ({ scrollTargetId = 'lesson-detail' } = {}) {
   const route = useRoute()
+  const router = useRouter()
   const requestedLesson = Number(route.query.lesson)
   const activeLesson = ref(Number.isInteger(requestedLesson) && requestedLesson > 0 ? requestedLesson : 1)
   const showAllVocab = ref(false)
@@ -42,7 +43,7 @@ export function useHskPage ({ scrollTargetId = 'lesson-detail' } = {}) {
 
   const search = ref('')
 
-  const pickLesson = (n) => {
+  const selectLesson = (n) => {
     activeLesson.value = n
     showAllVocab.value = false
     revealAll.value = false
@@ -56,6 +57,21 @@ export function useHskPage ({ scrollTargetId = 'lesson-detail' } = {}) {
     }
   }
 
+  const pickLesson = (n) => {
+    selectLesson(n)
+    // Include the unit in the route saved for app relaunches.
+    void router.replace({
+      path: route.path,
+      query: { ...route.query, lesson: String(n) },
+      hash: route.hash || `#${scrollTargetId}`,
+    })
+  }
+
+  watch(() => route.query.lesson, (value) => {
+    const lesson = Number(value)
+    const nextLesson = Number.isInteger(lesson) && lesson > 0 ? lesson : 1
+    if (nextLesson !== activeLesson.value) selectLesson(nextLesson)
+  })
   onMounted(() => {
     if (!route.query.lesson || !route.hash) return
     nextTick(() => document.getElementById(scrollTargetId)?.scrollIntoView({ block: 'start' }))
